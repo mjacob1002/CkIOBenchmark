@@ -1,0 +1,16 @@
+
+Running as 1792 OS processes: ./iotest TEST_FILES/30.txt 1792
+charmrun> /usr/bin/setarch x86_64 -R mpirun -np 1792 ./iotest TEST_FILES/30.txt 1792
+Charm++> Running on MPI library: Open MPI v4.0.5, package: Open MPI spack@br012.ib.bridges2.psc.edu Distribution, ident: 4.0.5, repo rev: v4.0.5, Aug 26, 2020 (MPI standard: 3.1)
+Charm++> Level of thread support used: MPI_THREAD_SINGLE (desired: MPI_THREAD_SINGLE)
+Charm++> Running in non-SMP mode: 1792 processes (PEs)
+Converse/Charm++ Commit ID: v7.1.0-devel-237-ga3f055e15
+Isomalloc> Synchronized global address space.
+CharmLB> Load balancer assumes all CPUs are same.
+Charm++> Running on 14 hosts (2 sockets x 64 cores x 1 PUs = 128-way SMP)
+Charm++> cpu topology info is gathered in 0.075 seconds.
+CharmLB> Load balancing instrumentation for communication is off.
+Total time: 0.137337
+[Partition 0][Node 0] End of program
+[1675925998.756359] [r053:68071:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x1555488e8dc0 was not matched
+[1675925998.756697] [r053:68063:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x1555413c4f40 was not matched

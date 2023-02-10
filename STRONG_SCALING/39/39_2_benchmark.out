@@ -1,0 +1,2093 @@
+
+Running as 256 OS processes: ./iotest TEST_FILES/39.txt 256
+charmrun> /usr/bin/setarch x86_64 -R mpirun -np 256 ./iotest TEST_FILES/39.txt 256
+Charm++> Running on MPI library: Open MPI v4.0.5, package: Open MPI spack@br012.ib.bridges2.psc.edu Distribution, ident: 4.0.5, repo rev: v4.0.5, Aug 26, 2020 (MPI standard: 3.1)
+Charm++> Level of thread support used: MPI_THREAD_SINGLE (desired: MPI_THREAD_SINGLE)
+Charm++> Running in non-SMP mode: 256 processes (PEs)
+Converse/Charm++ Commit ID: v7.1.0-devel-237-ga3f055e15
+Isomalloc> Synchronized global address space.
+CharmLB> Load balancer assumes all CPUs are same.
+Charm++> Running on 2 hosts (2 sockets x 64 cores x 1 PUs = 128-way SMP)
+Charm++> cpu topology info is gathered in 0.049 seconds.
+CharmLB> Load balancing instrumentation for communication is off.
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+MPI_ABORT was invoked on rank 76 in communicator MPI COMMUNICATOR 3 DUP FROM 0
+with errorcode 1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+------------- Processor 0 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 2 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 3 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 4 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 5 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 6 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 7 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 8 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 9 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 10 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 11 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 12 Exiting: Caught Signal ------------
+Reason: Terminated
+[1] Stack Traceback:
+  [1:0] libpthread.so.0 0x155553edcdd0 
+  [1:1] libpthread.so.0 0x155553edbb94 __read
+  [1:2] libstdc++.so.6 0x1555543d05d7 std::__basic_file<char>::xsgetn(char*, long)
+  [1:3] libstdc++.so.6 0x15555440a191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+  [1:4] libstdc++.so.6 0x155554416dae std::istream::read(char*, long)
+  [1:5] iotest 0x52e965 Ck::IO::impl::ReadSession::readData()
+  [1:6] iotest 0x52e7ad Ck::IO::impl::ReadSession::ReadSession(int, unsigned long, unsigned long)
+  [1:7] iotest 0x527e34 Ck::IO::impl::CkIndex_ReadSession::_call_ReadSession_marshall1(void*, void*)
+  [1:8] iotest 0x542002 CkDeliverMessageFree
+  [1:9] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [1:10] iotest 0x5573e5 CkArray::insertElement(CkArrayMessage*, CkArrayIndex const&, int*)
+  [1:11] iotest 0x557622 CkArray::insertInitial(CkArrayIndex const&, void*)
+  [1:12] iotest 0x56bab2 CkArrayMap::populateInitial(int, CkArrayOptions&, void*, CkArray*)
+  [1:13] iotest 0x55554d CkArray::CkArray(CkArrayOptions&&, CkMarshalledMessage&&)
+  [1:14] iotest 0x555a15 CkIndex_CkArray::_call_CkArray_marshall1(void*, void*)
+  [1:15] iotest 0x542002 CkDeliverMessageFree
+  [1:16] iotest 0x542368 CkCreateLocalGroup
+  [1:17] iotest 0x544fbf _processHandler(void*, CkCoreState*)
+  [1:18] iotest 0x6369cb CsdScheduleForever
+  [1:19] iotest 0x636d05 CsdScheduler
+  [1:20] iotest 0x65d13a ConverseInit
+  [1:21] iotest 0x5c67c7 charm_main
+  [1:22] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [1:23] iotest 0x503dae _start
+------------- Processor 13 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 14 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 15 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 16 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 18 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 20 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 22 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 23 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 24 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 25 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 26 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 27 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 28 Exiting: Caught Signal ------------
+Reason: Terminated
+[2] Stack Traceback:
+  [2:0] libpthread.so.0 0x155553edcdd0 
+  [2:1] iotest 0x65b3a1 
+  [2:2] iotest 0x65c609 
+  [2:3] iotest 0x6348a0 CcdRaiseCondition
+  [2:4] iotest 0x636a5a CsdScheduleForever
+  [2:5] iotest 0x636d05 CsdScheduler
+  [2:6] iotest 0x65d13a ConverseInit
+  [2:7] iotest 0x5c67c7 charm_main
+  [2:8] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [2:9] iotest 0x503dae _start
+[3] Stack Traceback:
+  [3:0] libpthread.so.0 0x155553edcdd0 
+  [3:1] libuct_ib.so.0 0x1555500730ad 
+  [3:2] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [3:3] libmpi.so.40 0x1555548a60eb mca_pml_ucx_iprobe
+  [3:4] libmpi.so.40 0x15555478371c PMPI_Iprobe
+  [3:5] iotest 0x65c388 
+  [3:6] iotest 0x65c60e 
+  [3:7] iotest 0x6348a0 CcdRaiseCondition
+  [3:8] iotest 0x636a5a CsdScheduleForever
+  [3:9] iotest 0x636d05 CsdScheduler
+  [3:10] iotest 0x65d13a ConverseInit
+  [3:11] iotest 0x5c67c7 charm_main
+  [3:12] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [3:13] iotest 0x503dae _start
+[4] Stack Traceback:
+  [4:0] libpthread.so.0 0x155553edcdd0 
+  [4:1] libpthread.so.0 0x155553edbb94 __read
+  [4:2] libstdc++.so.6 0x1555543d05d7 std::__basic_file<char>::xsgetn(char*, long)
+  [4:3] libstdc++.so.6 0x15555440a191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+  [4:4] libstdc++.so.6 0x155554416dae std::istream::read(char*, long)
+  [4:5] iotest 0x52e965 Ck::IO::impl::ReadSession::readData()
+  [4:6] iotest 0x52e7ad Ck::IO::impl::ReadSession::ReadSession(int, unsigned long, unsigned long)
+  [4:7] iotest 0x527e34 Ck::IO::impl::CkIndex_ReadSession::_call_ReadSession_marshall1(void*, void*)
+  [4:8] iotest 0x542002 CkDeliverMessageFree
+  [4:9] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [4:10] iotest 0x5573e5 CkArray::insertElement(CkArrayMessage*, CkArrayIndex const&, int*)
+  [4:11] iotest 0x557622 CkArray::insertInitial(CkArrayIndex const&, void*)
+  [4:12] iotest 0x56bab2 CkArrayMap::populateInitial(int, CkArrayOptions&, void*, CkArray*)
+  [4:13] iotest 0x55554d CkArray::CkArray(CkArrayOptions&&, CkMarshalledMessage&&)
+  [4:14] iotest 0x555a15 CkIndex_CkArray::_call_CkArray_marshall1(void*, void*)
+  [4:15] iotest 0x542002 CkDeliverMessageFree
+  [4:16] iotest 0x542368 CkCreateLocalGroup
+  [4:17] iotest 0x544fbf _processHandler(void*, CkCoreState*)
+  [4:18] iotest 0x6369cb CsdScheduleForever
+  [4:19] iotest 0x636d05 CsdScheduler
+  [4:20] iotest 0x65d13a ConverseInit
+  [4:21] iotest 0x5c67c7 charm_main
+  [4:22] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [4:23] iotest 0x503dae _start
+------------- Processor 29 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 30 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 32 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 33 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 34 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 35 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 36 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 37 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 38 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 39 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 41 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 42 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 44 Exiting: Caught Signal ------------
+Reason: Terminated
+[5] Stack Traceback:
+  [5:0] libpthread.so.0 0x155553edcdd0 
+  [5:1] iotest 0x65b2f7 
+  [5:2] iotest 0x65c6ad CmiGetNonLocal
+  [5:3] iotest 0x6368cd CsdNextMessage
+  [5:4] iotest 0x63699a CsdScheduleForever
+  [5:5] iotest 0x636d05 CsdScheduler
+  [5:6] iotest 0x65d13a ConverseInit
+  [5:7] iotest 0x5c67c7 charm_main
+  [5:8] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [5:9] iotest 0x503dae _start
+[6] Stack Traceback:
+  [6:0] libpthread.so.0 0x155553edcdd0 
+  [6:1] libpthread.so.0 0x155553edbb94 __read
+  [6:2] libstdc++.so.6 0x1555543d05d7 std::__basic_file<char>::xsgetn(char*, long)
+  [6:3] libstdc++.so.6 0x15555440a191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+  [6:4] libstdc++.so.6 0x155554416dae std::istream::read(char*, long)
+  [6:5] iotest 0x52e965 Ck::IO::impl::ReadSession::readData()
+  [6:6] iotest 0x52e7ad Ck::IO::impl::ReadSession::ReadSession(int, unsigned long, unsigned long)
+  [6:7] iotest 0x527e34 Ck::IO::impl::CkIndex_ReadSession::_call_ReadSession_marshall1(void*, void*)
+  [6:8] iotest 0x542002 CkDeliverMessageFree
+  [6:9] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [6:10] iotest 0x5573e5 CkArray::insertElement(CkArrayMessage*, CkArrayIndex const&, int*)
+  [6:11] iotest 0x557622 CkArray::insertInitial(CkArrayIndex const&, void*)
+  [6:12] iotest 0x56bab2 CkArrayMap::populateInitial(int, CkArrayOptions&, void*, CkArray*)
+  [6:13] iotest 0x55554d CkArray::CkArray(CkArrayOptions&&, CkMarshalledMessage&&)
+  [6:14] iotest 0x555a15 CkIndex_CkArray::_call_CkArray_marshall1(void*, void*)
+  [6:15] iotest 0x542002 CkDeliverMessageFree
+  [6:16] iotest 0x542368 CkCreateLocalGroup
+  [6:17] iotest 0x544fbf _processHandler(void*, CkCoreState*)
+  [6:18] iotest 0x6369cb CsdScheduleForever
+  [6:19] iotest 0x636d05 CsdScheduler
+  [6:20] iotest 0x65d13a ConverseInit
+  [6:21] iotest 0x5c67c7 charm_main
+  [6:22] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [6:23] iotest 0x503dae _start
+------------- Processor 45 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 46 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 47 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 48 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 49 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 50 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 51 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 52 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 54 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 55 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 56 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 57 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 58 Exiting: Caught Signal ------------
+Reason: Terminated
+[7] Stack Traceback:
+  [7:0] libpthread.so.0 0x155553edcdd0 
+  [7:1] libmpi.so.40 0x1555548a6074 mca_pml_ucx_iprobe
+  [7:2] libmpi.so.40 0x15555478371c PMPI_Iprobe
+  [7:3] iotest 0x65c388 
+  [7:4] iotest 0x65c6b2 CmiGetNonLocal
+  [7:5] iotest 0x6368cd CsdNextMessage
+  [7:6] iotest 0x63699a CsdScheduleForever
+  [7:7] iotest 0x636d05 CsdScheduler
+  [7:8] iotest 0x65d13a ConverseInit
+  [7:9] iotest 0x5c67c7 charm_main
+  [7:10] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [7:11] iotest 0x503dae _start
+[8] Stack Traceback:
+  [8:0] libpthread.so.0 0x155553edcdd0 
+  [8:1] libpthread.so.0 0x155553edbb94 __read
+  [8:2] libstdc++.so.6 0x1555543d05d7 std::__basic_file<char>::xsgetn(char*, long)
+  [8:3] libstdc++.so.6 0x15555440a191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+  [8:4] libstdc++.so.6 0x155554416dae std::istream::read(char*, long)
+  [8:5] iotest 0x52e965 Ck::IO::impl::ReadSession::readData()
+  [8:6] iotest 0x52e7ad Ck::IO::impl::ReadSession::ReadSession(int, unsigned long, unsigned long)
+  [8:7] iotest 0x527e34 Ck::IO::impl::CkIndex_ReadSession::_call_ReadSession_marshall1(void*, void*)
+  [8:8] iotest 0x542002 CkDeliverMessageFree
+  [8:9] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [8:10] iotest 0x5573e5 CkArray::insertElement(CkArrayMessage*, CkArrayIndex const&, int*)
+  [8:11] iotest 0x557622 CkArray::insertInitial(CkArrayIndex const&, void*)
+  [8:12] iotest 0x56bab2 CkArrayMap::populateInitial(int, CkArrayOptions&, void*, CkArray*)
+  [8:13] iotest 0x55554d CkArray::CkArray(CkArrayOptions&&, CkMarshalledMessage&&)
+  [8:14] iotest 0x555a15 CkIndex_CkArray::_call_CkArray_marshall1(void*, void*)
+  [8:15] iotest 0x542002 CkDeliverMessageFree
+  [8:16] iotest 0x542368 CkCreateLocalGroup
+  [8:17] iotest 0x544fbf _processHandler(void*, CkCoreState*)
+  [8:18] iotest 0x6369cb CsdScheduleForever
+  [8:19] iotest 0x636d05 CsdScheduler
+  [8:20] iotest 0x65d13a ConverseInit
+  [8:21] iotest 0x5c67c7 charm_main
+  [8:22] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [8:23] iotest 0x503dae _start
+------------- Processor 59 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 60 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 61 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 62 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 63 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 64 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 65 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 66 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 67 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 68 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 69 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 70 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 71 Exiting: Caught Signal ------------
+Reason: Terminated
+[9] Stack Traceback:
+  [9:0] libpthread.so.0 0x155553edcdd0 
+  [9:1] iotest 0x659d3a 
+  [9:2] iotest 0x659e37 
+  [9:3] iotest 0x65c627 
+  [9:4] iotest 0x6348a0 CcdRaiseCondition
+  [9:5] iotest 0x636a5a CsdScheduleForever
+  [9:6] iotest 0x636d05 CsdScheduler
+  [9:7] iotest 0x65d13a ConverseInit
+  [9:8] iotest 0x5c67c7 charm_main
+  [9:9] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [9:10] iotest 0x503dae _start
+[10] Stack Traceback:
+  [10:0] libpthread.so.0 0x155553edcdd0 
+  [10:1] iotest 0x63487a CcdRaiseCondition
+  [10:2] iotest 0x636a5a CsdScheduleForever
+  [10:3] iotest 0x636d05 CsdScheduler
+  [10:4] iotest 0x65d13a ConverseInit
+  [10:5] iotest 0x5c67c7 charm_main
+  [10:6] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [10:7] iotest 0x503dae _start
+[11] Stack Traceback:
+  [11:0] libpthread.so.0 0x155553edcdd0 
+  [11:1] iotest 0x65c51f 
+  [11:2] iotest 0x65c6b2 CmiGetNonLocal
+  [11:3] iotest 0x6368cd CsdNextMessage
+  [11:4] iotest 0x63699a CsdScheduleForever
+  [11:5] iotest 0x636d05 CsdScheduler
+  [11:6] iotest 0x65d13a ConverseInit
+  [11:7] iotest 0x5c67c7 charm_main
+  [11:8] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [11:9] iotest 0x503dae _start
+------------- Processor 72 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 74 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 75 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 76 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 77 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 78 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 79 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 80 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 81 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 82 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 83 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 84 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 85 Exiting: Caught Signal ------------
+Reason: Terminated
+[12] Stack Traceback:
+  [12:0] libpthread.so.0 0x155553edcdd0 
+  [12:1] iotest 0x6368d2 CsdNextMessage
+  [12:2] iotest 0x63699a CsdScheduleForever
+  [12:3] iotest 0x636d05 CsdScheduler
+  [12:4] iotest 0x65d13a ConverseInit
+  [12:5] iotest 0x5c67c7 charm_main
+  [12:6] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [12:7] iotest 0x503dae _start
+[13] Stack Traceback:
+  [13:0] libpthread.so.0 0x155553edcdd0 
+  [13:1] libucp.so.0 0x155552efaf33 ucp_worker_progress
+  [13:2] libmpi.so.40 0x1555548a60eb mca_pml_ucx_iprobe
+  [13:3] libmpi.so.40 0x15555478371c PMPI_Iprobe
+  [13:4] iotest 0x65c388 
+  [13:5] iotest 0x65c6b2 CmiGetNonLocal
+  [13:6] iotest 0x6368cd CsdNextMessage
+  [13:7] iotest 0x63699a CsdScheduleForever
+  [13:8] iotest 0x636d05 CsdScheduler
+  [13:9] iotest 0x65d13a ConverseInit
+  [13:10] iotest 0x5c67c7 charm_main
+  [13:11] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [13:12] iotest 0x503dae _start
+[14] Stack Traceback:
+  [14:0] libpthread.so.0 0x155553edcdd0 
+  [14:1] libpthread.so.0 0x155553edbb94 __read
+  [14:2] libstdc++.so.6 0x1555543d05d7 std::__basic_file<char>::xsgetn(char*, long)
+  [14:3] libstdc++.so.6 0x15555440a191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+  [14:4] libstdc++.so.6 0x155554416dae std::istream::read(char*, long)
+  [14:5] iotest 0x52e965 Ck::IO::impl::ReadSession::readData()
+  [14:6] iotest 0x52e7ad Ck::IO::impl::ReadSession::ReadSession(int, unsigned long, unsigned long)
+  [14:7] iotest 0x527e34 Ck::IO::impl::CkIndex_ReadSession::_call_ReadSession_marshall1(void*, void*)
+  [14:8] iotest 0x542002 CkDeliverMessageFree
+  [14:9] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [14:10] iotest 0x5573e5 CkArray::insertElement(CkArrayMessage*, CkArrayIndex const&, int*)
+  [14:11] iotest 0x557622 CkArray::insertInitial(CkArrayIndex const&, void*)
+  [14:12] iotest 0x56bab2 CkArrayMap::populateInitial(int, CkArrayOptions&, void*, CkArray*)
+  [14:13] iotest 0x55554d CkArray::CkArray(CkArrayOptions&&, CkMarshalledMessage&&)
+  [14:14] iotest 0x555a15 CkIndex_CkArray::_call_CkArray_marshall1(void*, void*)
+  [14:15] iotest 0x542002 CkDeliverMessageFree
+  [14:16] iotest 0x542368 CkCreateLocalGroup
+  [14:17] iotest 0x544fbf _processHandler(void*, CkCoreState*)
+  [14:18] iotest 0x6369cb CsdScheduleForever
+  [14:19] iotest 0x636d05 CsdScheduler
+  [14:20] iotest 0x65d13a ConverseInit
+  [14:21] iotest 0x5c67c7 charm_main
+  [14:22] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [14:23] iotest 0x503dae _start
+------------- Processor 86 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 87 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 88 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 90 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 91 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 92 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 93 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 94 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 95 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 97 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 98 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 99 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 100 Exiting: Caught Signal ------------
+Reason: Terminated
+[15] Stack Traceback:
+  [15:0] libpthread.so.0 0x155553edcdd0 
+  [15:1] iotest 0x64db93 CdsFifo_Dequeue
+  [15:2] iotest 0x6368df CsdNextMessage
+  [15:3] iotest 0x63699a CsdScheduleForever
+  [15:4] iotest 0x636d05 CsdScheduler
+  [15:5] iotest 0x65d13a ConverseInit
+  [15:6] iotest 0x5c67c7 charm_main
+  [15:7] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [15:8] iotest 0x503dae _start
+[16] Stack Traceback:
+  [16:0] libpthread.so.0 0x155553edcdd0 
+  [16:1] libpthread.so.0 0x155553edbb94 __read
+  [16:2] libstdc++.so.6 0x1555543d05d7 std::__basic_file<char>::xsgetn(char*, long)
+  [16:3] libstdc++.so.6 0x15555440a191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+  [16:4] libstdc++.so.6 0x155554416dae std::istream::read(char*, long)
+  [16:5] iotest 0x52e965 Ck::IO::impl::ReadSession::readData()
+  [16:6] iotest 0x52e7ad Ck::IO::impl::ReadSession::ReadSession(int, unsigned long, unsigned long)
+  [16:7] iotest 0x527e34 Ck::IO::impl::CkIndex_ReadSession::_call_ReadSession_marshall1(void*, void*)
+  [16:8] iotest 0x542002 CkDeliverMessageFree
+  [16:9] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [16:10] iotest 0x5573e5 CkArray::insertElement(CkArrayMessage*, CkArrayIndex const&, int*)
+  [16:11] iotest 0x557622 CkArray::insertInitial(CkArrayIndex const&, void*)
+  [16:12] iotest 0x56bab2 CkArrayMap::populateInitial(int, CkArrayOptions&, void*, CkArray*)
+  [16:13] iotest 0x55554d CkArray::CkArray(CkArrayOptions&&, CkMarshalledMessage&&)
+  [16:14] iotest 0x555a15 CkIndex_CkArray::_call_CkArray_marshall1(void*, void*)
+  [16:15] iotest 0x542002 CkDeliverMessageFree
+  [16:16] iotest 0x542368 CkCreateLocalGroup
+  [16:17] iotest 0x544fbf _processHandler(void*, CkCoreState*)
+  [16:18] iotest 0x6369cb CsdScheduleForever
+  [16:19] iotest 0x636d05 CsdScheduler
+  [16:20] iotest 0x65d13a ConverseInit
+  [16:21] iotest 0x5c67c7 charm_main
+  [16:22] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [16:23] iotest 0x503dae _start
+------------- Processor 101 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 102 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 103 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 104 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 105 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 106 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 107 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 108 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 109 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 110 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 111 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 112 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 113 Exiting: Caught Signal ------------
+Reason: Terminated
+[18] Stack Traceback:
+  [18:0] libpthread.so.0 0x155553edcdd0 
+  [18:1] iotest 0x659d8b 
+  [18:2] iotest 0x659e37 
+  [18:3] iotest 0x65c627 
+  [18:4] iotest 0x6348a0 CcdRaiseCondition
+  [18:5] iotest 0x636a5a CsdScheduleForever
+  [18:6] iotest 0x636d05 CsdScheduler
+  [18:7] iotest 0x65d13a ConverseInit
+  [18:8] iotest 0x5c67c7 charm_main
+  [18:9] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [18:10] iotest 0x503dae _start
+[20] Stack Traceback:
+  [20:0] libpthread.so.0 0x155553edcdd0 
+  [20:1] iotest 0x634770 CcdRaiseCondition
+  [20:2] iotest 0x636a5a CsdScheduleForever
+  [20:3] iotest 0x636d05 CsdScheduler
+  [20:4] iotest 0x65d13a ConverseInit
+  [20:5] iotest 0x5c67c7 charm_main
+  [20:6] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [20:7] iotest 0x503dae _start
+[22] Stack Traceback:
+  [22:0] libpthread.so.0 0x155553edcdd0 
+  [22:1] libpthread.so.0 0x155553edbb94 __read
+  [22:2] libstdc++.so.6 0x1555543d05d7 std::__basic_file<char>::xsgetn(char*, long)
+  [22:3] libstdc++.so.6 0x15555440a191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+  [22:4] libstdc++.so.6 0x155554416dae std::istream::read(char*, long)
+  [22:5] iotest 0x52e965 Ck::IO::impl::ReadSession::readData()
+  [22:6] iotest 0x52e7ad Ck::IO::impl::ReadSession::ReadSession(int, unsigned long, unsigned long)
+  [22:7] iotest 0x527e34 Ck::IO::impl::CkIndex_ReadSession::_call_ReadSession_marshall1(void*, void*)
+  [22:8] iotest 0x542002 CkDeliverMessageFree
+  [22:9] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [22:10] iotest 0x5573e5 CkArray::insertElement(CkArrayMessage*, CkArrayIndex const&, int*)
+  [22:11] iotest 0x557622 CkArray::insertInitial(CkArrayIndex const&, void*)
+  [22:12] iotest 0x56bab2 CkArrayMap::populateInitial(int, CkArrayOptions&, void*, CkArray*)
+  [22:13] iotest 0x55554d CkArray::CkArray(CkArrayOptions&&, CkMarshalledMessage&&)
+  [22:14] iotest 0x555a15 CkIndex_CkArray::_call_CkArray_marshall1(void*, void*)
+  [22:15] iotest 0x542002 CkDeliverMessageFree
+  [22:16] iotest 0x542368 CkCreateLocalGroup
+  [22:17] iotest 0x544fbf _processHandler(void*, CkCoreState*)
+  [22:18] iotest 0x6369cb CsdScheduleForever
+  [22:19] iotest 0x636d05 CsdScheduler
+  [22:20] iotest 0x65d13a ConverseInit
+  [22:21] iotest 0x5c67c7 charm_main
+  [22:22] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [22:23] iotest 0x503dae _start
+------------- Processor 114 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 115 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 116 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 117 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 118 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 119 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 120 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 121 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 122 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 123 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 124 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 125 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 126 Exiting: Caught Signal ------------
+Reason: Terminated
+[23] Stack Traceback:
+  [23:0] libpthread.so.0 0x155553edcdd0 
+  [23:1] iotest 0x65c2c6 
+  [23:2] iotest 0x65c60e 
+  [23:3] iotest 0x6348a0 CcdRaiseCondition
+  [23:4] iotest 0x636a5a CsdScheduleForever
+  [23:5] iotest 0x636d05 CsdScheduler
+  [23:6] iotest 0x65d13a ConverseInit
+  [23:7] iotest 0x5c67c7 charm_main
+  [23:8] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [23:9] iotest 0x503dae _start
+[24] Stack Traceback:
+  [24:0] libpthread.so.0 0x155553edcdd0 
+  [24:1] iotest 0x65c377 
+  [24:2] iotest 0x65c6b2 CmiGetNonLocal
+  [24:3] iotest 0x6368cd CsdNextMessage
+  [24:4] iotest 0x63699a CsdScheduleForever
+  [24:5] iotest 0x636d05 CsdScheduler
+  [24:6] iotest 0x65d13a ConverseInit
+  [24:7] iotest 0x5c67c7 charm_main
+  [24:8] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [24:9] iotest 0x503dae _start
+[25] Stack Traceback:
+  [25:0] libpthread.so.0 0x155553edcdd0 
+  [25:1] libuct_ib.so.0 0x155550073253 
+  [25:2] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [25:3] libmpi.so.40 0x1555548a60eb mca_pml_ucx_iprobe
+  [25:4] libmpi.so.40 0x15555478371c PMPI_Iprobe
+  [25:5] iotest 0x65c388 
+  [25:6] iotest 0x65c6b2 CmiGetNonLocal
+  [25:7] iotest 0x6368cd CsdNextMessage
+  [25:8] iotest 0x63699a CsdScheduleForever
+  [25:9] iotest 0x636d05 CsdScheduler
+  [25:10] iotest 0x65d13a ConverseInit
+  [25:11] iotest 0x5c67c7 charm_main
+  [25:12] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [25:13] iotest 0x503dae _start
+[26] Stack Traceback:
+  [26:0] libpthread.so.0 0x155553edcdd0 
+  [26:1] libmpi.so.40 0x155554783691 PMPI_Iprobe
+  [26:2] iotest 0x65c388 
+  [26:3] iotest 0x65c60e 
+  [26:4] iotest 0x6348a0 CcdRaiseCondition
+  [26:5] iotest 0x636a5a CsdScheduleForever
+  [26:6] iotest 0x636d05 CsdScheduler
+  [26:7] iotest 0x65d13a ConverseInit
+  [26:8] iotest 0x5c67c7 charm_main
+  [26:9] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [26:10] iotest 0x503dae _start
+[27] Stack Traceback:
+  [27:0] libpthread.so.0 0x155553edcdd0 
+  [27:1] iotest 0x65c396 
+  [27:2] iotest 0x65c60e 
+  [27:3] iotest 0x6348a0 CcdRaiseCondition
+  [27:4] iotest 0x636a5a CsdScheduleForever
+  [27:5] iotest 0x636d05 CsdScheduler
+  [27:6] iotest 0x65d13a ConverseInit
+  [27:7] iotest 0x5c67c7 charm_main
+  [27:8] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [27:9] iotest 0x503dae _start
+[28] Stack Traceback:
+  [28:0] libpthread.so.0 0x155553edcdd0 
+  [28:1] libuct.so.0 0x155552cb905d 
+  [28:2] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [28:3] libmpi.so.40 0x1555548a60eb mca_pml_ucx_iprobe
+  [28:4] libmpi.so.40 0x15555478371c PMPI_Iprobe
+  [28:5] iotest 0x65c388 
+  [28:6] iotest 0x65c60e 
+  [28:7] iotest 0x6348a0 CcdRaiseCondition
+  [28:8] iotest 0x636a5a CsdScheduleForever
+  [28:9] iotest 0x636d05 CsdScheduler
+  [28:10] iotest 0x65d13a ConverseInit
+  [28:11] iotest 0x5c67c7 charm_main
+  [28:12] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [28:13] iotest 0x503dae _start
+[29] Stack Traceback:
+  [29:0] libpthread.so.0 0x155553edcdd0 
+  [29:1] libucp.so.0 0x155552f08fc7 ucp_tag_probe_nb
+  [29:2] libmpi.so.40 0x1555548a6079 mca_pml_ucx_iprobe
+  [29:3] libmpi.so.40 0x15555478371c PMPI_Iprobe
+  [29:4] iotest 0x65c388 
+  [29:5] iotest 0x65c6b2 CmiGetNonLocal
+  [29:6] iotest 0x6368cd CsdNextMessage
+  [29:7] iotest 0x63699a CsdScheduleForever
+  [29:8] iotest 0x636d05 CsdScheduler
+  [29:9] iotest 0x65d13a ConverseInit
+  [29:10] iotest 0x5c67c7 charm_main
+  [29:11] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [29:12] iotest 0x503dae _start
+[30] Stack Traceback:
+  [30:0] libpthread.so.0 0x155553edcdd0 
+  [30:1] libucp.so.0 0x155552f08fb0 ucp_tag_probe_nb
+  [30:2] libmpi.so.40 0x1555548a6079 mca_pml_ucx_iprobe
+  [30:3] libmpi.so.40 0x15555478371c PMPI_Iprobe
+  [30:4] iotest 0x65c388 
+  [30:5] iotest 0x65c6b2 CmiGetNonLocal
+  [30:6] iotest 0x6368cd CsdNextMessage
+  [30:7] iotest 0x63699a CsdScheduleForever
+  [30:8] iotest 0x636d05 CsdScheduler
+  [30:9] iotest 0x65d13a ConverseInit
+  [30:10] iotest 0x5c67c7 charm_main
+  [30:11] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [30:12] iotest 0x503dae _start
+[32] Stack Traceback:
+  [32:0] libpthread.so.0 0x155553edcdd0 
+  [32:1] libpthread.so.0 0x155553edbb94 __read
+  [32:2] libstdc++.so.6 0x1555543d05d7 std::__basic_file<char>::xsgetn(char*, long)
+  [32:3] libstdc++.so.6 0x15555440a191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+  [32:4] libstdc++.so.6 0x155554416dae std::istream::read(char*, long)
+  [32:5] iotest 0x52e965 Ck::IO::impl::ReadSession::readData()
+  [32:6] iotest 0x52e7ad Ck::IO::impl::ReadSession::ReadSession(int, unsigned long, unsigned long)
+  [32:7] iotest 0x527e34 Ck::IO::impl::CkIndex_ReadSession::_call_ReadSession_marshall1(void*, void*)
+  [32:8] iotest 0x542002 CkDeliverMessageFree
+  [32:9] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [32:10] iotest 0x5573e5 CkArray::insertElement(CkArrayMessage*, CkArrayIndex const&, int*)
+  [32:11] iotest 0x557622 CkArray::insertInitial(CkArrayIndex const&, void*)
+  [32:12] iotest 0x56bab2 CkArrayMap::populateInitial(int, CkArrayOptions&, void*, CkArray*)
+  [32:13] iotest 0x55554d CkArray::CkArray(CkArrayOptions&&, CkMarshalledMessage&&)
+  [32:14] iotest 0x555a15 CkIndex_CkArray::_call_CkArray_marshall1(void*, void*)
+  [32:15] iotest 0x542002 CkDeliverMessageFree
+  [32:16] iotest 0x542368 CkCreateLocalGroup
+  [32:17] iotest 0x544fbf _processHandler(void*, CkCoreState*)
+  [32:18] iotest 0x6369cb CsdScheduleForever
+  [32:19] iotest 0x636d05 CsdScheduler
+  [32:20] iotest 0x65d13a ConverseInit
+  [32:21] iotest 0x5c67c7 charm_main
+  [32:22] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [32:23] iotest 0x503dae _start
+[33] Stack Traceback:
+  [33:0] libpthread.so.0 0x155553edcdd0 
+  [33:1] libpthread.so.0 0x155553edbb94 __read
+  [33:2] libstdc++.so.6 0x1555543d05d7 std::__basic_file<char>::xsgetn(char*, long)
+  [33:3] libstdc++.so.6 0x15555440a191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+  [33:4] libstdc++.so.6 0x155554416dae std::istream::read(char*, long)
+  [33:5] iotest 0x52e965 Ck::IO::impl::ReadSession::readData()
+  [33:6] iotest 0x52e7ad Ck::IO::impl::ReadSession::ReadSession(int, unsigned long, unsigned long)
+  [33:7] iotest 0x527e34 Ck::IO::impl::CkIndex_ReadSession::_call_ReadSession_marshall1(void*, void*)
+  [33:8] iotest 0x542002 CkDeliverMessageFree
+  [33:9] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [33:10] iotest 0x5573e5 CkArray::insertElement(CkArrayMessage*, CkArrayIndex const&, int*)
+  [33:11] iotest 0x557622 CkArray::insertInitial(CkArrayIndex const&, void*)
+  [33:12] iotest 0x56bab2 CkArrayMap::populateInitial(int, CkArrayOptions&, void*, CkArray*)
+  [33:13] iotest 0x55554d CkArray::CkArray(CkArrayOptions&&, CkMarshalledMessage&&)
+  [33:14] iotest 0x555a15 CkIndex_CkArray::_call_CkArray_marshall1(void*, void*)
+  [33:15] iotest 0x542002 CkDeliverMessageFree
+  [33:16] iotest 0x542368 CkCreateLocalGroup
+  [33:17] iotest 0x544fbf _processHandler(void*, CkCoreState*)
+  [33:18] iotest 0x6369cb CsdScheduleForever
+  [33:19] iotest 0x636d05 CsdScheduler
+  [33:20] iotest 0x65d13a ConverseInit
+  [33:21] iotest 0x5c67c7 charm_main
+  [33:22] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [33:23] iotest 0x503dae _start
+[34] Stack Traceback:
+  [34:0] libpthread.so.0 0x155553edcdd0 
+  [34:1] libuct_ib.so.0 0x1555500730c7 
+  [34:2] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [34:3] libmpi.so.40 0x1555548a60eb mca_pml_ucx_iprobe
+  [34:4] libmpi.so.40 0x15555478371c PMPI_Iprobe
+  [34:5] iotest 0x65c388 
+  [34:6] iotest 0x65c60e 
+  [34:7] iotest 0x6348a0 CcdRaiseCondition
+  [34:8] iotest 0x636a5a CsdScheduleForever
+  [34:9] iotest 0x636d05 CsdScheduler
+  [34:10] iotest 0x65d13a ConverseInit
+  [34:11] iotest 0x5c67c7 charm_main
+  [34:12] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [34:13] iotest 0x503dae _start
+[35] Stack Traceback:
+  [35:0] libpthread.so.0 0x155553edcdd0 
+  [35:1] libmpi.so.40 0x1555548a60da mca_pml_ucx_iprobe
+  [35:2] libmpi.so.40 0x15555478371c PMPI_Iprobe
+  [35:3] iotest 0x65c388 
+  [35:4] iotest 0x65c6b2 CmiGetNonLocal
+  [35:5] iotest 0x6368cd CsdNextMessage
+  [35:6] iotest 0x63699a CsdScheduleForever
+  [35:7] iotest 0x636d05 CsdScheduler
+  [35:8] iotest 0x65d13a ConverseInit
+  [35:9] iotest 0x5c67c7 charm_main
+  [35:10] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [35:11] iotest 0x503dae _start
+[36] Stack Traceback:
+  [36:0] libpthread.so.0 0x155553edcdd0 
+  [36:1] libmpi.so.40 0x1555548a6074 mca_pml_ucx_iprobe
+  [36:2] libmpi.so.40 0x15555478371c PMPI_Iprobe
+  [36:3] iotest 0x65c388 
+  [36:4] iotest 0x65c60e 
+  [36:5] iotest 0x6348a0 CcdRaiseCondition
+  [36:6] iotest 0x636a5a CsdScheduleForever
+  [36:7] iotest 0x636d05 CsdScheduler
+  [36:8] iotest 0x65d13a ConverseInit
+  [36:9] iotest 0x5c67c7 charm_main
+  [36:10] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [36:11] iotest 0x503dae _start
+[37] Stack Traceback:
+  [37:0] libpthread.so.0 0x155553edcdd0 
+  [37:1] libpthread.so.0 0x155553edbb94 __read
+  [37:2] libstdc++.so.6 0x1555543d05d7 std::__basic_file<char>::xsgetn(char*, long)
+  [37:3] libstdc++.so.6 0x15555440a191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+  [37:4] libstdc++.so.6 0x155554416dae std::istream::read(char*, long)
+  [37:5] iotest 0x52e965 Ck::IO::impl::ReadSession::readData()
+  [37:6] iotest 0x52e7ad Ck::IO::impl::ReadSession::ReadSession(int, unsigned long, unsigned long)
+  [37:7] iotest 0x527e34 Ck::IO::impl::CkIndex_ReadSession::_call_ReadSession_marshall1(void*, void*)
+  [37:8] iotest 0x542002 CkDeliverMessageFree
+  [37:9] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [37:10] iotest 0x5573e5 CkArray::insertElement(CkArrayMessage*, CkArrayIndex const&, int*)
+  [37:11] iotest 0x557622 CkArray::insertInitial(CkArrayIndex const&, void*)
+  [37:12] iotest 0x56bab2 CkArrayMap::populateInitial(int, CkArrayOptions&, void*, CkArray*)
+  [37:13] iotest 0x55554d CkArray::CkArray(CkArrayOptions&&, CkMarshalledMessage&&)
+  [37:14] iotest 0x555a15 CkIndex_CkArray::_call_CkArray_marshall1(void*, void*)
+  [37:15] iotest 0x542002 CkDeliverMessageFree
+  [37:16] iotest 0x542368 CkCreateLocalGroup
+  [37:17] iotest 0x544fbf _processHandler(void*, CkCoreState*)
+  [37:18] iotest 0x6369cb CsdScheduleForever
+  [37:19] iotest 0x636d05 CsdScheduler
+  [37:20] iotest 0x65d13a ConverseInit
+  [37:21] iotest 0x5c67c7 charm_main
+  [37:22] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [37:23] iotest 0x503dae _start
+[38] Stack Traceback:
+  [38:0] libpthread.so.0 0x155553edcdd0 
+  [38:1] libuct_ib.so.0 0x1555500730ee 
+  [38:2] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [38:3] libmpi.so.40 0x1555548a60eb mca_pml_ucx_iprobe
+  [38:4] libmpi.so.40 0x15555478371c PMPI_Iprobe
+  [38:5] iotest 0x65c388 
+  [38:6] iotest 0x65c60e 
+  [38:7] iotest 0x6348a0 CcdRaiseCondition
+  [38:8] iotest 0x636a5a CsdScheduleForever
+  [38:9] iotest 0x636d05 CsdScheduler
+  [38:10] iotest 0x65d13a ConverseInit
+  [38:11] iotest 0x5c67c7 charm_main
+  [38:12] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [38:13] iotest 0x503dae _start
+[39] Stack Traceback:
+  [39:0] libpthread.so.0 0x155553edcdd0 
+  [39:1] iotest 0x634780 CcdRaiseCondition
+  [39:2] iotest 0x636992 CsdScheduleForever
+  [39:3] iotest 0x636d05 CsdScheduler
+  [39:4] iotest 0x65d13a ConverseInit
+  [39:5] iotest 0x5c67c7 charm_main
+  [39:6] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [39:7] iotest 0x503dae _start
+[0] Stack Traceback:
+  [0:0] libpthread.so.0 0x155553edcdd0 
+  [0:1] libmpi.so.40 0x155554783711 PMPI_Iprobe
+  [0:2] iotest 0x65c388 
+  [0:3] iotest 0x65c6b2 CmiGetNonLocal
+  [0:4] iotest 0x6368cd CsdNextMessage
+  [0:5] iotest 0x63699a CsdScheduleForever
+  [0:6] iotest 0x636d05 CsdScheduler
+  [0:7] iotest 0x65d13a ConverseInit
+  [0:8] iotest 0x5c67c7 charm_main
+  [0:9] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [0:10] iotest 0x503dae _start
+[41] Stack Traceback:
+  [41:0] libpthread.so.0 0x155553edcdd0 
+  [41:1] iotest 0x646426 CqsDequeue
+  [41:2] iotest 0x636901 CsdNextMessage
+  [41:3] iotest 0x63699a CsdScheduleForever
+  [41:4] iotest 0x636d05 CsdScheduler
+  [41:5] iotest 0x65d13a ConverseInit
+  [41:6] iotest 0x5c67c7 charm_main
+  [41:7] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [41:8] iotest 0x503dae _start
+[42] Stack Traceback:
+  [42:0] libpthread.so.0 0x155553edcdd0 
+  [42:1] libpthread.so.0 0x155553edbb94 __read
+  [42:2] libstdc++.so.6 0x1555543d05d7 std::__basic_file<char>::xsgetn(char*, long)
+  [42:3] libstdc++.so.6 0x15555440a191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+  [42:4] libstdc++.so.6 0x155554416dae std::istream::read(char*, long)
+  [42:5] iotest 0x52e965 Ck::IO::impl::ReadSession::readData()
+  [42:6] iotest 0x52e7ad Ck::IO::impl::ReadSession::ReadSession(int, unsigned long, unsigned long)
+  [42:7] iotest 0x527e34 Ck::IO::impl::CkIndex_ReadSession::_call_ReadSession_marshall1(void*, void*)
+  [42:8] iotest 0x542002 CkDeliverMessageFree
+  [42:9] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [42:10] iotest 0x5573e5 CkArray::insertElement(CkArrayMessage*, CkArrayIndex const&, int*)
+  [42:11] iotest 0x557622 CkArray::insertInitial(CkArrayIndex const&, void*)
+  [42:12] iotest 0x56bab2 CkArrayMap::populateInitial(int, CkArrayOptions&, void*, CkArray*)
+  [42:13] iotest 0x55554d CkArray::CkArray(CkArrayOptions&&, CkMarshalledMessage&&)
+  [42:14] iotest 0x555a15 CkIndex_CkArray::_call_CkArray_marshall1(void*, void*)
+  [42:15] iotest 0x542002 CkDeliverMessageFree
+  [42:16] iotest 0x542368 CkCreateLocalGroup
+  [42:17] iotest 0x544fbf _processHandler(void*, CkCoreState*)
+  [42:18] iotest 0x6369cb CsdScheduleForever
+  [42:19] iotest 0x636d05 CsdScheduler
+  [42:20] iotest 0x65d13a ConverseInit
+  [42:21] iotest 0x5c67c7 charm_main
+  [42:22] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [42:23] iotest 0x503dae _start
+[44] Stack Traceback:
+  [44:0] libpthread.so.0 0x155553edcdd0 
+  [44:1] iotest 0x65b2e4 
+  [44:2] iotest 0x65c6ad CmiGetNonLocal
+  [44:3] iotest 0x6368cd CsdNextMessage
+  [44:4] iotest 0x63699a CsdScheduleForever
+  [44:5] iotest 0x636d05 CsdScheduler
+  [44:6] iotest 0x65d13a ConverseInit
+  [44:7] iotest 0x5c67c7 charm_main
+  [44:8] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [44:9] iotest 0x503dae _start
+[45] Stack Traceback:
+  [45:0] libpthread.so.0 0x155553edcdd0 
+  [45:1] libmpi.so.40 0x1555548a60da mca_pml_ucx_iprobe
+  [45:2] libmpi.so.40 0x15555478371c PMPI_Iprobe
+  [45:3] iotest 0x65c388 
+  [45:4] iotest 0x65c60e 
+  [45:5] iotest 0x6348a0 CcdRaiseCondition
+  [45:6] iotest 0x636a5a CsdScheduleForever
+  [45:7] iotest 0x636d05 CsdScheduler
+  [45:8] iotest 0x65d13a ConverseInit
+  [45:9] iotest 0x5c67c7 charm_main
+  [45:10] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [45:11] iotest 0x503dae _start
+[46] Stack Traceback:
+  [46:0] libpthread.so.0 0x155553edcdd0 
+  [46:1] libpthread.so.0 0x155553edbb94 __read
+  [46:2] libstdc++.so.6 0x1555543d05d7 std::__basic_file<char>::xsgetn(char*, long)
+  [46:3] libstdc++.so.6 0x15555440a191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+  [46:4] libstdc++.so.6 0x155554416dae std::istream::read(char*, long)
+  [46:5] iotest 0x52e965 Ck::IO::impl::ReadSession::readData()
+  [46:6] iotest 0x52e7ad Ck::IO::impl::ReadSession::ReadSession(int, unsigned long, unsigned long)
+  [46:7] iotest 0x527e34 Ck::IO::impl::CkIndex_ReadSession::_call_ReadSession_marshall1(void*, void*)
+  [46:8] iotest 0x542002 CkDeliverMessageFree
+  [46:9] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [46:10] iotest 0x5573e5 CkArray::insertElement(CkArrayMessage*, CkArrayIndex const&, int*)
+  [46:11] iotest 0x557622 CkArray::insertInitial(CkArrayIndex const&, void*)
+  [46:12] iotest 0x56bab2 CkArrayMap::populateInitial(int, CkArrayOptions&, void*, CkArray*)
+  [46:13] iotest 0x55554d CkArray::CkArray(CkArrayOptions&&, CkMarshalledMessage&&)
+  [46:14] iotest 0x555a15 CkIndex_CkArray::_call_CkArray_marshall1(void*, void*)
+  [46:15] iotest 0x542002 CkDeliverMessageFree
+  [46:16] iotest 0x542368 CkCreateLocalGroup
+  [46:17] iotest 0x544fbf _processHandler(void*, CkCoreState*)
+  [46:18] iotest 0x6369cb CsdScheduleForever
+  [46:19] iotest 0x636d05 CsdScheduler
+  [46:20] iotest 0x65d13a ConverseInit
+  [46:21] iotest 0x5c67c7 charm_main
+  [46:22] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [46:23] iotest 0x503dae _start
+[47] Stack Traceback:
+  [47:0] libpthread.so.0 0x155553edcdd0 
+  [47:1] libmpi.so.40 0x1555548a5ff0 mca_pml_ucx_iprobe
+  [47:2] libmpi.so.40 0x15555478371c PMPI_Iprobe
+  [47:3] iotest 0x65c388 
+  [47:4] iotest 0x65c60e 
+  [47:5] iotest 0x6348a0 CcdRaiseCondition
+  [47:6] iotest 0x636a5a CsdScheduleForever
+  [47:7] iotest 0x636d05 CsdScheduler
+  [47:8] iotest 0x65d13a ConverseInit
+  [47:9] iotest 0x5c67c7 charm_main
+  [47:10] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [47:11] iotest 0x503dae _start
+[48] Stack Traceback:
+  [48:0] libpthread.so.0 0x155553edcdd0 
+  [48:1] libpthread.so.0 0x155553edbb94 __read
+  [48:2] libstdc++.so.6 0x1555543d05d7 std::__basic_file<char>::xsgetn(char*, long)
+  [48:3] libstdc++.so.6 0x15555440a191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+  [48:4] libstdc++.so.6 0x155554416dae std::istream::read(char*, long)
+  [48:5] iotest 0x52e965 Ck::IO::impl::ReadSession::readData()
+  [48:6] iotest 0x52e7ad Ck::IO::impl::ReadSession::ReadSession(int, unsigned long, unsigned long)
+  [48:7] iotest 0x527e34 Ck::IO::impl::CkIndex_ReadSession::_call_ReadSession_marshall1(void*, void*)
+  [48:8] iotest 0x542002 CkDeliverMessageFree
+  [48:9] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [48:10] iotest 0x5573e5 CkArray::insertElement(CkArrayMessage*, CkArrayIndex const&, int*)
+  [48:11] iotest 0x557622 CkArray::insertInitial(CkArrayIndex const&, void*)
+  [48:12] iotest 0x56bab2 CkArrayMap::populateInitial(int, CkArrayOptions&, void*, CkArray*)
+  [48:13] iotest 0x55554d CkArray::CkArray(CkArrayOptions&&, CkMarshalledMessage&&)
+  [48:14] iotest 0x555a15 CkIndex_CkArray::_call_CkArray_marshall1(void*, void*)
+  [48:15] iotest 0x542002 CkDeliverMessageFree
+  [48:16] iotest 0x542368 CkCreateLocalGroup
+  [48:17] iotest 0x544fbf _processHandler(void*, CkCoreState*)
+  [48:18] iotest 0x6369cb CsdScheduleForever
+  [48:19] iotest 0x636d05 CsdScheduler
+  [48:20] iotest 0x65d13a ConverseInit
+  [48:21] iotest 0x5c67c7 charm_main
+  [48:22] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [48:23] iotest 0x503dae _start
+[49] Stack Traceback:
+  [49:0] libpthread.so.0 0x155553edcdd0 
+  [49:1] libpthread.so.0 0x155553edbb94 __read
+  [49:2] libstdc++.so.6 0x1555543d05d7 std::__basic_file<char>::xsgetn(char*, long)
+  [49:3] libstdc++.so.6 0x15555440a191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+  [49:4] libstdc++.so.6 0x155554416dae std::istream::read(char*, long)
+  [49:5] iotest 0x52e965 Ck::IO::impl::ReadSession::readData()
+  [49:6] iotest 0x52e7ad Ck::IO::impl::ReadSession::ReadSession(int, unsigned long, unsigned long)
+  [49:7] iotest 0x527e34 Ck::IO::impl::CkIndex_ReadSession::_call_ReadSession_marshall1(void*, void*)
+  [49:8] iotest 0x542002 CkDeliverMessageFree
+  [49:9] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [49:10] iotest 0x5573e5 CkArray::insertElement(CkArrayMessage*, CkArrayIndex const&, int*)
+  [49:11] iotest 0x557622 CkArray::insertInitial(CkArrayIndex const&, void*)
+  [49:12] iotest 0x56bab2 CkArrayMap::populateInitial(int, CkArrayOptions&, void*, CkArray*)
+  [49:13] iotest 0x55554d CkArray::CkArray(CkArrayOptions&&, CkMarshalledMessage&&)
+  [49:14] iotest 0x555a15 CkIndex_CkArray::_call_CkArray_marshall1(void*, void*)
+  [49:15] iotest 0x542002 CkDeliverMessageFree
+  [49:16] iotest 0x542368 CkCreateLocalGroup
+  [49:17] iotest 0x544fbf _processHandler(void*, CkCoreState*)
+  [49:18] iotest 0x6369cb CsdScheduleForever
+  [49:19] iotest 0x636d05 CsdScheduler
+  [49:20] iotest 0x65d13a ConverseInit
+  [49:21] iotest 0x5c67c7 charm_main
+  [49:22] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [49:23] iotest 0x503dae _start
+[50] Stack Traceback:
+  [50:0] libpthread.so.0 0x155553edcdd0 
+  [50:1] iotest 0x659d8d 
+  [50:2] iotest 0x65c6d7 CmiGetNonLocal
+  [50:3] iotest 0x6368cd CsdNextMessage
+  [50:4] iotest 0x63699a CsdScheduleForever
+  [50:5] iotest 0x636d05 CsdScheduler
+  [50:6] iotest 0x65d13a ConverseInit
+  [50:7] iotest 0x5c67c7 charm_main
+  [50:8] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [50:9] iotest 0x503dae _start
+[51] Stack Traceback:
+  [51:0] libpthread.so.0 0x155553edcdd0 
+  [51:1] libmpi.so.40 0x155554783666 PMPI_Iprobe
+  [51:2] iotest 0x65c388 
+  [51:3] iotest 0x65c60e 
+  [51:4] iotest 0x6348a0 CcdRaiseCondition
+  [51:5] iotest 0x636a5a CsdScheduleForever
+  [51:6] iotest 0x636d05 CsdScheduler
+  [51:7] iotest 0x65d13a ConverseInit
+  [51:8] iotest 0x5c67c7 charm_main
+  [51:9] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [51:10] iotest 0x503dae _start
+[52] Stack Traceback:
+  [52:0] libpthread.so.0 0x155553edcdd0 
+  [52:1] libpthread.so.0 0x155553edbb94 __read
+  [52:2] libstdc++.so.6 0x1555543d05d7 std::__basic_file<char>::xsgetn(char*, long)
+  [52:3] libstdc++.so.6 0x15555440a191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+  [52:4] libstdc++.so.6 0x155554416dae std::istream::read(char*, long)
+  [52:5] iotest 0x52e965 Ck::IO::impl::ReadSession::readData()
+  [52:6] iotest 0x52e7ad Ck::IO::impl::ReadSession::ReadSession(int, unsigned long, unsigned long)
+  [52:7] iotest 0x527e34 Ck::IO::impl::CkIndex_ReadSession::_call_ReadSession_marshall1(void*, void*)
+  [52:8] iotest 0x542002 CkDeliverMessageFree
+  [52:9] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [52:10] iotest 0x5573e5 CkArray::insertElement(CkArrayMessage*, CkArrayIndex const&, int*)
+  [52:11] iotest 0x557622 CkArray::insertInitial(CkArrayIndex const&, void*)
+  [52:12] iotest 0x56bab2 CkArrayMap::populateInitial(int, CkArrayOptions&, void*, CkArray*)
+  [52:13] iotest 0x55554d CkArray::CkArray(CkArrayOptions&&, CkMarshalledMessage&&)
+  [52:14] iotest 0x555a15 CkIndex_CkArray::_call_CkArray_marshall1(void*, void*)
+  [52:15] iotest 0x542002 CkDeliverMessageFree
+  [52:16] iotest 0x542368 CkCreateLocalGroup
+  [52:17] iotest 0x544fbf _processHandler(void*, CkCoreState*)
+  [52:18] iotest 0x6369cb CsdScheduleForever
+  [52:19] iotest 0x636d05 CsdScheduler
+  [52:20] iotest 0x65d13a ConverseInit
+  [52:21] iotest 0x5c67c7 charm_main
+  [52:22] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [52:23] iotest 0x503dae _start
+[54] Stack Traceback:
+  [54:0] libpthread.so.0 0x155553edcdd0 
+  [54:1] libpthread.so.0 0x155553edbb94 __read
+  [54:2] libstdc++.so.6 0x1555543d05d7 std::__basic_file<char>::xsgetn(char*, long)
+  [54:3] libstdc++.so.6 0x15555440a191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+  [54:4] libstdc++.so.6 0x155554416dae std::istream::read(char*, long)
+  [54:5] iotest 0x52e965 Ck::IO::impl::ReadSession::readData()
+  [54:6] iotest 0x52e7ad Ck::IO::impl::ReadSession::ReadSession(int, unsigned long, unsigned long)
+  [54:7] iotest 0x527e34 Ck::IO::impl::CkIndex_ReadSession::_call_ReadSession_marshall1(void*, void*)
+  [54:8] iotest 0x542002 CkDeliverMessageFree
+  [54:9] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [54:10] iotest 0x5573e5 CkArray::insertElement(CkArrayMessage*, CkArrayIndex const&, int*)
+  [54:11] iotest 0x557622 CkArray::insertInitial(CkArrayIndex const&, void*)
+  [54:12] iotest 0x56bab2 CkArrayMap::populateInitial(int, CkArrayOptions&, void*, CkArray*)
+  [54:13] iotest 0x55554d CkArray::CkArray(CkArrayOptions&&, CkMarshalledMessage&&)
+  [54:14] iotest 0x555a15 CkIndex_CkArray::_call_CkArray_marshall1(void*, void*)
+  [54:15] iotest 0x542002 CkDeliverMessageFree
+  [54:16] iotest 0x542368 CkCreateLocalGroup
+  [54:17] iotest 0x544fbf _processHandler(void*, CkCoreState*)
+  [54:18] iotest 0x6369cb CsdScheduleForever
+  [54:19] iotest 0x636d05 CsdScheduler
+  [54:20] iotest 0x65d13a ConverseInit
+  [54:21] iotest 0x5c67c7 charm_main
+  [54:22] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [54:23] iotest 0x503dae _start
+[55] Stack Traceback:
+  [55:0] libpthread.so.0 0x155553edcdd0 
+  [55:1] libpthread.so.0 0x155553edbb94 __read
+  [55:2] libstdc++.so.6 0x1555543d05d7 std::__basic_file<char>::xsgetn(char*, long)
+  [55:3] libstdc++.so.6 0x15555440a191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+  [55:4] libstdc++.so.6 0x155554416dae std::istream::read(char*, long)
+  [55:5] iotest 0x52e965 Ck::IO::impl::ReadSession::readData()
+  [55:6] iotest 0x52e7ad Ck::IO::impl::ReadSession::ReadSession(int, unsigned long, unsigned long)
+  [55:7] iotest 0x527e34 Ck::IO::impl::CkIndex_ReadSession::_call_ReadSession_marshall1(void*, void*)
+  [55:8] iotest 0x542002 CkDeliverMessageFree
+  [55:9] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [55:10] iotest 0x5573e5 CkArray::insertElement(CkArrayMessage*, CkArrayIndex const&, int*)
+  [55:11] iotest 0x557622 CkArray::insertInitial(CkArrayIndex const&, void*)
+  [55:12] iotest 0x56bab2 CkArrayMap::populateInitial(int, CkArrayOptions&, void*, CkArray*)
+  [55:13] iotest 0x55554d CkArray::CkArray(CkArrayOptions&&, CkMarshalledMessage&&)
+  [55:14] iotest 0x555a15 CkIndex_CkArray::_call_CkArray_marshall1(void*, void*)
+  [55:15] iotest 0x542002 CkDeliverMessageFree
+  [55:16] iotest 0x542368 CkCreateLocalGroup
+  [55:17] iotest 0x544fbf _processHandler(void*, CkCoreState*)
+  [55:18] iotest 0x6369cb CsdScheduleForever
+  [55:19] iotest 0x636d05 CsdScheduler
+  [55:20] iotest 0x65d13a ConverseInit
+  [55:21] iotest 0x5c67c7 charm_main
+  [55:22] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [55:23] iotest 0x503dae _start
+[56] Stack Traceback:
+  [56:0] libpthread.so.0 0x155553edcdd0 
+  [56:1] libmpi.so.40 0x1555548a60da mca_pml_ucx_iprobe
+  [56:2] libmpi.so.40 0x15555478371c PMPI_Iprobe
+  [56:3] iotest 0x65c388 
+  [56:4] iotest 0x65c6b2 CmiGetNonLocal
+  [56:5] iotest 0x6368cd CsdNextMessage
+  [56:6] iotest 0x63699a CsdScheduleForever
+  [56:7] iotest 0x636d05 CsdScheduler
+  [56:8] iotest 0x65d13a ConverseInit
+  [56:9] iotest 0x5c67c7 charm_main
+  [56:10] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [56:11] iotest 0x503dae _start
+[57] Stack Traceback:
+  [57:0] libpthread.so.0 0x155553edcdd0 
+  [57:1] iotest 0x65b2ef 
+  [57:2] iotest 0x65c609 
+  [57:3] iotest 0x6348a0 CcdRaiseCondition
+  [57:4] iotest 0x636a5a CsdScheduleForever
+  [57:5] iotest 0x636d05 CsdScheduler
+  [57:6] iotest 0x65d13a ConverseInit
+  [57:7] iotest 0x5c67c7 charm_main
+  [57:8] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [57:9] iotest 0x503dae _start
+[58] Stack Traceback:
+  [58:0] libpthread.so.0 0x155553edcdd0 
+  [58:1] libmpi.so.40 0x1555547836ad PMPI_Iprobe
+  [58:2] iotest 0x65c388 
+  [58:3] iotest 0x65c60e 
+  [58:4] iotest 0x6348a0 CcdRaiseCondition
+  [58:5] iotest 0x636a5a CsdScheduleForever
+  [58:6] iotest 0x636d05 CsdScheduler
+  [58:7] iotest 0x65d13a ConverseInit
+  [58:8] iotest 0x5c67c7 charm_main
+  [58:9] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [58:10] iotest 0x503dae _start
+[59] Stack Traceback:
+  [59:0] libpthread.so.0 0x155553edcdd0 
+  [59:1] libmpi.so.40 0x1555548a6074 mca_pml_ucx_iprobe
+  [59:2] libmpi.so.40 0x15555478371c PMPI_Iprobe
+  [59:3] iotest 0x65c388 
+  [59:4] iotest 0x65c6b2 CmiGetNonLocal
+  [59:5] iotest 0x6368cd CsdNextMessage
+  [59:6] iotest 0x63699a CsdScheduleForever
+  [59:7] iotest 0x636d05 CsdScheduler
+  [59:8] iotest 0x65d13a ConverseInit
+  [59:9] iotest 0x5c67c7 charm_main
+  [59:10] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [59:11] iotest 0x503dae _start
+[60] Stack Traceback:
+  [60:0] libpthread.so.0 0x155553edcdd0 
+  [60:1] libpthread.so.0 0x155553edbb94 __read
+  [60:2] libstdc++.so.6 0x1555543d05d7 std::__basic_file<char>::xsgetn(char*, long)
+  [60:3] libstdc++.so.6 0x15555440a191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+  [60:4] libstdc++.so.6 0x155554416dae std::istream::read(char*, long)
+  [60:5] iotest 0x52e965 Ck::IO::impl::ReadSession::readData()
+  [60:6] iotest 0x52e7ad Ck::IO::impl::ReadSession::ReadSession(int, unsigned long, unsigned long)
+  [60:7] iotest 0x527e34 Ck::IO::impl::CkIndex_ReadSession::_call_ReadSession_marshall1(void*, void*)
+  [60:8] iotest 0x542002 CkDeliverMessageFree
+  [60:9] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [60:10] iotest 0x5573e5 CkArray::insertElement(CkArrayMessage*, CkArrayIndex const&, int*)
+  [60:11] iotest 0x557622 CkArray::insertInitial(CkArrayIndex const&, void*)
+  [60:12] iotest 0x56bab2 CkArrayMap::populateInitial(int, CkArrayOptions&, void*, CkArray*)
+  [60:13] iotest 0x55554d CkArray::CkArray(CkArrayOptions&&, CkMarshalledMessage&&)
+  [60:14] iotest 0x555a15 CkIndex_CkArray::_call_CkArray_marshall1(void*, void*)
+  [60:15] iotest 0x542002 CkDeliverMessageFree
+  [60:16] iotest 0x542368 CkCreateLocalGroup
+  [60:17] iotest 0x544fbf _processHandler(void*, CkCoreState*)
+  [60:18] iotest 0x6369cb CsdScheduleForever
+  [60:19] iotest 0x636d05 CsdScheduler
+  [60:20] iotest 0x65d13a ConverseInit
+  [60:21] iotest 0x5c67c7 charm_main
+  [60:22] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [60:23] iotest 0x503dae _start
+[61] Stack Traceback:
+  [61:0] libpthread.so.0 0x155553edcdd0 
+  [61:1] libucp.so.0 0x155552f08fc7 ucp_tag_probe_nb
+  [61:2] libmpi.so.40 0x1555548a6079 mca_pml_ucx_iprobe
+  [61:3] libmpi.so.40 0x15555478371c PMPI_Iprobe
+  [61:4] iotest 0x65c388 
+  [61:5] iotest 0x65c6b2 CmiGetNonLocal
+  [61:6] iotest 0x6368cd CsdNextMessage
+  [61:7] iotest 0x63699a CsdScheduleForever
+  [61:8] iotest 0x636d05 CsdScheduler
+  [61:9] iotest 0x65d13a ConverseInit
+  [61:10] iotest 0x5c67c7 charm_main
+  [61:11] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [61:12] iotest 0x503dae _start
+[62] Stack Traceback:
+  [62:0] libpthread.so.0 0x155553edcdd0 
+  [62:1] iotest 0x65b3a1 
+  [62:2] iotest 0x65c6ad CmiGetNonLocal
+  [62:3] iotest 0x6368cd CsdNextMessage
+  [62:4] iotest 0x63699a CsdScheduleForever
+  [62:5] iotest 0x636d05 CsdScheduler
+  [62:6] iotest 0x65d13a ConverseInit
+  [62:7] iotest 0x5c67c7 charm_main
+  [62:8] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [62:9] iotest 0x503dae _start
+[63] Stack Traceback:
+  [63:0] libpthread.so.0 0x155553edcdd0 
+  [63:1] libucp.so.0 0x155552efaefd ucp_worker_progress
+  [63:2] libmpi.so.40 0x1555548a60eb mca_pml_ucx_iprobe
+  [63:3] libmpi.so.40 0x15555478371c PMPI_Iprobe
+  [63:4] iotest 0x65c388 
+  [63:5] iotest 0x65c6b2 CmiGetNonLocal
+  [63:6] iotest 0x6368cd CsdNextMessage
+  [63:7] iotest 0x63699a CsdScheduleForever
+  [63:8] iotest 0x636d05 CsdScheduler
+  [63:9] iotest 0x65d13a ConverseInit
+  [63:10] iotest 0x5c67c7 charm_main
+  [63:11] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [63:12] iotest 0x503dae _start
+[64] Stack Traceback:
+  [64:0] libpthread.so.0 0x155553edcdd0 
+  [64:1] iotest 0x634780 CcdRaiseCondition
+  [64:2] iotest 0x636992 CsdScheduleForever
+  [64:3] iotest 0x636d05 CsdScheduler
+  [64:4] iotest 0x65d13a ConverseInit
+  [64:5] iotest 0x5c67c7 charm_main
+  [64:6] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [64:7] iotest 0x503dae _start
+[65] Stack Traceback:
+  [65:0] libpthread.so.0 0x155553edcdd0 
+  [65:1] libpthread.so.0 0x155553edbb94 __read
+  [65:2] libstdc++.so.6 0x1555543d05d7 std::__basic_file<char>::xsgetn(char*, long)
+  [65:3] libstdc++.so.6 0x15555440a191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+  [65:4] libstdc++.so.6 0x155554416dae std::istream::read(char*, long)
+  [65:5] iotest 0x52e965 Ck::IO::impl::ReadSession::readData()
+  [65:6] iotest 0x52e7ad Ck::IO::impl::ReadSession::ReadSession(int, unsigned long, unsigned long)
+  [65:7] iotest 0x527e34 Ck::IO::impl::CkIndex_ReadSession::_call_ReadSession_marshall1(void*, void*)
+  [65:8] iotest 0x542002 CkDeliverMessageFree
+  [65:9] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [65:10] iotest 0x5573e5 CkArray::insertElement(CkArrayMessage*, CkArrayIndex const&, int*)
+  [65:11] iotest 0x557622 CkArray::insertInitial(CkArrayIndex const&, void*)
+  [65:12] iotest 0x56bab2 CkArrayMap::populateInitial(int, CkArrayOptions&, void*, CkArray*)
+  [65:13] iotest 0x55554d CkArray::CkArray(CkArrayOptions&&, CkMarshalledMessage&&)
+  [65:14] iotest 0x555a15 CkIndex_CkArray::_call_CkArray_marshall1(void*, void*)
+  [65:15] iotest 0x542002 CkDeliverMessageFree
+  [65:16] iotest 0x542368 CkCreateLocalGroup
+  [65:17] iotest 0x544fbf _processHandler(void*, CkCoreState*)
+  [65:18] iotest 0x6369cb CsdScheduleForever
+  [65:19] iotest 0x636d05 CsdScheduler
+  [65:20] iotest 0x65d13a ConverseInit
+  [65:21] iotest 0x5c67c7 charm_main
+  [65:22] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [65:23] iotest 0x503dae _start
+[66] Stack Traceback:
+  [66:0] libpthread.so.0 0x155553edcdd0 
+  [66:1] libucp.so.0 0x155552f08faa ucp_tag_probe_nb
+  [66:2] libmpi.so.40 0x1555548a6079 mca_pml_ucx_iprobe
+  [66:3] libmpi.so.40 0x15555478371c PMPI_Iprobe
+  [66:4] iotest 0x65c388 
+  [66:5] iotest 0x65c60e 
+  [66:6] iotest 0x6348a0 CcdRaiseCondition
+  [66:7] iotest 0x636a5a CsdScheduleForever
+  [66:8] iotest 0x636d05 CsdScheduler
+  [66:9] iotest 0x65d13a ConverseInit
+  [66:10] iotest 0x5c67c7 charm_main
+  [66:11] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [66:12] iotest 0x503dae _start
+[67] Stack Traceback:
+  [67:0] libpthread.so.0 0x155553edcdd0 
+  [67:1] libucp.so.0 0x155552efaed7 ucp_worker_progress
+  [67:2] libmpi.so.40 0x1555548a60eb mca_pml_ucx_iprobe
+  [67:3] libmpi.so.40 0x15555478371c PMPI_Iprobe
+  [67:4] iotest 0x65c388 
+  [67:5] iotest 0x65c60e 
+  [67:6] iotest 0x6348a0 CcdRaiseCondition
+  [67:7] iotest 0x636a5a CsdScheduleForever
+  [67:8] iotest 0x636d05 CsdScheduler
+  [67:9] iotest 0x65d13a ConverseInit
+  [67:10] iotest 0x5c67c7 charm_main
+  [67:11] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [67:12] iotest 0x503dae _start
+[68] Stack Traceback:
+  [68:0] libpthread.so.0 0x155553edcdd0 
+  [68:1] iotest 0x659d8b 
+  [68:2] iotest 0x659e37 
+  [68:3] iotest 0x65c627 
+  [68:4] iotest 0x6348a0 CcdRaiseCondition
+  [68:5] iotest 0x636a5a CsdScheduleForever
+  [68:6] iotest 0x636d05 CsdScheduler
+  [68:7] iotest 0x65d13a ConverseInit
+  [68:8] iotest 0x5c67c7 charm_main
+  [68:9] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [68:10] iotest 0x503dae _start
+[69] Stack Traceback:
+  [69:0] libpthread.so.0 0x155553edcdd0 
+  [69:1] libpthread.so.0 0x155553edbb94 __read
+  [69:2] libstdc++.so.6 0x1555543d05d7 std::__basic_file<char>::xsgetn(char*, long)
+  [69:3] libstdc++.so.6 0x15555440a191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+  [69:4] libstdc++.so.6 0x155554416dae std::istream::read(char*, long)
+  [69:5] iotest 0x52e965 Ck::IO::impl::ReadSession::readData()
+  [69:6] iotest 0x52e7ad Ck::IO::impl::ReadSession::ReadSession(int, unsigned long, unsigned long)
+  [69:7] iotest 0x527e34 Ck::IO::impl::CkIndex_ReadSession::_call_ReadSession_marshall1(void*, void*)
+  [69:8] iotest 0x542002 CkDeliverMessageFree
+  [69:9] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [69:10] iotest 0x5573e5 CkArray::insertElement(CkArrayMessage*, CkArrayIndex const&, int*)
+  [69:11] iotest 0x557622 CkArray::insertInitial(CkArrayIndex const&, void*)
+  [69:12] iotest 0x56bab2 CkArrayMap::populateInitial(int, CkArrayOptions&, void*, CkArray*)
+  [69:13] iotest 0x55554d CkArray::CkArray(CkArrayOptions&&, CkMarshalledMessage&&)
+  [69:14] iotest 0x555a15 CkIndex_CkArray::_call_CkArray_marshall1(void*, void*)
+  [69:15] iotest 0x542002 CkDeliverMessageFree
+  [69:16] iotest 0x542368 CkCreateLocalGroup
+  [69:17] iotest 0x544fbf _processHandler(void*, CkCoreState*)
+  [69:18] iotest 0x6369cb CsdScheduleForever
+  [69:19] iotest 0x636d05 CsdScheduler
+  [69:20] iotest 0x65d13a ConverseInit
+  [69:21] iotest 0x5c67c7 charm_main
+  [69:22] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [69:23] iotest 0x503dae _start
+[70] Stack Traceback:
+  [70:0] libpthread.so.0 0x155553edcdd0 
+  [70:1] iotest 0x65c61e 
+  [70:2] iotest 0x6348a0 CcdRaiseCondition
+  [70:3] iotest 0x636a5a CsdScheduleForever
+  [70:4] iotest 0x636d05 CsdScheduler
+  [70:5] iotest 0x65d13a ConverseInit
+  [70:6] iotest 0x5c67c7 charm_main
+  [70:7] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [70:8] iotest 0x503dae _start
+[71] Stack Traceback:
+  [71:0] libpthread.so.0 0x155553edcdd0 
+  [71:1] iotest 0x659d8b 
+  [71:2] iotest 0x659df7 
+  [71:3] iotest 0x65c627 
+  [71:4] iotest 0x6348a0 CcdRaiseCondition
+  [71:5] iotest 0x636a5a CsdScheduleForever
+  [71:6] iotest 0x636d05 CsdScheduler
+  [71:7] iotest 0x65d13a ConverseInit
+  [71:8] iotest 0x5c67c7 charm_main
+  [71:9] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [71:10] iotest 0x503dae _start
+[72] Stack Traceback:
+  [72:0] libpthread.so.0 0x155553edcdd0 
+  [72:1] iotest 0x659d8b 
+  [72:2] iotest 0x659e37 
+  [72:3] iotest 0x65c627 
+  [72:4] iotest 0x6348a0 CcdRaiseCondition
+  [72:5] iotest 0x636a5a CsdScheduleForever
+  [72:6] iotest 0x636d05 CsdScheduler
+  [72:7] iotest 0x65d13a ConverseInit
+  [72:8] iotest 0x5c67c7 charm_main
+  [72:9] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [72:10] iotest 0x503dae _start
+[74] Stack Traceback:
+  [74:0] libpthread.so.0 0x155553edcdd0 
+  [74:1] libmpi.so.40 0x155554783666 PMPI_Iprobe
+  [74:2] iotest 0x65c388 
+  [74:3] iotest 0x65c60e 
+  [74:4] iotest 0x6348a0 CcdRaiseCondition
+  [74:5] iotest 0x636a5a CsdScheduleForever
+  [74:6] iotest 0x636d05 CsdScheduler
+  [74:7] iotest 0x65d13a ConverseInit
+  [74:8] iotest 0x5c67c7 charm_main
+  [74:9] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [74:10] iotest 0x503dae _start
+[75] Stack Traceback:
+  [75:0] libpthread.so.0 0x155553edcdd0 
+  [75:1] iotest 0x659d8b 
+  [75:2] iotest 0x659df7 
+  [75:3] iotest 0x65c627 
+  [75:4] iotest 0x6348a0 CcdRaiseCondition
+  [75:5] iotest 0x636a5a CsdScheduleForever
+  [75:6] iotest 0x636d05 CsdScheduler
+  [75:7] iotest 0x65d13a ConverseInit
+  [75:8] iotest 0x5c67c7 charm_main
+  [75:9] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [75:10] iotest 0x503dae _start
+[76] Stack Traceback:
+  [76:0] libpthread.so.0 0x155553edcdd0 
+  [76:1] libc.so.6 0x155553bf8f21 __poll
+  [76:2] libopen-pal.so.40 0x15555320275d 
+  [76:3] libopen-pal.so.40 0x1555531fa8c9 opal_libevent2022_event_base_loop
+  [76:4] libopen-pal.so.40 0x1555531a421e 
+  [76:5] libpthread.so.0 0x155553ed22de 
+  [76:6] libc.so.6 0x155553c03e83 clone
+[77] Stack Traceback:
+  [77:0] libpthread.so.0 0x155553edcdd0 
+  [77:1] iotest 0x659d33 
+  [77:2] iotest 0x659df7 
+  [77:3] iotest 0x65c6cb CmiGetNonLocal
+  [77:4] iotest 0x6368cd CsdNextMessage
+  [77:5] iotest 0x63699a CsdScheduleForever
+  [77:6] iotest 0x636d05 CsdScheduler
+  [77:7] iotest 0x65d13a ConverseInit
+  [77:8] iotest 0x5c67c7 charm_main
+  [77:9] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [77:10] iotest 0x503dae _start
+[78] Stack Traceback:
+  [78:0] libpthread.so.0 0x155553edcdd0 
+  [78:1] iotest 0x659d8b 
+  [78:2] iotest 0x65c66c CmiGetNonLocal
+  [78:3] iotest 0x6368cd CsdNextMessage
+  [78:4] iotest 0x63699a CsdScheduleForever
+  [78:5] iotest 0x636d05 CsdScheduler
+  [78:6] iotest 0x65d13a ConverseInit
+  [78:7] iotest 0x5c67c7 charm_main
+  [78:8] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [78:9] iotest 0x503dae _start
+[79] Stack Traceback:
+  [79:0] libpthread.so.0 0x155553edcdd0 
+  [79:1] libc.so.6 0x155553c660bb 
+  [79:2] iotest 0x53701a __gnu_cxx::__enable_if<std::__is_byte<char>::__value, void>::__type std::__fill_a1<char>(char*, char*, char const&)
+  [79:3] iotest 0x536754 void std::__fill_a<char*, char>(char*, char*, char const&)
+  [79:4] iotest 0x537861 char* std::__fill_n_a<char*, unsigned long, char>(char*, unsigned long, char const&, std::random_access_iterator_tag)
+  [79:5] iotest 0x5372da char* std::fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [79:6] iotest 0x537048 char* std::__uninitialized_fill_n<true>::__uninit_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [79:7] iotest 0x536786 char* std::uninitialized_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [79:8] iotest 0x535214 char* std::__uninitialized_fill_n_a<char*, unsigned long, char, char>(char*, unsigned long, char const&, std::allocator<char>&)
+  [79:9] iotest 0x53330a std::vector<char, std::allocator<char> >::_M_fill_insert(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, unsigned long, char const&)
+  [79:10] iotest 0x531ae0 std::vector<char, std::allocator<char> >::resize(unsigned long, char const&)
+  [79:11] iotest 0x52e910 Ck::IO::impl::ReadSession::readData()
+  [79:12] iotest 0x52e7ad Ck::IO::impl::ReadSession::ReadSession(int, unsigned long, unsigned long)
+  [79:13] iotest 0x527e34 Ck::IO::impl::CkIndex_ReadSession::_call_ReadSession_marshall1(void*, void*)
+  [79:14] iotest 0x542002 CkDeliverMessageFree
+  [79:15] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [79:16] iotest 0x5573e5 CkArray::insertElement(CkArrayMessage*, CkArrayIndex const&, int*)
+  [79:17] iotest 0x557622 CkArray::insertInitial(CkArrayIndex const&, void*)
+  [79:18] iotest 0x56bab2 CkArrayMap::populateInitial(int, CkArrayOptions&, void*, CkArray*)
+  [79:19] iotest 0x55554d CkArray::CkArray(CkArrayOptions&&, CkMarshalledMessage&&)
+  [79:20] iotest 0x555a15 CkIndex_CkArray::_call_CkArray_marshall1(void*, void*)
+  [79:21] iotest 0x542002 CkDeliverMessageFree
+  [79:22] iotest 0x542368 CkCreateLocalGroup
+  [79:23] iotest 0x544fbf _processHandler(void*, CkCoreState*)
+  [79:24] iotest 0x6369cb CsdScheduleForever
+  [79:25] iotest 0x636d05 CsdScheduler
+  [79:26] iotest 0x65d13a ConverseInit
+  [79:27] iotest 0x5c67c7 charm_main
+  [79:28] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [79:29] iotest 0x503dae _start
+[80] Stack Traceback:
+  [80:0] libpthread.so.0 0x155553edcdd0 
+  [80:1] libpthread.so.0 0x155553edbb94 __read
+  [80:2] libstdc++.so.6 0x1555543d05d7 std::__basic_file<char>::xsgetn(char*, long)
+  [80:3] libstdc++.so.6 0x15555440a191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+  [80:4] libstdc++.so.6 0x155554416dae std::istream::read(char*, long)
+  [80:5] iotest 0x52e965 Ck::IO::impl::ReadSession::readData()
+  [80:6] iotest 0x52e7ad Ck::IO::impl::ReadSession::ReadSession(int, unsigned long, unsigned long)
+  [80:7] iotest 0x527e34 Ck::IO::impl::CkIndex_ReadSession::_call_ReadSession_marshall1(void*, void*)
+  [80:8] iotest 0x542002 CkDeliverMessageFree
+  [80:9] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [80:10] iotest 0x5573e5 CkArray::insertElement(CkArrayMessage*, CkArrayIndex const&, int*)
+  [80:11] iotest 0x557622 CkArray::insertInitial(CkArrayIndex const&, void*)
+  [80:12] iotest 0x56bab2 CkArrayMap::populateInitial(int, CkArrayOptions&, void*, CkArray*)
+  [80:13] iotest 0x55554d CkArray::CkArray(CkArrayOptions&&, CkMarshalledMessage&&)
+  [80:14] iotest 0x555a15 CkIndex_CkArray::_call_CkArray_marshall1(void*, void*)
+  [80:15] iotest 0x542002 CkDeliverMessageFree
+  [80:16] iotest 0x542368 CkCreateLocalGroup
+  [80:17] iotest 0x544fbf _processHandler(void*, CkCoreState*)
+  [80:18] iotest 0x6369cb CsdScheduleForever
+  [80:19] iotest 0x636d05 CsdScheduler
+  [80:20] iotest 0x65d13a ConverseInit
+  [80:21] iotest 0x5c67c7 charm_main
+  [80:22] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [80:23] iotest 0x503dae _start
+[81] Stack Traceback:
+  [81:0] libpthread.so.0 0x155553edcdd0 
+  [81:1] libuct_ib.so.0 0x1555500730c7 
+  [81:2] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [81:3] libopen-pal.so.40 0x15555319e773 opal_progress
+  [81:4] libmpi.so.40 0x1555548a6105 mca_pml_ucx_iprobe
+  [81:5] libmpi.so.40 0x15555478371c PMPI_Iprobe
+  [81:6] iotest 0x65c388 
+  [81:7] iotest 0x65c60e 
+  [81:8] iotest 0x6348a0 CcdRaiseCondition
+  [81:9] iotest 0x636a5a CsdScheduleForever
+  [81:10] iotest 0x636d05 CsdScheduler
+  [81:11] iotest 0x65d13a ConverseInit
+  [81:12] iotest 0x5c67c7 charm_main
+  [81:13] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [81:14] iotest 0x503dae _start
+[82] Stack Traceback:
+  [82:0] libpthread.so.0 0x155553edcdd0 
+  [82:1] iotest 0x63489a CcdRaiseCondition
+  [82:2] iotest 0x636a5a CsdScheduleForever
+  [82:3] iotest 0x636d05 CsdScheduler
+  [82:4] iotest 0x65d13a ConverseInit
+  [82:5] iotest 0x5c67c7 charm_main
+  [82:6] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [82:7] iotest 0x503dae _start
+[83] Stack Traceback:
+  [83:0] libpthread.so.0 0x155553edcdd0 
+  [83:1] iotest 0x6348a0 CcdRaiseCondition
+  [83:2] iotest 0x636a5a CsdScheduleForever
+  [83:3] iotest 0x636d05 CsdScheduler
+  [83:4] iotest 0x65d13a ConverseInit
+  [83:5] iotest 0x5c67c7 charm_main
+  [83:6] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [83:7] iotest 0x503dae _start
+[84] Stack Traceback:
+  [84:0] libpthread.so.0 0x155553edcdd0 
+  [84:1] iotest 0x659da5 
+  [84:2] iotest 0x65c6cb CmiGetNonLocal
+  [84:3] iotest 0x6368cd CsdNextMessage
+  [84:4] iotest 0x63699a CsdScheduleForever
+  [84:5] iotest 0x636d05 CsdScheduler
+  [84:6] iotest 0x65d13a ConverseInit
+  [84:7] iotest 0x5c67c7 charm_main
+  [84:8] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [84:9] iotest 0x503dae _start
+[85] Stack Traceback:
+  [85:0] libpthread.so.0 0x155553edcdd0 
+  [85:1] iotest 0x65b2f7 
+  [85:2] iotest 0x65c6ad CmiGetNonLocal
+  [85:3] iotest 0x6368cd CsdNextMessage
+  [85:4] iotest 0x63699a CsdScheduleForever
+  [85:5] iotest 0x636d05 CsdScheduler
+  [85:6] iotest 0x65d13a ConverseInit
+  [85:7] iotest 0x5c67c7 charm_main
+  [85:8] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [85:9] iotest 0x503dae _start
+[86] Stack Traceback:
+  [86:0] libpthread.so.0 0x155553edcdd0 
+  [86:1] libpthread.so.0 0x155553edbb94 __read
+  [86:2] libstdc++.so.6 0x1555543d05d7 std::__basic_file<char>::xsgetn(char*, long)
+  [86:3] libstdc++.so.6 0x15555440a191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+  [86:4] libstdc++.so.6 0x155554416dae std::istream::read(char*, long)
+  [86:5] iotest 0x52e965 Ck::IO::impl::ReadSession::readData()
+  [86:6] iotest 0x52e7ad Ck::IO::impl::ReadSession::ReadSession(int, unsigned long, unsigned long)
+  [86:7] iotest 0x527e34 Ck::IO::impl::CkIndex_ReadSession::_call_ReadSession_marshall1(void*, void*)
+  [86:8] iotest 0x542002 CkDeliverMessageFree
+  [86:9] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [86:10] iotest 0x5573e5 CkArray::insertElement(CkArrayMessage*, CkArrayIndex const&, int*)
+  [86:11] iotest 0x557622 CkArray::insertInitial(CkArrayIndex const&, void*)
+  [86:12] iotest 0x56bab2 CkArrayMap::populateInitial(int, CkArrayOptions&, void*, CkArray*)
+  [86:13] iotest 0x55554d CkArray::CkArray(CkArrayOptions&&, CkMarshalledMessage&&)
+  [86:14] iotest 0x555a15 CkIndex_CkArray::_call_CkArray_marshall1(void*, void*)
+  [86:15] iotest 0x542002 CkDeliverMessageFree
+  [86:16] iotest 0x542368 CkCreateLocalGroup
+  [86:17] iotest 0x544fbf _processHandler(void*, CkCoreState*)
+  [86:18] iotest 0x6369cb CsdScheduleForever
+  [86:19] iotest 0x636d05 CsdScheduler
+  [86:20] iotest 0x65d13a ConverseInit
+  [86:21] iotest 0x5c67c7 charm_main
+  [86:22] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [86:23] iotest 0x503dae _start
+[87] Stack Traceback:
+  [87:0] libpthread.so.0 0x155553edcdd0 
+  [87:1] libc.so.6 0x155553c660bb 
+  [87:2] iotest 0x53701a __gnu_cxx::__enable_if<std::__is_byte<char>::__value, void>::__type std::__fill_a1<char>(char*, char*, char const&)
+  [87:3] iotest 0x536754 void std::__fill_a<char*, char>(char*, char*, char const&)
+  [87:4] iotest 0x537861 char* std::__fill_n_a<char*, unsigned long, char>(char*, unsigned long, char const&, std::random_access_iterator_tag)
+  [87:5] iotest 0x5372da char* std::fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [87:6] iotest 0x537048 char* std::__uninitialized_fill_n<true>::__uninit_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [87:7] iotest 0x536786 char* std::uninitialized_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [87:8] iotest 0x535214 char* std::__uninitialized_fill_n_a<char*, unsigned long, char, char>(char*, unsigned long, char const&, std::allocator<char>&)
+  [87:9] iotest 0x53330a std::vector<char, std::allocator<char> >::_M_fill_insert(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, unsigned long, char const&)
+  [87:10] iotest 0x531ae0 std::vector<char, std::allocator<char> >::resize(unsigned long, char const&)
+  [87:11] iotest 0x52e910 Ck::IO::impl::ReadSession::readData()
+  [87:12] iotest 0x52e7ad Ck::IO::impl::ReadSession::ReadSession(int, unsigned long, unsigned long)
+  [87:13] iotest 0x527e34 Ck::IO::impl::CkIndex_ReadSession::_call_ReadSession_marshall1(void*, void*)
+  [87:14] iotest 0x542002 CkDeliverMessageFree
+  [87:15] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [87:16] iotest 0x5573e5 CkArray::insertElement(CkArrayMessage*, CkArrayIndex const&, int*)
+  [87:17] iotest 0x557622 CkArray::insertInitial(CkArrayIndex const&, void*)
+  [87:18] iotest 0x56bab2 CkArrayMap::populateInitial(int, CkArrayOptions&, void*, CkArray*)
+  [87:19] iotest 0x55554d CkArray::CkArray(CkArrayOptions&&, CkMarshalledMessage&&)
+  [87:20] iotest 0x555a15 CkIndex_CkArray::_call_CkArray_marshall1(void*, void*)
+  [87:21] iotest 0x542002 CkDeliverMessageFree
+  [87:22] iotest 0x542368 CkCreateLocalGroup
+  [87:23] iotest 0x544fbf _processHandler(void*, CkCoreState*)
+  [87:24] iotest 0x6369cb CsdScheduleForever
+  [87:25] iotest 0x636d05 CsdScheduler
+  [87:26] iotest 0x65d13a ConverseInit
+  [87:27] iotest 0x5c67c7 charm_main
+  [87:28] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [87:29] iotest 0x503dae _start
+[88] Stack Traceback:
+  [88:0] libpthread.so.0 0x155553edcdd0 
+  [88:1] libuct_ib.so.0 0x1555500730c7 
+  [88:2] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [88:3] libmpi.so.40 0x1555548a60eb mca_pml_ucx_iprobe
+  [88:4] libmpi.so.40 0x15555478371c PMPI_Iprobe
+  [88:5] iotest 0x65c388 
+  [88:6] iotest 0x65c6b2 CmiGetNonLocal
+  [88:7] iotest 0x6368cd CsdNextMessage
+  [88:8] iotest 0x63699a CsdScheduleForever
+  [88:9] iotest 0x636d05 CsdScheduler
+  [88:10] iotest 0x65d13a ConverseInit
+  [88:11] iotest 0x5c67c7 charm_main
+  [88:12] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [88:13] iotest 0x503dae _start
+[90] Stack Traceback:
+  [90:0] libpthread.so.0 0x155553edcdd0 
+  [90:1] libmpi.so.40 0x1555548a60dc mca_pml_ucx_iprobe
+  [90:2] libmpi.so.40 0x15555478371c PMPI_Iprobe
+  [90:3] iotest 0x65c388 
+  [90:4] iotest 0x65c6b2 CmiGetNonLocal
+  [90:5] iotest 0x6368cd CsdNextMessage
+  [90:6] iotest 0x63699a CsdScheduleForever
+  [90:7] iotest 0x636d05 CsdScheduler
+  [90:8] iotest 0x65d13a ConverseInit
+  [90:9] iotest 0x5c67c7 charm_main
+  [90:10] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [90:11] iotest 0x503dae _start
+[91] Stack Traceback:
+  [91:0] libpthread.so.0 0x155553edcdd0 
+  [91:1] iotest 0x6368c8 CsdNextMessage
+  [91:2] iotest 0x63699a CsdScheduleForever
+  [91:3] iotest 0x636d05 CsdScheduler
+  [91:4] iotest 0x65d13a ConverseInit
+  [91:5] iotest 0x5c67c7 charm_main
+  [91:6] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [91:7] iotest 0x503dae _start
+[92] Stack Traceback:
+  [92:0] libpthread.so.0 0x155553edcdd0 
+  [92:1] libpthread.so.0 0x155553edbb94 __read
+  [92:2] libstdc++.so.6 0x1555543d05d7 std::__basic_file<char>::xsgetn(char*, long)
+  [92:3] libstdc++.so.6 0x15555440a191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+  [92:4] libstdc++.so.6 0x155554416dae std::istream::read(char*, long)
+  [92:5] iotest 0x52e965 Ck::IO::impl::ReadSession::readData()
+  [92:6] iotest 0x52e7ad Ck::IO::impl::ReadSession::ReadSession(int, unsigned long, unsigned long)
+  [92:7] iotest 0x527e34 Ck::IO::impl::CkIndex_ReadSession::_call_ReadSession_marshall1(void*, void*)
+  [92:8] iotest 0x542002 CkDeliverMessageFree
+  [92:9] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [92:10] iotest 0x5573e5 CkArray::insertElement(CkArrayMessage*, CkArrayIndex const&, int*)
+  [92:11] iotest 0x557622 CkArray::insertInitial(CkArrayIndex const&, void*)
+  [92:12] iotest 0x56bab2 CkArrayMap::populateInitial(int, CkArrayOptions&, void*, CkArray*)
+  [92:13] iotest 0x55554d CkArray::CkArray(CkArrayOptions&&, CkMarshalledMessage&&)
+  [92:14] iotest 0x555a15 CkIndex_CkArray::_call_CkArray_marshall1(void*, void*)
+  [92:15] iotest 0x542002 CkDeliverMessageFree
+  [92:16] iotest 0x542368 CkCreateLocalGroup
+  [92:17] iotest 0x544fbf _processHandler(void*, CkCoreState*)
+  [92:18] iotest 0x6369cb CsdScheduleForever
+  [92:19] iotest 0x636d05 CsdScheduler
+  [92:20] iotest 0x65d13a ConverseInit
+  [92:21] iotest 0x5c67c7 charm_main
+  [92:22] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [92:23] iotest 0x503dae _start
+[93] Stack Traceback:
+  [93:0] libpthread.so.0 0x155553edcdd0 
+  [93:1] iotest 0x659d8b 
+  [93:2] iotest 0x659df7 
+  [93:3] iotest 0x65c6cb CmiGetNonLocal
+  [93:4] iotest 0x6368cd CsdNextMessage
+  [93:5] iotest 0x63699a CsdScheduleForever
+  [93:6] iotest 0x636d05 CsdScheduler
+  [93:7] iotest 0x65d13a ConverseInit
+  [93:8] iotest 0x5c67c7 charm_main
+  [93:9] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [93:10] iotest 0x503dae _start
+[94] Stack Traceback:
+  [94:0] libpthread.so.0 0x155553edcdd0 
+  [94:1] iotest 0x63489e CcdRaiseCondition
+  [94:2] iotest 0x636a5a CsdScheduleForever
+  [94:3] iotest 0x636d05 CsdScheduler
+  [94:4] iotest 0x65d13a ConverseInit
+  [94:5] iotest 0x5c67c7 charm_main
+  [94:6] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [94:7] iotest 0x503dae _start
+[95] Stack Traceback:
+  [95:0] libpthread.so.0 0x155553edcdd0 
+  [95:1] iotest 0x6368da CsdNextMessage
+  [95:2] iotest 0x63699a CsdScheduleForever
+  [95:3] iotest 0x636d05 CsdScheduler
+  [95:4] iotest 0x65d13a ConverseInit
+  [95:5] iotest 0x5c67c7 charm_main
+  [95:6] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [95:7] iotest 0x503dae _start
+[97] Stack Traceback:
+  [97:0] libpthread.so.0 0x155553edcdd0 
+  [97:1] libpthread.so.0 0x155553edbb94 __read
+  [97:2] libstdc++.so.6 0x1555543d05d7 std::__basic_file<char>::xsgetn(char*, long)
+  [97:3] libstdc++.so.6 0x15555440a191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+  [97:4] libstdc++.so.6 0x155554416dae std::istream::read(char*, long)
+  [97:5] iotest 0x52e965 Ck::IO::impl::ReadSession::readData()
+  [97:6] iotest 0x52e7ad Ck::IO::impl::ReadSession::ReadSession(int, unsigned long, unsigned long)
+  [97:7] iotest 0x527e34 Ck::IO::impl::CkIndex_ReadSession::_call_ReadSession_marshall1(void*, void*)
+  [97:8] iotest 0x542002 CkDeliverMessageFree
+  [97:9] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [97:10] iotest 0x5573e5 CkArray::insertElement(CkArrayMessage*, CkArrayIndex const&, int*)
+  [97:11] iotest 0x557622 CkArray::insertInitial(CkArrayIndex const&, void*)
+  [97:12] iotest 0x56bab2 CkArrayMap::populateInitial(int, CkArrayOptions&, void*, CkArray*)
+  [97:13] iotest 0x55554d CkArray::CkArray(CkArrayOptions&&, CkMarshalledMessage&&)
+  [97:14] iotest 0x555a15 CkIndex_CkArray::_call_CkArray_marshall1(void*, void*)
+  [97:15] iotest 0x542002 CkDeliverMessageFree
+  [97:16] iotest 0x542368 CkCreateLocalGroup
+  [97:17] iotest 0x544fbf _processHandler(void*, CkCoreState*)
+[98] Stack Traceback:
+  [98:0] libpthread.so.0 0x155553edcdd0 
+  [98:1] libmpi.so.40 0x1555548a60da mca_pml_ucx_iprobe
+  [98:2] libmpi.so.40 0x15555478371c PMPI_Iprobe
+  [98:3] iotest 0x65c388 
+  [98:4] iotest 0x65c6b2 CmiGetNonLocal
+  [98:5] iotest 0x6368cd CsdNextMessage
+  [98:6] iotest 0x63699a CsdScheduleForever
+  [98:7] iotest 0x636d05 CsdScheduler
+  [98:8] iotest 0x65d13a ConverseInit
+  [98:9] iotest 0x5c67c7 charm_main
+  [98:10] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [98:11] iotest 0x503dae _start
+[99] Stack Traceback:
+  [99:0] libpthread.so.0 0x155553edcdd0 
+  [99:1] libmpi.so.40 0x1555548a604e mca_pml_ucx_iprobe
+  [99:2] libmpi.so.40 0x15555478371c PMPI_Iprobe
+  [99:3] iotest 0x65c388 
+  [99:4] iotest 0x65c60e 
+  [99:5] iotest 0x6348a0 CcdRaiseCondition
+  [99:6] iotest 0x636a5a CsdScheduleForever
+  [99:7] iotest 0x636d05 CsdScheduler
+  [99:8] iotest 0x65d13a ConverseInit
+  [99:9] iotest 0x5c67c7 charm_main
+  [99:10] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [99:11] iotest 0x503dae _start
+[100] Stack Traceback:
+  [100:0] libpthread.so.0 0x155553edcdd0 
+  [100:1] libpthread.so.0 0x155553edbb94 __read
+  [100:2] libstdc++.so.6 0x1555543d05d7 std::__basic_file<char>::xsgetn(char*, long)
+  [100:3] libstdc++.so.6 0x15555440a191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+  [100:4] libstdc++.so.6 0x155554416dae std::istream::read(char*, long)
+  [100:5] iotest 0x52e965 Ck::IO::impl::ReadSession::readData()
+  [100:6] iotest 0x52e7ad Ck::IO::impl::ReadSession::ReadSession(int, unsigned long, unsigned long)
+  [100:7] iotest 0x527e34 Ck::IO::impl::CkIndex_ReadSession::_call_ReadSession_marshall1(void*, void*)
+  [100:8] iotest 0x542002 CkDeliverMessageFree
+  [100:9] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [100:10] iotest 0x5573e5 CkArray::insertElement(CkArrayMessage*, CkArrayIndex const&, int*)
+  [100:11] iotest 0x557622 CkArray::insertInitial(CkArrayIndex const&, void*)
+  [100:12] iotest 0x56bab2 CkArrayMap::populateInitial(int, CkArrayOptions&, void*, CkArray*)
+  [100:13] iotest 0x55554d CkArray::CkArray(CkArrayOptions&&, CkMarshalledMessage&&)
+  [100:14] iotest 0x555a15 CkIndex_CkArray::_call_CkArray_marshall1(void*, void*)
+  [100:15] iotest 0x542002 CkDeliverMessageFree
+  [100:16] iotest 0x542368 CkCreateLocalGroup
+  [100:17] iotest 0x544fbf _processHandler(void*, CkCoreState*)
+  [100:18] iotest 0x6369cb CsdScheduleForever
+  [100:19] iotest 0x636d05 CsdScheduler
+  [100:20] iotest 0x65d13a ConverseInit
+  [100:21] iotest 0x5c67c7 charm_main
+  [100:22] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [100:23] iotest 0x503dae _start
+[101] Stack Traceback:
+  [101:0] libpthread.so.0 0x155553edcdd0 
+  [101:1] iotest 0x659d30 
+  [101:2] iotest 0x659df7 
+  [101:3] iotest 0x65c6cb CmiGetNonLocal
+  [101:4] iotest 0x6368cd CsdNextMessage
+  [101:5] iotest 0x63699a CsdScheduleForever
+  [101:6] iotest 0x636d05 CsdScheduler
+  [101:7] iotest 0x65d13a ConverseInit
+  [101:8] iotest 0x5c67c7 charm_main
+  [101:9] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [101:10] iotest 0x503dae _start
+[102] Stack Traceback:
+  [102:0] libpthread.so.0 0x155553edcdd0 
+  [102:1] libpthread.so.0 0x155553edbb94 __read
+  [102:2] libstdc++.so.6 0x1555543d05d7 std::__basic_file<char>::xsgetn(char*, long)
+  [102:3] libstdc++.so.6 0x15555440a191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+  [102:4] libstdc++.so.6 0x155554416dae std::istream::read(char*, long)
+  [102:5] iotest 0x52e965 Ck::IO::impl::ReadSession::readData()
+  [102:6] iotest 0x52e7ad Ck::IO::impl::ReadSession::ReadSession(int, unsigned long, unsigned long)
+  [102:7] iotest 0x527e34 Ck::IO::impl::CkIndex_ReadSession::_call_ReadSession_marshall1(void*, void*)
+  [102:8] iotest 0x542002 CkDeliverMessageFree
+  [102:9] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [102:10] iotest 0x5573e5 CkArray::insertElement(CkArrayMessage*, CkArrayIndex const&, int*)
+  [102:11] iotest 0x557622 CkArray::insertInitial(CkArrayIndex const&, void*)
+  [102:12] iotest 0x56bab2 CkArrayMap::populateInitial(int, CkArrayOptions&, void*, CkArray*)
+  [102:13] iotest 0x55554d CkArray::CkArray(CkArrayOptions&&, CkMarshalledMessage&&)
+  [102:14] iotest 0x555a15 CkIndex_CkArray::_call_CkArray_marshall1(void*, void*)
+  [102:15] iotest 0x542002 CkDeliverMessageFree
+  [102:16] iotest 0x542368 CkCreateLocalGroup
+  [102:17] iotest 0x544fbf _processHandler(void*, CkCoreState*)
+  [102:18] iotest 0x6369cb CsdScheduleForever
+  [102:19] iotest 0x636d05 CsdScheduler
+  [102:20] iotest 0x65d13a ConverseInit
+  [102:21] iotest 0x5c67c7 charm_main
+  [102:22] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [102:23] iotest 0x503dae _start
+[103] Stack Traceback:
+  [103:0] libpthread.so.0 0x155553edcdd0 
+  [103:1] iotest 0x634885 CcdRaiseCondition
+  [103:2] iotest 0x636a5a CsdScheduleForever
+  [103:3] iotest 0x636d05 CsdScheduler
+  [103:4] iotest 0x65d13a ConverseInit
+  [103:5] iotest 0x5c67c7 charm_main
+  [103:6] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [103:7] iotest 0x503dae _start
+[104] Stack Traceback:
+  [104:0] libpthread.so.0 0x155553edcdd0 
+  [104:1] libmpi.so.40 0x155554783662 PMPI_Iprobe
+  [104:2] iotest 0x65c388 
+  [104:3] iotest 0x65c60e 
+  [104:4] iotest 0x6348a0 CcdRaiseCondition
+  [104:5] iotest 0x636a5a CsdScheduleForever
+  [104:6] iotest 0x636d05 CsdScheduler
+  [104:7] iotest 0x65d13a ConverseInit
+  [104:8] iotest 0x5c67c7 charm_main
+  [104:9] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [104:10] iotest 0x503dae _start
+[105] Stack Traceback:
+  [105:0] libpthread.so.0 0x155553edcdd0 
+  [105:1] libucp.so.0 0x155552f08eb2 ucp_tag_probe_nb
+  [105:2] libmpi.so.40 0x1555548a6079 mca_pml_ucx_iprobe
+  [105:3] libmpi.so.40 0x15555478371c PMPI_Iprobe
+  [105:4] iotest 0x65c388 
+  [105:5] iotest 0x65c60e 
+  [105:6] iotest 0x6348a0 CcdRaiseCondition
+  [105:7] iotest 0x636a5a CsdScheduleForever
+  [105:8] iotest 0x636d05 CsdScheduler
+  [105:9] iotest 0x65d13a ConverseInit
+  [105:10] iotest 0x5c67c7 charm_main
+  [105:11] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [105:12] iotest 0x503dae _start
+[106] Stack Traceback:
+  [106:0] libpthread.so.0 0x155553edcdd0 
+  [106:1] libuct_ib.so.0 0x1555500730ee 
+  [106:2] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [106:3] libmpi.so.40 0x1555548a60eb mca_pml_ucx_iprobe
+  [106:4] libmpi.so.40 0x15555478371c PMPI_Iprobe
+  [106:5] iotest 0x65c388 
+  [106:6] iotest 0x65c60e 
+  [106:7] iotest 0x6348a0 CcdRaiseCondition
+  [106:8] iotest 0x636a5a CsdScheduleForever
+  [106:9] iotest 0x636d05 CsdScheduler
+  [106:10] iotest 0x65d13a ConverseInit
+  [106:11] iotest 0x5c67c7 charm_main
+  [106:12] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [106:13] iotest 0x503dae _start
+[107] Stack Traceback:
+  [107:0] libpthread.so.0 0x155553edcdd0 
+  [107:1] libpthread.so.0 0x155553edbb94 __read
+  [107:2] libstdc++.so.6 0x1555543d05d7 std::__basic_file<char>::xsgetn(char*, long)
+  [107:3] libstdc++.so.6 0x15555440a191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+  [107:4] libstdc++.so.6 0x155554416dae std::istream::read(char*, long)
+  [107:5] iotest 0x52e965 Ck::IO::impl::ReadSession::readData()
+  [107:6] iotest 0x52e7ad Ck::IO::impl::ReadSession::ReadSession(int, unsigned long, unsigned long)
+  [107:7] iotest 0x527e34 Ck::IO::impl::CkIndex_ReadSession::_call_ReadSession_marshall1(void*, void*)
+[108] Stack Traceback:
+  [108:0] libpthread.so.0 0x155553edcdd0 
+  [108:1] libpthread.so.0 0x155553edbb94 __read
+  [108:2] libstdc++.so.6 0x1555543d05d7 std::__basic_file<char>::xsgetn(char*, long)
+  [108:3] libstdc++.so.6 0x15555440a191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+  [108:4] libstdc++.so.6 0x155554416dae std::istream::read(char*, long)
+  [108:5] iotest 0x52e965 Ck::IO::impl::ReadSession::readData()
+  [108:6] iotest 0x52e7ad Ck::IO::impl::ReadSession::ReadSession(int, unsigned long, unsigned long)
+  [108:7] iotest 0x527e34 Ck::IO::impl::CkIndex_ReadSession::_call_ReadSession_marshall1(void*, void*)
+  [108:8] iotest 0x542002 CkDeliverMessageFree
+  [108:9] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [108:10] iotest 0x5573e5 CkArray::insertElement(CkArrayMessage*, CkArrayIndex const&, int*)
+  [108:11] iotest 0x557622 CkArray::insertInitial(CkArrayIndex const&, void*)
+  [108:12] iotest 0x56bab2 CkArrayMap::populateInitial(int, CkArrayOptions&, void*, CkArray*)
+  [108:13] iotest 0x55554d CkArray::CkArray(CkArrayOptions&&, CkMarshalledMessage&&)
+  [108:14] iotest 0x555a15 CkIndex_CkArray::_call_CkArray_marshall1(void*, void*)
+  [108:15] iotest 0x542002 CkDeliverMessageFree
+  [108:16] iotest 0x542368 CkCreateLocalGroup
+  [108:17] iotest 0x544fbf _processHandler(void*, CkCoreState*)
+  [108:18] iotest 0x6369cb CsdScheduleForever
+  [108:19] iotest 0x636d05 CsdScheduler
+  [108:20] iotest 0x65d13a ConverseInit
+  [108:21] iotest 0x5c67c7 charm_main
+  [108:22] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [108:23] iotest 0x503dae _start
+[109] Stack Traceback:
+  [109:0] libpthread.so.0 0x155553edcdd0 
+  [109:1] libpthread.so.0 0x155553edbb94 __read
+  [109:2] libstdc++.so.6 0x1555543d05d7 std::__basic_file<char>::xsgetn(char*, long)
+  [109:3] libstdc++.so.6 0x15555440a191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+  [109:4] libstdc++.so.6 0x155554416dae std::istream::read(char*, long)
+  [109:5] iotest 0x52e965 Ck::IO::impl::ReadSession::readData()
+  [109:6] iotest 0x52e7ad Ck::IO::impl::ReadSession::ReadSession(int, unsigned long, unsigned long)
+  [109:7] iotest 0x527e34 Ck::IO::impl::CkIndex_ReadSession::_call_ReadSession_marshall1(void*, void*)
+  [109:8] iotest 0x542002 CkDeliverMessageFree
+  [109:9] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [109:10] iotest 0x5573e5 CkArray::insertElement(CkArrayMessage*, CkArrayIndex const&, int*)
+  [109:11] iotest 0x557622 CkArray::insertInitial(CkArrayIndex const&, void*)
+  [109:12] iotest 0x56bab2 CkArrayMap::populateInitial(int, CkArrayOptions&, void*, CkArray*)
+  [109:13] iotest 0x55554d CkArray::CkArray(CkArrayOptions&&, CkMarshalledMessage&&)
+  [109:14] iotest 0x555a15 CkIndex_CkArray::_call_CkArray_marshall1(void*, void*)
+  [109:15] iotest 0x542002 CkDeliverMessageFree
+  [109:16] iotest 0x542368 CkCreateLocalGroup
+  [109:17] iotest 0x544fbf _processHandler(void*, CkCoreState*)
+  [109:18] iotest 0x6369cb CsdScheduleForever
+  [109:19] iotest 0x636d05 CsdScheduler
+  [109:20] iotest 0x65d13a ConverseInit
+  [109:21] iotest 0x5c67c7 charm_main
+  [109:22] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [109:23] iotest 0x503dae _start
+[110] Stack Traceback:
+  [110:0] libpthread.so.0 0x155553edcdd0 
+  [110:1] libpthread.so.0 0x155553edbb94 __read
+  [110:2] libstdc++.so.6 0x1555543d05d7 std::__basic_file<char>::xsgetn(char*, long)
+  [110:3] libstdc++.so.6 0x15555440a191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+  [110:4] libstdc++.so.6 0x155554416dae std::istream::read(char*, long)
+  [110:5] iotest 0x52e965 Ck::IO::impl::ReadSession::readData()
+  [110:6] iotest 0x52e7ad Ck::IO::impl::ReadSession::ReadSession(int, unsigned long, unsigned long)
+  [110:7] iotest 0x527e34 Ck::IO::impl::CkIndex_ReadSession::_call_ReadSession_marshall1(void*, void*)
+  [110:8] iotest 0x542002 CkDeliverMessageFree
+  [110:9] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [110:10] iotest 0x5573e5 CkArray::insertElement(CkArrayMessage*, CkArrayIndex const&, int*)
+  [110:11] iotest 0x557622 CkArray::insertInitial(CkArrayIndex const&, void*)
+  [110:12] iotest 0x56bab2 CkArrayMap::populateInitial(int, CkArrayOptions&, void*, CkArray*)
+  [110:13] iotest 0x55554d CkArray::CkArray(CkArrayOptions&&, CkMarshalledMessage&&)
+  [110:14] iotest 0x555a15 CkIndex_CkArray::_call_CkArray_marshall1(void*, void*)
+  [110:15] iotest 0x542002 CkDeliverMessageFree
+  [110:16] iotest 0x542368 CkCreateLocalGroup
+  [110:17] iotest 0x544fbf _processHandler(void*, CkCoreState*)
+  [110:18] iotest 0x6369cb CsdScheduleForever
+  [110:19] iotest 0x636d05 CsdScheduler
+  [110:20] iotest 0x65d13a ConverseInit
+  [110:21] iotest 0x5c67c7 charm_main
+  [110:22] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [110:23] iotest 0x503dae _start
+[111] Stack Traceback:
+  [111:0] libpthread.so.0 0x155553edcdd0 
+  [111:1] iotest 0x65c6ba CmiGetNonLocal
+  [111:2] iotest 0x6368cd CsdNextMessage
+  [111:3] iotest 0x63699a CsdScheduleForever
+  [111:4] iotest 0x636d05 CsdScheduler
+  [111:5] iotest 0x65d13a ConverseInit
+  [111:6] iotest 0x5c67c7 charm_main
+  [111:7] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [111:8] iotest 0x503dae _start
+[112] Stack Traceback:
+  [112:0] libpthread.so.0 0x155553edcdd0 
+  [112:1] libmpi.so.40 0x1555548a60da mca_pml_ucx_iprobe
+  [112:2] libmpi.so.40 0x15555478371c PMPI_Iprobe
+  [112:3] iotest 0x65c388 
+  [112:4] iotest 0x65c60e 
+  [112:5] iotest 0x6348a0 CcdRaiseCondition
+  [112:6] iotest 0x636a5a CsdScheduleForever
+  [112:7] iotest 0x636d05 CsdScheduler
+  [112:8] iotest 0x65d13a ConverseInit
+  [112:9] iotest 0x5c67c7 charm_main
+  [112:10] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [112:11] iotest 0x503dae _start
+[113] Stack Traceback:
+  [113:0] libpthread.so.0 0x155553edcdd0 
+  [113:1] iotest 0x659d30 
+  [113:2] iotest 0x659e37 
+  [113:3] iotest 0x65c627 
+  [113:4] iotest 0x6348a0 CcdRaiseCondition
+  [113:5] iotest 0x636a5a CsdScheduleForever
+  [113:6] iotest 0x636d05 CsdScheduler
+  [113:7] iotest 0x65d13a ConverseInit
+  [113:8] iotest 0x5c67c7 charm_main
+  [113:9] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [113:10] iotest 0x503dae _start
+[114] Stack Traceback:
+  [114:0] libpthread.so.0 0x155553edcdd0 
+  [114:1] libpthread.so.0 0x155553edbb94 __read
+  [114:2] libstdc++.so.6 0x1555543d05d7 std::__basic_file<char>::xsgetn(char*, long)
+  [114:3] libstdc++.so.6 0x15555440a191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+  [114:4] libstdc++.so.6 0x155554416dae std::istream::read(char*, long)
+  [114:5] iotest 0x52e965 Ck::IO::impl::ReadSession::readData()
+  [114:6] iotest 0x52e7ad Ck::IO::impl::ReadSession::ReadSession(int, unsigned long, unsigned long)
+  [114:7] iotest 0x527e34 Ck::IO::impl::CkIndex_ReadSession::_call_ReadSession_marshall1(void*, void*)
+  [114:8] iotest 0x542002 CkDeliverMessageFree
+  [114:9] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [114:10] iotest 0x5573e5 CkArray::insertElement(CkArrayMessage*, CkArrayIndex const&, int*)
+  [114:11] iotest 0x557622 CkArray::insertInitial(CkArrayIndex const&, void*)
+  [114:12] iotest 0x56bab2 CkArrayMap::populateInitial(int, CkArrayOptions&, void*, CkArray*)
+  [114:13] iotest 0x55554d CkArray::CkArray(CkArrayOptions&&, CkMarshalledMessage&&)
+  [114:14] iotest 0x555a15 CkIndex_CkArray::_call_CkArray_marshall1(void*, void*)
+  [114:15] iotest 0x542002 CkDeliverMessageFree
+  [114:16] iotest 0x542368 CkCreateLocalGroup
+  [114:17] iotest 0x544fbf _processHandler(void*, CkCoreState*)
+  [114:18] iotest 0x6369cb CsdScheduleForever
+  [114:19] iotest 0x636d05 CsdScheduler
+  [114:20] iotest 0x65d13a ConverseInit
+  [114:21] iotest 0x5c67c7 charm_main
+  [114:22] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [114:23] iotest 0x503dae _start
+[115] Stack Traceback:
+  [115:0] libpthread.so.0 0x155553edcdd0 
+  [115:1] libpthread.so.0 0x155553edbb94 __read
+  [115:2] libstdc++.so.6 0x1555543d05d7 std::__basic_file<char>::xsgetn(char*, long)
+  [115:3] libstdc++.so.6 0x15555440a191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+  [115:4] libstdc++.so.6 0x155554416dae std::istream::read(char*, long)
+  [115:5] iotest 0x52e965 Ck::IO::impl::ReadSession::readData()
+  [115:6] iotest 0x52e7ad Ck::IO::impl::ReadSession::ReadSession(int, unsigned long, unsigned long)
+  [115:7] iotest 0x527e34 Ck::IO::impl::CkIndex_ReadSession::_call_ReadSession_marshall1(void*, void*)
+  [115:8] iotest 0x542002 CkDeliverMessageFree
+  [115:9] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [115:10] iotest 0x5573e5 CkArray::insertElement(CkArrayMessage*, CkArrayIndex const&, int*)
+  [115:11] iotest 0x557622 CkArray::insertInitial(CkArrayIndex const&, void*)
+  [115:12] iotest 0x56bab2 CkArrayMap::populateInitial(int, CkArrayOptions&, void*, CkArray*)
+  [115:13] iotest 0x55554d CkArray::CkArray(CkArrayOptions&&, CkMarshalledMessage&&)
+  [115:14] iotest 0x555a15 CkIndex_CkArray::_call_CkArray_marshall1(void*, void*)
+  [115:15] iotest 0x542002 CkDeliverMessageFree
+  [115:16] iotest 0x542368 CkCreateLocalGroup
+  [115:17] iotest 0x544fbf _processHandler(void*, CkCoreState*)
+  [115:18] iotest 0x6369cb CsdScheduleForever
+  [115:19] iotest 0x636d05 CsdScheduler
+  [115:20] iotest 0x65d13a ConverseInit
+  [115:21] iotest 0x5c67c7 charm_main
+  [115:22] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [115:23] iotest 0x503dae _start
+[116] Stack Traceback:
+  [116:0] libpthread.so.0 0x155553edcdd0 
+  [116:1] iotest 0x634770 CcdRaiseCondition
+  [116:2] iotest 0x636a5a CsdScheduleForever
+  [116:3] iotest 0x636d05 CsdScheduler
+  [116:4] iotest 0x65d13a ConverseInit
+  [116:5] iotest 0x5c67c7 charm_main
+  [116:6] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [116:7] iotest 0x503dae _start
+[117] Stack Traceback:
+  [117:0] libpthread.so.0 0x155553edcdd0 
+  [117:1] iotest 0x65c600 
+  [117:2] iotest 0x6348a0 CcdRaiseCondition
+  [117:3] iotest 0x636a5a CsdScheduleForever
+  [117:4] iotest 0x636d05 CsdScheduler
+  [117:5] iotest 0x65d13a ConverseInit
+  [117:6] iotest 0x5c67c7 charm_main
+  [117:7] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [117:8] iotest 0x503dae _start
+[118] Stack Traceback:
+  [118:0] libpthread.so.0 0x155553edcdd0 
+  [118:1] iotest 0x65c60e 
+  [118:2] iotest 0x6348a0 CcdRaiseCondition
+  [118:3] iotest 0x636a5a CsdScheduleForever
+  [118:4] iotest 0x636d05 CsdScheduler
+  [118:5] iotest 0x65d13a ConverseInit
+  [118:6] iotest 0x5c67c7 charm_main
+  [118:7] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [118:8] iotest 0x503dae _start
+[119] Stack Traceback:
+  [119:0] libpthread.so.0 0x155553edcdd0 
+  [119:1] libmpi.so.40 0x155554783711 PMPI_Iprobe
+  [119:2] iotest 0x65c388 
+  [119:3] iotest 0x65c60e 
+  [119:4] iotest 0x6348a0 CcdRaiseCondition
+  [119:5] iotest 0x636a5a CsdScheduleForever
+  [119:6] iotest 0x636d05 CsdScheduler
+  [119:7] iotest 0x65d13a ConverseInit
+  [119:8] iotest 0x5c67c7 charm_main
+  [119:9] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [119:10] iotest 0x503dae _start
+[120] Stack Traceback:
+  [120:0] libpthread.so.0 0x155553edcdd0 
+  [120:1] iotest 0x659da2 
+  [120:2] iotest 0x65c6cb CmiGetNonLocal
+  [120:3] iotest 0x6368cd CsdNextMessage
+  [120:4] iotest 0x63699a CsdScheduleForever
+  [120:5] iotest 0x636d05 CsdScheduler
+  [120:6] iotest 0x65d13a ConverseInit
+  [120:7] iotest 0x5c67c7 charm_main
+  [120:8] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [120:9] iotest 0x503dae _start
+[121] Stack Traceback:
+  [121:0] libpthread.so.0 0x155553edcdd0 
+  [121:1] iotest 0x65b2e4 
+  [121:2] iotest 0x65c6ad CmiGetNonLocal
+  [121:3] iotest 0x6368cd CsdNextMessage
+  [121:4] iotest 0x63699a CsdScheduleForever
+  [121:5] iotest 0x636d05 CsdScheduler
+  [121:6] iotest 0x65d13a ConverseInit
+  [121:7] iotest 0x5c67c7 charm_main
+  [121:8] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [121:9] iotest 0x503dae _start
+[122] Stack Traceback:
+  [122:0] libpthread.so.0 0x155553edcdd0 
+  [122:1] iotest 0x64642b CqsDequeue
+  [122:2] iotest 0x636901 CsdNextMessage
+  [122:3] iotest 0x63699a CsdScheduleForever
+  [122:4] iotest 0x636d05 CsdScheduler
+  [122:5] iotest 0x65d13a ConverseInit
+  [122:6] iotest 0x5c67c7 charm_main
+  [122:7] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [122:8] iotest 0x503dae _start
+[123] Stack Traceback:
+  [123:0] libpthread.so.0 0x155553edcdd0 
+  [123:1] libucp.so.0 0x155552f08ea4 ucp_tag_probe_nb
+  [123:2] libmpi.so.40 0x1555548a6079 mca_pml_ucx_iprobe
+  [123:3] libmpi.so.40 0x15555478371c PMPI_Iprobe
+  [123:4] iotest 0x65c388 
+  [123:5] iotest 0x65c60e 
+  [123:6] iotest 0x6348a0 CcdRaiseCondition
+  [123:7] iotest 0x636a5a CsdScheduleForever
+  [123:8] iotest 0x636d05 CsdScheduler
+  [123:9] iotest 0x65d13a ConverseInit
+  [123:10] iotest 0x5c67c7 charm_main
+  [123:11] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [123:12] iotest 0x503dae _start
+[124] Stack Traceback:
+  [124:0] libpthread.so.0 0x155553edcdd0 
+  [124:1] iotest 0x6348a0 CcdRaiseCondition
+  [124:2] iotest 0x636a5a CsdScheduleForever
+  [124:3] iotest 0x636d05 CsdScheduler
+  [124:4] iotest 0x65d13a ConverseInit
+  [124:5] iotest 0x5c67c7 charm_main
+  [124:6] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [124:7] iotest 0x503dae _start
+[125] Stack Traceback:
+  [125:0] libpthread.so.0 0x155553edcdd0 
+  [125:1] libpthread.so.0 0x155553edbb94 __read
+  [125:2] libstdc++.so.6 0x1555543d05d7 std::__basic_file<char>::xsgetn(char*, long)
+  [125:3] libstdc++.so.6 0x15555440a191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+  [125:4] libstdc++.so.6 0x155554416dae std::istream::read(char*, long)
+  [125:5] iotest 0x52e965 Ck::IO::impl::ReadSession::readData()
+  [125:6] iotest 0x52e7ad Ck::IO::impl::ReadSession::ReadSession(int, unsigned long, unsigned long)
+  [125:7] iotest 0x527e34 Ck::IO::impl::CkIndex_ReadSession::_call_ReadSession_marshall1(void*, void*)
+  [125:8] iotest 0x542002 CkDeliverMessageFree
+  [125:9] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [125:10] iotest 0x5573e5 CkArray::insertElement(CkArrayMessage*, CkArrayIndex const&, int*)
+  [125:11] iotest 0x557622 CkArray::insertInitial(CkArrayIndex const&, void*)
+  [125:12] iotest 0x56bab2 CkArrayMap::populateInitial(int, CkArrayOptions&, void*, CkArray*)
+  [125:13] iotest 0x55554d CkArray::CkArray(CkArrayOptions&&, CkMarshalledMessage&&)
+  [125:14] iotest 0x555a15 CkIndex_CkArray::_call_CkArray_marshall1(void*, void*)
+  [125:15] iotest 0x542002 CkDeliverMessageFree
+  [125:16] iotest 0x542368 CkCreateLocalGroup
+  [125:17] iotest 0x544fbf _processHandler(void*, CkCoreState*)
+  [125:18] iotest 0x6369cb CsdScheduleForever
+  [125:19] iotest 0x636d05 CsdScheduler
+  [125:20] iotest 0x65d13a ConverseInit
+  [125:21] iotest 0x5c67c7 charm_main
+  [125:22] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [125:23] iotest 0x503dae _start
+[126] Stack Traceback:
+  [126:0] libpthread.so.0 0x155553edcdd0 
+  [126:1] iotest 0x6463db CqsDequeue
+  [126:2] iotest 0x636901 CsdNextMessage
+  [126:3] iotest 0x63699a CsdScheduleForever
+  [126:4] iotest 0x636d05 CsdScheduler
+  [126:5] iotest 0x65d13a ConverseInit
+  [126:6] iotest 0x5c67c7 charm_main
+  [126:7] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [126:8] iotest 0x503dae _start
+[r430.ib.bridges2.psc.edu:79892] 114 more processes have sent help message help-mpi-api.txt / mpi-abort
+[r430.ib.bridges2.psc.edu:79892] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+mpirun noticed that process rank 40 with PID 0 on node r430 exited on signal 9 (Killed).
+--------------------------------------------------------------------------
+slurmstepd: error: Detected 1 oom-kill event(s) in StepId=14318869.batch cgroup. Some of your processes may have been killed by the cgroup out-of-memory handler.

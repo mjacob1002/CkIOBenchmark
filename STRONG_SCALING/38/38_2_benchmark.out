@@ -1,0 +1,534 @@
+
+Running as 256 OS processes: ./iotest TEST_FILES/38.txt 256
+charmrun> /usr/bin/setarch x86_64 -R mpirun -np 256 ./iotest TEST_FILES/38.txt 256
+Charm++> Running on MPI library: Open MPI v4.0.5, package: Open MPI spack@br012.ib.bridges2.psc.edu Distribution, ident: 4.0.5, repo rev: v4.0.5, Aug 26, 2020 (MPI standard: 3.1)
+Charm++> Level of thread support used: MPI_THREAD_SINGLE (desired: MPI_THREAD_SINGLE)
+Charm++> Running in non-SMP mode: 256 processes (PEs)
+Converse/Charm++ Commit ID: v7.1.0-devel-237-ga3f055e15
+Isomalloc> Synchronized global address space.
+CharmLB> Load balancer assumes all CPUs are same.
+Charm++> Running on 2 hosts (2 sockets x 64 cores x 1 PUs = 128-way SMP)
+Charm++> cpu topology info is gathered in 0.052 seconds.
+CharmLB> Load balancing instrumentation for communication is off.
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+[1675937837.741326] [r087:79615:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79564/fd/20 flags=0x0) failed: Permission denied
+[r087.ib.bridges2.psc.edu:79615] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[r087:79615] *** An error occurred in MPI_Isend
+[r087:79615] *** reported by process [1333395457,245]
+[r087:79615] *** on communicator MPI COMMUNICATOR 3 DUP FROM 0
+[r087:79615] *** MPI_ERR_OTHER: known error not in list
+[r087:79615] *** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+[r087:79615] ***    and potentially your MPI job)
+[1675937838.069911] [r087:79515:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79564/fd/20 flags=0x0) failed: No such file or directory
+[r087.ib.bridges2.psc.edu:79515] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937838.175327] [r087:79580:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79524/fd/20 flags=0x0) failed: No such file or directory
+[r087.ib.bridges2.psc.edu:79580] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937838.196572] [r087:79605:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79554/fd/20 flags=0x0) failed: No such file or directory
+[r087.ib.bridges2.psc.edu:79605] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937838.261526] [r087:79533:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79605/fd/20 flags=0x0) failed: Permission denied
+[r087.ib.bridges2.psc.edu:79533] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937838.318255] [r087:79529:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79615/fd/20 flags=0x0) failed: No such file or directory
+[r087.ib.bridges2.psc.edu:79529] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937838.355586] [r087:79593:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79529/fd/20 flags=0x0) failed: Permission denied
+[r087.ib.bridges2.psc.edu:79593] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937838.360070] [r087:79507:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79591/fd/20 flags=0x0) failed: No such file or directory
+[r087.ib.bridges2.psc.edu:79507] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937838.438310] [r087:79618:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79524/fd/20 flags=0x0) failed: No such file or directory
+[r087.ib.bridges2.psc.edu:79618] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937838.440456] [r087:79549:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79591/fd/20 flags=0x0) failed: No such file or directory
+[r087.ib.bridges2.psc.edu:79549] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937838.494807] [r087:79563:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79554/fd/20 flags=0x0) failed: No such file or directory
+[r087.ib.bridges2.psc.edu:79563] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937838.559991] [r087:79587:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=79533 length=524288) returned -1: No such process
+[1675937838.556099] [r087:79594:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79593/fd/20 flags=0x0) failed: Permission denied
+[r087.ib.bridges2.psc.edu:79594] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937838.572811] [r087:79527:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79529/fd/20 flags=0x0) failed: Permission denied
+[r087.ib.bridges2.psc.edu:79527] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937838.698251] [r087:79617:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79564/fd/20 flags=0x0) failed: No such file or directory
+[r087.ib.bridges2.psc.edu:79617] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.005786] [r087:79616:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79515/fd/20 flags=0x0) failed: No such file or directory
+[1675937839.005924] [r087:79559:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=79618 length=524288) returned -1: No such process
+[1675937839.005761] [r087:79567:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79515/fd/20 flags=0x0) failed: No such file or directory
+[1675937839.005980] [r087:79575:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79524/fd/20 flags=0x0) failed: No such file or directory
+[1675937839.007009] [r087:79606:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79605/fd/20 flags=0x0) failed: No such file or directory
+[1675937839.005621] [r087:79609:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79515/fd/20 flags=0x0) failed: No such file or directory
+[1675937839.008939] [r087:79497:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79515/fd/20 flags=0x0) failed: No such file or directory
+[r087.ib.bridges2.psc.edu:79497] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[r087.ib.bridges2.psc.edu:79567] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[r087.ib.bridges2.psc.edu:79575] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[r087.ib.bridges2.psc.edu:79616] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+------------- Processor 217 Exiting: Called CmiAbort ------------
+Reason: Converse zero handler executed-- was a message corrupted?
+
+[r087.ib.bridges2.psc.edu:79609] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[r087.ib.bridges2.psc.edu:79606] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[217] Stack Traceback:
+[1675937839.072855] [r087:79550:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79549/fd/20 flags=0x0) failed: Permission denied
+[1675937839.072633] [r087:79532:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79533/fd/20 flags=0x0) failed: No such file or directory
+  [217:0] iotest 0x65a850 CmiAsyncBroadcastFn
+[1675937839.076879] [r087:79624:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79515/fd/20 flags=0x0) failed: No such file or directory
+  [217:1] iotest 0x635880 
+  [217:2] iotest 0x6369cb CsdScheduleForever
+  [217:3] iotest 0x636d05 CsdScheduler
+  [217:4] iotest 0x65d13a ConverseInit
+[1675937839.077290] [r087:79565:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79515/fd/20 flags=0x0) failed: No such file or directory
+  [217:5] iotest 0x5c67c7 charm_main
+  [217:6] libc.so.6 0x1461ec7ba6a3 __libc_start_main
+  [217:7] iotest 0x503dae _start
+[1675937839.077287] [r087:79557:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79580/fd/20 flags=0x0) failed: No such file or directory
+[1675937839.078098] [r087:79505:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79549/fd/20 flags=0x0) failed: Permission denied
+[1675937839.078301] [r087:79534:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79524/fd/20 flags=0x0) failed: No such file or directory
+[1675937839.078572] [r087:79528:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79515/fd/20 flags=0x0) failed: No such file or directory
+[r087.ib.bridges2.psc.edu:79505] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[r087.ib.bridges2.psc.edu:79532] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[r087.ib.bridges2.psc.edu:79534] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[r087.ib.bridges2.psc.edu:79550] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[r087.ib.bridges2.psc.edu:79557] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[r087.ib.bridges2.psc.edu:79565] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[r087.ib.bridges2.psc.edu:79624] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[r087.ib.bridges2.psc.edu:79528] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+--------------------------------------------------------------------------
+MPI_ABORT was invoked on rank 217 in communicator MPI COMMUNICATOR 3 DUP FROM 0
+with errorcode 1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+[1675937839.125731] [r087:79559:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=79575 length=524288) returned -1: No such process
+[1675937839.106796] [r087:79582:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=79532 length=524288) returned -1: No such process
+[1675937839.106649] [r087:79516:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=79532 length=524288) returned -1: No such process
+[1675937839.143764] [r087:79559:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=79534 length=524288) returned -1: No such process
+[1675937839.143793] [r087:79559:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=79534 length=524288) returned -1: No such process
+[1675937839.150727] [r087:79603:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79549/fd/20 flags=0x0) failed: Permission denied
+[1675937839.150873] [r087:79547:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79591/fd/20 flags=0x0) failed: No such file or directory
+[1675937839.150864] [r087:79510:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79549/fd/20 flags=0x0) failed: Permission denied
+[1675937839.150690] [r087:79517:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79557/fd/20 flags=0x0) failed: Permission denied
+[1675937839.150760] [r087:79620:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79616/fd/20 flags=0x0) failed: Permission denied
+[1675937839.150786] [r087:79602:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79591/fd/20 flags=0x0) failed: No such file or directory
+[1675937839.150740] [r087:79595:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79587/fd/20 flags=0x0) failed: Permission denied
+[1675937839.150989] [r087:79546:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79594/fd/20 flags=0x0) failed: Permission denied
+[1675937839.151492] [r087:79522:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79563/fd/20 flags=0x0) failed: Permission denied
+[r087.ib.bridges2.psc.edu:79510] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[r087.ib.bridges2.psc.edu:79546] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[r087.ib.bridges2.psc.edu:79602] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[r087.ib.bridges2.psc.edu:79620] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[r087.ib.bridges2.psc.edu:79595] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[r087.ib.bridges2.psc.edu:79603] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.153008] [r087:79570:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79617/fd/20 flags=0x0) failed: Permission denied
+[r087.ib.bridges2.psc.edu:79522] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.153272] [r087:79536:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79580/fd/20 flags=0x0) failed: No such file or directory
+[r087.ib.bridges2.psc.edu:79570] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[r087.ib.bridges2.psc.edu:79517] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[r087.ib.bridges2.psc.edu:79547] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[r087.ib.bridges2.psc.edu:79536] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.153560] [r087:79569:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79564/fd/20 flags=0x0) failed: No such file or directory
+[1675937839.154475] [r087:79560:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79505/fd/20 flags=0x0) failed: Permission denied
+[1675937839.154458] [r087:79541:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79557/fd/20 flags=0x0) failed: Permission denied
+[r087.ib.bridges2.psc.edu:79569] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[r087.ib.bridges2.psc.edu:79560] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.156270] [r087:79625:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79528/fd/20 flags=0x0) failed: Permission denied
+[r087.ib.bridges2.psc.edu:79625] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[r087.ib.bridges2.psc.edu:79541] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.157731] [r087:79520:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79564/fd/20 flags=0x0) failed: No such file or directory
+[r087.ib.bridges2.psc.edu:79520] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.160204] [r087:79623:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79615/fd/20 flags=0x0) failed: No such file or directory
+[r087.ib.bridges2.psc.edu:79623] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.166215] [r087:79508:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79554/fd/20 flags=0x0) failed: No such file or directory
+[1675937839.166706] [r087:79516:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79550/fd/20 flags=0x0) failed: Permission denied
+[r087.ib.bridges2.psc.edu:79516] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[r087.ib.bridges2.psc.edu:79508] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.166987] [r087:79539:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79587/fd/20 flags=0x0) failed: Permission denied
+[1675937839.167510] [r087:79512:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79567/fd/20 flags=0x0) failed: Permission denied
+[r087.ib.bridges2.psc.edu:79539] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.167798] [r087:79611:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79593/fd/20 flags=0x0) failed: Permission denied
+[r087.ib.bridges2.psc.edu:79512] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[r087.ib.bridges2.psc.edu:79611] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.176770] [r087:79578:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79615/fd/20 flags=0x0) failed: No such file or directory
+[1675937839.176701] [r087:79513:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79609/fd/20 flags=0x0) failed: Permission denied
+[r087.ib.bridges2.psc.edu:79513] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[r087.ib.bridges2.psc.edu:79578] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.179313] [r087:79542:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79575/fd/20 flags=0x0) failed: Permission denied
+[r087.ib.bridges2.psc.edu:79542] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.181149] [r087:79555:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79617/fd/20 flags=0x0) failed: Permission denied
+[r087.ib.bridges2.psc.edu:79555] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.182510] [r087:79509:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79550/fd/20 flags=0x0) failed: Permission denied
+[r087.ib.bridges2.psc.edu:79509] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.182367] [r087:79577:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79618/fd/20 flags=0x0) failed: Permission denied
+[1675937839.183007] [r087:79521:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79567/fd/20 flags=0x0) failed: Permission denied
+[r087.ib.bridges2.psc.edu:79577] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[r087.ib.bridges2.psc.edu:79521] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.189249] [r087:79608:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79593/fd/20 flags=0x0) failed: Permission denied
+[r087.ib.bridges2.psc.edu:79608] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.195407] [r087:79590:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79606/fd/20 flags=0x0) failed: Permission denied
+[1675937839.196559] [r087:79499:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=79557 length=524288) returned -1: No such process
+[r087.ib.bridges2.psc.edu:79590] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.196549] [r087:79506:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79524/fd/20 flags=0x0) failed: No such file or directory
+[r087.ib.bridges2.psc.edu:79506] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.198477] [r087:79498:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79554/fd/20 flags=0x0) failed: No such file or directory
+[r087.ib.bridges2.psc.edu:79498] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.200098] [r087:79531:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79580/fd/20 flags=0x0) failed: No such file or directory
+[r087.ib.bridges2.psc.edu:79531] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.204939] [r087:79501:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79557/fd/20 flags=0x0) failed: Permission denied
+[r087.ib.bridges2.psc.edu:79501] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.209646] [r087:79499:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=79602 length=524288) returned -1: No such process
+[1675937839.210862] [r087:79499:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=79539 length=524288) returned -1: No such process
+[1675937839.210960] [r087:79499:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=79539 length=524288) returned -1: No such process
+[1675937839.215316] [r087:79592:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79536/fd/20 flags=0x0) failed: Permission denied
+[1675937839.215675] [r087:79504:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79580/fd/20 flags=0x0) failed: No such file or directory
+[r087.ib.bridges2.psc.edu:79592] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[r087.ib.bridges2.psc.edu:79504] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.215782] [r087:79614:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=79520 length=524288) returned -1: No such process
+[1675937839.216562] [r087:79614:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=79509 length=524288) returned -1: No such process
+[1675937839.217029] [r087:79579:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=79611 length=524288) returned -1: No such process
+[1675937839.217682] [r087:79511:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79529/fd/20 flags=0x0) failed: Permission denied
+[r087.ib.bridges2.psc.edu:79511] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+------------- Processor 209 Exiting: Called CmiAbort ------------
+Reason: Converse zero handler executed-- was a message corrupted?
+
+------------- Processor 247 Exiting: Called CmiAbort ------------
+Reason: Converse zero handler executed-- was a message corrupted?
+
+[1675937839.221859] [r087:79543:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79620/fd/20 flags=0x0) failed: Permission denied
+[1675937839.221482] [r087:79566:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=79611 length=524288) returned -1: No such process
+[r087.ib.bridges2.psc.edu:79543] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.222970] [r087:79566:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=79611 length=524288) returned -1: No such process
+------------- Processor 197 Exiting: Called CmiAbort ------------
+Reason: Converse zero handler executed-- was a message corrupted?
+
+[1675937839.223464] [r087:79499:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=79555 length=524288) returned -1: No such process
+[1675937839.223514] [r087:79499:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=79555 length=524288) returned -1: No such process
+[1675937839.223626] [r087:79500:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79547/fd/20 flags=0x0) failed: No such file or directory
+[1675937839.222276] [r087:79537:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79555/fd/20 flags=0x0) failed: Permission denied
+[r087.ib.bridges2.psc.edu:79537] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[r087.ib.bridges2.psc.edu:79500] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.224271] [r087:79525:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79564/fd/20 flags=0x0) failed: No such file or directory
+[r087.ib.bridges2.psc.edu:79525] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.228128] [r087:79574:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79563/fd/20 flags=0x0) failed: Permission denied
+[r087.ib.bridges2.psc.edu:79574] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.232333] [r087:79551:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=79500 length=524288) returned -1: No such process
+[1675937839.232543] [r087:79571:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79569/fd/20 flags=0x0) failed: Permission denied
+[209] Stack Traceback:
+[197] Stack Traceback:
+[247] Stack Traceback:
+[r087.ib.bridges2.psc.edu:79571] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.233544] [r087:79502:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79505/fd/20 flags=0x0) failed: Permission denied
+[r087.ib.bridges2.psc.edu:79502] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.234898] [r087:79597:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=79592 length=524288) returned -1: No such process
+[1675937839.236006] [r087:79545:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79603/fd/20 flags=0x0) failed: Permission denied
+[r087.ib.bridges2.psc.edu:79545] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.238544] [r087:79588:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79532/fd/20 flags=0x0) failed: Permission denied
+[1675937839.239308] [r087:79551:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79542/fd/20 flags=0x0) failed: Permission denied
+[r087.ib.bridges2.psc.edu:79588] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[r087.ib.bridges2.psc.edu:79551] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.239646] [r087:79552:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79532/fd/20 flags=0x0) failed: Permission denied
+[r087.ib.bridges2.psc.edu:79552] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.242196] [r087:79601:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79507/fd/20 flags=0x0) failed: Permission denied
+[r087.ib.bridges2.psc.edu:79601] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.244340] [r087:79599:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=79502 length=524288) returned -1: No such process
+  [247:0] iotest 0x65a850 CmiAsyncBroadcastFn
+  [197:0] iotest 0x65a850 CmiAsyncBroadcastFn
+  [247:1] iotest 0x635880 
+  [197:1] iotest 0x635880 
+  [247:2] iotest 0x6369cb CsdScheduleForever
+  [197:2] iotest 0x6369cb CsdScheduleForever
+  [247:3] iotest 0x636d05 CsdScheduler
+  [197:3] iotest 0x636d05 CsdScheduler
+[1675937839.247071] [r087:79582:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79620/fd/20 flags=0x0) failed: Permission denied
+  [247:4] iotest 0x65d13a ConverseInit
+  [197:4] iotest 0x65d13a ConverseInit
+[r087.ib.bridges2.psc.edu:79582] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+  [197:5] iotest 0x5c67c7 charm_main
+  [197:6] libc.so.6 0x1477e20586a3 __libc_start_main
+  [247:5] iotest 0x5c67c7 charm_main
+  [247:6] libc.so.6 0x14947a29c6a3 __libc_start_main
+  [247:7] iotest 0x503dae _start
+  [197:7] iotest 0x503dae _start
+  [209:0] iotest 0x65a850 CmiAsyncBroadcastFn
+  [209:1] iotest 0x635880 
+  [209:2] iotest 0x6369cb CsdScheduleForever
+  [209:3] iotest 0x636d05 CsdScheduler
+  [209:4] iotest 0x65d13a ConverseInit
+  [209:5] iotest 0x5c67c7 charm_main
+  [209:6] libc.so.6 0x14fb1be036a3 __libc_start_main
+  [209:7] iotest 0x503dae _start
+[1675937839.256004] [r087:79572:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=79588 length=524288) returned -1: No such process
+[1675937839.261955] [r087:79526:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79587/fd/20 flags=0x0) failed: Permission denied
+[r087.ib.bridges2.psc.edu:79526] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.265705] [r087:79556:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79594/fd/20 flags=0x0) failed: Permission denied
+[r087.ib.bridges2.psc.edu:79556] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.271909] [r087:79573:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79625/fd/20 flags=0x0) failed: Permission denied
+[r087.ib.bridges2.psc.edu:79573] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.282819] [r087:79584:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79527/fd/20 flags=0x0) failed: Permission denied
+[r087.ib.bridges2.psc.edu:79584] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.284419] [r087:79538:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=79579 length=524288) returned -1: No such process
+[1675937839.285023] [r087:79600:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79578/fd/20 flags=0x0) failed: Permission denied
+[1675937839.285489] [r087:79538:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=79579 length=524288) returned -1: No such process
+[r087.ib.bridges2.psc.edu:79600] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.286915] [r087:79596:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79497/fd/20 flags=0x0) failed: Permission denied
+------------- Processor 168 Exiting: Called CmiAbort ------------
+Reason: Converse zero handler executed-- was a message corrupted?
+
+[r087.ib.bridges2.psc.edu:79596] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[168] Stack Traceback:
+  [168:0] iotest 0x65a850 CmiAsyncBroadcastFn
+  [168:1] iotest 0x635880 
+  [168:2] iotest 0x6369cb CsdScheduleForever
+  [168:3] iotest 0x636d05 CsdScheduler
+  [168:4] iotest 0x65d13a ConverseInit
+  [168:5] iotest 0x5c67c7 charm_main
+  [168:6] libc.so.6 0x15310f35a6a3 __libc_start_main
+  [168:7] iotest 0x503dae _start
+[1675937839.289793] [r087:79604:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79505/fd/20 flags=0x0) failed: Permission denied
+[r087.ib.bridges2.psc.edu:79604] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.292134] [r087:79561:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79547/fd/20 flags=0x0) failed: No such file or directory
+[r087.ib.bridges2.psc.edu:79561] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.296496] [r087:79499:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=79537 length=524288) returned -1: No such process
+[1675937839.300983] [r087:79607:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=79592 length=524288) returned -1: No such process
+[1675937839.301604] [r087:79607:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=79502 length=524288) returned -1: No such process
+[1675937839.312657] [r087:79568:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79512/fd/20 flags=0x0) failed: Permission denied
+------------- Processor 130 Exiting: Called CmiAbort ------------
+Reason: Converse zero handler executed-- was a message corrupted?
+
+[r087.ib.bridges2.psc.edu:79568] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.313743] [r087:79576:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79616/fd/20 flags=0x0) failed: Permission denied
+[130] Stack Traceback:
+[r087.ib.bridges2.psc.edu:79576] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+  [130:0] iotest 0x65a850 CmiAsyncBroadcastFn
+  [130:1] iotest 0x635880 
+  [130:2] iotest 0x6369cb CsdScheduleForever
+  [130:3] iotest 0x636d05 CsdScheduler
+  [130:4] iotest 0x65d13a ConverseInit
+  [130:5] iotest 0x5c67c7 charm_main
+  [130:6] libc.so.6 0x151fb35386a3 __libc_start_main
+  [130:7] iotest 0x503dae _start
+------------- Processor 239 Exiting: Called CmiAbort ------------
+Reason: Converse zero handler executed-- was a message corrupted?
+
+[239] Stack Traceback:
+[1675937839.323234] [r087:79585:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79534/fd/20 flags=0x0) failed: Permission denied
+  [239:0] iotest 0x65a850 CmiAsyncBroadcastFn
+  [239:1] iotest 0x635880 
+  [239:2] iotest 0x6369cb CsdScheduleForever
+  [239:3] iotest 0x636d05 CsdScheduler
+  [239:4] iotest 0x65d13a ConverseInit
+  [239:5] iotest 0x5c67c7 charm_main
+  [239:6] libc.so.6 0x1525161306a3 __libc_start_main
+  [239:7] iotest 0x503dae _start
+[r087.ib.bridges2.psc.edu:79585] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.331985] [r087:79586:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79521/fd/20 flags=0x0) failed: Permission denied
+[r087.ib.bridges2.psc.edu:79586] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[r087.ib.bridges2.psc.edu:79599] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[191] Stack Traceback:
+  [191:0] iotest 0x65a850 CmiAsyncBroadcastFn
+  [191:1] iotest 0x635880 
+  [191:2] iotest 0x6369cb CsdScheduleForever
+  [191:3] iotest 0x636d05 CsdScheduler
+  [191:4] iotest 0x65d13a ConverseInit
+  [191:5] iotest 0x5c67c7 charm_main
+  [191:6] libc.so.6 0x14f41c7f56a3 __libc_start_main
+  [191:7] iotest 0x503dae _start
+[1675937839.349376] [r087:79503:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79542/fd/20 flags=0x0) failed: Permission denied
+[r087.ib.bridges2.psc.edu:79503] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.341940] [r087:79519:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79507/fd/20 flags=0x0) failed: Permission denied
+[r087.ib.bridges2.psc.edu:79519] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.368996] [r087:79523:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79511/fd/20 flags=0x0) failed: Permission denied
+------------- Processor 191 Exiting: Called CmiAbort ------------
+Reason: Converse zero handler executed-- was a message corrupted?
+
+[1675937839.343450] [r087:79599:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79584/fd/20 flags=0x0) failed: Permission denied
+[r087.ib.bridges2.psc.edu:79523] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.378719] [r087:79598:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=79596 length=524288) returned -1: No such process
+------------- Processor 229 Exiting: Called CmiAbort ------------
+Reason: Converse zero handler executed-- was a message corrupted?
+
+[229] Stack Traceback:
+  [229:0] iotest 0x65a850 CmiAsyncBroadcastFn
+  [229:1] iotest 0x635880 
+  [229:2] iotest 0x6369cb CsdScheduleForever
+  [229:3] iotest 0x636d05 CsdScheduler
+  [229:4] iotest 0x65d13a ConverseInit
+  [229:5] iotest 0x5c67c7 charm_main
+  [229:6] libc.so.6 0x147dae0a36a3 __libc_start_main
+  [229:7] iotest 0x503dae _start
+[1675937839.385460] [r087:79572:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79580/fd/20 flags=0x0) failed: No such file or directory
+[r087.ib.bridges2.psc.edu:79572] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.388059] [r087:79610:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79543/fd/20 flags=0x0) failed: Permission denied
+[r087.ib.bridges2.psc.edu:79610] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.391554] [r087:79518:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79509/fd/20 flags=0x0) failed: Permission denied
+[1675937839.392174] [r087:79544:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79582/fd/20 flags=0x0) failed: Permission denied
+[r087.ib.bridges2.psc.edu:79544] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[r087.ib.bridges2.psc.edu:79518] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.394061] [r087:79583:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=79614 length=524288) returned -1: No such process
+------------- Processor 213 Exiting: Called CmiAbort ------------
+Reason: Converse zero handler executed-- was a message corrupted?
+
+[1675937839.402322] [r087:79530:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79563/fd/20 flags=0x0) failed: Permission denied
+[r087.ib.bridges2.psc.edu:79530] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[213] Stack Traceback:
+  [213:0] iotest 0x65a850 CmiAsyncBroadcastFn
+  [213:1] iotest 0x635880 
+  [213:2] iotest 0x6369cb CsdScheduleForever
+  [213:3] iotest 0x636d05 CsdScheduler
+  [213:4] iotest 0x65d13a ConverseInit
+  [213:5] iotest 0x5c67c7 charm_main
+  [213:6] libc.so.6 0x151bd13ce6a3 __libc_start_main
+  [213:7] iotest 0x503dae _start
+[1675937839.440798] [r087:79597:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79578/fd/20 flags=0x0) failed: Permission denied
+[r087.ib.bridges2.psc.edu:79597] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.444753] [r087:79535:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79528/fd/20 flags=0x0) failed: Permission denied
+[r087.ib.bridges2.psc.edu:79535] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.470268] [r087:79548:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79561/fd/20 flags=0x0) failed: Permission denied
+[r087.ib.bridges2.psc.edu:79548] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.482923] [r087:79589:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79584/fd/20 flags=0x0) failed: Permission denied
+[r087.ib.bridges2.psc.edu:79589] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1675937839.503077] [r087:79581:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79530/fd/20 flags=0x0) failed: Permission denied
+[r087.ib.bridges2.psc.edu:79581] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[144] Stack Traceback:
+  [144:0] libpthread.so.0 0x1477f5419dd0 
+  [144:1] libc.so.6 0x1477f51a2d84 
+  [144:2] iotest 0x526570 Ck::IO::impl::CProxy_ReadAssembler::shareData(unsigned long const&, unsigned long const&, char const*, CkEntryOptions const*)
+  [144:3] iotest 0x52eacb Ck::IO::impl::ReadSession::sendData(unsigned long, unsigned long, Ck::IO::impl::CProxy_ReadAssembler)
+  [144:4] iotest 0x5284c5 Ck::IO::impl::CkIndex_ReadSession::_call_sendData_marshall2(void*, void*)
+  [144:5] iotest 0x542002 CkDeliverMessageFree
+  [144:6] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [144:7] iotest 0x5459e6 _processHandler(void*, CkCoreState*)
+  [144:8] iotest 0x6369cb CsdScheduleForever
+  [144:9] iotest 0x636d05 CsdScheduler
+  [144:10] iotest 0x65d13a ConverseInit
+  [144:11] iotest 0x5c67c7 charm_main
+  [144:12] libc.so.6 0x1477f50686a3 __libc_start_main
+  [144:13] iotest 0x503dae _start
+------------- Processor 144 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 246 Exiting: Caught Signal ------------
+Reason: Terminated
+[246] Stack Traceback:
+  [246:0] libpthread.so.0 0x150058aaddd0 
+  [246:1] libc.so.6 0x1500587d5cee process_vm_readv
+  [246:2] libuct_cma.so.0 0x15004fbe35f8 uct_cma_ep_tx
+  [246:3] libuct.so.0 0x15005788dac5 uct_scopy_ep_progress_tx
+  [246:4] libucs.so.0 0x1500574304b2 ucs_arbiter_dispatch_nonempty
+  [246:5] libuct.so.0 0x15005788d5e9 uct_scopy_iface_progress
+  [246:6] libucp.so.0 0x150057acbeea ucp_worker_progress
+  [246:7] libmpi.so.40 0x150059477233 mca_pml_ucx_recv
+  [246:8] libmpi.so.40 0x15005935bcf5 PMPI_Recv
+  [246:9] iotest 0x65c3e7 
+  [246:10] iotest 0x65c6b2 CmiGetNonLocal
+  [246:11] iotest 0x6368cd CsdNextMessage
+  [246:12] iotest 0x63699a CsdScheduleForever
+  [246:13] iotest 0x636d05 CsdScheduler
+  [246:14] iotest 0x65d13a ConverseInit
+  [246:15] iotest 0x5c67c7 charm_main
+  [246:16] libc.so.6 0x1500586fc6a3 __libc_start_main
+  [246:17] iotest 0x503dae _start
+[170] Stack Traceback:
+  [170:0] libpthread.so.0 0x14bf608a0dd0 
+  [170:1] libc.so.6 0x14bf605c8cee process_vm_readv
+  [170:2] libuct_cma.so.0 0x14bf579d55f8 uct_cma_ep_tx
+  [170:3] libuct.so.0 0x14bf5f680ac5 uct_scopy_ep_progress_tx
+  [170:4] libucs.so.0 0x14bf5f2234b2 ucs_arbiter_dispatch_nonempty
+  [170:5] libuct.so.0 0x14bf5f6805e9 uct_scopy_iface_progress
+  [170:6] libucp.so.0 0x14bf5f8beeea ucp_worker_progress
+  [170:7] libmpi.so.40 0x14bf6126a233 mca_pml_ucx_recv
+  [170:8] libmpi.so.40 0x14bf6114ecf5 PMPI_Recv
+  [170:9] iotest 0x65c3e7 
+  [170:10] iotest 0x65c6b2 CmiGetNonLocal
+  [170:11] iotest 0x6368cd CsdNextMessage
+  [170:12] iotest 0x63699a CsdScheduleForever
+  [170:13] iotest 0x636d05 CsdScheduler
+  [170:14] iotest 0x65d13a ConverseInit
+  [170:15] iotest 0x5c67c7 charm_main
+  [170:16] libc.so.6 0x14bf604ef6a3 __libc_start_main
+  [170:17] iotest 0x503dae _start
+------------- Processor 170 Exiting: Caught Signal ------------
+Reason: Terminated
+[1675937840.673202] [r087:79558:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79506/fd/20 flags=0x0) failed: Permission denied
+[189] Stack Traceback:
+  [189:0] libpthread.so.0 0x14b5154f0dd0 
+  [189:1] libpthread.so.0 0x14b5154f0260 nanosleep
+  [189:2] libopen-rte.so.40 0x14b514bff4fa orte_show_help_norender
+  [189:3] libopen-rte.so.40 0x14b514bff867 orte_show_help
+  [189:4] libmpi.so.40 0x14b515d58e40 
+  [189:5] libmpi.so.40 0x14b515d595b3 ompi_mpi_errors_are_fatal_comm_handler
+  [189:6] libmpi.so.40 0x14b515d589e3 ompi_errhandler_invoke
+  [189:7] libmpi.so.40 0x14b515d981d5 MPI_Isend
+  [189:8] iotest 0x65baa4 
+  [189:9] iotest 0x544f47 _processHandler(void*, CkCoreState*)
+  [189:10] iotest 0x6369cb CsdScheduleForever
+  [189:11] iotest 0x636d05 CsdScheduler
+  [189:12] iotest 0x65d13a ConverseInit
+  [189:13] iotest 0x5c67c7 charm_main
+  [189:14] libc.so.6 0x14b51513f6a3 __libc_start_main
+  [189:15] iotest 0x503dae _start
+[r087.ib.bridges2.psc.edu:79558] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+------------- Processor 189 Exiting: Caught Signal ------------
+Reason: Terminated
+[1675937841.033486] [r087:79562:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79510/fd/20 flags=0x0) failed: Permission denied
+[193] Stack Traceback:
+  [193:0] libpthread.so.0 0x150e2c29ddd0 
+  [193:1] libpthread.so.0 0x150e2c29d260 nanosleep
+  [193:2] libopen-rte.so.40 0x150e2b9ac4fa orte_show_help_norender
+  [193:3] libopen-rte.so.40 0x150e2b9ac867 orte_show_help
+  [193:4] libmpi.so.40 0x150e2cb05e40 
+  [193:5] libmpi.so.40 0x150e2cb065b3 ompi_mpi_errors_are_fatal_comm_handler
+  [193:6] libmpi.so.40 0x150e2cb059e3 ompi_errhandler_invoke
+  [193:7] libmpi.so.40 0x150e2cb451d5 MPI_Isend
+  [193:8] iotest 0x65baa4 
+  [193:9] iotest 0x544f47 _processHandler(void*, CkCoreState*)
+  [193:10] iotest 0x6369cb CsdScheduleForever
+  [193:11] iotest 0x636d05 CsdScheduler
+  [193:12] iotest 0x65d13a ConverseInit
+  [193:13] iotest 0x5c67c7 charm_main
+  [193:14] libc.so.6 0x150e2beec6a3 __libc_start_main
+  [193:15] iotest 0x503dae _start
+[r087.ib.bridges2.psc.edu:79562] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+------------- Processor 193 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 248 Exiting: Caught Signal ------------
+Reason: Terminated
+[248] Stack Traceback:
+  [248:0] libpthread.so.0 0x1469128e9dd0 
+  [248:1] libc.so.6 0x146912672d84 
+  [248:2] iotest 0x526570 Ck::IO::impl::CProxy_ReadAssembler::shareData(unsigned long const&, unsigned long const&, char const*, CkEntryOptions const*)
+  [248:3] iotest 0x52eacb Ck::IO::impl::ReadSession::sendData(unsigned long, unsigned long, Ck::IO::impl::CProxy_ReadAssembler)
+  [248:4] iotest 0x5284c5 Ck::IO::impl::CkIndex_ReadSession::_call_sendData_marshall2(void*, void*)
+  [248:5] iotest 0x542002 CkDeliverMessageFree
+  [248:6] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [248:7] iotest 0x5459e6 _processHandler(void*, CkCoreState*)
+  [248:8] iotest 0x6369cb CsdScheduleForever
+  [248:9] iotest 0x636d05 CsdScheduler
+  [248:10] iotest 0x65d13a ConverseInit
+  [248:11] iotest 0x5c67c7 charm_main
+  [248:12] libc.so.6 0x1469125386a3 __libc_start_main
+  [248:13] iotest 0x503dae _start
+[1675937841.900901] [r087:79612:0]       mm_posix.c:194  UCX  ERROR open(file_name=/proc/79597/fd/20 flags=0x0) failed: Permission denied
+[240] Stack Traceback:
+  [240:0] libpthread.so.0 0x14d3f8d17dd0 
+  [240:1] libpthread.so.0 0x14d3f8d17260 nanosleep
+  [240:2] libopen-rte.so.40 0x14d3f84264fa orte_show_help_norender
+  [240:3] libopen-rte.so.40 0x14d3f8426867 orte_show_help
+  [240:4] libmpi.so.40 0x14d3f957fe40 
+  [240:5] libmpi.so.40 0x14d3f95805b3 ompi_mpi_errors_are_fatal_comm_handler
+  [240:6] libmpi.so.40 0x14d3f957f9e3 ompi_errhandler_invoke
+  [240:7] libmpi.so.40 0x14d3f95bf1d5 MPI_Isend
+  [240:8] iotest 0x65baa4 
+  [240:9] iotest 0x544f47 _processHandler(void*, CkCoreState*)
+  [240:10] iotest 0x6369cb CsdScheduleForever
+  [240:11] iotest 0x636d05 CsdScheduler
+  [240:12] iotest 0x65d13a ConverseInit
+  [240:13] iotest 0x5c67c7 charm_main
+  [240:14] libc.so.6 0x14d3f89666a3 __libc_start_main
+  [240:15] iotest 0x503dae _start
+[r087.ib.bridges2.psc.edu:79612] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+------------- Processor 240 Exiting: Caught Signal ------------
+Reason: Terminated
+--------------------------------------------------------------------------
+mpirun noticed that process rank 185 with PID 79554 on node r087 exited on signal 9 (Killed).
+--------------------------------------------------------------------------
+[r064.ib.bridges2.psc.edu:54927] 107 more processes have sent help message help-mpi-errors.txt / mpi_errors_are_fatal
+[r064.ib.bridges2.psc.edu:54927] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[r064.ib.bridges2.psc.edu:54927] 16 more processes have sent help message help-mpi-api.txt / mpi-abort

@@ -1,7 +1,8 @@
 #include "iotest.decl.h"
 #include <vector>
 #include <fstream>
-#define TEST_FILE "large_test.txt"
+#include <algorithm>
+
 CProxy_Main mainProxy;
 
 
@@ -14,8 +15,13 @@ class Main : public CBase_Main {
 	double start_time;
 	double end_time;
 	size_t file_size;
+	size_t num_pes;
+	size_t num_readers_per_pe = 50;
+	std::string TEST_FILE;
 public:
 	Main(CkArgMsg* msg){
+		TEST_FILE = std::string(msg -> argv[1]);	
+		num_pes = atoi(msg -> argv[2]);
 		std::ifstream ifs;
 		ifs.open(TEST_FILE);
 		ifs.seekg(0, std::ios::end);
@@ -39,10 +45,10 @@ public:
 	}
 
 	void doneReading(CkReductionMsg* msg){
-		CkCallback cb(CkIndex_Main::postClose(0),mainProxy);
 		double end_time = CkWallTimer();
-		CkPrintf("Total time: %f\n", end_time - start_time);
+		CkCallback cb(CkIndex_Main::postClose(0),mainProxy);
 		Ck::IO::closeReadSession(current_session, cb);
+		CkPrintf("Total time: %f\n", end_time - start_time);
 	}
 
 };
@@ -52,8 +58,9 @@ struct Reader : public CBase_Reader {
 
 	Reader_SDAG_CODE;
 public:
-	Reader(Ck::IO::Session session, size_t bytes, size_t offset, CkCallback after_read){
+	Reader(Ck::IO::Session session, size_t file_size, size_t bytes, size_t offset, size_t num_chares){
 		size_t my_offset = offset + thisIndex * bytes;
+		if(thisIndex == num_chares - 1) bytes = std::min(bytes, file_size - my_offset);
 		// ckout << "My offset for reader " << thisIndex << " is " << my_offset << endl;
 		CkCallback test_read_cb(CkIndex_Reader::testRead(0), thisProxy[thisIndex]);	
 		Ck::IO::read(session, bytes, my_offset, test_read_cb); 
@@ -62,4 +69,3 @@ public:
 };
 
 #include "iotest.def.h"
-#undef TEST_FILE

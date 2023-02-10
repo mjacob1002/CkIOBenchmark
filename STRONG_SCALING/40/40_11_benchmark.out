@@ -1,0 +1,2943 @@
+
+Running as 1408 OS processes: ./iotest TEST_FILES/40.txt 1408
+charmrun> /usr/bin/setarch x86_64 -R mpirun -np 1408 ./iotest TEST_FILES/40.txt 1408
+Charm++> Running on MPI library: Open MPI v4.0.5, package: Open MPI spack@br012.ib.bridges2.psc.edu Distribution, ident: 4.0.5, repo rev: v4.0.5, Aug 26, 2020 (MPI standard: 3.1)
+Charm++> Level of thread support used: MPI_THREAD_SINGLE (desired: MPI_THREAD_SINGLE)
+Charm++> Running in non-SMP mode: 1408 processes (PEs)
+Converse/Charm++ Commit ID: v7.1.0-devel-237-ga3f055e15
+Isomalloc> Synchronized global address space.
+CharmLB> Load balancer assumes all CPUs are same.
+Charm++> Running on 11 hosts (2 sockets x 64 cores x 1 PUs = 128-way SMP)
+Charm++> cpu topology info is gathered in 0.066 seconds.
+CharmLB> Load balancing instrumentation for communication is off.
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+MPI_ABORT was invoked on rank 1290 in communicator MPI COMMUNICATOR 3 DUP FROM 0
+with errorcode 1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+------------- Processor 1282 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1286 Exiting: Caught Signal ------------
+Reason: Terminated
+[391] Stack Traceback:
+  [391:0] libpthread.so.0 0x151ce6c68dd0 
+  [391:1] libc.so.6 0x151ce6984f21 __poll
+  [391:2] libopen-pal.so.40 0x151ce5f8e75d 
+  [391:3] libopen-pal.so.40 0x151ce5f868c9 opal_libevent2022_event_base_loop
+  [391:4] libopen-pal.so.40 0x151ce5f3021e 
+  [391:5] libpthread.so.0 0x151ce6c5e2de 
+  [391:6] libc.so.6 0x151ce698fe83 clone
+------------- Processor 1289 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 391 Exiting: Caught Signal ------------
+Reason: Terminated
+[1675941100.639082] [r444:1512 :0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=1504 length=524288) returned -1: No such process
+[1290] Stack Traceback:
+  [1290:0] libpthread.so.0 0x1458d98bfdd0 
+[397] Stack Traceback:
+  [397:0] libpthread.so.0 0x14e9a9e74dd0 
+  [397:1] libc.so.6 0x14e9a9b90f21 __poll
+  [397:2] libopen-pal.so.40 0x14e9a919a75d 
+  [397:3] libopen-pal.so.40 0x14e9a91928c9 opal_libevent2022_event_base_loop
+  [397:4] libopen-pal.so.40 0x14e9a913c21e 
+  [397:5] libpthread.so.0 0x14e9a9e6a2de 
+  [397:6] libc.so.6 0x14e9a9b9be83 clone
+------------- Processor 1290 Exiting: Caught Signal ------------
+Reason: Segmentation fault
+------------- Processor 397 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1292 Exiting: Caught Signal ------------
+Reason: Terminated
+[479] Stack Traceback:
+  [479:0] libpthread.so.0 0x14d37dad7dd0 
+  [479:1] libc.so.6 0x14d37d7f3f21 __poll
+  [479:2] libopen-pal.so.40 0x14d37cdfd75d 
+  [479:3] libopen-pal.so.40 0x14d37cdf58c9 opal_libevent2022_event_base_loop
+  [479:4] libopen-pal.so.40 0x14d37cd9f21e 
+  [479:5] libpthread.so.0 0x14d37dacd2de 
+  [479:6] libc.so.6 0x14d37d7fee83 clone
+------------- Processor 1297 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 479 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1299 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1300 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1302 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1304 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1305 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1311 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1320 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1322 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1324 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1326 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1337 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1343 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1344 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1345 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1346 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1407 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1348 Exiting: Caught Signal ------------
+Reason: Terminated
+[1675941100.652912] [r444:1583 :0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=1582 length=524288) returned -1: No such process
+------------- Processor 1351 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1352 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1353 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1355 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1356 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1357 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1358 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1362 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1364 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1365 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1366 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1369 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1370 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1373 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1374 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1382 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1384 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1385 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1386 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1387 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1390 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1391 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1392 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1394 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1395 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1396 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1397 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1398 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1399 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1400 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1401 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1403 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1405 Exiting: Caught Signal ------------
+Reason: Terminated
+[817] Stack Traceback:
+  [817:0] libpthread.so.0 0x154f298b3dd0 
+  [817:1] libc.so.6 0x154f295cff21 __poll
+  [817:2] libopen-pal.so.40 0x154f28bd975d 
+  [817:3] libopen-pal.so.40 0x154f28bd18c9 opal_libevent2022_event_base_loop
+  [817:4] libopen-pal.so.40 0x154f28b7b21e 
+  [817:5] libpthread.so.0 0x154f298a92de 
+  [817:6] libc.so.6 0x154f295dae83 clone
+------------- Processor 817 Exiting: Caught Signal ------------
+Reason: Terminated
+[878] Stack Traceback:
+  [878:0] libpthread.so.0 0x152033e1add0 
+  [878:1] libucp.so.0 0x152032e38e90 ucp_worker_progress
+  [878:2] libopen-pal.so.40 0x1520330dc773 opal_progress
+  [878:3] libmpi.so.40 0x152034690f9a ompi_request_default_test
+  [878:4] libmpi.so.40 0x1520346d046e PMPI_Test
+  [878:5] iotest 0x65b380 
+  [878:6] iotest 0x65c6ad CmiGetNonLocal
+  [878:7] iotest 0x6368cd CsdNextMessage
+  [878:8] iotest 0x63699a CsdScheduleForever
+  [878:9] iotest 0x636d05 CsdScheduler
+  [878:10] iotest 0x65d13a ConverseInit
+  [878:11] iotest 0x5c67c7 charm_main
+  [878:12] libc.so.6 0x152033a696a3 __libc_start_main
+  [878:13] iotest 0x503dae _start
+------------- Processor 878 Exiting: Caught Signal ------------
+Reason: Terminated
+[512] Stack Traceback:
+  [512:0] libpthread.so.0 0x14e8f823cdd0 
+  [512:1] libuct_ib.so.0 0x14e8efdd1a40 uct_dc_mlx5_ep_am_short
+  [512:2] libucp.so.0 0x14e8f72722b2 ucp_tag_send_nbx
+  [512:3] libmpi.so.40 0x14e8f8c06f8a mca_pml_ucx_isend
+  [512:4] libmpi.so.40 0x14e8f8ae4085 MPI_Isend
+  [512:5] iotest 0x65baa4 
+  [512:6] iotest 0x53edb3 Chare::~Chare()
+  [512:7] iotest 0x52ebb0 CBaseT1<Chare, Ck::IO::impl::CProxy_ReadAssembler>::~CBaseT1()
+  [512:8] iotest 0x538260 Ck::IO::impl::ReadAssembler::~ReadAssembler()
+  [512:9] iotest 0x53827c Ck::IO::impl::ReadAssembler::~ReadAssembler()
+  [512:10] iotest 0x52ef86 Ck::IO::impl::ReadAssembler::shareData(unsigned long, unsigned long, char*)
+  [512:11] iotest 0x52680a Ck::IO::impl::CkIndex_ReadAssembler::_call_shareData_marshall3(void*, void*)
+  [512:12] iotest 0x542002 CkDeliverMessageFree
+  [512:13] iotest 0x542c58 
+  [512:14] iotest 0x5453f1 _processHandler(void*, CkCoreState*)
+  [512:15] iotest 0x6369cb CsdScheduleForever
+  [512:16] iotest 0x636d05 CsdScheduler
+  [512:17] iotest 0x65d13a ConverseInit
+  [512:18] iotest 0x5c67c7 charm_main
+  [512:19] libc.so.6 0x14e8f7e8b6a3 __libc_start_main
+  [512:20] iotest 0x503dae _start
+------------- Processor 512 Exiting: Caught Signal ------------
+Reason: Terminated
+[513] Stack Traceback:
+  [513:0] libpthread.so.0 0x14d41acc4dd0 
+  [513:1] libuct_ib.so.0 0x14d416a59e70 uct_dc_mlx5_iface_is_reachable
+  [513:2] libucp.so.0 0x14d419d07ee8 ucp_wireup_is_reachable
+  [513:3] libucp.so.0 0x14d419d03704 
+  [513:4] libucp.so.0 0x14d419d042e3 
+  [513:5] libucp.so.0 0x14d419d04e7e ucp_wireup_select_lanes
+  [513:6] libucp.so.0 0x14d419d07f8b ucp_wireup_init_lanes
+  [513:7] libucp.so.0 0x14d419cd68b7 ucp_ep_create_to_worker_addr
+  [513:8] libucp.so.0 0x14d419cd745b ucp_ep_create
+  [513:9] libmpi.so.40 0x14d41b68d493 
+  [513:10] libmpi.so.40 0x14d41b68e86b 
+  [513:11] libmpi.so.40 0x14d41b68f093 mca_pml_ucx_isend
+  [513:12] libmpi.so.40 0x14d41b56c085 MPI_Isend
+  [513:13] iotest 0x65baa4 
+  [513:14] iotest 0x544f47 _processHandler(void*, CkCoreState*)
+  [513:15] iotest 0x6369cb CsdScheduleForever
+  [513:16] iotest 0x636d05 CsdScheduler
+  [513:17] iotest 0x65d13a ConverseInit
+  [513:18] iotest 0x5c67c7 charm_main
+  [513:19] libc.so.6 0x14d41a9136a3 __libc_start_main
+  [513:20] iotest 0x503dae _start
+------------- Processor 513 Exiting: Caught Signal ------------
+Reason: Terminated
+[514] Stack Traceback:
+  [514:0] libpthread.so.0 0x1534cae5add0 
+  [514:1] libuct_ib.so.0 0x1534c6beff80 
+  [514:2] libuct_ib.so.0 0x1534c6bf075e 
+  [514:3] libucp.so.0 0x1534c9e78eea ucp_worker_progress
+  [514:4] libmpi.so.40 0x1534cb824233 mca_pml_ucx_recv
+  [514:5] libmpi.so.40 0x1534cb708cf5 PMPI_Recv
+  [514:6] iotest 0x65c3e7 
+  [514:7] iotest 0x65c6b2 CmiGetNonLocal
+  [514:8] iotest 0x6368cd CsdNextMessage
+  [514:9] iotest 0x63699a CsdScheduleForever
+  [514:10] iotest 0x636d05 CsdScheduler
+  [514:11] iotest 0x65d13a ConverseInit
+  [514:12] iotest 0x5c67c7 charm_main
+  [514:13] libc.so.6 0x1534caaa96a3 __libc_start_main
+  [514:14] iotest 0x503dae _start
+------------- Processor 514 Exiting: Caught Signal ------------
+Reason: Terminated
+[515] Stack Traceback:
+  [515:0] libpthread.so.0 0x14b274716dd0 
+  [515:1] libuct_ib.so.0 0x14b2704a97a0 uct_dc_mlx5_ep_pending_purge
+  [515:2] libucp.so.0 0x14b27375ada3 ucp_wireup_connect_remote
+  [515:3] libucp.so.0 0x14b27374783f ucp_tag_send_start_rndv
+  [515:4] libucp.so.0 0x14b27374caa6 ucp_tag_send_nbx
+  [515:5] libmpi.so.40 0x14b2750e0f8a mca_pml_ucx_isend
+  [515:6] libmpi.so.40 0x14b274fbe085 MPI_Isend
+  [515:7] iotest 0x65baa4 
+  [515:8] iotest 0x698b27 CldEnqueue
+  [515:9] iotest 0x54515d _processHandler(void*, CkCoreState*)
+  [515:10] iotest 0x6369cb CsdScheduleForever
+  [515:11] iotest 0x636d05 CsdScheduler
+  [515:12] iotest 0x65d13a ConverseInit
+  [515:13] iotest 0x5c67c7 charm_main
+  [515:14] libc.so.6 0x14b2743656a3 __libc_start_main
+  [515:15] iotest 0x503dae _start
+------------- Processor 515 Exiting: Caught Signal ------------
+Reason: Terminated
+[516] Stack Traceback:
+  [516:0] libpthread.so.0 0x153df1485dd0 
+  [516:1] iotest 0x634788 CcdRaiseCondition
+  [516:2] iotest 0x636a5a CsdScheduleForever
+  [516:3] iotest 0x636d05 CsdScheduler
+  [516:4] iotest 0x65d13a ConverseInit
+  [516:5] iotest 0x5c67c7 charm_main
+  [516:6] libc.so.6 0x153df10d46a3 __libc_start_main
+  [516:7] iotest 0x503dae _start
+------------- Processor 516 Exiting: Caught Signal ------------
+Reason: Terminated
+[517] Stack Traceback:
+  [517:0] libpthread.so.0 0x1545bb48edd0 
+  [517:1] libmpi.so.40 0x1545bbe58223 mca_pml_ucx_recv
+  [517:2] libmpi.so.40 0x1545bbd3ccf5 PMPI_Recv
+  [517:3] iotest 0x65c3e7 
+  [517:4] iotest 0x65c6b2 CmiGetNonLocal
+  [517:5] iotest 0x6368cd CsdNextMessage
+  [517:6] iotest 0x63699a CsdScheduleForever
+  [517:7] iotest 0x636d05 CsdScheduler
+  [517:8] iotest 0x65d13a ConverseInit
+  [517:9] iotest 0x5c67c7 charm_main
+  [517:10] libc.so.6 0x1545bb0dd6a3 __libc_start_main
+  [517:11] iotest 0x503dae _start
+------------- Processor 517 Exiting: Caught Signal ------------
+Reason: Terminated
+[518] Stack Traceback:
+  [518:0] libpthread.so.0 0x1544801aadd0 
+  [518:1] libuct.so.0 0x15447ef87049 
+  [518:2] libucp.so.0 0x15447f1c8eea ucp_worker_progress
+  [518:3] libmpi.so.40 0x154480b740eb mca_pml_ucx_iprobe
+  [518:4] libmpi.so.40 0x154480a5171c PMPI_Iprobe
+  [518:5] iotest 0x65c388 
+  [518:6] iotest 0x65c60e 
+  [518:7] iotest 0x6348a0 CcdRaiseCondition
+  [518:8] iotest 0x636a5a CsdScheduleForever
+  [518:9] iotest 0x636d05 CsdScheduler
+  [518:10] iotest 0x65d13a ConverseInit
+  [518:11] iotest 0x5c67c7 charm_main
+  [518:12] libc.so.6 0x15447fdf96a3 __libc_start_main
+  [518:13] iotest 0x503dae _start
+------------- Processor 518 Exiting: Caught Signal ------------
+Reason: Terminated
+[519] Stack Traceback:
+  [519:0] libpthread.so.0 0x1476af1eadd0 
+  [519:1] libc.so.6 0x1476aef740bb 
+  [519:2] iotest 0x53701a __gnu_cxx::__enable_if<std::__is_byte<char>::__value, void>::__type std::__fill_a1<char>(char*, char*, char const&)
+  [519:3] iotest 0x536754 void std::__fill_a<char*, char>(char*, char*, char const&)
+  [519:4] iotest 0x537861 char* std::__fill_n_a<char*, unsigned long, char>(char*, unsigned long, char const&, std::random_access_iterator_tag)
+  [519:5] iotest 0x5372da char* std::fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [519:6] iotest 0x537048 char* std::__uninitialized_fill_n<true>::__uninit_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [519:7] iotest 0x536786 char* std::uninitialized_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [519:8] iotest 0x535214 char* std::__uninitialized_fill_n_a<char*, unsigned long, char, char>(char*, unsigned long, char const&, std::allocator<char>&)
+  [519:9] iotest 0x53330a std::vector<char, std::allocator<char> >::_M_fill_insert(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, unsigned long, char const&)
+  [519:10] iotest 0x531ae0 std::vector<char, std::allocator<char> >::resize(unsigned long, char const&)
+  [519:11] iotest 0x52ecf6 Ck::IO::impl::ReadAssembler::ReadAssembler(Ck::IO::Session, unsigned long, unsigned long, CkCallback)
+  [519:12] iotest 0x52514f Ck::IO::impl::CkIndex_ReadAssembler::_call_ReadAssembler_marshall1(void*, void*)
+  [519:13] iotest 0x542002 CkDeliverMessageFree
+  [519:14] iotest 0x542c58 
+  [519:15] iotest 0x545922 _processHandler(void*, CkCoreState*)
+  [519:16] iotest 0x6369cb CsdScheduleForever
+  [519:17] iotest 0x636d05 CsdScheduler
+  [519:18] iotest 0x65d13a ConverseInit
+  [519:19] iotest 0x5c67c7 charm_main
+  [519:20] libc.so.6 0x1476aee396a3 __libc_start_main
+  [519:21] iotest 0x503dae _start
+------------- Processor 519 Exiting: Caught Signal ------------
+Reason: Terminated
+[520] Stack Traceback:
+  [520:0] libpthread.so.0 0x14b84dcfadd0 
+  [520:1] libuct_ib.so.0 0x14b849a8da40 uct_dc_mlx5_ep_am_short
+  [520:2] libucp.so.0 0x14b84cd302b2 ucp_tag_send_nbx
+  [520:3] libmpi.so.40 0x14b84e6c4f8a mca_pml_ucx_isend
+  [520:4] libmpi.so.40 0x14b84e5a2085 MPI_Isend
+  [520:5] iotest 0x65baa4 
+  [520:6] iotest 0x53f63c _noCldNodeEnqueue(int, envelope*)
+  [520:7] iotest 0x543231 CkSendMsgBranch
+  [520:8] iotest 0x572c2b CProxyElement_CkLocMgr::requestLocation(CkArrayIndex const&, int, CkEntryOptions const*)
+  [520:9] iotest 0x5798b1 CkLocMgr::requestLocation(CkArrayIndex const&)
+  [520:10] iotest 0x55853f CkArray::bufferForLocation(CkArrayMessage*, CkArrayIndex const&)
+  [520:11] iotest 0x52ef68 Ck::IO::impl::ReadAssembler::shareData(unsigned long, unsigned long, char*)
+  [520:12] iotest 0x52680a Ck::IO::impl::CkIndex_ReadAssembler::_call_shareData_marshall3(void*, void*)
+  [520:13] iotest 0x542002 CkDeliverMessageFree
+  [520:14] iotest 0x542c58 
+  [520:15] iotest 0x5453f1 _processHandler(void*, CkCoreState*)
+  [520:16] iotest 0x6369cb CsdScheduleForever
+  [520:17] iotest 0x636d05 CsdScheduler
+  [520:18] iotest 0x65d13a ConverseInit
+  [520:19] iotest 0x5c67c7 charm_main
+  [520:20] libc.so.6 0x14b84d9496a3 __libc_start_main
+  [520:21] iotest 0x503dae _start
+------------- Processor 520 Exiting: Caught Signal ------------
+Reason: Terminated
+[521] Stack Traceback:
+  [521:0] libpthread.so.0 0x146a74308dd0 
+  [521:1] libuct_ib.so.0 0x146a700793f0 
+  [521:2] libucp.so.0 0x146a7331fb23 ucp_mem_rereg_mds
+  [521:3] libucp.so.0 0x146a73321e0a ucp_request_memory_reg
+  [521:4] libucp.so.0 0x146a7333978c ucp_tag_rndv_reg_send_buffer
+  [521:5] libucp.so.0 0x146a7333eaa6 ucp_tag_send_nbx
+  [521:6] libmpi.so.40 0x146a74cd2f8a mca_pml_ucx_isend
+  [521:7] libmpi.so.40 0x146a74bb0085 MPI_Isend
+  [521:8] iotest 0x65baa4 
+  [521:9] iotest 0x698b27 CldEnqueue
+  [521:10] iotest 0x543e95 
+  [521:11] iotest 0x526653 Ck::IO::impl::CProxy_ReadAssembler::shareData(unsigned long const&, unsigned long const&, char const*, CkEntryOptions const*)
+  [521:12] iotest 0x52eacb Ck::IO::impl::ReadSession::sendData(unsigned long, unsigned long, Ck::IO::impl::CProxy_ReadAssembler)
+  [521:13] iotest 0x5284c5 Ck::IO::impl::CkIndex_ReadSession::_call_sendData_marshall2(void*, void*)
+  [521:14] iotest 0x542002 CkDeliverMessageFree
+  [521:15] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [521:16] iotest 0x5459e6 _processHandler(void*, CkCoreState*)
+  [521:17] iotest 0x6369cb CsdScheduleForever
+  [521:18] iotest 0x636d05 CsdScheduler
+  [521:19] iotest 0x65d13a ConverseInit
+  [521:20] iotest 0x5c67c7 charm_main
+  [521:21] libc.so.6 0x146a73f576a3 __libc_start_main
+  [521:22] iotest 0x503dae _start
+------------- Processor 521 Exiting: Caught Signal ------------
+Reason: Terminated
+[522] Stack Traceback:
+  [522:0] libpthread.so.0 0x14f345c73dd0 
+  [522:1] libuct_ib.so.0 0x14f341a08f80 
+  [522:2] libuct_ib.so.0 0x14f341a0975e 
+  [522:3] libucp.so.0 0x14f344c91eea ucp_worker_progress
+  [522:4] libmpi.so.40 0x14f34663d233 mca_pml_ucx_recv
+  [522:5] libmpi.so.40 0x14f346521cf5 PMPI_Recv
+  [522:6] iotest 0x65c3e7 
+  [522:7] iotest 0x65c6b2 CmiGetNonLocal
+  [522:8] iotest 0x6368cd CsdNextMessage
+  [522:9] iotest 0x63699a CsdScheduleForever
+  [522:10] iotest 0x636d05 CsdScheduler
+  [522:11] iotest 0x65d13a ConverseInit
+  [522:12] iotest 0x5c67c7 charm_main
+  [522:13] libc.so.6 0x14f3458c26a3 __libc_start_main
+  [522:14] iotest 0x503dae _start
+------------- Processor 522 Exiting: Caught Signal ------------
+Reason: Terminated
+[523] Stack Traceback:
+  [523:0] libpthread.so.0 0x14f067b2add0 
+  [523:1] libuct_ib.so.0 0x14f0640bea40 uct_dc_mlx5_ep_am_short
+  [523:2] libucp.so.0 0x14f066b602b2 ucp_tag_send_nbx
+  [523:3] libmpi.so.40 0x14f0684f4f8a mca_pml_ucx_isend
+  [523:4] libmpi.so.40 0x14f0683d2085 MPI_Isend
+  [523:5] iotest 0x65baa4 
+  [523:6] iotest 0x53f63c _noCldNodeEnqueue(int, envelope*)
+  [523:7] iotest 0x543231 CkSendMsgBranch
+  [523:8] iotest 0x572c2b CProxyElement_CkLocMgr::requestLocation(CkArrayIndex const&, int, CkEntryOptions const*)
+  [523:9] iotest 0x5798b1 CkLocMgr::requestLocation(CkArrayIndex const&)
+  [523:10] iotest 0x55853f CkArray::bufferForLocation(CkArrayMessage*, CkArrayIndex const&)
+  [523:11] iotest 0x52ef68 Ck::IO::impl::ReadAssembler::shareData(unsigned long, unsigned long, char*)
+  [523:12] iotest 0x52680a Ck::IO::impl::CkIndex_ReadAssembler::_call_shareData_marshall3(void*, void*)
+  [523:13] iotest 0x542002 CkDeliverMessageFree
+  [523:14] iotest 0x542c58 
+  [523:15] iotest 0x5453f1 _processHandler(void*, CkCoreState*)
+  [523:16] iotest 0x6369cb CsdScheduleForever
+  [523:17] iotest 0x636d05 CsdScheduler
+  [523:18] iotest 0x65d13a ConverseInit
+  [523:19] iotest 0x5c67c7 charm_main
+  [523:20] libc.so.6 0x14f0677796a3 __libc_start_main
+  [523:21] iotest 0x503dae _start
+------------- Processor 523 Exiting: Caught Signal ------------
+Reason: Terminated
+[524] Stack Traceback:
+  [524:0] libpthread.so.0 0x1485e701edd0 
+  [524:1] libc.so.6 0x1485e6da7d76 
+  [524:2] iotest 0x526570 Ck::IO::impl::CProxy_ReadAssembler::shareData(unsigned long const&, unsigned long const&, char const*, CkEntryOptions const*)
+  [524:3] iotest 0x52eacb Ck::IO::impl::ReadSession::sendData(unsigned long, unsigned long, Ck::IO::impl::CProxy_ReadAssembler)
+  [524:4] iotest 0x5284c5 Ck::IO::impl::CkIndex_ReadSession::_call_sendData_marshall2(void*, void*)
+  [524:5] iotest 0x542002 CkDeliverMessageFree
+  [524:6] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [524:7] iotest 0x5459e6 _processHandler(void*, CkCoreState*)
+  [524:8] iotest 0x6369cb CsdScheduleForever
+  [524:9] iotest 0x636d05 CsdScheduler
+  [524:10] iotest 0x65d13a ConverseInit
+  [524:11] iotest 0x5c67c7 charm_main
+  [524:12] libc.so.6 0x1485e6c6d6a3 __libc_start_main
+  [524:13] iotest 0x503dae _start
+------------- Processor 524 Exiting: Caught Signal ------------
+Reason: Terminated
+[525] Stack Traceback:
+  [525:0] libpthread.so.0 0x150742e15dd0 
+  [525:1] libuct_ib.so.0 0x15073eb863f0 
+  [525:2] libucp.so.0 0x150741e2cb23 ucp_mem_rereg_mds
+  [525:3] libucp.so.0 0x150741e2ee0a ucp_request_memory_reg
+  [525:4] libucp.so.0 0x150741e4678c ucp_tag_rndv_reg_send_buffer
+  [525:5] libucp.so.0 0x150741e4baa6 ucp_tag_send_nbx
+  [525:6] libmpi.so.40 0x1507437dff8a mca_pml_ucx_isend
+  [525:7] libmpi.so.40 0x1507436bd085 MPI_Isend
+  [525:8] iotest 0x65baa4 
+  [525:9] iotest 0x698b27 CldEnqueue
+  [525:10] iotest 0x543e95 
+  [525:11] iotest 0x526653 Ck::IO::impl::CProxy_ReadAssembler::shareData(unsigned long const&, unsigned long const&, char const*, CkEntryOptions const*)
+  [525:12] iotest 0x52eacb Ck::IO::impl::ReadSession::sendData(unsigned long, unsigned long, Ck::IO::impl::CProxy_ReadAssembler)
+  [525:13] iotest 0x5284c5 Ck::IO::impl::CkIndex_ReadSession::_call_sendData_marshall2(void*, void*)
+  [525:14] iotest 0x542002 CkDeliverMessageFree
+  [525:15] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [525:16] iotest 0x5459e6 _processHandler(void*, CkCoreState*)
+  [525:17] iotest 0x6369cb CsdScheduleForever
+  [525:18] iotest 0x636d05 CsdScheduler
+  [525:19] iotest 0x65d13a ConverseInit
+  [525:20] iotest 0x5c67c7 charm_main
+  [525:21] libc.so.6 0x150742a646a3 __libc_start_main
+  [525:22] iotest 0x503dae _start
+------------- Processor 525 Exiting: Caught Signal ------------
+Reason: Terminated
+[526] Stack Traceback:
+  [526:0] libpthread.so.0 0x14a3d886cdd0 
+  [526:1] libuct_ib.so.0 0x14a3d45ffa40 uct_dc_mlx5_ep_am_short
+  [526:2] libucp.so.0 0x14a3d78a22b2 ucp_tag_send_nbx
+  [526:3] libmpi.so.40 0x14a3d9236f8a mca_pml_ucx_isend
+  [526:4] libmpi.so.40 0x14a3d9114085 MPI_Isend
+  [526:5] iotest 0x65baa4 
+  [526:6] iotest 0x544f47 _processHandler(void*, CkCoreState*)
+  [526:7] iotest 0x6369cb CsdScheduleForever
+  [526:8] iotest 0x636d05 CsdScheduler
+  [526:9] iotest 0x65d13a ConverseInit
+  [526:10] iotest 0x5c67c7 charm_main
+  [526:11] libc.so.6 0x14a3d84bb6a3 __libc_start_main
+  [526:12] iotest 0x503dae _start
+------------- Processor 526 Exiting: Caught Signal ------------
+Reason: Terminated
+[527] Stack Traceback:
+  [527:0] libpthread.so.0 0x1503ff974dd0 
+  [527:1] libc.so.6 0x1503ff6fe0bb 
+  [527:2] iotest 0x53701a __gnu_cxx::__enable_if<std::__is_byte<char>::__value, void>::__type std::__fill_a1<char>(char*, char*, char const&)
+  [527:3] iotest 0x536754 void std::__fill_a<char*, char>(char*, char*, char const&)
+  [527:4] iotest 0x537861 char* std::__fill_n_a<char*, unsigned long, char>(char*, unsigned long, char const&, std::random_access_iterator_tag)
+  [527:5] iotest 0x5372da char* std::fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [527:6] iotest 0x537048 char* std::__uninitialized_fill_n<true>::__uninit_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [527:7] iotest 0x536786 char* std::uninitialized_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [527:8] iotest 0x535214 char* std::__uninitialized_fill_n_a<char*, unsigned long, char, char>(char*, unsigned long, char const&, std::allocator<char>&)
+  [527:9] iotest 0x53330a std::vector<char, std::allocator<char> >::_M_fill_insert(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, unsigned long, char const&)
+  [527:10] iotest 0x531ae0 std::vector<char, std::allocator<char> >::resize(unsigned long, char const&)
+  [527:11] iotest 0x52ecf6 Ck::IO::impl::ReadAssembler::ReadAssembler(Ck::IO::Session, unsigned long, unsigned long, CkCallback)
+  [527:12] iotest 0x52514f Ck::IO::impl::CkIndex_ReadAssembler::_call_ReadAssembler_marshall1(void*, void*)
+  [527:13] iotest 0x542002 CkDeliverMessageFree
+  [527:14] iotest 0x542c58 
+  [527:15] iotest 0x545922 _processHandler(void*, CkCoreState*)
+  [527:16] iotest 0x6369cb CsdScheduleForever
+  [527:17] iotest 0x636d05 CsdScheduler
+  [527:18] iotest 0x65d13a ConverseInit
+  [527:19] iotest 0x5c67c7 charm_main
+  [527:20] libc.so.6 0x1503ff5c36a3 __libc_start_main
+  [527:21] iotest 0x503dae _start
+------------- Processor 527 Exiting: Caught Signal ------------
+Reason: Terminated
+[528] Stack Traceback:
+  [528:0] libpthread.so.0 0x145b389eadd0 
+  [528:1] libucp.so.0 0x145b37a2de50 ucp_wireup_is_reachable
+  [528:2] libucp.so.0 0x145b37a29704 
+  [528:3] libucp.so.0 0x145b37a29cf9 
+  [528:4] libucp.so.0 0x145b37a2ac59 
+  [528:5] libucp.so.0 0x145b37a2ae7e ucp_wireup_select_lanes
+  [528:6] libucp.so.0 0x145b37a2df8b ucp_wireup_init_lanes
+  [528:7] libucp.so.0 0x145b379fc8b7 ucp_ep_create_to_worker_addr
+  [528:8] libucp.so.0 0x145b379fd45b ucp_ep_create
+  [528:9] libmpi.so.40 0x145b393b3493 
+  [528:10] libmpi.so.40 0x145b393b486b 
+  [528:11] libmpi.so.40 0x145b393b5093 mca_pml_ucx_isend
+  [528:12] libmpi.so.40 0x145b39292085 MPI_Isend
+  [528:13] iotest 0x65baa4 
+  [528:14] iotest 0x544f47 _processHandler(void*, CkCoreState*)
+  [528:15] iotest 0x6369cb CsdScheduleForever
+  [528:16] iotest 0x636d05 CsdScheduler
+  [528:17] iotest 0x65d13a ConverseInit
+  [528:18] iotest 0x5c67c7 charm_main
+  [528:19] libc.so.6 0x145b386396a3 __libc_start_main
+  [528:20] iotest 0x503dae _start
+------------- Processor 528 Exiting: Caught Signal ------------
+Reason: Terminated
+[529] Stack Traceback:
+  [529:0] libpthread.so.0 0x151f127d9dd0 
+  [529:1] libuct_ib.so.0 0x151f0e54a190 
+  [529:2] libucp.so.0 0x151f117f42a9 ucp_ep_rkey_unpack
+  [529:3] libucp.so.0 0x151f1180a9e6 ucp_rndv_matched
+  [529:4] libucp.so.0 0x151f1180df8f ucp_tag_recv_nbx
+  [529:5] libmpi.so.40 0x151f131a31fe mca_pml_ucx_recv
+  [529:6] libmpi.so.40 0x151f13087cf5 PMPI_Recv
+  [529:7] iotest 0x65c3e7 
+  [529:8] iotest 0x65c6b2 CmiGetNonLocal
+  [529:9] iotest 0x6368cd CsdNextMessage
+  [529:10] iotest 0x63699a CsdScheduleForever
+  [529:11] iotest 0x636d05 CsdScheduler
+  [529:12] iotest 0x65d13a ConverseInit
+  [529:13] iotest 0x5c67c7 charm_main
+  [529:14] libc.so.6 0x151f124286a3 __libc_start_main
+  [529:15] iotest 0x503dae _start
+------------- Processor 529 Exiting: Caught Signal ------------
+Reason: Terminated
+[530] Stack Traceback:
+  [530:0] libpthread.so.0 0x1526299fadd0 
+  [530:1] libuct_ib.so.0 0x15262576b3d0 
+  [530:2] libucp.so.0 0x152628a11a7f ucp_mem_rereg_mds
+  [530:3] libucp.so.0 0x152628a140cf ucp_request_memory_dereg
+  [530:4] libucp.so.0 0x152628a29efe ucp_rndv_ats_handler
+  [530:5] libuct.so.0 0x1526287d6fcd 
+  [530:6] libucp.so.0 0x152628a18eea ucp_worker_progress
+  [530:7] libopen-pal.so.40 0x152628cbc773 opal_progress
+  [530:8] libmpi.so.40 0x15262a270f9a ompi_request_default_test
+  [530:9] libmpi.so.40 0x15262a2b046e PMPI_Test
+  [530:10] iotest 0x65b380 
+  [530:11] iotest 0x65c6ad CmiGetNonLocal
+  [530:12] iotest 0x6368cd CsdNextMessage
+  [530:13] iotest 0x63699a CsdScheduleForever
+  [530:14] iotest 0x636d05 CsdScheduler
+  [530:15] iotest 0x65d13a ConverseInit
+  [530:16] iotest 0x5c67c7 charm_main
+  [530:17] libc.so.6 0x1526296496a3 __libc_start_main
+  [530:18] iotest 0x503dae _start
+------------- Processor 530 Exiting: Caught Signal ------------
+Reason: Terminated
+[531] Stack Traceback:
+  [531:0] libpthread.so.0 0x14991ee49dd0 
+  [531:1] libuct_ib.so.0 0x14991abba3d0 
+  [531:2] libucp.so.0 0x14991de60a7f ucp_mem_rereg_mds
+  [531:3] libucp.so.0 0x14991de630cf ucp_request_memory_dereg
+  [531:4] libucp.so.0 0x14991de78efe ucp_rndv_ats_handler
+  [531:5] libuct.so.0 0x14991dc25fcd 
+  [531:6] libucp.so.0 0x14991de67eea ucp_worker_progress
+  [531:7] libopen-pal.so.40 0x14991e10b773 opal_progress
+  [531:8] libmpi.so.40 0x14991f6bff9a ompi_request_default_test
+  [531:9] libmpi.so.40 0x14991f6ff46e PMPI_Test
+  [531:10] iotest 0x65b380 
+  [531:11] iotest 0x65c6ad CmiGetNonLocal
+  [531:12] iotest 0x6368cd CsdNextMessage
+  [531:13] iotest 0x63699a CsdScheduleForever
+  [531:14] iotest 0x636d05 CsdScheduler
+  [531:15] iotest 0x65d13a ConverseInit
+  [531:16] iotest 0x5c67c7 charm_main
+  [531:17] libc.so.6 0x14991ea986a3 __libc_start_main
+  [531:18] iotest 0x503dae _start
+------------- Processor 531 Exiting: Caught Signal ------------
+Reason: Terminated
+[532] Stack Traceback:
+  [532:0] libpthread.so.0 0x152991ea1dd0 
+  [532:1] libuct_ib.so.0 0x15298dc123d0 
+  [532:2] libucp.so.0 0x152990eb8a7f ucp_mem_rereg_mds
+  [532:3] libucp.so.0 0x152990ebb0cf ucp_request_memory_dereg
+  [532:4] libucp.so.0 0x152990ed0efe ucp_rndv_ats_handler
+  [532:5] libuct.so.0 0x152990c7dfcd 
+  [532:6] libucp.so.0 0x152990ebfeea ucp_worker_progress
+  [532:7] libopen-pal.so.40 0x152991163773 opal_progress
+  [532:8] libmpi.so.40 0x152992717f9a ompi_request_default_test
+  [532:9] libmpi.so.40 0x15299275746e PMPI_Test
+  [532:10] iotest 0x65b380 
+  [532:11] iotest 0x65c6ad CmiGetNonLocal
+  [532:12] iotest 0x6368cd CsdNextMessage
+  [532:13] iotest 0x63699a CsdScheduleForever
+  [532:14] iotest 0x636d05 CsdScheduler
+  [532:15] iotest 0x65d13a ConverseInit
+  [532:16] iotest 0x5c67c7 charm_main
+  [532:17] libc.so.6 0x152991af06a3 __libc_start_main
+  [532:18] iotest 0x503dae _start
+------------- Processor 532 Exiting: Caught Signal ------------
+Reason: Terminated
+[533] Stack Traceback:
+  [533:0] libpthread.so.0 0x148948be0dd0 
+  [533:1] libuct_ib.so.0 0x1489449513d0 
+  [533:2] libucp.so.0 0x148947bf7a7f ucp_mem_rereg_mds
+  [533:3] libucp.so.0 0x148947bfa0cf ucp_request_memory_dereg
+  [533:4] libucp.so.0 0x148947c0fefe ucp_rndv_ats_handler
+  [533:5] libuct.so.0 0x1489479bcfcd 
+  [533:6] libucp.so.0 0x148947bfeeea ucp_worker_progress
+  [533:7] libopen-pal.so.40 0x148947ea2773 opal_progress
+  [533:8] libmpi.so.40 0x148949456f9a ompi_request_default_test
+  [533:9] libmpi.so.40 0x14894949646e PMPI_Test
+  [533:10] iotest 0x65b380 
+  [533:11] iotest 0x65c6ad CmiGetNonLocal
+  [533:12] iotest 0x6368cd CsdNextMessage
+  [533:13] iotest 0x63699a CsdScheduleForever
+  [533:14] iotest 0x636d05 CsdScheduler
+  [533:15] iotest 0x65d13a ConverseInit
+  [533:16] iotest 0x5c67c7 charm_main
+  [533:17] libc.so.6 0x14894882f6a3 __libc_start_main
+  [533:18] iotest 0x503dae _start
+------------- Processor 533 Exiting: Caught Signal ------------
+Reason: Terminated
+[534] Stack Traceback:
+  [534:0] libpthread.so.0 0x14b8ae1a0dd0 
+  [534:1] libuct_ib.so.0 0x14b8a9f272f0 uct_rc_mlx5_release_desc
+  [534:2] libucp.so.0 0x14b8ad1d4a65 ucp_tag_recv_nbx
+  [534:3] libmpi.so.40 0x14b8aeb6a1fe mca_pml_ucx_recv
+  [534:4] libmpi.so.40 0x14b8aea4ecf5 PMPI_Recv
+  [534:5] iotest 0x65c3e7 
+  [534:6] iotest 0x65c6b2 CmiGetNonLocal
+  [534:7] iotest 0x6368cd CsdNextMessage
+  [534:8] iotest 0x63699a CsdScheduleForever
+  [534:9] iotest 0x636d05 CsdScheduler
+  [534:10] iotest 0x65d13a ConverseInit
+  [534:11] iotest 0x5c67c7 charm_main
+  [534:12] libc.so.6 0x14b8addef6a3 __libc_start_main
+  [534:13] iotest 0x503dae _start
+------------- Processor 534 Exiting: Caught Signal ------------
+Reason: Terminated
+[535] Stack Traceback:
+  [535:0] libpthread.so.0 0x148641cd1dd0 
+  [535:1] libuct_ib.so.0 0x14863da582f0 uct_rc_mlx5_release_desc
+  [535:2] libucp.so.0 0x148640d05a65 ucp_tag_recv_nbx
+  [535:3] libmpi.so.40 0x14864269b1fe mca_pml_ucx_recv
+  [535:4] libmpi.so.40 0x14864257fcf5 PMPI_Recv
+  [535:5] iotest 0x65c3e7 
+  [535:6] iotest 0x65c6b2 CmiGetNonLocal
+  [535:7] iotest 0x6368cd CsdNextMessage
+  [535:8] iotest 0x63699a CsdScheduleForever
+  [535:9] iotest 0x636d05 CsdScheduler
+  [535:10] iotest 0x65d13a ConverseInit
+  [535:11] iotest 0x5c67c7 charm_main
+  [535:12] libc.so.6 0x1486419206a3 __libc_start_main
+  [535:13] iotest 0x503dae _start
+------------- Processor 535 Exiting: Caught Signal ------------
+Reason: Terminated
+[536] Stack Traceback:
+  [536:0] libpthread.so.0 0x14c154e8ddd0 
+  [536:1] libopen-pal.so.40 0x14c1541c69b0 pmix3x_convert_jobid
+  [536:2] libopen-pal.so.40 0x14c1541cd435 pmix3x_get
+  [536:3] libmpi.so.40 0x14c155701f56 ompi_proc_complete_init_single
+  [536:4] libmpi.so.40 0x14c1557021ff ompi_proc_for_name
+  [536:5] libmpi.so.40 0x14c15585802b mca_pml_ucx_isend
+  [536:6] libmpi.so.40 0x14c155735085 MPI_Isend
+  [536:7] iotest 0x65baa4 
+  [536:8] iotest 0x544f47 _processHandler(void*, CkCoreState*)
+  [536:9] iotest 0x6369cb CsdScheduleForever
+  [536:10] iotest 0x636d05 CsdScheduler
+  [536:11] iotest 0x65d13a ConverseInit
+  [536:12] iotest 0x5c67c7 charm_main
+  [536:13] libc.so.6 0x14c154adc6a3 __libc_start_main
+  [536:14] iotest 0x503dae _start
+------------- Processor 536 Exiting: Caught Signal ------------
+Reason: Terminated
+[537] Stack Traceback:
+  [537:0] libpthread.so.0 0x1456617badd0 
+  [537:1] libuct_ib.so.0 0x14565d52c3ef uct_ib_reg_mr
+  [537:2] libuct_ib.so.0 0x14565d52c9c8 uct_ib_reg_key_impl
+  [537:3] libuct_ib.so.0 0x14565d530da3 
+  [537:4] libuct_ib.so.0 0x14565d52bc20 
+  [537:5] libucs.so.0 0x14566014adad ucs_rcache_get
+  [537:6] libuct_ib.so.0 0x14565d52b414 
+  [537:7] libucp.so.0 0x1456607d1b23 ucp_mem_rereg_mds
+  [537:8] libucp.so.0 0x1456607d3e0a ucp_request_memory_reg
+  [537:9] libucp.so.0 0x1456607eb78c ucp_tag_rndv_reg_send_buffer
+  [537:10] libucp.so.0 0x1456607f0aa6 ucp_tag_send_nbx
+  [537:11] libmpi.so.40 0x145662184f8a mca_pml_ucx_isend
+  [537:12] libmpi.so.40 0x145662062085 MPI_Isend
+  [537:13] iotest 0x65baa4 
+  [537:14] iotest 0x698b27 CldEnqueue
+  [537:15] iotest 0x543e95 
+  [537:16] iotest 0x526653 Ck::IO::impl::CProxy_ReadAssembler::shareData(unsigned long const&, unsigned long const&, char const*, CkEntryOptions const*)
+  [537:17] iotest 0x52eacb Ck::IO::impl::ReadSession::sendData(unsigned long, unsigned long, Ck::IO::impl::CProxy_ReadAssembler)
+  [537:18] iotest 0x5284c5 Ck::IO::impl::CkIndex_ReadSession::_call_sendData_marshall2(void*, void*)
+  [537:19] iotest 0x542002 CkDeliverMessageFree
+  [537:20] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [537:21] iotest 0x5459e6 _processHandler(void*, CkCoreState*)
+  [537:22] iotest 0x6369cb CsdScheduleForever
+  [537:23] iotest 0x636d05 CsdScheduler
+  [537:24] iotest 0x65d13a ConverseInit
+  [537:25] iotest 0x5c67c7 charm_main
+  [537:26] libc.so.6 0x1456614096a3 __libc_start_main
+  [537:27] iotest 0x503dae _start
+------------- Processor 537 Exiting: Caught Signal ------------
+Reason: Terminated
+[538] Stack Traceback:
+  [538:0] libpthread.so.0 0x154f109c4dd0 
+  [538:1] libc.so.6 0x154f1074e0bb 
+  [538:2] iotest 0x53701a __gnu_cxx::__enable_if<std::__is_byte<char>::__value, void>::__type std::__fill_a1<char>(char*, char*, char const&)
+  [538:3] iotest 0x536754 void std::__fill_a<char*, char>(char*, char*, char const&)
+  [538:4] iotest 0x537861 char* std::__fill_n_a<char*, unsigned long, char>(char*, unsigned long, char const&, std::random_access_iterator_tag)
+  [538:5] iotest 0x5372da char* std::fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [538:6] iotest 0x537048 char* std::__uninitialized_fill_n<true>::__uninit_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [538:7] iotest 0x536786 char* std::uninitialized_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [538:8] iotest 0x535214 char* std::__uninitialized_fill_n_a<char*, unsigned long, char, char>(char*, unsigned long, char const&, std::allocator<char>&)
+  [538:9] iotest 0x53330a std::vector<char, std::allocator<char> >::_M_fill_insert(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, unsigned long, char const&)
+  [538:10] iotest 0x531ae0 std::vector<char, std::allocator<char> >::resize(unsigned long, char const&)
+  [538:11] iotest 0x52ecf6 Ck::IO::impl::ReadAssembler::ReadAssembler(Ck::IO::Session, unsigned long, unsigned long, CkCallback)
+  [538:12] iotest 0x52514f Ck::IO::impl::CkIndex_ReadAssembler::_call_ReadAssembler_marshall1(void*, void*)
+  [538:13] iotest 0x542002 CkDeliverMessageFree
+  [538:14] iotest 0x542c58 
+  [538:15] iotest 0x545922 _processHandler(void*, CkCoreState*)
+  [538:16] iotest 0x6369cb CsdScheduleForever
+  [538:17] iotest 0x636d05 CsdScheduler
+  [538:18] iotest 0x65d13a ConverseInit
+  [538:19] iotest 0x5c67c7 charm_main
+  [538:20] libc.so.6 0x154f106136a3 __libc_start_main
+  [538:21] iotest 0x503dae _start
+------------- Processor 538 Exiting: Caught Signal ------------
+Reason: Terminated
+[539] Stack Traceback:
+  [539:0] libpthread.so.0 0x147c1873add0 
+  [539:1] iotest 0x65be20 CmiInterSendNetworkFunc(int, int, int, char*, int)
+  [539:2] iotest 0x698b27 CldEnqueue
+  [539:3] iotest 0x543e95 
+  [539:4] iotest 0x526653 Ck::IO::impl::CProxy_ReadAssembler::shareData(unsigned long const&, unsigned long const&, char const*, CkEntryOptions const*)
+  [539:5] iotest 0x52eacb Ck::IO::impl::ReadSession::sendData(unsigned long, unsigned long, Ck::IO::impl::CProxy_ReadAssembler)
+  [539:6] iotest 0x5284c5 Ck::IO::impl::CkIndex_ReadSession::_call_sendData_marshall2(void*, void*)
+  [539:7] iotest 0x542002 CkDeliverMessageFree
+  [539:8] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [539:9] iotest 0x5459e6 _processHandler(void*, CkCoreState*)
+  [539:10] iotest 0x6369cb CsdScheduleForever
+  [539:11] iotest 0x636d05 CsdScheduler
+  [539:12] iotest 0x65d13a ConverseInit
+  [539:13] iotest 0x5c67c7 charm_main
+  [539:14] libc.so.6 0x147c183896a3 __libc_start_main
+  [539:15] iotest 0x503dae _start
+------------- Processor 539 Exiting: Caught Signal ------------
+Reason: Terminated
+[540] Stack Traceback:
+  [540:0] libpthread.so.0 0x14c207c35dd0 
+  [540:1] libucp.so.0 0x14c206c53eea ucp_worker_progress
+  [540:2] libmpi.so.40 0x14c2085ff233 mca_pml_ucx_recv
+  [540:3] libmpi.so.40 0x14c2084e3cf5 PMPI_Recv
+  [540:4] iotest 0x65c3e7 
+  [540:5] iotest 0x65c6b2 CmiGetNonLocal
+  [540:6] iotest 0x6368cd CsdNextMessage
+  [540:7] iotest 0x63699a CsdScheduleForever
+  [540:8] iotest 0x636d05 CsdScheduler
+  [540:9] iotest 0x65d13a ConverseInit
+  [540:10] iotest 0x5c67c7 charm_main
+  [540:11] libc.so.6 0x14c2078846a3 __libc_start_main
+  [540:12] iotest 0x503dae _start
+------------- Processor 540 Exiting: Caught Signal ------------
+Reason: Terminated
+[541] Stack Traceback:
+  [541:0] libpthread.so.0 0x146019fefdd0 
+  [541:1] libmpi.so.40 0x14601a841d40 
+  [541:2] libmpi.so.40 0x14601a9b920b mca_pml_ucx_recv
+  [541:3] libmpi.so.40 0x14601a89dcf5 PMPI_Recv
+  [541:4] iotest 0x65c3e7 
+  [541:5] iotest 0x65c6b2 CmiGetNonLocal
+  [541:6] iotest 0x6368cd CsdNextMessage
+  [541:7] iotest 0x63699a CsdScheduleForever
+  [541:8] iotest 0x636d05 CsdScheduler
+  [541:9] iotest 0x65d13a ConverseInit
+  [541:10] iotest 0x5c67c7 charm_main
+  [541:11] libc.so.6 0x146019c3e6a3 __libc_start_main
+  [541:12] iotest 0x503dae _start
+------------- Processor 541 Exiting: Caught Signal ------------
+Reason: Terminated
+[542] Stack Traceback:
+  [542:0] libpthread.so.0 0x155366204dd0 
+  [542:1] libuct_ib.so.0 0x155361f99e70 uct_dc_mlx5_iface_is_reachable
+  [542:2] libucp.so.0 0x155365247ee8 ucp_wireup_is_reachable
+  [542:3] libucp.so.0 0x155365243704 
+  [542:4] libucp.so.0 0x1553652442e3 
+  [542:5] libucp.so.0 0x155365244e7e ucp_wireup_select_lanes
+  [542:6] libucp.so.0 0x155365247f8b ucp_wireup_init_lanes
+  [542:7] libucp.so.0 0x1553652168b7 ucp_ep_create_to_worker_addr
+  [542:8] libucp.so.0 0x15536521745b ucp_ep_create
+  [542:9] libmpi.so.40 0x155366bcd493 
+  [542:10] libmpi.so.40 0x155366bce86b 
+  [542:11] libmpi.so.40 0x155366bcf093 mca_pml_ucx_isend
+  [542:12] libmpi.so.40 0x155366aac085 MPI_Isend
+  [542:13] iotest 0x65baa4 
+  [542:14] iotest 0x544f47 _processHandler(void*, CkCoreState*)
+  [542:15] iotest 0x6369cb CsdScheduleForever
+  [542:16] iotest 0x636d05 CsdScheduler
+  [542:17] iotest 0x65d13a ConverseInit
+  [542:18] iotest 0x5c67c7 charm_main
+  [542:19] libc.so.6 0x155365e536a3 __libc_start_main
+  [542:20] iotest 0x503dae _start
+------------- Processor 542 Exiting: Caught Signal ------------
+Reason: Terminated
+[543] Stack Traceback:
+  [543:0] libpthread.so.0 0x14ae8c043dd0 
+  [543:1] libuct_ib.so.0 0x14ae83daf3d0 
+  [543:2] libucp.so.0 0x14ae8b05aa7f ucp_mem_rereg_mds
+  [543:3] libucp.so.0 0x14ae8b05d0cf ucp_request_memory_dereg
+  [543:4] libucp.so.0 0x14ae8b072efe ucp_rndv_ats_handler
+  [543:5] libuct.so.0 0x14ae8ae1ffcd 
+  [543:6] libucp.so.0 0x14ae8b061eea ucp_worker_progress
+  [543:7] libopen-pal.so.40 0x14ae8b305773 opal_progress
+  [543:8] libmpi.so.40 0x14ae8c8b9f9a ompi_request_default_test
+  [543:9] libmpi.so.40 0x14ae8c8f946e PMPI_Test
+  [543:10] iotest 0x65b380 
+  [543:11] iotest 0x65c6ad CmiGetNonLocal
+  [543:12] iotest 0x6368cd CsdNextMessage
+  [543:13] iotest 0x63699a CsdScheduleForever
+  [543:14] iotest 0x636d05 CsdScheduler
+  [543:15] iotest 0x65d13a ConverseInit
+  [543:16] iotest 0x5c67c7 charm_main
+  [543:17] libc.so.6 0x14ae8bc926a3 __libc_start_main
+  [543:18] iotest 0x503dae _start
+------------- Processor 543 Exiting: Caught Signal ------------
+Reason: Terminated
+[545] Stack Traceback:
+  [545:0] libpthread.so.0 0x14d333f6edd0 
+  [545:1] libc.so.6 0x14d333cf80bb 
+  [545:2] iotest 0x53701a __gnu_cxx::__enable_if<std::__is_byte<char>::__value, void>::__type std::__fill_a1<char>(char*, char*, char const&)
+  [545:3] iotest 0x536754 void std::__fill_a<char*, char>(char*, char*, char const&)
+  [545:4] iotest 0x537861 char* std::__fill_n_a<char*, unsigned long, char>(char*, unsigned long, char const&, std::random_access_iterator_tag)
+  [545:5] iotest 0x5372da char* std::fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [545:6] iotest 0x537048 char* std::__uninitialized_fill_n<true>::__uninit_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [545:7] iotest 0x536786 char* std::uninitialized_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [545:8] iotest 0x535214 char* std::__uninitialized_fill_n_a<char*, unsigned long, char, char>(char*, unsigned long, char const&, std::allocator<char>&)
+  [545:9] iotest 0x53330a std::vector<char, std::allocator<char> >::_M_fill_insert(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, unsigned long, char const&)
+  [545:10] iotest 0x531ae0 std::vector<char, std::allocator<char> >::resize(unsigned long, char const&)
+  [545:11] iotest 0x52ecf6 Ck::IO::impl::ReadAssembler::ReadAssembler(Ck::IO::Session, unsigned long, unsigned long, CkCallback)
+  [545:12] iotest 0x52514f Ck::IO::impl::CkIndex_ReadAssembler::_call_ReadAssembler_marshall1(void*, void*)
+  [545:13] iotest 0x542002 CkDeliverMessageFree
+  [545:14] iotest 0x542c58 
+  [545:15] iotest 0x545922 _processHandler(void*, CkCoreState*)
+  [545:16] iotest 0x6369cb CsdScheduleForever
+  [545:17] iotest 0x636d05 CsdScheduler
+  [545:18] iotest 0x65d13a ConverseInit
+  [545:19] iotest 0x5c67c7 charm_main
+  [545:20] libc.so.6 0x14d333bbd6a3 __libc_start_main
+  [545:21] iotest 0x503dae _start
+------------- Processor 545 Exiting: Caught Signal ------------
+Reason: Terminated
+[546] Stack Traceback:
+  [546:0] libpthread.so.0 0x14d9bbe28dd0 
+  [546:1] libuct_ib.so.0 0x14d9b39d2e70 uct_dc_mlx5_iface_is_reachable
+  [546:2] libucp.so.0 0x14d9bae6bee8 ucp_wireup_is_reachable
+  [546:3] libucp.so.0 0x14d9bae67704 
+  [546:4] libucp.so.0 0x14d9bae682e3 
+  [546:5] libucp.so.0 0x14d9bae68e7e ucp_wireup_select_lanes
+  [546:6] libucp.so.0 0x14d9bae6bf8b ucp_wireup_init_lanes
+  [546:7] libucp.so.0 0x14d9bae3a8b7 ucp_ep_create_to_worker_addr
+  [546:8] libucp.so.0 0x14d9bae3b45b ucp_ep_create
+  [546:9] libmpi.so.40 0x14d9bc7f1493 
+  [546:10] libmpi.so.40 0x14d9bc7f286b 
+  [546:11] libmpi.so.40 0x14d9bc7f3093 mca_pml_ucx_isend
+  [546:12] libmpi.so.40 0x14d9bc6d0085 MPI_Isend
+  [546:13] iotest 0x65baa4 
+  [546:14] iotest 0x544f47 _processHandler(void*, CkCoreState*)
+  [546:15] iotest 0x6369cb CsdScheduleForever
+  [546:16] iotest 0x636d05 CsdScheduler
+  [546:17] iotest 0x65d13a ConverseInit
+  [546:18] iotest 0x5c67c7 charm_main
+  [546:19] libc.so.6 0x14d9bba776a3 __libc_start_main
+  [546:20] iotest 0x503dae _start
+------------- Processor 546 Exiting: Caught Signal ------------
+Reason: Terminated
+[547] Stack Traceback:
+  [547:0] libpthread.so.0 0x14ee3dde3dd0 
+  [547:1] libc.so.6 0x14ee3db6d0bb 
+  [547:2] iotest 0x53701a __gnu_cxx::__enable_if<std::__is_byte<char>::__value, void>::__type std::__fill_a1<char>(char*, char*, char const&)
+  [547:3] iotest 0x536754 void std::__fill_a<char*, char>(char*, char*, char const&)
+  [547:4] iotest 0x537861 char* std::__fill_n_a<char*, unsigned long, char>(char*, unsigned long, char const&, std::random_access_iterator_tag)
+  [547:5] iotest 0x5372da char* std::fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [547:6] iotest 0x537048 char* std::__uninitialized_fill_n<true>::__uninit_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [547:7] iotest 0x536786 char* std::uninitialized_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [547:8] iotest 0x535214 char* std::__uninitialized_fill_n_a<char*, unsigned long, char, char>(char*, unsigned long, char const&, std::allocator<char>&)
+  [547:9] iotest 0x53330a std::vector<char, std::allocator<char> >::_M_fill_insert(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, unsigned long, char const&)
+  [547:10] iotest 0x531ae0 std::vector<char, std::allocator<char> >::resize(unsigned long, char const&)
+  [547:11] iotest 0x52ecf6 Ck::IO::impl::ReadAssembler::ReadAssembler(Ck::IO::Session, unsigned long, unsigned long, CkCallback)
+  [547:12] iotest 0x52514f Ck::IO::impl::CkIndex_ReadAssembler::_call_ReadAssembler_marshall1(void*, void*)
+  [547:13] iotest 0x542002 CkDeliverMessageFree
+  [547:14] iotest 0x542c58 
+  [547:15] iotest 0x545922 _processHandler(void*, CkCoreState*)
+  [547:16] iotest 0x6369cb CsdScheduleForever
+  [547:17] iotest 0x636d05 CsdScheduler
+  [547:18] iotest 0x65d13a ConverseInit
+  [547:19] iotest 0x5c67c7 charm_main
+  [547:20] libc.so.6 0x14ee3da326a3 __libc_start_main
+  [547:21] iotest 0x503dae _start
+------------- Processor 547 Exiting: Caught Signal ------------
+Reason: Terminated
+[548] Stack Traceback:
+  [548:0] libpthread.so.0 0x15126a85fdd0 
+  [548:1] libc.so.6 0x15126a5e90bb 
+  [548:2] iotest 0x53701a __gnu_cxx::__enable_if<std::__is_byte<char>::__value, void>::__type std::__fill_a1<char>(char*, char*, char const&)
+  [548:3] iotest 0x536754 void std::__fill_a<char*, char>(char*, char*, char const&)
+  [548:4] iotest 0x537861 char* std::__fill_n_a<char*, unsigned long, char>(char*, unsigned long, char const&, std::random_access_iterator_tag)
+  [548:5] iotest 0x5372da char* std::fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [548:6] iotest 0x537048 char* std::__uninitialized_fill_n<true>::__uninit_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [548:7] iotest 0x536786 char* std::uninitialized_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [548:8] iotest 0x535214 char* std::__uninitialized_fill_n_a<char*, unsigned long, char, char>(char*, unsigned long, char const&, std::allocator<char>&)
+  [548:9] iotest 0x53330a std::vector<char, std::allocator<char> >::_M_fill_insert(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, unsigned long, char const&)
+  [548:10] iotest 0x531ae0 std::vector<char, std::allocator<char> >::resize(unsigned long, char const&)
+  [548:11] iotest 0x52ecf6 Ck::IO::impl::ReadAssembler::ReadAssembler(Ck::IO::Session, unsigned long, unsigned long, CkCallback)
+  [548:12] iotest 0x52514f Ck::IO::impl::CkIndex_ReadAssembler::_call_ReadAssembler_marshall1(void*, void*)
+  [548:13] iotest 0x542002 CkDeliverMessageFree
+  [548:14] iotest 0x542c58 
+  [548:15] iotest 0x545922 _processHandler(void*, CkCoreState*)
+  [548:16] iotest 0x6369cb CsdScheduleForever
+  [548:17] iotest 0x636d05 CsdScheduler
+  [548:18] iotest 0x65d13a ConverseInit
+  [548:19] iotest 0x5c67c7 charm_main
+  [548:20] libc.so.6 0x15126a4ae6a3 __libc_start_main
+  [548:21] iotest 0x503dae _start
+------------- Processor 548 Exiting: Caught Signal ------------
+Reason: Terminated
+[549] Stack Traceback:
+  [549:0] libpthread.so.0 0x14640cee4dd0 
+  [549:1] libuct_ib.so.0 0x146408c553f0 
+  [549:2] libucp.so.0 0x14640befbb23 ucp_mem_rereg_mds
+  [549:3] libucp.so.0 0x14640befde0a ucp_request_memory_reg
+  [549:4] libucp.so.0 0x14640bf1578c ucp_tag_rndv_reg_send_buffer
+  [549:5] libucp.so.0 0x14640bf1aaa6 ucp_tag_send_nbx
+  [549:6] libmpi.so.40 0x14640d8aef8a mca_pml_ucx_isend
+  [549:7] libmpi.so.40 0x14640d78c085 MPI_Isend
+  [549:8] iotest 0x65baa4 
+  [549:9] iotest 0x698b27 CldEnqueue
+  [549:10] iotest 0x543e95 
+  [549:11] iotest 0x526653 Ck::IO::impl::CProxy_ReadAssembler::shareData(unsigned long const&, unsigned long const&, char const*, CkEntryOptions const*)
+  [549:12] iotest 0x52eacb Ck::IO::impl::ReadSession::sendData(unsigned long, unsigned long, Ck::IO::impl::CProxy_ReadAssembler)
+  [549:13] iotest 0x5284c5 Ck::IO::impl::CkIndex_ReadSession::_call_sendData_marshall2(void*, void*)
+  [549:14] iotest 0x542002 CkDeliverMessageFree
+  [549:15] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [549:16] iotest 0x5459e6 _processHandler(void*, CkCoreState*)
+  [549:17] iotest 0x6369cb CsdScheduleForever
+  [549:18] iotest 0x636d05 CsdScheduler
+  [549:19] iotest 0x65d13a ConverseInit
+  [549:20] iotest 0x5c67c7 charm_main
+  [549:21] libc.so.6 0x14640cb336a3 __libc_start_main
+  [549:22] iotest 0x503dae _start
+------------- Processor 549 Exiting: Caught Signal ------------
+Reason: Terminated
+[550] Stack Traceback:
+  [550:0] libpthread.so.0 0x14ec63878dd0 
+  [550:1] libuct_ib.so.0 0x14ec5b5ae190 
+  [550:2] libucp.so.0 0x14ec628932a9 ucp_ep_rkey_unpack
+  [550:3] libucp.so.0 0x14ec628a99e6 ucp_rndv_matched
+  [550:4] libucp.so.0 0x14ec628acf8f ucp_tag_recv_nbx
+  [550:5] libmpi.so.40 0x14ec642421fe mca_pml_ucx_recv
+  [550:6] libmpi.so.40 0x14ec64126cf5 PMPI_Recv
+  [550:7] iotest 0x65c3e7 
+  [550:8] iotest 0x65c6b2 CmiGetNonLocal
+  [550:9] iotest 0x6368cd CsdNextMessage
+  [550:10] iotest 0x63699a CsdScheduleForever
+  [550:11] iotest 0x636d05 CsdScheduler
+  [550:12] iotest 0x65d13a ConverseInit
+  [550:13] iotest 0x5c67c7 charm_main
+  [550:14] libc.so.6 0x14ec634c76a3 __libc_start_main
+  [550:15] iotest 0x503dae _start
+------------- Processor 550 Exiting: Caught Signal ------------
+Reason: Terminated
+[551] Stack Traceback:
+  [551:0] libpthread.so.0 0x14726efb9dd0 
+  [551:1] libc.so.6 0x14726ed430bb 
+  [551:2] iotest 0x53701a __gnu_cxx::__enable_if<std::__is_byte<char>::__value, void>::__type std::__fill_a1<char>(char*, char*, char const&)
+  [551:3] iotest 0x536754 void std::__fill_a<char*, char>(char*, char*, char const&)
+  [551:4] iotest 0x537861 char* std::__fill_n_a<char*, unsigned long, char>(char*, unsigned long, char const&, std::random_access_iterator_tag)
+  [551:5] iotest 0x5372da char* std::fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [551:6] iotest 0x537048 char* std::__uninitialized_fill_n<true>::__uninit_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [551:7] iotest 0x536786 char* std::uninitialized_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [551:8] iotest 0x535214 char* std::__uninitialized_fill_n_a<char*, unsigned long, char, char>(char*, unsigned long, char const&, std::allocator<char>&)
+  [551:9] iotest 0x53330a std::vector<char, std::allocator<char> >::_M_fill_insert(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, unsigned long, char const&)
+  [551:10] iotest 0x531ae0 std::vector<char, std::allocator<char> >::resize(unsigned long, char const&)
+  [551:11] iotest 0x52ecf6 Ck::IO::impl::ReadAssembler::ReadAssembler(Ck::IO::Session, unsigned long, unsigned long, CkCallback)
+  [551:12] iotest 0x52514f Ck::IO::impl::CkIndex_ReadAssembler::_call_ReadAssembler_marshall1(void*, void*)
+  [551:13] iotest 0x542002 CkDeliverMessageFree
+  [551:14] iotest 0x542c58 
+  [551:15] iotest 0x545922 _processHandler(void*, CkCoreState*)
+  [551:16] iotest 0x6369cb CsdScheduleForever
+  [551:17] iotest 0x636d05 CsdScheduler
+  [551:18] iotest 0x65d13a ConverseInit
+  [551:19] iotest 0x5c67c7 charm_main
+  [551:20] libc.so.6 0x14726ec086a3 __libc_start_main
+  [551:21] iotest 0x503dae _start
+------------- Processor 551 Exiting: Caught Signal ------------
+Reason: Terminated
+[552] Stack Traceback:
+  [552:0] libpthread.so.0 0x153ebfd18dd0 
+  [552:1] libc.so.6 0x153ebfaa20bb 
+  [552:2] iotest 0x53701a __gnu_cxx::__enable_if<std::__is_byte<char>::__value, void>::__type std::__fill_a1<char>(char*, char*, char const&)
+  [552:3] iotest 0x536754 void std::__fill_a<char*, char>(char*, char*, char const&)
+  [552:4] iotest 0x537861 char* std::__fill_n_a<char*, unsigned long, char>(char*, unsigned long, char const&, std::random_access_iterator_tag)
+  [552:5] iotest 0x5372da char* std::fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [552:6] iotest 0x537048 char* std::__uninitialized_fill_n<true>::__uninit_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [552:7] iotest 0x536786 char* std::uninitialized_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [552:8] iotest 0x535214 char* std::__uninitialized_fill_n_a<char*, unsigned long, char, char>(char*, unsigned long, char const&, std::allocator<char>&)
+  [552:9] iotest 0x53330a std::vector<char, std::allocator<char> >::_M_fill_insert(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, unsigned long, char const&)
+  [552:10] iotest 0x531ae0 std::vector<char, std::allocator<char> >::resize(unsigned long, char const&)
+  [552:11] iotest 0x52ecf6 Ck::IO::impl::ReadAssembler::ReadAssembler(Ck::IO::Session, unsigned long, unsigned long, CkCallback)
+  [552:12] iotest 0x52514f Ck::IO::impl::CkIndex_ReadAssembler::_call_ReadAssembler_marshall1(void*, void*)
+  [552:13] iotest 0x542002 CkDeliverMessageFree
+  [552:14] iotest 0x542c58 
+  [552:15] iotest 0x545922 _processHandler(void*, CkCoreState*)
+  [552:16] iotest 0x6369cb CsdScheduleForever
+  [552:17] iotest 0x636d05 CsdScheduler
+  [552:18] iotest 0x65d13a ConverseInit
+  [552:19] iotest 0x5c67c7 charm_main
+  [552:20] libc.so.6 0x153ebf9676a3 __libc_start_main
+  [552:21] iotest 0x503dae _start
+------------- Processor 552 Exiting: Caught Signal ------------
+Reason: Terminated
+[553] Stack Traceback:
+  [553:0] libpthread.so.0 0x14f00f707dd0 
+  [553:1] libuct_ib.so.0 0x14f00c09de70 uct_dc_mlx5_iface_is_reachable
+  [553:2] libucp.so.0 0x14f00e74aee8 ucp_wireup_is_reachable
+  [553:3] libucp.so.0 0x14f00e746704 
+  [553:4] libucp.so.0 0x14f00e7472e3 
+  [553:5] libucp.so.0 0x14f00e747e7e ucp_wireup_select_lanes
+  [553:6] libucp.so.0 0x14f00e74af8b ucp_wireup_init_lanes
+  [553:7] libucp.so.0 0x14f00e74b5c8 
+  [553:8] libucp.so.0 0x14f00e74bc8e 
+  [553:9] libuct_ib.so.0 0x14f00c09e199 
+  [553:10] libucp.so.0 0x14f00e725eea ucp_worker_progress
+  [553:11] libmpi.so.40 0x14f0100d10eb mca_pml_ucx_iprobe
+  [553:12] libmpi.so.40 0x14f00ffae71c PMPI_Iprobe
+  [553:13] iotest 0x65c388 
+  [553:14] iotest 0x65c6b2 CmiGetNonLocal
+  [553:15] iotest 0x6368cd CsdNextMessage
+  [553:16] iotest 0x63699a CsdScheduleForever
+  [553:17] iotest 0x636d05 CsdScheduler
+  [553:18] iotest 0x65d13a ConverseInit
+  [553:19] iotest 0x5c67c7 charm_main
+  [553:20] libc.so.6 0x14f00f3566a3 __libc_start_main
+  [553:21] iotest 0x503dae _start
+------------- Processor 553 Exiting: Caught Signal ------------
+Reason: Terminated
+[554] Stack Traceback:
+  [554:0] libpthread.so.0 0x14c7f268ddd0 
+  [554:1] libc.so.6 0x14c7f24170bb 
+  [554:2] iotest 0x53701a __gnu_cxx::__enable_if<std::__is_byte<char>::__value, void>::__type std::__fill_a1<char>(char*, char*, char const&)
+  [554:3] iotest 0x536754 void std::__fill_a<char*, char>(char*, char*, char const&)
+  [554:4] iotest 0x537861 char* std::__fill_n_a<char*, unsigned long, char>(char*, unsigned long, char const&, std::random_access_iterator_tag)
+  [554:5] iotest 0x5372da char* std::fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [554:6] iotest 0x537048 char* std::__uninitialized_fill_n<true>::__uninit_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [554:7] iotest 0x536786 char* std::uninitialized_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [554:8] iotest 0x535214 char* std::__uninitialized_fill_n_a<char*, unsigned long, char, char>(char*, unsigned long, char const&, std::allocator<char>&)
+  [554:9] iotest 0x53330a std::vector<char, std::allocator<char> >::_M_fill_insert(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, unsigned long, char const&)
+  [554:10] iotest 0x531ae0 std::vector<char, std::allocator<char> >::resize(unsigned long, char const&)
+  [554:11] iotest 0x52ecf6 Ck::IO::impl::ReadAssembler::ReadAssembler(Ck::IO::Session, unsigned long, unsigned long, CkCallback)
+  [554:12] iotest 0x52514f Ck::IO::impl::CkIndex_ReadAssembler::_call_ReadAssembler_marshall1(void*, void*)
+  [554:13] iotest 0x542002 CkDeliverMessageFree
+  [554:14] iotest 0x542c58 
+  [554:15] iotest 0x545922 _processHandler(void*, CkCoreState*)
+  [554:16] iotest 0x6369cb CsdScheduleForever
+  [554:17] iotest 0x636d05 CsdScheduler
+  [554:18] iotest 0x65d13a ConverseInit
+  [554:19] iotest 0x5c67c7 charm_main
+  [554:20] libc.so.6 0x14c7f22dc6a3 __libc_start_main
+  [554:21] iotest 0x503dae _start
+------------- Processor 554 Exiting: Caught Signal ------------
+Reason: Terminated
+[555] Stack Traceback:
+  [555:0] libpthread.so.0 0x14987e501dd0 
+  [555:1] libmpi.so.40 0x14987eecd3f0 mca_pml_ucx_send_nbx_completion
+  [555:2] libucp.so.0 0x14987d530f19 ucp_rndv_ats_handler
+  [555:3] libuct.so.0 0x14987d2ddfcd 
+  [555:4] libucp.so.0 0x14987d51feea ucp_worker_progress
+  [555:5] libopen-pal.so.40 0x14987d7c3773 opal_progress
+  [555:6] libmpi.so.40 0x14987ed77f9a ompi_request_default_test
+  [555:7] libmpi.so.40 0x14987edb746e PMPI_Test
+  [555:8] iotest 0x65b380 
+  [555:9] iotest 0x65c6ad CmiGetNonLocal
+  [555:10] iotest 0x6368cd CsdNextMessage
+  [555:11] iotest 0x63699a CsdScheduleForever
+  [555:12] iotest 0x636d05 CsdScheduler
+  [555:13] iotest 0x65d13a ConverseInit
+  [555:14] iotest 0x5c67c7 charm_main
+  [555:15] libc.so.6 0x14987e1506a3 __libc_start_main
+  [555:16] iotest 0x503dae _start
+------------- Processor 555 Exiting: Caught Signal ------------
+Reason: Terminated
+[556] Stack Traceback:
+  [556:0] libpthread.so.0 0x152fb9915dd0 
+  [556:1] libuct_ib.so.0 0x152fb5686190 
+  [556:2] libucp.so.0 0x152fb89302a9 ucp_ep_rkey_unpack
+  [556:3] libucp.so.0 0x152fb89469e6 ucp_rndv_matched
+  [556:4] libucp.so.0 0x152fb8949f8f ucp_tag_recv_nbx
+  [556:5] libmpi.so.40 0x152fba2df1fe mca_pml_ucx_recv
+  [556:6] libmpi.so.40 0x152fba1c3cf5 PMPI_Recv
+  [556:7] iotest 0x65c3e7 
+  [556:8] iotest 0x65c6b2 CmiGetNonLocal
+  [556:9] iotest 0x6368cd CsdNextMessage
+  [556:10] iotest 0x63699a CsdScheduleForever
+  [556:11] iotest 0x636d05 CsdScheduler
+  [556:12] iotest 0x65d13a ConverseInit
+  [556:13] iotest 0x5c67c7 charm_main
+  [556:14] libc.so.6 0x152fb95646a3 __libc_start_main
+  [556:15] iotest 0x503dae _start
+------------- Processor 556 Exiting: Caught Signal ------------
+Reason: Terminated
+[557] Stack Traceback:
+  [557:0] libpthread.so.0 0x14f9350a5dd0 
+  [557:1] libc.so.6 0x14f934e2f0bb 
+  [557:2] iotest 0x53701a __gnu_cxx::__enable_if<std::__is_byte<char>::__value, void>::__type std::__fill_a1<char>(char*, char*, char const&)
+  [557:3] iotest 0x536754 void std::__fill_a<char*, char>(char*, char*, char const&)
+  [557:4] iotest 0x537861 char* std::__fill_n_a<char*, unsigned long, char>(char*, unsigned long, char const&, std::random_access_iterator_tag)
+  [557:5] iotest 0x5372da char* std::fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [557:6] iotest 0x537048 char* std::__uninitialized_fill_n<true>::__uninit_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [557:7] iotest 0x536786 char* std::uninitialized_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [557:8] iotest 0x535214 char* std::__uninitialized_fill_n_a<char*, unsigned long, char, char>(char*, unsigned long, char const&, std::allocator<char>&)
+  [557:9] iotest 0x53330a std::vector<char, std::allocator<char> >::_M_fill_insert(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, unsigned long, char const&)
+  [557:10] iotest 0x531ae0 std::vector<char, std::allocator<char> >::resize(unsigned long, char const&)
+  [557:11] iotest 0x52ecf6 Ck::IO::impl::ReadAssembler::ReadAssembler(Ck::IO::Session, unsigned long, unsigned long, CkCallback)
+  [557:12] iotest 0x52514f Ck::IO::impl::CkIndex_ReadAssembler::_call_ReadAssembler_marshall1(void*, void*)
+  [557:13] iotest 0x542002 CkDeliverMessageFree
+  [557:14] iotest 0x542c58 
+  [557:15] iotest 0x545922 _processHandler(void*, CkCoreState*)
+  [557:16] iotest 0x6369cb CsdScheduleForever
+  [557:17] iotest 0x636d05 CsdScheduler
+  [557:18] iotest 0x65d13a ConverseInit
+  [557:19] iotest 0x5c67c7 charm_main
+  [557:20] libc.so.6 0x14f934cf46a3 __libc_start_main
+  [557:21] iotest 0x503dae _start
+------------- Processor 557 Exiting: Caught Signal ------------
+Reason: Terminated
+[558] Stack Traceback:
+  [558:0] libpthread.so.0 0x153bdcf76dd0 
+  [558:1] libuct_ib.so.0 0x153bd8d0be70 uct_dc_mlx5_iface_is_reachable
+  [558:2] libucp.so.0 0x153bdbfb9ee8 ucp_wireup_is_reachable
+  [558:3] libucp.so.0 0x153bdbfb5704 
+  [558:4] libucp.so.0 0x153bdbfb62e3 
+  [558:5] libucp.so.0 0x153bdbfb6e7e ucp_wireup_select_lanes
+  [558:6] libucp.so.0 0x153bdbfb9f8b ucp_wireup_init_lanes
+  [558:7] libucp.so.0 0x153bdbf888b7 ucp_ep_create_to_worker_addr
+  [558:8] libucp.so.0 0x153bdbf8945b ucp_ep_create
+  [558:9] libmpi.so.40 0x153bdd93f493 
+  [558:10] libmpi.so.40 0x153bdd94086b 
+  [558:11] libmpi.so.40 0x153bdd941093 mca_pml_ucx_isend
+  [558:12] libmpi.so.40 0x153bdd81e085 MPI_Isend
+  [558:13] iotest 0x65baa4 
+  [558:14] iotest 0x544f47 _processHandler(void*, CkCoreState*)
+  [558:15] iotest 0x6369cb CsdScheduleForever
+  [558:16] iotest 0x636d05 CsdScheduler
+  [558:17] iotest 0x65d13a ConverseInit
+  [558:18] iotest 0x5c67c7 charm_main
+  [558:19] libc.so.6 0x153bdcbc56a3 __libc_start_main
+  [558:20] iotest 0x503dae _start
+------------- Processor 558 Exiting: Caught Signal ------------
+Reason: Terminated
+[559] Stack Traceback:
+  [559:0] libpthread.so.0 0x14778820edd0 
+  [559:1] libuct_ib.so.0 0x14777fdaf3d0 
+  [559:2] libucp.so.0 0x147787225a7f ucp_mem_rereg_mds
+  [559:3] libucp.so.0 0x1477872280cf ucp_request_memory_dereg
+  [559:4] libucp.so.0 0x14778723defe ucp_rndv_ats_handler
+  [559:5] libuct.so.0 0x147786feafcd 
+  [559:6] libucp.so.0 0x14778722ceea ucp_worker_progress
+  [559:7] libopen-pal.so.40 0x1477874d0773 opal_progress
+  [559:8] libmpi.so.40 0x147788a84f9a ompi_request_default_test
+  [559:9] libmpi.so.40 0x147788ac446e PMPI_Test
+  [559:10] iotest 0x65b380 
+  [559:11] iotest 0x65c6ad CmiGetNonLocal
+  [559:12] iotest 0x6368cd CsdNextMessage
+  [559:13] iotest 0x63699a CsdScheduleForever
+  [559:14] iotest 0x636d05 CsdScheduler
+  [559:15] iotest 0x65d13a ConverseInit
+  [559:16] iotest 0x5c67c7 charm_main
+  [559:17] libc.so.6 0x147787e5d6a3 __libc_start_main
+  [559:18] iotest 0x503dae _start
+------------- Processor 559 Exiting: Caught Signal ------------
+Reason: Terminated
+[560] Stack Traceback:
+  [560:0] libpthread.so.0 0x152fb8ad1dd0 
+  [560:1] libuct_ib.so.0 0x152fb4842190 
+  [560:2] libucp.so.0 0x152fb7aec2a9 ucp_ep_rkey_unpack
+  [560:3] libucp.so.0 0x152fb7b029e6 ucp_rndv_matched
+  [560:4] libucp.so.0 0x152fb7b05f8f ucp_tag_recv_nbx
+  [560:5] libmpi.so.40 0x152fb949b1fe mca_pml_ucx_recv
+  [560:6] libmpi.so.40 0x152fb937fcf5 PMPI_Recv
+  [560:7] iotest 0x65c3e7 
+  [560:8] iotest 0x65c6b2 CmiGetNonLocal
+  [560:9] iotest 0x6368cd CsdNextMessage
+  [560:10] iotest 0x63699a CsdScheduleForever
+  [560:11] iotest 0x636d05 CsdScheduler
+  [560:12] iotest 0x65d13a ConverseInit
+  [560:13] iotest 0x5c67c7 charm_main
+  [560:14] libc.so.6 0x152fb87206a3 __libc_start_main
+  [560:15] iotest 0x503dae _start
+------------- Processor 560 Exiting: Caught Signal ------------
+Reason: Terminated
+[561] Stack Traceback:
+  [561:0] libpthread.so.0 0x148d10fb9dd0 
+  [561:1] libuct_ib.so.0 0x148d0cd2a3f0 
+  [561:2] libucp.so.0 0x148d0ffd0b23 ucp_mem_rereg_mds
+  [561:3] libucp.so.0 0x148d0ffd2e0a ucp_request_memory_reg
+  [561:4] libucp.so.0 0x148d0ffea78c ucp_tag_rndv_reg_send_buffer
+  [561:5] libucp.so.0 0x148d0ffefaa6 ucp_tag_send_nbx
+  [561:6] libmpi.so.40 0x148d11983f8a mca_pml_ucx_isend
+  [561:7] libmpi.so.40 0x148d11861085 MPI_Isend
+  [561:8] iotest 0x65baa4 
+  [561:9] iotest 0x698b27 CldEnqueue
+  [561:10] iotest 0x543e95 
+  [561:11] iotest 0x526653 Ck::IO::impl::CProxy_ReadAssembler::shareData(unsigned long const&, unsigned long const&, char const*, CkEntryOptions const*)
+  [561:12] iotest 0x52eacb Ck::IO::impl::ReadSession::sendData(unsigned long, unsigned long, Ck::IO::impl::CProxy_ReadAssembler)
+  [561:13] iotest 0x5284c5 Ck::IO::impl::CkIndex_ReadSession::_call_sendData_marshall2(void*, void*)
+  [561:14] iotest 0x542002 CkDeliverMessageFree
+  [561:15] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [561:16] iotest 0x5459e6 _processHandler(void*, CkCoreState*)
+  [561:17] iotest 0x6369cb CsdScheduleForever
+  [561:18] iotest 0x636d05 CsdScheduler
+  [561:19] iotest 0x65d13a ConverseInit
+  [561:20] iotest 0x5c67c7 charm_main
+  [561:21] libc.so.6 0x148d10c086a3 __libc_start_main
+  [561:22] iotest 0x503dae _start
+------------- Processor 561 Exiting: Caught Signal ------------
+Reason: Terminated
+[562] Stack Traceback:
+  [562:0] libpthread.so.0 0x14b4e7f00dd0 
+  [562:1] libuct_ib.so.0 0x14b4e40882f0 uct_rc_mlx5_release_desc
+  [562:2] libucp.so.0 0x14b4e6f34a65 ucp_tag_recv_nbx
+  [562:3] libmpi.so.40 0x14b4e88ca1fe mca_pml_ucx_recv
+  [562:4] libmpi.so.40 0x14b4e87aecf5 PMPI_Recv
+  [562:5] iotest 0x65c3e7 
+  [562:6] iotest 0x65c6b2 CmiGetNonLocal
+  [562:7] iotest 0x6368cd CsdNextMessage
+  [562:8] iotest 0x63699a CsdScheduleForever
+  [562:9] iotest 0x636d05 CsdScheduler
+  [562:10] iotest 0x65d13a ConverseInit
+  [562:11] iotest 0x5c67c7 charm_main
+  [562:12] libc.so.6 0x14b4e7b4f6a3 __libc_start_main
+  [562:13] iotest 0x503dae _start
+------------- Processor 562 Exiting: Caught Signal ------------
+Reason: Terminated
+[564] Stack Traceback:
+  [564:0] libpthread.so.0 0x1537a7d00dd0 
+  [564:1] libuct_ib.so.0 0x15379f9ae3f0 
+  [564:2] libucp.so.0 0x1537a6d17b23 ucp_mem_rereg_mds
+  [564:3] libucp.so.0 0x1537a6d19e0a ucp_request_memory_reg
+  [564:4] libucp.so.0 0x1537a6d3178c ucp_tag_rndv_reg_send_buffer
+  [564:5] libucp.so.0 0x1537a6d36aa6 ucp_tag_send_nbx
+  [564:6] libmpi.so.40 0x1537a86caf8a mca_pml_ucx_isend
+  [564:7] libmpi.so.40 0x1537a85a8085 MPI_Isend
+  [564:8] iotest 0x65baa4 
+  [564:9] iotest 0x698b27 CldEnqueue
+  [564:10] iotest 0x543e95 
+  [564:11] iotest 0x526653 Ck::IO::impl::CProxy_ReadAssembler::shareData(unsigned long const&, unsigned long const&, char const*, CkEntryOptions const*)
+  [564:12] iotest 0x52eacb Ck::IO::impl::ReadSession::sendData(unsigned long, unsigned long, Ck::IO::impl::CProxy_ReadAssembler)
+  [564:13] iotest 0x5284c5 Ck::IO::impl::CkIndex_ReadSession::_call_sendData_marshall2(void*, void*)
+  [564:14] iotest 0x542002 CkDeliverMessageFree
+  [564:15] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [564:16] iotest 0x5459e6 _processHandler(void*, CkCoreState*)
+  [564:17] iotest 0x6369cb CsdScheduleForever
+  [564:18] iotest 0x636d05 CsdScheduler
+  [564:19] iotest 0x65d13a ConverseInit
+  [564:20] iotest 0x5c67c7 charm_main
+  [564:21] libc.so.6 0x1537a794f6a3 __libc_start_main
+  [564:22] iotest 0x503dae _start
+------------- Processor 564 Exiting: Caught Signal ------------
+Reason: Terminated
+[565] Stack Traceback:
+  [565:0] libpthread.so.0 0x14e25f213dd0 
+  [565:1] libuct_ib.so.0 0x14e25afa8e70 uct_dc_mlx5_iface_is_reachable
+  [565:2] libucp.so.0 0x14e25e256ee8 ucp_wireup_is_reachable
+  [565:3] libucp.so.0 0x14e25e252704 
+  [565:4] libucp.so.0 0x14e25e2532e3 
+  [565:5] libucp.so.0 0x14e25e253e7e ucp_wireup_select_lanes
+  [565:6] libucp.so.0 0x14e25e256f8b ucp_wireup_init_lanes
+  [565:7] libucp.so.0 0x14e25e2258b7 ucp_ep_create_to_worker_addr
+  [565:8] libucp.so.0 0x14e25e22645b ucp_ep_create
+  [565:9] libmpi.so.40 0x14e25fbdc493 
+  [565:10] libmpi.so.40 0x14e25fbdd86b 
+  [565:11] libmpi.so.40 0x14e25fbde093 mca_pml_ucx_isend
+  [565:12] libmpi.so.40 0x14e25fabb085 MPI_Isend
+  [565:13] iotest 0x65baa4 
+  [565:14] iotest 0x544f47 _processHandler(void*, CkCoreState*)
+  [565:15] iotest 0x6369cb CsdScheduleForever
+  [565:16] iotest 0x636d05 CsdScheduler
+  [565:17] iotest 0x65d13a ConverseInit
+  [565:18] iotest 0x5c67c7 charm_main
+  [565:19] libc.so.6 0x14e25ee626a3 __libc_start_main
+  [565:20] iotest 0x503dae _start
+------------- Processor 565 Exiting: Caught Signal ------------
+Reason: Terminated
+[566] Stack Traceback:
+  [566:0] libpthread.so.0 0x1469d426edd0 
+  [566:1] libuct_ib.so.0 0x1469cbdd3e70 uct_dc_mlx5_iface_is_reachable
+  [566:2] libucp.so.0 0x1469d32b1ee8 ucp_wireup_is_reachable
+  [566:3] libucp.so.0 0x1469d32ad704 
+  [566:4] libucp.so.0 0x1469d32ae2e3 
+  [566:5] libucp.so.0 0x1469d32aee7e ucp_wireup_select_lanes
+  [566:6] libucp.so.0 0x1469d32b1f8b ucp_wireup_init_lanes
+  [566:7] libucp.so.0 0x1469d32808b7 ucp_ep_create_to_worker_addr
+  [566:8] libucp.so.0 0x1469d328145b ucp_ep_create
+  [566:9] libmpi.so.40 0x1469d4c37493 
+  [566:10] libmpi.so.40 0x1469d4c3886b 
+  [566:11] libmpi.so.40 0x1469d4c39093 mca_pml_ucx_isend
+  [566:12] libmpi.so.40 0x1469d4b16085 MPI_Isend
+  [566:13] iotest 0x65baa4 
+  [566:14] iotest 0x544f47 _processHandler(void*, CkCoreState*)
+  [566:15] iotest 0x6369cb CsdScheduleForever
+  [566:16] iotest 0x636d05 CsdScheduler
+  [566:17] iotest 0x65d13a ConverseInit
+  [566:18] iotest 0x5c67c7 charm_main
+  [566:19] libc.so.6 0x1469d3ebd6a3 __libc_start_main
+  [566:20] iotest 0x503dae _start
+------------- Processor 566 Exiting: Caught Signal ------------
+Reason: Terminated
+[567] Stack Traceback:
+  [567:0] libpthread.so.0 0x14d7f0eb6dd0 
+  [567:1] libuct_ib.so.0 0x14d7ecc273f0 
+  [567:2] libucp.so.0 0x14d7efecdb23 ucp_mem_rereg_mds
+  [567:3] libucp.so.0 0x14d7efecfe0a ucp_request_memory_reg
+  [567:4] libucp.so.0 0x14d7efee778c ucp_tag_rndv_reg_send_buffer
+  [567:5] libucp.so.0 0x14d7efeecaa6 ucp_tag_send_nbx
+  [567:6] libmpi.so.40 0x14d7f1880f8a mca_pml_ucx_isend
+  [567:7] libmpi.so.40 0x14d7f175e085 MPI_Isend
+  [567:8] iotest 0x65baa4 
+  [567:9] iotest 0x698b27 CldEnqueue
+  [567:10] iotest 0x543e95 
+  [567:11] iotest 0x526653 Ck::IO::impl::CProxy_ReadAssembler::shareData(unsigned long const&, unsigned long const&, char const*, CkEntryOptions const*)
+  [567:12] iotest 0x52eacb Ck::IO::impl::ReadSession::sendData(unsigned long, unsigned long, Ck::IO::impl::CProxy_ReadAssembler)
+  [567:13] iotest 0x5284c5 Ck::IO::impl::CkIndex_ReadSession::_call_sendData_marshall2(void*, void*)
+  [567:14] iotest 0x542002 CkDeliverMessageFree
+  [567:15] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [567:16] iotest 0x5459e6 _processHandler(void*, CkCoreState*)
+  [567:17] iotest 0x6369cb CsdScheduleForever
+  [567:18] iotest 0x636d05 CsdScheduler
+  [567:19] iotest 0x65d13a ConverseInit
+  [567:20] iotest 0x5c67c7 charm_main
+  [567:21] libc.so.6 0x14d7f0b056a3 __libc_start_main
+  [567:22] iotest 0x503dae _start
+------------- Processor 567 Exiting: Caught Signal ------------
+Reason: Terminated
+[568] Stack Traceback:
+  [568:0] libpthread.so.0 0x151fe4ab4dd0 
+  [568:1] libuct_ib.so.0 0x151fe0822be0 uct_ib_address_unpack
+  [568:2] libuct_ib.so.0 0x151fe0823100 uct_ib_iface_fill_ah_attr_from_addr
+  [568:3] libuct_ib.so.0 0x151fe0858fcf uct_ud_mlx5_iface_get_av
+  [568:4] libuct_ib.so.0 0x151fe0849b65 
+  [568:5] libucp.so.0 0x151fe3af7a30 ucp_wireup_connect_lane
+  [568:6] libucp.so.0 0x151fe3af83e0 ucp_wireup_init_lanes
+  [568:7] libucp.so.0 0x151fe3ac68b7 ucp_ep_create_to_worker_addr
+  [568:8] libucp.so.0 0x151fe3ac745b ucp_ep_create
+  [568:9] libmpi.so.40 0x151fe547d493 
+  [568:10] libmpi.so.40 0x151fe547e86b 
+  [568:11] libmpi.so.40 0x151fe547f093 mca_pml_ucx_isend
+  [568:12] libmpi.so.40 0x151fe535c085 MPI_Isend
+  [568:13] iotest 0x65baa4 
+  [568:14] iotest 0x544f47 _processHandler(void*, CkCoreState*)
+  [568:15] iotest 0x6369cb CsdScheduleForever
+  [568:16] iotest 0x636d05 CsdScheduler
+  [568:17] iotest 0x65d13a ConverseInit
+  [568:18] iotest 0x5c67c7 charm_main
+  [568:19] libc.so.6 0x151fe47036a3 __libc_start_main
+  [568:20] iotest 0x503dae _start
+------------- Processor 568 Exiting: Caught Signal ------------
+Reason: Terminated
+[569] Stack Traceback:
+  [569:0] libpthread.so.0 0x147ea9782dd0 
+  [569:1] libc.so.6 0x147ea950c0bb 
+  [569:2] iotest 0x53701a __gnu_cxx::__enable_if<std::__is_byte<char>::__value, void>::__type std::__fill_a1<char>(char*, char*, char const&)
+  [569:3] iotest 0x536754 void std::__fill_a<char*, char>(char*, char*, char const&)
+  [569:4] iotest 0x537861 char* std::__fill_n_a<char*, unsigned long, char>(char*, unsigned long, char const&, std::random_access_iterator_tag)
+  [569:5] iotest 0x5372da char* std::fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [569:6] iotest 0x537048 char* std::__uninitialized_fill_n<true>::__uninit_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [569:7] iotest 0x536786 char* std::uninitialized_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [569:8] iotest 0x535214 char* std::__uninitialized_fill_n_a<char*, unsigned long, char, char>(char*, unsigned long, char const&, std::allocator<char>&)
+  [569:9] iotest 0x53330a std::vector<char, std::allocator<char> >::_M_fill_insert(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, unsigned long, char const&)
+  [569:10] iotest 0x531ae0 std::vector<char, std::allocator<char> >::resize(unsigned long, char const&)
+  [569:11] iotest 0x52ecf6 Ck::IO::impl::ReadAssembler::ReadAssembler(Ck::IO::Session, unsigned long, unsigned long, CkCallback)
+  [569:12] iotest 0x52514f Ck::IO::impl::CkIndex_ReadAssembler::_call_ReadAssembler_marshall1(void*, void*)
+  [569:13] iotest 0x542002 CkDeliverMessageFree
+  [569:14] iotest 0x542c58 
+  [569:15] iotest 0x545922 _processHandler(void*, CkCoreState*)
+  [569:16] iotest 0x6369cb CsdScheduleForever
+  [569:17] iotest 0x636d05 CsdScheduler
+  [569:18] iotest 0x65d13a ConverseInit
+  [569:19] iotest 0x5c67c7 charm_main
+  [569:20] libc.so.6 0x147ea93d16a3 __libc_start_main
+  [569:21] iotest 0x503dae _start
+------------- Processor 569 Exiting: Caught Signal ------------
+Reason: Terminated
+[570] Stack Traceback:
+  [570:0] libpthread.so.0 0x145ac9e87dd0 
+  [570:1] libuct_ib.so.0 0x145ac5c1ce70 uct_dc_mlx5_iface_is_reachable
+  [570:2] libucp.so.0 0x145ac8ecaee8 ucp_wireup_is_reachable
+  [570:3] libucp.so.0 0x145ac8ec6704 
+  [570:4] libucp.so.0 0x145ac8ec72e3 
+  [570:5] libucp.so.0 0x145ac8ec7e7e ucp_wireup_select_lanes
+  [570:6] libucp.so.0 0x145ac8ecaf8b ucp_wireup_init_lanes
+  [570:7] libucp.so.0 0x145ac8e998b7 ucp_ep_create_to_worker_addr
+  [570:8] libucp.so.0 0x145ac8e9a45b ucp_ep_create
+  [570:9] libmpi.so.40 0x145aca850493 
+  [570:10] libmpi.so.40 0x145aca85186b 
+  [570:11] libmpi.so.40 0x145aca852093 mca_pml_ucx_isend
+  [570:12] libmpi.so.40 0x145aca72f085 MPI_Isend
+  [570:13] iotest 0x65baa4 
+  [570:14] iotest 0x544f47 _processHandler(void*, CkCoreState*)
+  [570:15] iotest 0x6369cb CsdScheduleForever
+  [570:16] iotest 0x636d05 CsdScheduler
+  [570:17] iotest 0x65d13a ConverseInit
+  [570:18] iotest 0x5c67c7 charm_main
+  [570:19] libc.so.6 0x145ac9ad66a3 __libc_start_main
+  [570:20] iotest 0x503dae _start
+------------- Processor 570 Exiting: Caught Signal ------------
+Reason: Terminated
+[571] Stack Traceback:
+  [571:0] libpthread.so.0 0x154a2024add0 
+  [571:1] libuct_ib.so.0 0x154a17dd3e70 uct_dc_mlx5_iface_is_reachable
+  [571:2] libucp.so.0 0x154a1f28dee8 ucp_wireup_is_reachable
+  [571:3] libucp.so.0 0x154a1f289704 
+  [571:4] libucp.so.0 0x154a1f28a2e3 
+  [571:5] libucp.so.0 0x154a1f28ae7e ucp_wireup_select_lanes
+  [571:6] libucp.so.0 0x154a1f28df8b ucp_wireup_init_lanes
+  [571:7] libucp.so.0 0x154a1f25c8b7 ucp_ep_create_to_worker_addr
+  [571:8] libucp.so.0 0x154a1f25d45b ucp_ep_create
+  [571:9] libmpi.so.40 0x154a20c13493 
+  [571:10] libmpi.so.40 0x154a20c1486b 
+  [571:11] libmpi.so.40 0x154a20c15093 mca_pml_ucx_isend
+  [571:12] libmpi.so.40 0x154a20af2085 MPI_Isend
+  [571:13] iotest 0x65baa4 
+  [571:14] iotest 0x544f47 _processHandler(void*, CkCoreState*)
+  [571:15] iotest 0x6369cb CsdScheduleForever
+  [571:16] iotest 0x636d05 CsdScheduler
+  [571:17] iotest 0x65d13a ConverseInit
+  [571:18] iotest 0x5c67c7 charm_main
+  [571:19] libc.so.6 0x154a1fe996a3 __libc_start_main
+  [571:20] iotest 0x503dae _start
+------------- Processor 571 Exiting: Caught Signal ------------
+Reason: Terminated
+[572] Stack Traceback:
+  [572:0] libpthread.so.0 0x153429dd4dd0 
+  [572:1] libuct_ib.so.0 0x153425b69e70 uct_dc_mlx5_iface_is_reachable
+  [572:2] libucp.so.0 0x153428e17ee8 ucp_wireup_is_reachable
+  [572:3] libucp.so.0 0x153428e13704 
+  [572:4] libucp.so.0 0x153428e142e3 
+  [572:5] libucp.so.0 0x153428e14e7e ucp_wireup_select_lanes
+  [572:6] libucp.so.0 0x153428e17f8b ucp_wireup_init_lanes
+  [572:7] libucp.so.0 0x153428de68b7 ucp_ep_create_to_worker_addr
+  [572:8] libucp.so.0 0x153428de745b ucp_ep_create
+  [572:9] libmpi.so.40 0x15342a79d493 
+  [572:10] libmpi.so.40 0x15342a79e86b 
+  [572:11] libmpi.so.40 0x15342a79f093 mca_pml_ucx_isend
+  [572:12] libmpi.so.40 0x15342a67c085 MPI_Isend
+  [572:13] iotest 0x65baa4 
+  [572:14] iotest 0x544f47 _processHandler(void*, CkCoreState*)
+  [572:15] iotest 0x6369cb CsdScheduleForever
+  [572:16] iotest 0x636d05 CsdScheduler
+  [572:17] iotest 0x65d13a ConverseInit
+  [572:18] iotest 0x5c67c7 charm_main
+  [572:19] libc.so.6 0x153429a236a3 __libc_start_main
+  [572:20] iotest 0x503dae _start
+------------- Processor 572 Exiting: Caught Signal ------------
+Reason: Terminated
+[573] Stack Traceback:
+  [573:0] libpthread.so.0 0x145bb6fefdd0 
+  [573:1] libc.so.6 0x145bb6d790bb 
+  [573:2] iotest 0x53701a __gnu_cxx::__enable_if<std::__is_byte<char>::__value, void>::__type std::__fill_a1<char>(char*, char*, char const&)
+  [573:3] iotest 0x536754 void std::__fill_a<char*, char>(char*, char*, char const&)
+  [573:4] iotest 0x537861 char* std::__fill_n_a<char*, unsigned long, char>(char*, unsigned long, char const&, std::random_access_iterator_tag)
+  [573:5] iotest 0x5372da char* std::fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [573:6] iotest 0x537048 char* std::__uninitialized_fill_n<true>::__uninit_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [573:7] iotest 0x536786 char* std::uninitialized_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [573:8] iotest 0x535214 char* std::__uninitialized_fill_n_a<char*, unsigned long, char, char>(char*, unsigned long, char const&, std::allocator<char>&)
+  [573:9] iotest 0x53330a std::vector<char, std::allocator<char> >::_M_fill_insert(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, unsigned long, char const&)
+  [573:10] iotest 0x531ae0 std::vector<char, std::allocator<char> >::resize(unsigned long, char const&)
+  [573:11] iotest 0x52ecf6 Ck::IO::impl::ReadAssembler::ReadAssembler(Ck::IO::Session, unsigned long, unsigned long, CkCallback)
+  [573:12] iotest 0x52514f Ck::IO::impl::CkIndex_ReadAssembler::_call_ReadAssembler_marshall1(void*, void*)
+  [573:13] iotest 0x542002 CkDeliverMessageFree
+  [573:14] iotest 0x542c58 
+  [573:15] iotest 0x545922 _processHandler(void*, CkCoreState*)
+  [573:16] iotest 0x6369cb CsdScheduleForever
+  [573:17] iotest 0x636d05 CsdScheduler
+  [573:18] iotest 0x65d13a ConverseInit
+  [573:19] iotest 0x5c67c7 charm_main
+  [573:20] libc.so.6 0x145bb6c3e6a3 __libc_start_main
+  [573:21] iotest 0x503dae _start
+------------- Processor 573 Exiting: Caught Signal ------------
+Reason: Terminated
+[574] Stack Traceback:
+  [574:0] libpthread.so.0 0x14590d4f8dd0 
+  [574:1] libuct_ib.so.0 0x14590928de70 uct_dc_mlx5_iface_is_reachable
+  [574:2] libucp.so.0 0x14590c53bee8 ucp_wireup_is_reachable
+  [574:3] libucp.so.0 0x14590c537704 
+  [574:4] libucp.so.0 0x14590c5382e3 
+  [574:5] libucp.so.0 0x14590c538e7e ucp_wireup_select_lanes
+  [574:6] libucp.so.0 0x14590c53bf8b ucp_wireup_init_lanes
+  [574:7] libucp.so.0 0x14590c50a8b7 ucp_ep_create_to_worker_addr
+  [574:8] libucp.so.0 0x14590c50b45b ucp_ep_create
+  [574:9] libmpi.so.40 0x14590dec1493 
+  [574:10] libmpi.so.40 0x14590dec286b 
+  [574:11] libmpi.so.40 0x14590dec3093 mca_pml_ucx_isend
+  [574:12] libmpi.so.40 0x14590dda0085 MPI_Isend
+  [574:13] iotest 0x65baa4 
+  [574:14] iotest 0x544f47 _processHandler(void*, CkCoreState*)
+  [574:15] iotest 0x6369cb CsdScheduleForever
+  [574:16] iotest 0x636d05 CsdScheduler
+  [574:17] iotest 0x65d13a ConverseInit
+  [574:18] iotest 0x5c67c7 charm_main
+  [574:19] libc.so.6 0x14590d1476a3 __libc_start_main
+  [574:20] iotest 0x503dae _start
+------------- Processor 574 Exiting: Caught Signal ------------
+Reason: Terminated
+[575] Stack Traceback:
+  [575:0] libpthread.so.0 0x14ac96933dd0 
+  [575:1] libc.so.6 0x14ac966bd0bb 
+  [575:2] iotest 0x53701a __gnu_cxx::__enable_if<std::__is_byte<char>::__value, void>::__type std::__fill_a1<char>(char*, char*, char const&)
+  [575:3] iotest 0x536754 void std::__fill_a<char*, char>(char*, char*, char const&)
+  [575:4] iotest 0x537861 char* std::__fill_n_a<char*, unsigned long, char>(char*, unsigned long, char const&, std::random_access_iterator_tag)
+  [575:5] iotest 0x5372da char* std::fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [575:6] iotest 0x537048 char* std::__uninitialized_fill_n<true>::__uninit_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [575:7] iotest 0x536786 char* std::uninitialized_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [575:8] iotest 0x535214 char* std::__uninitialized_fill_n_a<char*, unsigned long, char, char>(char*, unsigned long, char const&, std::allocator<char>&)
+  [575:9] iotest 0x53330a std::vector<char, std::allocator<char> >::_M_fill_insert(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, unsigned long, char const&)
+  [575:10] iotest 0x531ae0 std::vector<char, std::allocator<char> >::resize(unsigned long, char const&)
+  [575:11] iotest 0x52ecf6 Ck::IO::impl::ReadAssembler::ReadAssembler(Ck::IO::Session, unsigned long, unsigned long, CkCallback)
+  [575:12] iotest 0x52514f Ck::IO::impl::CkIndex_ReadAssembler::_call_ReadAssembler_marshall1(void*, void*)
+  [575:13] iotest 0x542002 CkDeliverMessageFree
+  [575:14] iotest 0x542c58 
+  [575:15] iotest 0x545922 _processHandler(void*, CkCoreState*)
+  [575:16] iotest 0x6369cb CsdScheduleForever
+  [575:17] iotest 0x636d05 CsdScheduler
+  [575:18] iotest 0x65d13a ConverseInit
+  [575:19] iotest 0x5c67c7 charm_main
+  [575:20] libc.so.6 0x14ac965826a3 __libc_start_main
+  [575:21] iotest 0x503dae _start
+------------- Processor 575 Exiting: Caught Signal ------------
+Reason: Terminated
+[576] Stack Traceback:
+  [576:0] libpthread.so.0 0x14d0f7364dd0 
+  [576:1] libc.so.6 0x14d0f70ee0bb 
+  [576:2] iotest 0x53701a __gnu_cxx::__enable_if<std::__is_byte<char>::__value, void>::__type std::__fill_a1<char>(char*, char*, char const&)
+  [576:3] iotest 0x536754 void std::__fill_a<char*, char>(char*, char*, char const&)
+  [576:4] iotest 0x537861 char* std::__fill_n_a<char*, unsigned long, char>(char*, unsigned long, char const&, std::random_access_iterator_tag)
+  [576:5] iotest 0x5372da char* std::fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [576:6] iotest 0x537048 char* std::__uninitialized_fill_n<true>::__uninit_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [576:7] iotest 0x536786 char* std::uninitialized_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [576:8] iotest 0x535214 char* std::__uninitialized_fill_n_a<char*, unsigned long, char, char>(char*, unsigned long, char const&, std::allocator<char>&)
+  [576:9] iotest 0x53330a std::vector<char, std::allocator<char> >::_M_fill_insert(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, unsigned long, char const&)
+  [576:10] iotest 0x531ae0 std::vector<char, std::allocator<char> >::resize(unsigned long, char const&)
+  [576:11] iotest 0x52ecf6 Ck::IO::impl::ReadAssembler::ReadAssembler(Ck::IO::Session, unsigned long, unsigned long, CkCallback)
+  [576:12] iotest 0x52514f Ck::IO::impl::CkIndex_ReadAssembler::_call_ReadAssembler_marshall1(void*, void*)
+  [576:13] iotest 0x542002 CkDeliverMessageFree
+  [576:14] iotest 0x542c58 
+  [576:15] iotest 0x545922 _processHandler(void*, CkCoreState*)
+  [576:16] iotest 0x6369cb CsdScheduleForever
+  [576:17] iotest 0x636d05 CsdScheduler
+  [576:18] iotest 0x65d13a ConverseInit
+  [576:19] iotest 0x5c67c7 charm_main
+  [576:20] libc.so.6 0x14d0f6fb36a3 __libc_start_main
+  [576:21] iotest 0x503dae _start
+------------- Processor 576 Exiting: Caught Signal ------------
+Reason: Terminated
+[577] Stack Traceback:
+  [577:0] libpthread.so.0 0x154644f99dd0 
+  [577:1] libuct_ib.so.0 0x154640d2ee70 uct_dc_mlx5_iface_is_reachable
+  [577:2] libucp.so.0 0x154643fdcee8 ucp_wireup_is_reachable
+  [577:3] libucp.so.0 0x154643fd8704 
+  [577:4] libucp.so.0 0x154643fd92e3 
+  [577:5] libucp.so.0 0x154643fd9e7e ucp_wireup_select_lanes
+  [577:6] libucp.so.0 0x154643fdcf8b ucp_wireup_init_lanes
+  [577:7] libucp.so.0 0x154643fab8b7 ucp_ep_create_to_worker_addr
+  [577:8] libucp.so.0 0x154643fac45b ucp_ep_create
+  [577:9] libmpi.so.40 0x154645962493 
+  [577:10] libmpi.so.40 0x15464596386b 
+  [577:11] libmpi.so.40 0x154645964093 mca_pml_ucx_isend
+  [577:12] libmpi.so.40 0x154645841085 MPI_Isend
+  [577:13] iotest 0x65baa4 
+  [577:14] iotest 0x544f47 _processHandler(void*, CkCoreState*)
+  [577:15] iotest 0x6369cb CsdScheduleForever
+  [577:16] iotest 0x636d05 CsdScheduler
+  [577:17] iotest 0x65d13a ConverseInit
+  [577:18] iotest 0x5c67c7 charm_main
+  [577:19] libc.so.6 0x154644be86a3 __libc_start_main
+  [577:20] iotest 0x503dae _start
+------------- Processor 577 Exiting: Caught Signal ------------
+Reason: Terminated
+[578] Stack Traceback:
+  [578:0] libpthread.so.0 0x1523a7f28dd0 
+  [578:1] libuct_ib.so.0 0x1523a409a190 
+  [578:2] libucp.so.0 0x1523a6f432a9 ucp_ep_rkey_unpack
+  [578:3] libucp.so.0 0x1523a6f599e6 ucp_rndv_matched
+  [578:4] libucp.so.0 0x1523a6f5cf8f ucp_tag_recv_nbx
+  [578:5] libmpi.so.40 0x1523a88f21fe mca_pml_ucx_recv
+  [578:6] libmpi.so.40 0x1523a87d6cf5 PMPI_Recv
+  [578:7] iotest 0x65c3e7 
+  [578:8] iotest 0x65c6b2 CmiGetNonLocal
+  [578:9] iotest 0x6368cd CsdNextMessage
+  [578:10] iotest 0x63699a CsdScheduleForever
+  [578:11] iotest 0x636d05 CsdScheduler
+  [578:12] iotest 0x65d13a ConverseInit
+  [578:13] iotest 0x5c67c7 charm_main
+  [578:14] libc.so.6 0x1523a7b776a3 __libc_start_main
+  [578:15] iotest 0x503dae _start
+------------- Processor 578 Exiting: Caught Signal ------------
+Reason: Terminated
+[579] Stack Traceback:
+  [579:0] libpthread.so.0 0x14662f3acdd0 
+  [579:1] libuct_ib.so.0 0x146626fad3d0 
+  [579:2] libucp.so.0 0x14662e3c3a7f ucp_mem_rereg_mds
+  [579:3] libucp.so.0 0x14662e3c60cf ucp_request_memory_dereg
+  [579:4] libucp.so.0 0x14662e3dbefe ucp_rndv_ats_handler
+  [579:5] libuct.so.0 0x14662e188fcd 
+  [579:6] libucp.so.0 0x14662e3caeea ucp_worker_progress
+  [579:7] libopen-pal.so.40 0x14662e66e773 opal_progress
+  [579:8] libmpi.so.40 0x14662fc22f9a ompi_request_default_test
+  [579:9] libmpi.so.40 0x14662fc6246e PMPI_Test
+  [579:10] iotest 0x65b380 
+  [579:11] iotest 0x65c6ad CmiGetNonLocal
+  [579:12] iotest 0x6368cd CsdNextMessage
+  [579:13] iotest 0x63699a CsdScheduleForever
+  [579:14] iotest 0x636d05 CsdScheduler
+  [579:15] iotest 0x65d13a ConverseInit
+  [579:16] iotest 0x5c67c7 charm_main
+  [579:17] libc.so.6 0x14662effb6a3 __libc_start_main
+  [579:18] iotest 0x503dae _start
+------------- Processor 579 Exiting: Caught Signal ------------
+Reason: Terminated
+[581] Stack Traceback:
+  [581:0] libpthread.so.0 0x150d1bb9bdd0 
+  [581:1] libc.so.6 0x150d1b9250bb 
+  [581:2] iotest 0x53701a __gnu_cxx::__enable_if<std::__is_byte<char>::__value, void>::__type std::__fill_a1<char>(char*, char*, char const&)
+  [581:3] iotest 0x536754 void std::__fill_a<char*, char>(char*, char*, char const&)
+  [581:4] iotest 0x537861 char* std::__fill_n_a<char*, unsigned long, char>(char*, unsigned long, char const&, std::random_access_iterator_tag)
+  [581:5] iotest 0x5372da char* std::fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [581:6] iotest 0x537048 char* std::__uninitialized_fill_n<true>::__uninit_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [581:7] iotest 0x536786 char* std::uninitialized_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [581:8] iotest 0x535214 char* std::__uninitialized_fill_n_a<char*, unsigned long, char, char>(char*, unsigned long, char const&, std::allocator<char>&)
+  [581:9] iotest 0x53330a std::vector<char, std::allocator<char> >::_M_fill_insert(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, unsigned long, char const&)
+  [581:10] iotest 0x531ae0 std::vector<char, std::allocator<char> >::resize(unsigned long, char const&)
+  [581:11] iotest 0x52ecf6 Ck::IO::impl::ReadAssembler::ReadAssembler(Ck::IO::Session, unsigned long, unsigned long, CkCallback)
+  [581:12] iotest 0x52514f Ck::IO::impl::CkIndex_ReadAssembler::_call_ReadAssembler_marshall1(void*, void*)
+  [581:13] iotest 0x542002 CkDeliverMessageFree
+  [581:14] iotest 0x542c58 
+  [581:15] iotest 0x545922 _processHandler(void*, CkCoreState*)
+  [581:16] iotest 0x6369cb CsdScheduleForever
+  [581:17] iotest 0x636d05 CsdScheduler
+  [581:18] iotest 0x65d13a ConverseInit
+  [581:19] iotest 0x5c67c7 charm_main
+  [581:20] libc.so.6 0x150d1b7ea6a3 __libc_start_main
+  [581:21] iotest 0x503dae _start
+------------- Processor 581 Exiting: Caught Signal ------------
+Reason: Terminated
+[582] Stack Traceback:
+  [582:0] libpthread.so.0 0x14f940f7ddd0 
+  [582:1] libuct_ib.so.0 0x14f93ccee190 
+  [582:2] libucp.so.0 0x14f93ff982a9 ucp_ep_rkey_unpack
+  [582:3] libucp.so.0 0x14f93ffae9e6 ucp_rndv_matched
+  [582:4] libucp.so.0 0x14f93ffb1f8f ucp_tag_recv_nbx
+  [582:5] libmpi.so.40 0x14f9419471fe mca_pml_ucx_recv
+  [582:6] libmpi.so.40 0x14f94182bcf5 PMPI_Recv
+  [582:7] iotest 0x65c3e7 
+  [582:8] iotest 0x65c6b2 CmiGetNonLocal
+  [582:9] iotest 0x6368cd CsdNextMessage
+  [582:10] iotest 0x63699a CsdScheduleForever
+  [582:11] iotest 0x636d05 CsdScheduler
+  [582:12] iotest 0x65d13a ConverseInit
+  [582:13] iotest 0x5c67c7 charm_main
+  [582:14] libc.so.6 0x14f940bcc6a3 __libc_start_main
+  [582:15] iotest 0x503dae _start
+------------- Processor 582 Exiting: Caught Signal ------------
+Reason: Terminated
+[583] Stack Traceback:
+  [583:0] libpthread.so.0 0x14f15126edd0 
+  [583:1] libuct_ib.so.0 0x14f14cfdf3f0 
+  [583:2] libucp.so.0 0x14f150285b23 ucp_mem_rereg_mds
+  [583:3] libucp.so.0 0x14f150287e0a ucp_request_memory_reg
+  [583:4] libucp.so.0 0x14f15029f78c ucp_tag_rndv_reg_send_buffer
+  [583:5] libucp.so.0 0x14f1502a4aa6 ucp_tag_send_nbx
+  [583:6] libmpi.so.40 0x14f151c38f8a mca_pml_ucx_isend
+  [583:7] libmpi.so.40 0x14f151b16085 MPI_Isend
+  [583:8] iotest 0x65baa4 
+  [583:9] iotest 0x698b27 CldEnqueue
+  [583:10] iotest 0x543e95 
+  [583:11] iotest 0x526653 Ck::IO::impl::CProxy_ReadAssembler::shareData(unsigned long const&, unsigned long const&, char const*, CkEntryOptions const*)
+  [583:12] iotest 0x52eacb Ck::IO::impl::ReadSession::sendData(unsigned long, unsigned long, Ck::IO::impl::CProxy_ReadAssembler)
+  [583:13] iotest 0x5284c5 Ck::IO::impl::CkIndex_ReadSession::_call_sendData_marshall2(void*, void*)
+  [583:14] iotest 0x542002 CkDeliverMessageFree
+  [583:15] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [583:16] iotest 0x5459e6 _processHandler(void*, CkCoreState*)
+  [583:17] iotest 0x6369cb CsdScheduleForever
+  [583:18] iotest 0x636d05 CsdScheduler
+  [583:19] iotest 0x65d13a ConverseInit
+  [583:20] iotest 0x5c67c7 charm_main
+  [583:21] libc.so.6 0x14f150ebd6a3 __libc_start_main
+  [583:22] iotest 0x503dae _start
+------------- Processor 583 Exiting: Caught Signal ------------
+Reason: Terminated
+[584] Stack Traceback:
+  [584:0] libpthread.so.0 0x1536c6e92dd0 
+  [584:1] libuct_ib.so.0 0x1536c2c25a40 uct_dc_mlx5_ep_am_short
+  [584:2] libucp.so.0 0x1536c5ec82b2 ucp_tag_send_nbx
+  [584:3] libmpi.so.40 0x1536c785cf8a mca_pml_ucx_isend
+  [584:4] libmpi.so.40 0x1536c773a085 MPI_Isend
+  [584:5] iotest 0x65baa4 
+  [584:6] iotest 0x544f47 _processHandler(void*, CkCoreState*)
+  [584:7] iotest 0x6369cb CsdScheduleForever
+  [584:8] iotest 0x636d05 CsdScheduler
+  [584:9] iotest 0x65d13a ConverseInit
+  [584:10] iotest 0x5c67c7 charm_main
+  [584:11] libc.so.6 0x1536c6ae16a3 __libc_start_main
+  [584:12] iotest 0x503dae _start
+------------- Processor 584 Exiting: Caught Signal ------------
+Reason: Terminated
+[585] Stack Traceback:
+  [585:0] libpthread.so.0 0x14c850344dd0 
+  [585:1] libuct_ib.so.0 0x14c84c0cb2f0 uct_rc_mlx5_release_desc
+  [585:2] libucp.so.0 0x14c84f378a65 ucp_tag_recv_nbx
+  [585:3] libmpi.so.40 0x14c850d0e1fe mca_pml_ucx_recv
+  [585:4] libmpi.so.40 0x14c850bf2cf5 PMPI_Recv
+  [585:5] iotest 0x65c3e7 
+  [585:6] iotest 0x65c6b2 CmiGetNonLocal
+  [585:7] iotest 0x6368cd CsdNextMessage
+  [585:8] iotest 0x63699a CsdScheduleForever
+  [585:9] iotest 0x636d05 CsdScheduler
+  [585:10] iotest 0x65d13a ConverseInit
+  [585:11] iotest 0x5c67c7 charm_main
+  [585:12] libc.so.6 0x14c84ff936a3 __libc_start_main
+  [585:13] iotest 0x503dae _start
+------------- Processor 585 Exiting: Caught Signal ------------
+Reason: Terminated
+[586] Stack Traceback:
+  [586:0] libpthread.so.0 0x152a66ec7dd0 
+  [586:1] libc.so.6 0x152a66c510bb 
+  [586:2] iotest 0x53701a __gnu_cxx::__enable_if<std::__is_byte<char>::__value, void>::__type std::__fill_a1<char>(char*, char*, char const&)
+  [586:3] iotest 0x536754 void std::__fill_a<char*, char>(char*, char*, char const&)
+  [586:4] iotest 0x537861 char* std::__fill_n_a<char*, unsigned long, char>(char*, unsigned long, char const&, std::random_access_iterator_tag)
+  [586:5] iotest 0x5372da char* std::fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [586:6] iotest 0x537048 char* std::__uninitialized_fill_n<true>::__uninit_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [586:7] iotest 0x536786 char* std::uninitialized_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [586:8] iotest 0x535214 char* std::__uninitialized_fill_n_a<char*, unsigned long, char, char>(char*, unsigned long, char const&, std::allocator<char>&)
+  [586:9] iotest 0x53330a std::vector<char, std::allocator<char> >::_M_fill_insert(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, unsigned long, char const&)
+  [586:10] iotest 0x531ae0 std::vector<char, std::allocator<char> >::resize(unsigned long, char const&)
+  [586:11] iotest 0x52ecf6 Ck::IO::impl::ReadAssembler::ReadAssembler(Ck::IO::Session, unsigned long, unsigned long, CkCallback)
+  [586:12] iotest 0x52514f Ck::IO::impl::CkIndex_ReadAssembler::_call_ReadAssembler_marshall1(void*, void*)
+  [586:13] iotest 0x542002 CkDeliverMessageFree
+  [586:14] iotest 0x542c58 
+  [586:15] iotest 0x545922 _processHandler(void*, CkCoreState*)
+  [586:16] iotest 0x6369cb CsdScheduleForever
+  [586:17] iotest 0x636d05 CsdScheduler
+  [586:18] iotest 0x65d13a ConverseInit
+  [586:19] iotest 0x5c67c7 charm_main
+  [586:20] libc.so.6 0x152a66b166a3 __libc_start_main
+  [586:21] iotest 0x503dae _start
+------------- Processor 586 Exiting: Caught Signal ------------
+Reason: Terminated
+[587] Stack Traceback:
+  [587:0] libpthread.so.0 0x1529bc949dd0 
+  [587:1] libuct_ib.so.0 0x1529b86dee70 uct_dc_mlx5_iface_is_reachable
+  [587:2] libucp.so.0 0x1529bb98cee8 ucp_wireup_is_reachable
+  [587:3] libucp.so.0 0x1529bb988704 
+  [587:4] libucp.so.0 0x1529bb9892e3 
+  [587:5] libucp.so.0 0x1529bb989e7e ucp_wireup_select_lanes
+  [587:6] libucp.so.0 0x1529bb98cf8b ucp_wireup_init_lanes
+  [587:7] libucp.so.0 0x1529bb95b8b7 ucp_ep_create_to_worker_addr
+  [587:8] libucp.so.0 0x1529bb95c45b ucp_ep_create
+  [587:9] libmpi.so.40 0x1529bd312493 
+  [587:10] libmpi.so.40 0x1529bd31386b 
+  [587:11] libmpi.so.40 0x1529bd314093 mca_pml_ucx_isend
+  [587:12] libmpi.so.40 0x1529bd1f1085 MPI_Isend
+  [587:13] iotest 0x65baa4 
+  [587:14] iotest 0x544f47 _processHandler(void*, CkCoreState*)
+  [587:15] iotest 0x6369cb CsdScheduleForever
+  [587:16] iotest 0x636d05 CsdScheduler
+  [587:17] iotest 0x65d13a ConverseInit
+  [587:18] iotest 0x5c67c7 charm_main
+  [587:19] libc.so.6 0x1529bc5986a3 __libc_start_main
+  [587:20] iotest 0x503dae _start
+------------- Processor 587 Exiting: Caught Signal ------------
+Reason: Terminated
+[588] Stack Traceback:
+  [588:0] libpthread.so.0 0x15041af93dd0 
+  [588:1] libuct_ib.so.0 0x150416d28e70 uct_dc_mlx5_iface_is_reachable
+  [588:2] libucp.so.0 0x150419fd6ee8 ucp_wireup_is_reachable
+  [588:3] libucp.so.0 0x150419fd2704 
+  [588:4] libucp.so.0 0x150419fd32e3 
+  [588:5] libucp.so.0 0x150419fd3e7e ucp_wireup_select_lanes
+  [588:6] libucp.so.0 0x150419fd6f8b ucp_wireup_init_lanes
+  [588:7] libucp.so.0 0x150419fa58b7 ucp_ep_create_to_worker_addr
+  [588:8] libucp.so.0 0x150419fa645b ucp_ep_create
+  [588:9] libmpi.so.40 0x15041b95c493 
+  [588:10] libmpi.so.40 0x15041b95d86b 
+  [588:11] libmpi.so.40 0x15041b95e093 mca_pml_ucx_isend
+  [588:12] libmpi.so.40 0x15041b83b085 MPI_Isend
+  [588:13] iotest 0x65baa4 
+  [588:14] iotest 0x544f47 _processHandler(void*, CkCoreState*)
+  [588:15] iotest 0x6369cb CsdScheduleForever
+  [588:16] iotest 0x636d05 CsdScheduler
+  [588:17] iotest 0x65d13a ConverseInit
+  [588:18] iotest 0x5c67c7 charm_main
+  [588:19] libc.so.6 0x15041abe26a3 __libc_start_main
+  [588:20] iotest 0x503dae _start
+------------- Processor 588 Exiting: Caught Signal ------------
+Reason: Terminated
+[589] Stack Traceback:
+  [589:0] libpthread.so.0 0x14eafc98edd0 
+  [589:1] libuct_ib.so.0 0x14eaf8723e70 uct_dc_mlx5_iface_is_reachable
+  [589:2] libucp.so.0 0x14eafb9d1ee8 ucp_wireup_is_reachable
+  [589:3] libucp.so.0 0x14eafb9cd704 
+  [589:4] libucp.so.0 0x14eafb9ce2e3 
+  [589:5] libucp.so.0 0x14eafb9cee7e ucp_wireup_select_lanes
+  [589:6] libucp.so.0 0x14eafb9d1f8b ucp_wireup_init_lanes
+  [589:7] libucp.so.0 0x14eafb9a08b7 ucp_ep_create_to_worker_addr
+  [589:8] libucp.so.0 0x14eafb9a145b ucp_ep_create
+  [589:9] libmpi.so.40 0x14eafd357493 
+  [589:10] libmpi.so.40 0x14eafd35886b 
+  [589:11] libmpi.so.40 0x14eafd359093 mca_pml_ucx_isend
+  [589:12] libmpi.so.40 0x14eafd236085 MPI_Isend
+  [589:13] iotest 0x65baa4 
+  [589:14] iotest 0x544f47 _processHandler(void*, CkCoreState*)
+  [589:15] iotest 0x6369cb CsdScheduleForever
+  [589:16] iotest 0x636d05 CsdScheduler
+  [589:17] iotest 0x65d13a ConverseInit
+  [589:18] iotest 0x5c67c7 charm_main
+  [589:19] libc.so.6 0x14eafc5dd6a3 __libc_start_main
+  [589:20] iotest 0x503dae _start
+------------- Processor 589 Exiting: Caught Signal ------------
+Reason: Terminated
+[590] Stack Traceback:
+  [590:0] libpthread.so.0 0x14e01a478dd0 
+  [590:1] libuct_ib.so.0 0x14e01620df80 
+  [590:2] libuct_ib.so.0 0x14e01620e75e 
+  [590:3] libucp.so.0 0x14e019496eea ucp_worker_progress
+  [590:4] libmpi.so.40 0x14e01ae420eb mca_pml_ucx_iprobe
+  [590:5] libmpi.so.40 0x14e01ad1f71c PMPI_Iprobe
+  [590:6] iotest 0x65c388 
+  [590:7] iotest 0x65c6b2 CmiGetNonLocal
+  [590:8] iotest 0x6368cd CsdNextMessage
+  [590:9] iotest 0x63699a CsdScheduleForever
+  [590:10] iotest 0x636d05 CsdScheduler
+  [590:11] iotest 0x65d13a ConverseInit
+  [590:12] iotest 0x5c67c7 charm_main
+  [590:13] libc.so.6 0x14e01a0c76a3 __libc_start_main
+  [590:14] iotest 0x503dae _start
+------------- Processor 590 Exiting: Caught Signal ------------
+Reason: Terminated
+[591] Stack Traceback:
+  [591:0] libpthread.so.0 0x147cf86f6dd0 
+  [591:1] libuct_ib.so.0 0x147cf44673f0 
+  [591:2] libucp.so.0 0x147cf770db23 ucp_mem_rereg_mds
+  [591:3] libucp.so.0 0x147cf770fe0a ucp_request_memory_reg
+  [591:4] libucp.so.0 0x147cf772778c ucp_tag_rndv_reg_send_buffer
+  [591:5] libucp.so.0 0x147cf772caa6 ucp_tag_send_nbx
+  [591:6] libmpi.so.40 0x147cf90c0f8a mca_pml_ucx_isend
+  [591:7] libmpi.so.40 0x147cf8f9e085 MPI_Isend
+  [591:8] iotest 0x65baa4 
+  [591:9] iotest 0x698b27 CldEnqueue
+  [591:10] iotest 0x543e95 
+  [591:11] iotest 0x526653 Ck::IO::impl::CProxy_ReadAssembler::shareData(unsigned long const&, unsigned long const&, char const*, CkEntryOptions const*)
+  [591:12] iotest 0x52eacb Ck::IO::impl::ReadSession::sendData(unsigned long, unsigned long, Ck::IO::impl::CProxy_ReadAssembler)
+  [591:13] iotest 0x5284c5 Ck::IO::impl::CkIndex_ReadSession::_call_sendData_marshall2(void*, void*)
+  [591:14] iotest 0x542002 CkDeliverMessageFree
+  [591:15] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [591:16] iotest 0x5459e6 _processHandler(void*, CkCoreState*)
+  [591:17] iotest 0x6369cb CsdScheduleForever
+  [591:18] iotest 0x636d05 CsdScheduler
+  [591:19] iotest 0x65d13a ConverseInit
+  [591:20] iotest 0x5c67c7 charm_main
+  [591:21] libc.so.6 0x147cf83456a3 __libc_start_main
+  [591:22] iotest 0x503dae _start
+------------- Processor 591 Exiting: Caught Signal ------------
+Reason: Terminated
+[592] Stack Traceback:
+  [592:0] libpthread.so.0 0x14d42d8d8dd0 
+  [592:1] libuct_ib.so.0 0x14d42965f2f0 uct_rc_mlx5_release_desc
+  [592:2] libucp.so.0 0x14d42c90ca65 ucp_tag_recv_nbx
+  [592:3] libmpi.so.40 0x14d42e2a21fe mca_pml_ucx_recv
+  [592:4] libmpi.so.40 0x14d42e186cf5 PMPI_Recv
+  [592:5] iotest 0x65c3e7 
+  [592:6] iotest 0x65c6b2 CmiGetNonLocal
+  [592:7] iotest 0x6368cd CsdNextMessage
+  [592:8] iotest 0x63699a CsdScheduleForever
+  [592:9] iotest 0x636d05 CsdScheduler
+  [592:10] iotest 0x65d13a ConverseInit
+  [592:11] iotest 0x5c67c7 charm_main
+  [592:12] libc.so.6 0x14d42d5276a3 __libc_start_main
+  [592:13] iotest 0x503dae _start
+------------- Processor 592 Exiting: Caught Signal ------------
+Reason: Terminated
+[593] Stack Traceback:
+  [593:0] libpthread.so.0 0x153122dfcdd0 
+  [593:1] libc.so.6 0x153122b860bb 
+  [593:2] iotest 0x53701a __gnu_cxx::__enable_if<std::__is_byte<char>::__value, void>::__type std::__fill_a1<char>(char*, char*, char const&)
+  [593:3] iotest 0x536754 void std::__fill_a<char*, char>(char*, char*, char const&)
+  [593:4] iotest 0x537861 char* std::__fill_n_a<char*, unsigned long, char>(char*, unsigned long, char const&, std::random_access_iterator_tag)
+  [593:5] iotest 0x5372da char* std::fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [593:6] iotest 0x537048 char* std::__uninitialized_fill_n<true>::__uninit_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [593:7] iotest 0x536786 char* std::uninitialized_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [593:8] iotest 0x535214 char* std::__uninitialized_fill_n_a<char*, unsigned long, char, char>(char*, unsigned long, char const&, std::allocator<char>&)
+  [593:9] iotest 0x53330a std::vector<char, std::allocator<char> >::_M_fill_insert(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, unsigned long, char const&)
+  [593:10] iotest 0x531ae0 std::vector<char, std::allocator<char> >::resize(unsigned long, char const&)
+  [593:11] iotest 0x52ecf6 Ck::IO::impl::ReadAssembler::ReadAssembler(Ck::IO::Session, unsigned long, unsigned long, CkCallback)
+  [593:12] iotest 0x52514f Ck::IO::impl::CkIndex_ReadAssembler::_call_ReadAssembler_marshall1(void*, void*)
+  [593:13] iotest 0x542002 CkDeliverMessageFree
+  [593:14] iotest 0x542c58 
+  [593:15] iotest 0x545922 _processHandler(void*, CkCoreState*)
+  [593:16] iotest 0x6369cb CsdScheduleForever
+  [593:17] iotest 0x636d05 CsdScheduler
+  [593:18] iotest 0x65d13a ConverseInit
+  [593:19] iotest 0x5c67c7 charm_main
+  [593:20] libc.so.6 0x153122a4b6a3 __libc_start_main
+  [593:21] iotest 0x503dae _start
+------------- Processor 593 Exiting: Caught Signal ------------
+Reason: Terminated
+[594] Stack Traceback:
+  [594:0] libpthread.so.0 0x14d10853ddd0 
+  [594:1] libuct_ib.so.0 0x14d1042ae3d0 
+  [594:2] libucp.so.0 0x14d107554a7f ucp_mem_rereg_mds
+  [594:3] libucp.so.0 0x14d1075570cf ucp_request_memory_dereg
+  [594:4] libucp.so.0 0x14d10756cefe ucp_rndv_ats_handler
+  [594:5] libuct.so.0 0x14d107319fcd 
+  [594:6] libucp.so.0 0x14d10755beea ucp_worker_progress
+  [594:7] libopen-pal.so.40 0x14d1077ff773 opal_progress
+  [594:8] libmpi.so.40 0x14d108db3f9a ompi_request_default_test
+  [594:9] libmpi.so.40 0x14d108df346e PMPI_Test
+  [594:10] iotest 0x65b380 
+  [594:11] iotest 0x65c6ad CmiGetNonLocal
+  [594:12] iotest 0x6368cd CsdNextMessage
+  [594:13] iotest 0x63699a CsdScheduleForever
+  [594:14] iotest 0x636d05 CsdScheduler
+  [594:15] iotest 0x65d13a ConverseInit
+  [594:16] iotest 0x5c67c7 charm_main
+  [594:17] libc.so.6 0x14d10818c6a3 __libc_start_main
+  [594:18] iotest 0x503dae _start
+------------- Processor 594 Exiting: Caught Signal ------------
+Reason: Terminated
+[595] Stack Traceback:
+  [595:0] libpthread.so.0 0x1482913dcdd0 
+  [595:1] libuct_ib.so.0 0x14828d171e70 uct_dc_mlx5_iface_is_reachable
+  [595:2] libucp.so.0 0x14829041fee8 ucp_wireup_is_reachable
+  [595:3] libucp.so.0 0x14829041b704 
+  [595:4] libucp.so.0 0x14829041c2e3 
+  [595:5] libucp.so.0 0x14829041ce7e ucp_wireup_select_lanes
+  [595:6] libucp.so.0 0x14829041ff8b ucp_wireup_init_lanes
+  [595:7] libucp.so.0 0x1482903ee8b7 ucp_ep_create_to_worker_addr
+  [595:8] libucp.so.0 0x1482903ef45b ucp_ep_create
+  [595:9] libmpi.so.40 0x148291da5493 
+  [595:10] libmpi.so.40 0x148291da686b 
+  [595:11] libmpi.so.40 0x148291da7093 mca_pml_ucx_isend
+  [595:12] libmpi.so.40 0x148291c84085 MPI_Isend
+  [595:13] iotest 0x65baa4 
+  [595:14] iotest 0x544f47 _processHandler(void*, CkCoreState*)
+  [595:15] iotest 0x6369cb CsdScheduleForever
+  [595:16] iotest 0x636d05 CsdScheduler
+  [595:17] iotest 0x65d13a ConverseInit
+  [595:18] iotest 0x5c67c7 charm_main
+  [595:19] libc.so.6 0x14829102b6a3 __libc_start_main
+  [595:20] iotest 0x503dae _start
+------------- Processor 595 Exiting: Caught Signal ------------
+Reason: Terminated
+[596] Stack Traceback:
+  [596:0] libpthread.so.0 0x150d9046bdd0 
+  [596:1] libuct_ib.so.0 0x150d8c1dc190 
+  [596:2] libucp.so.0 0x150d8f4862a9 ucp_ep_rkey_unpack
+  [596:3] libucp.so.0 0x150d8f49c9e6 ucp_rndv_matched
+  [596:4] libucp.so.0 0x150d8f49ff8f ucp_tag_recv_nbx
+  [596:5] libmpi.so.40 0x150d90e351fe mca_pml_ucx_recv
+  [596:6] libmpi.so.40 0x150d90d19cf5 PMPI_Recv
+  [596:7] iotest 0x65c3e7 
+  [596:8] iotest 0x65c6b2 CmiGetNonLocal
+  [596:9] iotest 0x6368cd CsdNextMessage
+  [596:10] iotest 0x63699a CsdScheduleForever
+  [596:11] iotest 0x636d05 CsdScheduler
+  [596:12] iotest 0x65d13a ConverseInit
+  [596:13] iotest 0x5c67c7 charm_main
+  [596:14] libc.so.6 0x150d900ba6a3 __libc_start_main
+  [596:15] iotest 0x503dae _start
+------------- Processor 596 Exiting: Caught Signal ------------
+Reason: Terminated
+[597] Stack Traceback:
+  [597:0] libpthread.so.0 0x1464ca908dd0 
+  [597:1] libuct_ib.so.0 0x1464c66793f0 
+  [597:2] libucp.so.0 0x1464c991fb23 ucp_mem_rereg_mds
+  [597:3] libucp.so.0 0x1464c9921e0a ucp_request_memory_reg
+  [597:4] libucp.so.0 0x1464c993978c ucp_tag_rndv_reg_send_buffer
+  [597:5] libucp.so.0 0x1464c993eaa6 ucp_tag_send_nbx
+  [597:6] libmpi.so.40 0x1464cb2d2f8a mca_pml_ucx_isend
+  [597:7] libmpi.so.40 0x1464cb1b0085 MPI_Isend
+  [597:8] iotest 0x65baa4 
+  [597:9] iotest 0x698b27 CldEnqueue
+  [597:10] iotest 0x543e95 
+  [597:11] iotest 0x526653 Ck::IO::impl::CProxy_ReadAssembler::shareData(unsigned long const&, unsigned long const&, char const*, CkEntryOptions const*)
+  [597:12] iotest 0x52eacb Ck::IO::impl::ReadSession::sendData(unsigned long, unsigned long, Ck::IO::impl::CProxy_ReadAssembler)
+  [597:13] iotest 0x5284c5 Ck::IO::impl::CkIndex_ReadSession::_call_sendData_marshall2(void*, void*)
+  [597:14] iotest 0x542002 CkDeliverMessageFree
+  [597:15] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [597:16] iotest 0x5459e6 _processHandler(void*, CkCoreState*)
+  [597:17] iotest 0x6369cb CsdScheduleForever
+  [597:18] iotest 0x636d05 CsdScheduler
+  [597:19] iotest 0x65d13a ConverseInit
+  [597:20] iotest 0x5c67c7 charm_main
+  [597:21] libc.so.6 0x1464ca5576a3 __libc_start_main
+  [597:22] iotest 0x503dae _start
+------------- Processor 597 Exiting: Caught Signal ------------
+Reason: Terminated
+[598] Stack Traceback:
+  [598:0] libpthread.so.0 0x14e7442d1dd0 
+  [598:1] libuct_ib.so.0 0x14e7400433ef uct_ib_reg_mr
+  [598:2] libuct_ib.so.0 0x14e7400439c8 uct_ib_reg_key_impl
+  [598:3] libuct_ib.so.0 0x14e740047da3 
+  [598:4] libuct_ib.so.0 0x14e740042c20 
+  [598:5] libucs.so.0 0x14e742c61dad ucs_rcache_get
+  [598:6] libuct_ib.so.0 0x14e740042414 
+  [598:7] libucp.so.0 0x14e7432e8b23 ucp_mem_rereg_mds
+  [598:8] libucp.so.0 0x14e7432eae0a ucp_request_memory_reg
+  [598:9] libucp.so.0 0x14e74330278c ucp_tag_rndv_reg_send_buffer
+  [598:10] libucp.so.0 0x14e743307aa6 ucp_tag_send_nbx
+  [598:11] libmpi.so.40 0x14e744c9bf8a mca_pml_ucx_isend
+  [598:12] libmpi.so.40 0x14e744b79085 MPI_Isend
+  [598:13] iotest 0x65baa4 
+  [598:14] iotest 0x698b27 CldEnqueue
+  [598:15] iotest 0x54515d _processHandler(void*, CkCoreState*)
+  [598:16] iotest 0x6369cb CsdScheduleForever
+  [598:17] iotest 0x636d05 CsdScheduler
+  [598:18] iotest 0x65d13a ConverseInit
+  [598:19] iotest 0x5c67c7 charm_main
+  [598:20] libc.so.6 0x14e743f206a3 __libc_start_main
+  [598:21] iotest 0x503dae _start
+------------- Processor 598 Exiting: Caught Signal ------------
+Reason: Terminated
+[599] Stack Traceback:
+  [599:0] libpthread.so.0 0x147f2879fdd0 
+  [599:1] libuct_ib.so.0 0x147f24534e70 uct_dc_mlx5_iface_is_reachable
+  [599:2] libucp.so.0 0x147f277e2ee8 ucp_wireup_is_reachable
+  [599:3] libucp.so.0 0x147f277de704 
+  [599:4] libucp.so.0 0x147f277df2e3 
+  [599:5] libucp.so.0 0x147f277dfe7e ucp_wireup_select_lanes
+  [599:6] libucp.so.0 0x147f277e2f8b ucp_wireup_init_lanes
+  [599:7] libucp.so.0 0x147f277b18b7 ucp_ep_create_to_worker_addr
+  [599:8] libucp.so.0 0x147f277b245b ucp_ep_create
+  [599:9] libmpi.so.40 0x147f29168493 
+  [599:10] libmpi.so.40 0x147f2916986b 
+  [599:11] libmpi.so.40 0x147f2916a093 mca_pml_ucx_isend
+  [599:12] libmpi.so.40 0x147f29047085 MPI_Isend
+  [599:13] iotest 0x65baa4 
+  [599:14] iotest 0x544f47 _processHandler(void*, CkCoreState*)
+  [599:15] iotest 0x6369cb CsdScheduleForever
+  [599:16] iotest 0x636d05 CsdScheduler
+  [599:17] iotest 0x65d13a ConverseInit
+  [599:18] iotest 0x5c67c7 charm_main
+  [599:19] libc.so.6 0x147f283ee6a3 __libc_start_main
+  [599:20] iotest 0x503dae _start
+------------- Processor 599 Exiting: Caught Signal ------------
+Reason: Terminated
+[600] Stack Traceback:
+  [600:0] libpthread.so.0 0x15304d21cdd0 
+  [600:1] libuct_ib.so.0 0x153048f8d190 
+  [600:2] libucp.so.0 0x15304c2372a9 ucp_ep_rkey_unpack
+  [600:3] libucp.so.0 0x15304c24d9e6 ucp_rndv_matched
+  [600:4] libucp.so.0 0x15304c250f8f ucp_tag_recv_nbx
+  [600:5] libmpi.so.40 0x15304dbe61fe mca_pml_ucx_recv
+  [600:6] libmpi.so.40 0x15304dacacf5 PMPI_Recv
+  [600:7] iotest 0x65c3e7 
+  [600:8] iotest 0x65c6b2 CmiGetNonLocal
+  [600:9] iotest 0x6368cd CsdNextMessage
+  [600:10] iotest 0x63699a CsdScheduleForever
+  [600:11] iotest 0x636d05 CsdScheduler
+  [600:12] iotest 0x65d13a ConverseInit
+  [600:13] iotest 0x5c67c7 charm_main
+  [600:14] libc.so.6 0x15304ce6b6a3 __libc_start_main
+  [600:15] iotest 0x503dae _start
+------------- Processor 600 Exiting: Caught Signal ------------
+Reason: Terminated
+[601] Stack Traceback:
+  [601:0] libpthread.so.0 0x14b48084edd0 
+  [601:1] libuct_ib.so.0 0x14b47c5bf3d0 
+  [601:2] libucp.so.0 0x14b47f865a7f ucp_mem_rereg_mds
+  [601:3] libucp.so.0 0x14b47f8680cf ucp_request_memory_dereg
+  [601:4] libucp.so.0 0x14b47f87defe ucp_rndv_ats_handler
+  [601:5] libuct.so.0 0x14b47f62afcd 
+  [601:6] libucp.so.0 0x14b47f86ceea ucp_worker_progress
+  [601:7] libmpi.so.40 0x14b481218233 mca_pml_ucx_recv
+  [601:8] libmpi.so.40 0x14b4810fccf5 PMPI_Recv
+  [601:9] iotest 0x65c3e7 
+  [601:10] iotest 0x65c6b2 CmiGetNonLocal
+  [601:11] iotest 0x6368cd CsdNextMessage
+  [601:12] iotest 0x63699a CsdScheduleForever
+  [601:13] iotest 0x636d05 CsdScheduler
+  [601:14] iotest 0x65d13a ConverseInit
+  [601:15] iotest 0x5c67c7 charm_main
+  [601:16] libc.so.6 0x14b48049d6a3 __libc_start_main
+  [601:17] iotest 0x503dae _start
+------------- Processor 601 Exiting: Caught Signal ------------
+Reason: Terminated
+[602] Stack Traceback:
+  [602:0] libpthread.so.0 0x14a6982fedd0 
+  [602:1] libc.so.6 0x14a6980880bb 
+  [602:2] iotest 0x53701a __gnu_cxx::__enable_if<std::__is_byte<char>::__value, void>::__type std::__fill_a1<char>(char*, char*, char const&)
+  [602:3] iotest 0x536754 void std::__fill_a<char*, char>(char*, char*, char const&)
+  [602:4] iotest 0x537861 char* std::__fill_n_a<char*, unsigned long, char>(char*, unsigned long, char const&, std::random_access_iterator_tag)
+  [602:5] iotest 0x5372da char* std::fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [602:6] iotest 0x537048 char* std::__uninitialized_fill_n<true>::__uninit_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [602:7] iotest 0x536786 char* std::uninitialized_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [602:8] iotest 0x535214 char* std::__uninitialized_fill_n_a<char*, unsigned long, char, char>(char*, unsigned long, char const&, std::allocator<char>&)
+  [602:9] iotest 0x53330a std::vector<char, std::allocator<char> >::_M_fill_insert(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, unsigned long, char const&)
+  [602:10] iotest 0x531ae0 std::vector<char, std::allocator<char> >::resize(unsigned long, char const&)
+  [602:11] iotest 0x52ecf6 Ck::IO::impl::ReadAssembler::ReadAssembler(Ck::IO::Session, unsigned long, unsigned long, CkCallback)
+  [602:12] iotest 0x52514f Ck::IO::impl::CkIndex_ReadAssembler::_call_ReadAssembler_marshall1(void*, void*)
+  [602:13] iotest 0x542002 CkDeliverMessageFree
+  [602:14] iotest 0x542c58 
+  [602:15] iotest 0x545922 _processHandler(void*, CkCoreState*)
+  [602:16] iotest 0x6369cb CsdScheduleForever
+  [602:17] iotest 0x636d05 CsdScheduler
+  [602:18] iotest 0x65d13a ConverseInit
+  [602:19] iotest 0x5c67c7 charm_main
+  [602:20] libc.so.6 0x14a697f4d6a3 __libc_start_main
+  [602:21] iotest 0x503dae _start
+------------- Processor 602 Exiting: Caught Signal ------------
+Reason: Terminated
+[603] Stack Traceback:
+  [603:0] libpthread.so.0 0x14d08bc08dd0 
+  [603:1] libuct_ib.so.0 0x14d08819ef80 
+  [603:2] libuct_ib.so.0 0x14d08819f75e 
+  [603:3] libucp.so.0 0x14d08ac26eea ucp_worker_progress
+  [603:4] libopen-pal.so.40 0x14d08aeca773 opal_progress
+  [603:5] libmpi.so.40 0x14d08c47ef9a ompi_request_default_test
+  [603:6] libmpi.so.40 0x14d08c4be46e PMPI_Test
+  [603:7] iotest 0x65b380 
+  [603:8] iotest 0x65c6ad CmiGetNonLocal
+  [603:9] iotest 0x6368cd CsdNextMessage
+  [603:10] iotest 0x63699a CsdScheduleForever
+  [603:11] iotest 0x636d05 CsdScheduler
+  [603:12] iotest 0x65d13a ConverseInit
+  [603:13] iotest 0x5c67c7 charm_main
+  [603:14] libc.so.6 0x14d08b8576a3 __libc_start_main
+  [603:15] iotest 0x503dae _start
+------------- Processor 603 Exiting: Caught Signal ------------
+Reason: Terminated
+[604] Stack Traceback:
+  [604:0] libpthread.so.0 0x15436b829dd0 
+  [604:1] libc.so.6 0x15436b5b30bb 
+  [604:2] iotest 0x53701a __gnu_cxx::__enable_if<std::__is_byte<char>::__value, void>::__type std::__fill_a1<char>(char*, char*, char const&)
+  [604:3] iotest 0x536754 void std::__fill_a<char*, char>(char*, char*, char const&)
+  [604:4] iotest 0x537861 char* std::__fill_n_a<char*, unsigned long, char>(char*, unsigned long, char const&, std::random_access_iterator_tag)
+  [604:5] iotest 0x5372da char* std::fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [604:6] iotest 0x537048 char* std::__uninitialized_fill_n<true>::__uninit_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [604:7] iotest 0x536786 char* std::uninitialized_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [604:8] iotest 0x535214 char* std::__uninitialized_fill_n_a<char*, unsigned long, char, char>(char*, unsigned long, char const&, std::allocator<char>&)
+  [604:9] iotest 0x53330a std::vector<char, std::allocator<char> >::_M_fill_insert(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, unsigned long, char const&)
+  [604:10] iotest 0x531ae0 std::vector<char, std::allocator<char> >::resize(unsigned long, char const&)
+  [604:11] iotest 0x52ecf6 Ck::IO::impl::ReadAssembler::ReadAssembler(Ck::IO::Session, unsigned long, unsigned long, CkCallback)
+  [604:12] iotest 0x52514f Ck::IO::impl::CkIndex_ReadAssembler::_call_ReadAssembler_marshall1(void*, void*)
+  [604:13] iotest 0x542002 CkDeliverMessageFree
+  [604:14] iotest 0x542c58 
+  [604:15] iotest 0x545922 _processHandler(void*, CkCoreState*)
+  [604:16] iotest 0x6369cb CsdScheduleForever
+  [604:17] iotest 0x636d05 CsdScheduler
+  [604:18] iotest 0x65d13a ConverseInit
+  [604:19] iotest 0x5c67c7 charm_main
+  [604:20] libc.so.6 0x15436b4786a3 __libc_start_main
+  [604:21] iotest 0x503dae _start
+------------- Processor 604 Exiting: Caught Signal ------------
+Reason: Terminated
+[605] Stack Traceback:
+  [605:0] libpthread.so.0 0x14d0e8d0add0 
+  [605:1] libuct_ib.so.0 0x14d0e4a9fe70 uct_dc_mlx5_iface_is_reachable
+  [605:2] libucp.so.0 0x14d0e7d4dee8 ucp_wireup_is_reachable
+  [605:3] libucp.so.0 0x14d0e7d49704 
+  [605:4] libucp.so.0 0x14d0e7d4a2e3 
+  [605:5] libucp.so.0 0x14d0e7d4ae7e ucp_wireup_select_lanes
+  [605:6] libucp.so.0 0x14d0e7d4df8b ucp_wireup_init_lanes
+  [605:7] libucp.so.0 0x14d0e7d1c8b7 ucp_ep_create_to_worker_addr
+  [605:8] libucp.so.0 0x14d0e7d1d45b ucp_ep_create
+  [605:9] libmpi.so.40 0x14d0e96d3493 
+  [605:10] libmpi.so.40 0x14d0e96d486b 
+  [605:11] libmpi.so.40 0x14d0e96d5093 mca_pml_ucx_isend
+  [605:12] libmpi.so.40 0x14d0e95b2085 MPI_Isend
+  [605:13] iotest 0x65baa4 
+  [605:14] iotest 0x544f47 _processHandler(void*, CkCoreState*)
+  [605:15] iotest 0x6369cb CsdScheduleForever
+  [605:16] iotest 0x636d05 CsdScheduler
+  [605:17] iotest 0x65d13a ConverseInit
+  [605:18] iotest 0x5c67c7 charm_main
+  [605:19] libc.so.6 0x14d0e89596a3 __libc_start_main
+  [605:20] iotest 0x503dae _start
+------------- Processor 605 Exiting: Caught Signal ------------
+Reason: Terminated
+[606] Stack Traceback:
+  [606:0] libpthread.so.0 0x1553c4eb3dd0 
+  [606:1] libuct_ib.so.0 0x1553c0c243f0 
+  [606:2] libucp.so.0 0x1553c3ecab23 ucp_mem_rereg_mds
+  [606:3] libucp.so.0 0x1553c3ecce0a ucp_request_memory_reg
+  [606:4] libucp.so.0 0x1553c3ee478c ucp_tag_rndv_reg_send_buffer
+  [606:5] libucp.so.0 0x1553c3ee9aa6 ucp_tag_send_nbx
+  [606:6] libmpi.so.40 0x1553c587df8a mca_pml_ucx_isend
+  [606:7] libmpi.so.40 0x1553c575b085 MPI_Isend
+  [606:8] iotest 0x65baa4 
+  [606:9] iotest 0x698b27 CldEnqueue
+  [606:10] iotest 0x543e95 
+  [606:11] iotest 0x526653 Ck::IO::impl::CProxy_ReadAssembler::shareData(unsigned long const&, unsigned long const&, char const*, CkEntryOptions const*)
+  [606:12] iotest 0x52eacb Ck::IO::impl::ReadSession::sendData(unsigned long, unsigned long, Ck::IO::impl::CProxy_ReadAssembler)
+  [606:13] iotest 0x5284c5 Ck::IO::impl::CkIndex_ReadSession::_call_sendData_marshall2(void*, void*)
+  [606:14] iotest 0x542002 CkDeliverMessageFree
+  [606:15] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [606:16] iotest 0x5459e6 _processHandler(void*, CkCoreState*)
+  [606:17] iotest 0x6369cb CsdScheduleForever
+  [606:18] iotest 0x636d05 CsdScheduler
+  [606:19] iotest 0x65d13a ConverseInit
+  [606:20] iotest 0x5c67c7 charm_main
+  [606:21] libc.so.6 0x1553c4b026a3 __libc_start_main
+  [606:22] iotest 0x503dae _start
+------------- Processor 606 Exiting: Caught Signal ------------
+Reason: Terminated
+[607] Stack Traceback:
+  [607:0] libpthread.so.0 0x150003e76dd0 
+  [607:1] libuct_ib.so.0 0x14fffb9d2e70 uct_dc_mlx5_iface_is_reachable
+  [607:2] libucp.so.0 0x150002eb9ee8 ucp_wireup_is_reachable
+  [607:3] libucp.so.0 0x150002eb5704 
+  [607:4] libucp.so.0 0x150002eb62e3 
+  [607:5] libucp.so.0 0x150002eb6e7e ucp_wireup_select_lanes
+  [607:6] libucp.so.0 0x150002eb9f8b ucp_wireup_init_lanes
+  [607:7] libucp.so.0 0x150002e888b7 ucp_ep_create_to_worker_addr
+  [607:8] libucp.so.0 0x150002e8945b ucp_ep_create
+  [607:9] libmpi.so.40 0x15000483f493 
+  [607:10] libmpi.so.40 0x15000484086b 
+  [607:11] libmpi.so.40 0x150004841093 mca_pml_ucx_isend
+  [607:12] libmpi.so.40 0x15000471e085 MPI_Isend
+  [607:13] iotest 0x65baa4 
+  [607:14] iotest 0x544f47 _processHandler(void*, CkCoreState*)
+  [607:15] iotest 0x6369cb CsdScheduleForever
+  [607:16] iotest 0x636d05 CsdScheduler
+  [607:17] iotest 0x65d13a ConverseInit
+  [607:18] iotest 0x5c67c7 charm_main
+  [607:19] libc.so.6 0x150003ac56a3 __libc_start_main
+  [607:20] iotest 0x503dae _start
+------------- Processor 607 Exiting: Caught Signal ------------
+Reason: Terminated
+[608] Stack Traceback:
+  [608:0] libpthread.so.0 0x14dd8eecedd0 
+  [608:1] libuct_ib.so.0 0x14dd8ac3f3f0 
+  [608:2] libucp.so.0 0x14dd8dee5b23 ucp_mem_rereg_mds
+  [608:3] libucp.so.0 0x14dd8dee7e0a ucp_request_memory_reg
+  [608:4] libucp.so.0 0x14dd8deff78c ucp_tag_rndv_reg_send_buffer
+  [608:5] libucp.so.0 0x14dd8df04aa6 ucp_tag_send_nbx
+  [608:6] libmpi.so.40 0x14dd8f898f8a mca_pml_ucx_isend
+  [608:7] libmpi.so.40 0x14dd8f776085 MPI_Isend
+  [608:8] iotest 0x65baa4 
+  [608:9] iotest 0x698b27 CldEnqueue
+  [608:10] iotest 0x543e95 
+  [608:11] iotest 0x526653 Ck::IO::impl::CProxy_ReadAssembler::shareData(unsigned long const&, unsigned long const&, char const*, CkEntryOptions const*)
+  [608:12] iotest 0x52eacb Ck::IO::impl::ReadSession::sendData(unsigned long, unsigned long, Ck::IO::impl::CProxy_ReadAssembler)
+  [608:13] iotest 0x5284c5 Ck::IO::impl::CkIndex_ReadSession::_call_sendData_marshall2(void*, void*)
+  [608:14] iotest 0x542002 CkDeliverMessageFree
+  [608:15] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [608:16] iotest 0x5459e6 _processHandler(void*, CkCoreState*)
+  [608:17] iotest 0x6369cb CsdScheduleForever
+  [608:18] iotest 0x636d05 CsdScheduler
+  [608:19] iotest 0x65d13a ConverseInit
+  [608:20] iotest 0x5c67c7 charm_main
+  [608:21] libc.so.6 0x14dd8eb1d6a3 __libc_start_main
+  [608:22] iotest 0x503dae _start
+------------- Processor 608 Exiting: Caught Signal ------------
+Reason: Terminated
+[609] Stack Traceback:
+  [609:0] libpthread.so.0 0x150b65564dd0 
+  [609:1] libc.so.6 0x150b652ee0bb 
+  [609:2] iotest 0x53701a __gnu_cxx::__enable_if<std::__is_byte<char>::__value, void>::__type std::__fill_a1<char>(char*, char*, char const&)
+  [609:3] iotest 0x536754 void std::__fill_a<char*, char>(char*, char*, char const&)
+  [609:4] iotest 0x537861 char* std::__fill_n_a<char*, unsigned long, char>(char*, unsigned long, char const&, std::random_access_iterator_tag)
+  [609:5] iotest 0x5372da char* std::fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [609:6] iotest 0x537048 char* std::__uninitialized_fill_n<true>::__uninit_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [609:7] iotest 0x536786 char* std::uninitialized_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [609:8] iotest 0x535214 char* std::__uninitialized_fill_n_a<char*, unsigned long, char, char>(char*, unsigned long, char const&, std::allocator<char>&)
+  [609:9] iotest 0x53330a std::vector<char, std::allocator<char> >::_M_fill_insert(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, unsigned long, char const&)
+  [609:10] iotest 0x531ae0 std::vector<char, std::allocator<char> >::resize(unsigned long, char const&)
+  [609:11] iotest 0x52ecf6 Ck::IO::impl::ReadAssembler::ReadAssembler(Ck::IO::Session, unsigned long, unsigned long, CkCallback)
+  [609:12] iotest 0x52514f Ck::IO::impl::CkIndex_ReadAssembler::_call_ReadAssembler_marshall1(void*, void*)
+  [609:13] iotest 0x542002 CkDeliverMessageFree
+  [609:14] iotest 0x542c58 
+  [609:15] iotest 0x545922 _processHandler(void*, CkCoreState*)
+  [609:16] iotest 0x6369cb CsdScheduleForever
+  [609:17] iotest 0x636d05 CsdScheduler
+  [609:18] iotest 0x65d13a ConverseInit
+  [609:19] iotest 0x5c67c7 charm_main
+  [609:20] libc.so.6 0x150b651b36a3 __libc_start_main
+  [609:21] iotest 0x503dae _start
+------------- Processor 609 Exiting: Caught Signal ------------
+Reason: Terminated
+[610] Stack Traceback:
+  [610:0] libpthread.so.0 0x14ec935c9dd0 
+  [610:1] libuct_ib.so.0 0x14ec8b1ae190 
+  [610:2] libucp.so.0 0x14ec925e42a9 ucp_ep_rkey_unpack
+  [610:3] libucp.so.0 0x14ec925fa9e6 ucp_rndv_matched
+  [610:4] libucp.so.0 0x14ec925fdf8f ucp_tag_recv_nbx
+  [610:5] libmpi.so.40 0x14ec93f931fe mca_pml_ucx_recv
+  [610:6] libmpi.so.40 0x14ec93e77cf5 PMPI_Recv
+  [610:7] iotest 0x65c3e7 
+  [610:8] iotest 0x65c6b2 CmiGetNonLocal
+  [610:9] iotest 0x6368cd CsdNextMessage
+  [610:10] iotest 0x63699a CsdScheduleForever
+  [610:11] iotest 0x636d05 CsdScheduler
+  [610:12] iotest 0x65d13a ConverseInit
+  [610:13] iotest 0x5c67c7 charm_main
+  [610:14] libc.so.6 0x14ec932186a3 __libc_start_main
+  [610:15] iotest 0x503dae _start
+------------- Processor 610 Exiting: Caught Signal ------------
+Reason: Terminated
+[611] Stack Traceback:
+  [611:0] libpthread.so.0 0x14aee2811dd0 
+  [611:1] libuct_ib.so.0 0x14aede5a6e70 uct_dc_mlx5_iface_is_reachable
+  [611:2] libucp.so.0 0x14aee1854ee8 ucp_wireup_is_reachable
+  [611:3] libucp.so.0 0x14aee1850704 
+  [611:4] libucp.so.0 0x14aee18512e3 
+  [611:5] libucp.so.0 0x14aee1851e7e ucp_wireup_select_lanes
+  [611:6] libucp.so.0 0x14aee1854f8b ucp_wireup_init_lanes
+  [611:7] libucp.so.0 0x14aee18238b7 ucp_ep_create_to_worker_addr
+  [611:8] libucp.so.0 0x14aee182445b ucp_ep_create
+  [611:9] libmpi.so.40 0x14aee31da493 
+  [611:10] libmpi.so.40 0x14aee31db86b 
+  [611:11] libmpi.so.40 0x14aee31dc093 mca_pml_ucx_isend
+  [611:12] libmpi.so.40 0x14aee30b9085 MPI_Isend
+  [611:13] iotest 0x65baa4 
+  [611:14] iotest 0x544f47 _processHandler(void*, CkCoreState*)
+  [611:15] iotest 0x6369cb CsdScheduleForever
+  [611:16] iotest 0x636d05 CsdScheduler
+  [611:17] iotest 0x65d13a ConverseInit
+  [611:18] iotest 0x5c67c7 charm_main
+  [611:19] libc.so.6 0x14aee24606a3 __libc_start_main
+  [611:20] iotest 0x503dae _start
+------------- Processor 611 Exiting: Caught Signal ------------
+Reason: Terminated
+[612] Stack Traceback:
+  [612:0] libpthread.so.0 0x151795470dd0 
+  [612:1] libuct_ib.so.0 0x1517911e13f0 
+  [612:2] libucp.so.0 0x151794487b23 ucp_mem_rereg_mds
+  [612:3] libucp.so.0 0x151794489e0a ucp_request_memory_reg
+  [612:4] libucp.so.0 0x1517944a178c ucp_tag_rndv_reg_send_buffer
+  [612:5] libucp.so.0 0x1517944a6aa6 ucp_tag_send_nbx
+  [612:6] libmpi.so.40 0x151795e3af8a mca_pml_ucx_isend
+  [612:7] libmpi.so.40 0x151795d18085 MPI_Isend
+  [612:8] iotest 0x65baa4 
+  [612:9] iotest 0x698b27 CldEnqueue
+  [612:10] iotest 0x543e95 
+  [612:11] iotest 0x526653 Ck::IO::impl::CProxy_ReadAssembler::shareData(unsigned long const&, unsigned long const&, char const*, CkEntryOptions const*)
+  [612:12] iotest 0x52eacb Ck::IO::impl::ReadSession::sendData(unsigned long, unsigned long, Ck::IO::impl::CProxy_ReadAssembler)
+  [612:13] iotest 0x5284c5 Ck::IO::impl::CkIndex_ReadSession::_call_sendData_marshall2(void*, void*)
+  [612:14] iotest 0x542002 CkDeliverMessageFree
+  [612:15] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [612:16] iotest 0x5459e6 _processHandler(void*, CkCoreState*)
+  [612:17] iotest 0x6369cb CsdScheduleForever
+  [612:18] iotest 0x636d05 CsdScheduler
+  [612:19] iotest 0x65d13a ConverseInit
+  [612:20] iotest 0x5c67c7 charm_main
+  [612:21] libc.so.6 0x1517950bf6a3 __libc_start_main
+  [612:22] iotest 0x503dae _start
+------------- Processor 612 Exiting: Caught Signal ------------
+Reason: Terminated
+[613] Stack Traceback:
+  [613:0] libpthread.so.0 0x14de3359cdd0 
+  [613:1] libuct_ib.so.0 0x14de2b1d2e70 uct_dc_mlx5_iface_is_reachable
+  [613:2] libucp.so.0 0x14de325dfee8 ucp_wireup_is_reachable
+  [613:3] libucp.so.0 0x14de325db704 
+  [613:4] libucp.so.0 0x14de325dc2e3 
+  [613:5] libucp.so.0 0x14de325dce7e ucp_wireup_select_lanes
+  [613:6] libucp.so.0 0x14de325dff8b ucp_wireup_init_lanes
+  [613:7] libucp.so.0 0x14de325ae8b7 ucp_ep_create_to_worker_addr
+  [613:8] libucp.so.0 0x14de325af45b ucp_ep_create
+  [613:9] libmpi.so.40 0x14de33f65493 
+  [613:10] libmpi.so.40 0x14de33f6686b 
+  [613:11] libmpi.so.40 0x14de33f67093 mca_pml_ucx_isend
+  [613:12] libmpi.so.40 0x14de33e44085 MPI_Isend
+  [613:13] iotest 0x65baa4 
+  [613:14] iotest 0x544f47 _processHandler(void*, CkCoreState*)
+  [613:15] iotest 0x6369cb CsdScheduleForever
+  [613:16] iotest 0x636d05 CsdScheduler
+  [613:17] iotest 0x65d13a ConverseInit
+  [613:18] iotest 0x5c67c7 charm_main
+  [613:19] libc.so.6 0x14de331eb6a3 __libc_start_main
+  [613:20] iotest 0x503dae _start
+------------- Processor 613 Exiting: Caught Signal ------------
+Reason: Terminated
+[614] Stack Traceback:
+  [614:0] libpthread.so.0 0x1515c8f2cdd0 
+  [614:1] libc.so.6 0x1515c8cb60bb 
+  [614:2] iotest 0x53701a __gnu_cxx::__enable_if<std::__is_byte<char>::__value, void>::__type std::__fill_a1<char>(char*, char*, char const&)
+  [614:3] iotest 0x536754 void std::__fill_a<char*, char>(char*, char*, char const&)
+  [614:4] iotest 0x537861 char* std::__fill_n_a<char*, unsigned long, char>(char*, unsigned long, char const&, std::random_access_iterator_tag)
+  [614:5] iotest 0x5372da char* std::fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [614:6] iotest 0x537048 char* std::__uninitialized_fill_n<true>::__uninit_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [614:7] iotest 0x536786 char* std::uninitialized_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [614:8] iotest 0x535214 char* std::__uninitialized_fill_n_a<char*, unsigned long, char, char>(char*, unsigned long, char const&, std::allocator<char>&)
+  [614:9] iotest 0x53330a std::vector<char, std::allocator<char> >::_M_fill_insert(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, unsigned long, char const&)
+  [614:10] iotest 0x531ae0 std::vector<char, std::allocator<char> >::resize(unsigned long, char const&)
+  [614:11] iotest 0x52ecf6 Ck::IO::impl::ReadAssembler::ReadAssembler(Ck::IO::Session, unsigned long, unsigned long, CkCallback)
+  [614:12] iotest 0x52514f Ck::IO::impl::CkIndex_ReadAssembler::_call_ReadAssembler_marshall1(void*, void*)
+  [614:13] iotest 0x542002 CkDeliverMessageFree
+  [614:14] iotest 0x542c58 
+  [614:15] iotest 0x545922 _processHandler(void*, CkCoreState*)
+  [614:16] iotest 0x6369cb CsdScheduleForever
+  [614:17] iotest 0x636d05 CsdScheduler
+  [614:18] iotest 0x65d13a ConverseInit
+  [614:19] iotest 0x5c67c7 charm_main
+  [614:20] libc.so.6 0x1515c8b7b6a3 __libc_start_main
+  [614:21] iotest 0x503dae _start
+------------- Processor 614 Exiting: Caught Signal ------------
+Reason: Terminated
+[615] Stack Traceback:
+  [615:0] libpthread.so.0 0x1471cfde8dd0 
+  [615:1] libc.so.6 0x1471cfb71d76 
+  [615:2] iotest 0x526570 Ck::IO::impl::CProxy_ReadAssembler::shareData(unsigned long const&, unsigned long const&, char const*, CkEntryOptions const*)
+  [615:3] iotest 0x52eacb Ck::IO::impl::ReadSession::sendData(unsigned long, unsigned long, Ck::IO::impl::CProxy_ReadAssembler)
+  [615:4] iotest 0x5284c5 Ck::IO::impl::CkIndex_ReadSession::_call_sendData_marshall2(void*, void*)
+  [615:5] iotest 0x542002 CkDeliverMessageFree
+  [615:6] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [615:7] iotest 0x5459e6 _processHandler(void*, CkCoreState*)
+  [615:8] iotest 0x6369cb CsdScheduleForever
+  [615:9] iotest 0x636d05 CsdScheduler
+  [615:10] iotest 0x65d13a ConverseInit
+  [615:11] iotest 0x5c67c7 charm_main
+  [615:12] libc.so.6 0x1471cfa376a3 __libc_start_main
+  [615:13] iotest 0x503dae _start
+------------- Processor 615 Exiting: Caught Signal ------------
+Reason: Terminated
+[616] Stack Traceback:
+  [616:0] libpthread.so.0 0x14ee6a1cadd0 
+  [616:1] libc.so.6 0x14ee69f540bb 
+  [616:2] iotest 0x53701a __gnu_cxx::__enable_if<std::__is_byte<char>::__value, void>::__type std::__fill_a1<char>(char*, char*, char const&)
+  [616:3] iotest 0x536754 void std::__fill_a<char*, char>(char*, char*, char const&)
+  [616:4] iotest 0x537861 char* std::__fill_n_a<char*, unsigned long, char>(char*, unsigned long, char const&, std::random_access_iterator_tag)
+  [616:5] iotest 0x5372da char* std::fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [616:6] iotest 0x537048 char* std::__uninitialized_fill_n<true>::__uninit_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [616:7] iotest 0x536786 char* std::uninitialized_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [616:8] iotest 0x535214 char* std::__uninitialized_fill_n_a<char*, unsigned long, char, char>(char*, unsigned long, char const&, std::allocator<char>&)
+  [616:9] iotest 0x53330a std::vector<char, std::allocator<char> >::_M_fill_insert(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, unsigned long, char const&)
+  [616:10] iotest 0x531ae0 std::vector<char, std::allocator<char> >::resize(unsigned long, char const&)
+  [616:11] iotest 0x52ecf6 Ck::IO::impl::ReadAssembler::ReadAssembler(Ck::IO::Session, unsigned long, unsigned long, CkCallback)
+  [616:12] iotest 0x52514f Ck::IO::impl::CkIndex_ReadAssembler::_call_ReadAssembler_marshall1(void*, void*)
+  [616:13] iotest 0x542002 CkDeliverMessageFree
+  [616:14] iotest 0x542c58 
+  [616:15] iotest 0x545922 _processHandler(void*, CkCoreState*)
+  [616:16] iotest 0x6369cb CsdScheduleForever
+  [616:17] iotest 0x636d05 CsdScheduler
+  [616:18] iotest 0x65d13a ConverseInit
+  [616:19] iotest 0x5c67c7 charm_main
+  [616:20] libc.so.6 0x14ee69e196a3 __libc_start_main
+  [616:21] iotest 0x503dae _start
+------------- Processor 616 Exiting: Caught Signal ------------
+Reason: Terminated
+[617] Stack Traceback:
+  [617:0] libpthread.so.0 0x14e93e3f1dd0 
+  [617:1] libuct_ib.so.0 0x14e93a184a40 uct_dc_mlx5_ep_am_short
+  [617:2] libucp.so.0 0x14e93d4272b2 ucp_tag_send_nbx
+  [617:3] libmpi.so.40 0x14e93edbbf8a mca_pml_ucx_isend
+  [617:4] libmpi.so.40 0x14e93ec99085 MPI_Isend
+  [617:5] iotest 0x65baa4 
+  [617:6] iotest 0x544f47 _processHandler(void*, CkCoreState*)
+  [617:7] iotest 0x6369cb CsdScheduleForever
+  [617:8] iotest 0x636d05 CsdScheduler
+  [617:9] iotest 0x65d13a ConverseInit
+  [617:10] iotest 0x5c67c7 charm_main
+  [617:11] libc.so.6 0x14e93e0406a3 __libc_start_main
+  [617:12] iotest 0x503dae _start
+------------- Processor 617 Exiting: Caught Signal ------------
+Reason: Terminated
+[618] Stack Traceback:
+  [618:0] libpthread.so.0 0x14a08536edd0 
+  [618:1] libuct_ib.so.0 0x14a081103e70 uct_dc_mlx5_iface_is_reachable
+  [618:2] libucp.so.0 0x14a0843b1ee8 ucp_wireup_is_reachable
+  [618:3] libucp.so.0 0x14a0843ad704 
+  [618:4] libucp.so.0 0x14a0843ae2e3 
+  [618:5] libucp.so.0 0x14a0843aee7e ucp_wireup_select_lanes
+  [618:6] libucp.so.0 0x14a0843b1f8b ucp_wireup_init_lanes
+  [618:7] libucp.so.0 0x14a0843808b7 ucp_ep_create_to_worker_addr
+  [618:8] libucp.so.0 0x14a08438145b ucp_ep_create
+  [618:9] libmpi.so.40 0x14a085d37493 
+  [618:10] libmpi.so.40 0x14a085d3886b 
+  [618:11] libmpi.so.40 0x14a085d39093 mca_pml_ucx_isend
+  [618:12] libmpi.so.40 0x14a085c16085 MPI_Isend
+  [618:13] iotest 0x65baa4 
+  [618:14] iotest 0x544f47 _processHandler(void*, CkCoreState*)
+  [618:15] iotest 0x6369cb CsdScheduleForever
+  [618:16] iotest 0x636d05 CsdScheduler
+  [618:17] iotest 0x65d13a ConverseInit
+  [618:18] iotest 0x5c67c7 charm_main
+  [618:19] libc.so.6 0x14a084fbd6a3 __libc_start_main
+  [618:20] iotest 0x503dae _start
+------------- Processor 618 Exiting: Caught Signal ------------
+Reason: Terminated
+[619] Stack Traceback:
+  [619:0] libpthread.so.0 0x14b591518dd0 
+  [619:1] libc.so.6 0x14b5912a20bb 
+  [619:2] iotest 0x53701a __gnu_cxx::__enable_if<std::__is_byte<char>::__value, void>::__type std::__fill_a1<char>(char*, char*, char const&)
+  [619:3] iotest 0x536754 void std::__fill_a<char*, char>(char*, char*, char const&)
+  [619:4] iotest 0x537861 char* std::__fill_n_a<char*, unsigned long, char>(char*, unsigned long, char const&, std::random_access_iterator_tag)
+  [619:5] iotest 0x5372da char* std::fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [619:6] iotest 0x537048 char* std::__uninitialized_fill_n<true>::__uninit_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [619:7] iotest 0x536786 char* std::uninitialized_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [619:8] iotest 0x535214 char* std::__uninitialized_fill_n_a<char*, unsigned long, char, char>(char*, unsigned long, char const&, std::allocator<char>&)
+  [619:9] iotest 0x53330a std::vector<char, std::allocator<char> >::_M_fill_insert(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, unsigned long, char const&)
+  [619:10] iotest 0x531ae0 std::vector<char, std::allocator<char> >::resize(unsigned long, char const&)
+  [619:11] iotest 0x52ecf6 Ck::IO::impl::ReadAssembler::ReadAssembler(Ck::IO::Session, unsigned long, unsigned long, CkCallback)
+  [619:12] iotest 0x52514f Ck::IO::impl::CkIndex_ReadAssembler::_call_ReadAssembler_marshall1(void*, void*)
+  [619:13] iotest 0x542002 CkDeliverMessageFree
+  [619:14] iotest 0x542c58 
+  [619:15] iotest 0x545922 _processHandler(void*, CkCoreState*)
+  [619:16] iotest 0x6369cb CsdScheduleForever
+  [619:17] iotest 0x636d05 CsdScheduler
+  [619:18] iotest 0x65d13a ConverseInit
+  [619:19] iotest 0x5c67c7 charm_main
+  [619:20] libc.so.6 0x14b5911676a3 __libc_start_main
+  [619:21] iotest 0x503dae _start
+------------- Processor 619 Exiting: Caught Signal ------------
+Reason: Terminated
+[620] Stack Traceback:
+  [620:0] libpthread.so.0 0x152d0df7fdd0 
+  [620:1] libc.so.6 0x152d0dd090bb 
+  [620:2] iotest 0x53701a __gnu_cxx::__enable_if<std::__is_byte<char>::__value, void>::__type std::__fill_a1<char>(char*, char*, char const&)
+  [620:3] iotest 0x536754 void std::__fill_a<char*, char>(char*, char*, char const&)
+  [620:4] iotest 0x537861 char* std::__fill_n_a<char*, unsigned long, char>(char*, unsigned long, char const&, std::random_access_iterator_tag)
+  [620:5] iotest 0x5372da char* std::fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [620:6] iotest 0x537048 char* std::__uninitialized_fill_n<true>::__uninit_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [620:7] iotest 0x536786 char* std::uninitialized_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [620:8] iotest 0x535214 char* std::__uninitialized_fill_n_a<char*, unsigned long, char, char>(char*, unsigned long, char const&, std::allocator<char>&)
+  [620:9] iotest 0x53330a std::vector<char, std::allocator<char> >::_M_fill_insert(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, unsigned long, char const&)
+  [620:10] iotest 0x531ae0 std::vector<char, std::allocator<char> >::resize(unsigned long, char const&)
+  [620:11] iotest 0x52ecf6 Ck::IO::impl::ReadAssembler::ReadAssembler(Ck::IO::Session, unsigned long, unsigned long, CkCallback)
+  [620:12] iotest 0x52514f Ck::IO::impl::CkIndex_ReadAssembler::_call_ReadAssembler_marshall1(void*, void*)
+  [620:13] iotest 0x542002 CkDeliverMessageFree
+  [620:14] iotest 0x542c58 
+  [620:15] iotest 0x545922 _processHandler(void*, CkCoreState*)
+  [620:16] iotest 0x6369cb CsdScheduleForever
+  [620:17] iotest 0x636d05 CsdScheduler
+  [620:18] iotest 0x65d13a ConverseInit
+  [620:19] iotest 0x5c67c7 charm_main
+  [620:20] libc.so.6 0x152d0dbce6a3 __libc_start_main
+  [620:21] iotest 0x503dae _start
+------------- Processor 620 Exiting: Caught Signal ------------
+Reason: Terminated
+[621] Stack Traceback:
+  [621:0] libpthread.so.0 0x147f83e42dd0 
+  [621:1] libuct_ib.so.0 0x147f7b9d2e70 uct_dc_mlx5_iface_is_reachable
+  [621:2] libucp.so.0 0x147f82e85ee8 ucp_wireup_is_reachable
+  [621:3] libucp.so.0 0x147f82e81704 
+  [621:4] libucp.so.0 0x147f82e822e3 
+  [621:5] libucp.so.0 0x147f82e82e7e ucp_wireup_select_lanes
+  [621:6] libucp.so.0 0x147f82e85f8b ucp_wireup_init_lanes
+  [621:7] libucp.so.0 0x147f82e548b7 ucp_ep_create_to_worker_addr
+  [621:8] libucp.so.0 0x147f82e5545b ucp_ep_create
+  [621:9] libmpi.so.40 0x147f8480b493 
+  [621:10] libmpi.so.40 0x147f8480c86b 
+  [621:11] libmpi.so.40 0x147f8480d093 mca_pml_ucx_isend
+  [621:12] libmpi.so.40 0x147f846ea085 MPI_Isend
+  [621:13] iotest 0x65baa4 
+  [621:14] iotest 0x544f47 _processHandler(void*, CkCoreState*)
+  [621:15] iotest 0x6369cb CsdScheduleForever
+  [621:16] iotest 0x636d05 CsdScheduler
+  [621:17] iotest 0x65d13a ConverseInit
+  [621:18] iotest 0x5c67c7 charm_main
+  [621:19] libc.so.6 0x147f83a916a3 __libc_start_main
+  [621:20] iotest 0x503dae _start
+------------- Processor 621 Exiting: Caught Signal ------------
+Reason: Terminated
+[622] Stack Traceback:
+  [622:0] libpthread.so.0 0x148a7cbbcdd0 
+  [622:1] libc.so.6 0x148a7c8e4cee process_vm_readv
+  [622:2] libuct_cma.so.0 0x148a73dfd5f8 uct_cma_ep_tx
+  [622:3] libuct.so.0 0x148a7b99cac5 uct_scopy_ep_progress_tx
+  [622:4] libucs.so.0 0x148a7b53f4b2 ucs_arbiter_dispatch_nonempty
+  [622:5] libuct.so.0 0x148a7b99c5e9 uct_scopy_iface_progress
+  [622:6] libucp.so.0 0x148a7bbdaeea ucp_worker_progress
+  [622:7] libmpi.so.40 0x148a7d586233 mca_pml_ucx_recv
+  [622:8] libmpi.so.40 0x148a7d46acf5 PMPI_Recv
+  [622:9] iotest 0x65c3e7 
+  [622:10] iotest 0x65c6b2 CmiGetNonLocal
+  [622:11] iotest 0x6368cd CsdNextMessage
+  [622:12] iotest 0x63699a CsdScheduleForever
+  [622:13] iotest 0x636d05 CsdScheduler
+  [622:14] iotest 0x65d13a ConverseInit
+  [622:15] iotest 0x5c67c7 charm_main
+  [622:16] libc.so.6 0x148a7c80b6a3 __libc_start_main
+  [622:17] iotest 0x503dae _start
+------------- Processor 622 Exiting: Caught Signal ------------
+Reason: Terminated
+[623] Stack Traceback:
+  [623:0] libpthread.so.0 0x14814884add0 
+  [623:1] libuct_ib.so.0 0x1481445bb190 
+  [623:2] libucp.so.0 0x1481478652a9 ucp_ep_rkey_unpack
+  [623:3] libucp.so.0 0x14814787b9e6 ucp_rndv_matched
+  [623:4] libucp.so.0 0x14814787ef8f ucp_tag_recv_nbx
+  [623:5] libmpi.so.40 0x1481492141fe mca_pml_ucx_recv
+  [623:6] libmpi.so.40 0x1481490f8cf5 PMPI_Recv
+  [623:7] iotest 0x65c3e7 
+  [623:8] iotest 0x65c6b2 CmiGetNonLocal
+  [623:9] iotest 0x6368cd CsdNextMessage
+  [623:10] iotest 0x63699a CsdScheduleForever
+  [623:11] iotest 0x636d05 CsdScheduler
+  [623:12] iotest 0x65d13a ConverseInit
+  [623:13] iotest 0x5c67c7 charm_main
+  [623:14] libc.so.6 0x1481484996a3 __libc_start_main
+  [623:15] iotest 0x503dae _start
+------------- Processor 623 Exiting: Caught Signal ------------
+Reason: Terminated
+[625] Stack Traceback:
+  [625:0] libpthread.so.0 0x1489a5abbdd0 
+  [625:1] libuct_ib.so.0 0x1489a182c190 
+  [625:2] libucp.so.0 0x1489a4ad62a9 ucp_ep_rkey_unpack
+  [625:3] libucp.so.0 0x1489a4aec9e6 ucp_rndv_matched
+  [625:4] libucp.so.0 0x1489a4aeff8f ucp_tag_recv_nbx
+  [625:5] libmpi.so.40 0x1489a64851fe mca_pml_ucx_recv
+  [625:6] libmpi.so.40 0x1489a6369cf5 PMPI_Recv
+  [625:7] iotest 0x65c3e7 
+  [625:8] iotest 0x65c6b2 CmiGetNonLocal
+  [625:9] iotest 0x6368cd CsdNextMessage
+  [625:10] iotest 0x63699a CsdScheduleForever
+  [625:11] iotest 0x636d05 CsdScheduler
+  [625:12] iotest 0x65d13a ConverseInit
+  [625:13] iotest 0x5c67c7 charm_main
+  [625:14] libc.so.6 0x1489a570a6a3 __libc_start_main
+  [625:15] iotest 0x503dae _start
+------------- Processor 625 Exiting: Caught Signal ------------
+Reason: Terminated
+[626] Stack Traceback:
+  [626:0] libpthread.so.0 0x14af4f58cdd0 
+  [626:1] libuct_ib.so.0 0x14af471ae3f0 
+  [626:2] libucp.so.0 0x14af4e5a3b23 ucp_mem_rereg_mds
+  [626:3] libucp.so.0 0x14af4e5a5e0a ucp_request_memory_reg
+  [626:4] libucp.so.0 0x14af4e5bd78c ucp_tag_rndv_reg_send_buffer
+  [626:5] libucp.so.0 0x14af4e5c2aa6 ucp_tag_send_nbx
+  [626:6] libmpi.so.40 0x14af4ff56f8a mca_pml_ucx_isend
+  [626:7] libmpi.so.40 0x14af4fe34085 MPI_Isend
+  [626:8] iotest 0x65baa4 
+  [626:9] iotest 0x698b27 CldEnqueue
+  [626:10] iotest 0x543e95 
+  [626:11] iotest 0x526653 Ck::IO::impl::CProxy_ReadAssembler::shareData(unsigned long const&, unsigned long const&, char const*, CkEntryOptions const*)
+  [626:12] iotest 0x52eacb Ck::IO::impl::ReadSession::sendData(unsigned long, unsigned long, Ck::IO::impl::CProxy_ReadAssembler)
+  [626:13] iotest 0x5284c5 Ck::IO::impl::CkIndex_ReadSession::_call_sendData_marshall2(void*, void*)
+  [626:14] iotest 0x542002 CkDeliverMessageFree
+  [626:15] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [626:16] iotest 0x5459e6 _processHandler(void*, CkCoreState*)
+  [626:17] iotest 0x6369cb CsdScheduleForever
+  [626:18] iotest 0x636d05 CsdScheduler
+  [626:19] iotest 0x65d13a ConverseInit
+  [626:20] iotest 0x5c67c7 charm_main
+  [626:21] libc.so.6 0x14af4f1db6a3 __libc_start_main
+  [626:22] iotest 0x503dae _start
+------------- Processor 626 Exiting: Caught Signal ------------
+Reason: Terminated
+[627] Stack Traceback:
+  [627:0] libpthread.so.0 0x1508c286edd0 
+  [627:1] libuct_ib.so.0 0x1508be5df190 
+  [627:2] libucp.so.0 0x1508c18892a9 ucp_ep_rkey_unpack
+  [627:3] libucp.so.0 0x1508c189f9e6 ucp_rndv_matched
+  [627:4] libucp.so.0 0x1508c18a2f8f ucp_tag_recv_nbx
+  [627:5] libmpi.so.40 0x1508c32381fe mca_pml_ucx_recv
+  [627:6] libmpi.so.40 0x1508c311ccf5 PMPI_Recv
+  [627:7] iotest 0x65c3e7 
+  [627:8] iotest 0x65c6b2 CmiGetNonLocal
+  [627:9] iotest 0x6368cd CsdNextMessage
+  [627:10] iotest 0x63699a CsdScheduleForever
+  [627:11] iotest 0x636d05 CsdScheduler
+  [627:12] iotest 0x65d13a ConverseInit
+  [627:13] iotest 0x5c67c7 charm_main
+  [627:14] libc.so.6 0x1508c24bd6a3 __libc_start_main
+  [627:15] iotest 0x503dae _start
+------------- Processor 627 Exiting: Caught Signal ------------
+Reason: Terminated
+[628] Stack Traceback:
+  [628:0] libpthread.so.0 0x14c6b2a30dd0 
+  [628:1] libuct_ib.so.0 0x14c6ae7c5e70 uct_dc_mlx5_iface_is_reachable
+  [628:2] libucp.so.0 0x14c6b1a73ee8 ucp_wireup_is_reachable
+  [628:3] libucp.so.0 0x14c6b1a6f704 
+  [628:4] libucp.so.0 0x14c6b1a702e3 
+  [628:5] libucp.so.0 0x14c6b1a70e7e ucp_wireup_select_lanes
+  [628:6] libucp.so.0 0x14c6b1a73f8b ucp_wireup_init_lanes
+  [628:7] libucp.so.0 0x14c6b1a745c8 
+  [628:8] libucp.so.0 0x14c6b1a74c8e 
+  [628:9] libuct_ib.so.0 0x14c6ae7c6199 
+  [628:10] libucp.so.0 0x14c6b1a4eeea ucp_worker_progress
+  [628:11] libmpi.so.40 0x14c6b33fa0eb mca_pml_ucx_iprobe
+  [628:12] libmpi.so.40 0x14c6b32d771c PMPI_Iprobe
+  [628:13] iotest 0x65c388 
+  [628:14] iotest 0x65c6b2 CmiGetNonLocal
+  [628:15] iotest 0x6368cd CsdNextMessage
+  [628:16] iotest 0x63699a CsdScheduleForever
+  [628:17] iotest 0x636d05 CsdScheduler
+  [628:18] iotest 0x65d13a ConverseInit
+  [628:19] iotest 0x5c67c7 charm_main
+  [628:20] libc.so.6 0x14c6b267f6a3 __libc_start_main
+  [628:21] iotest 0x503dae _start
+------------- Processor 628 Exiting: Caught Signal ------------
+Reason: Terminated
+[629] Stack Traceback:
+  [629:0] libpthread.so.0 0x14c402071dd0 
+  [629:1] libuct_ib.so.0 0x14c3fde06e70 uct_dc_mlx5_iface_is_reachable
+  [629:2] libucp.so.0 0x14c4010b4ee8 ucp_wireup_is_reachable
+  [629:3] libucp.so.0 0x14c4010b0704 
+  [629:4] libucp.so.0 0x14c4010b12e3 
+  [629:5] libucp.so.0 0x14c4010b1e7e ucp_wireup_select_lanes
+  [629:6] libucp.so.0 0x14c4010b4f8b ucp_wireup_init_lanes
+  [629:7] libucp.so.0 0x14c4010838b7 ucp_ep_create_to_worker_addr
+  [629:8] libucp.so.0 0x14c40108445b ucp_ep_create
+  [629:9] libmpi.so.40 0x14c402a3a493 
+  [629:10] libmpi.so.40 0x14c402a3b86b 
+  [629:11] libmpi.so.40 0x14c402a3c093 mca_pml_ucx_isend
+  [629:12] libmpi.so.40 0x14c402919085 MPI_Isend
+  [629:13] iotest 0x65baa4 
+  [629:14] iotest 0x544f47 _processHandler(void*, CkCoreState*)
+  [629:15] iotest 0x6369cb CsdScheduleForever
+  [629:16] iotest 0x636d05 CsdScheduler
+  [629:17] iotest 0x65d13a ConverseInit
+  [629:18] iotest 0x5c67c7 charm_main
+  [629:19] libc.so.6 0x14c401cc06a3 __libc_start_main
+  [629:20] iotest 0x503dae _start
+------------- Processor 629 Exiting: Caught Signal ------------
+Reason: Terminated
+[631] Stack Traceback:
+  [631:0] libpthread.so.0 0x1460bdab3dd0 
+  [631:1] libuct_ib.so.0 0x1460b9824190 
+  [631:2] libucp.so.0 0x1460bcace2a9 ucp_ep_rkey_unpack
+  [631:3] libucp.so.0 0x1460bcae49e6 ucp_rndv_matched
+  [631:4] libucp.so.0 0x1460bcae7f8f ucp_tag_recv_nbx
+  [631:5] libmpi.so.40 0x1460be47d1fe mca_pml_ucx_recv
+  [631:6] libmpi.so.40 0x1460be361cf5 PMPI_Recv
+  [631:7] iotest 0x65c3e7 
+  [631:8] iotest 0x65c6b2 CmiGetNonLocal
+  [631:9] iotest 0x6368cd CsdNextMessage
+  [631:10] iotest 0x63699a CsdScheduleForever
+  [631:11] iotest 0x636d05 CsdScheduler
+  [631:12] iotest 0x65d13a ConverseInit
+  [631:13] iotest 0x5c67c7 charm_main
+  [631:14] libc.so.6 0x1460bd7026a3 __libc_start_main
+  [631:15] iotest 0x503dae _start
+------------- Processor 631 Exiting: Caught Signal ------------
+Reason: Terminated
+[633] Stack Traceback:
+  [633:0] libpthread.so.0 0x14671514bdd0 
+  [633:1] libuct_ib.so.0 0x146710ee0e70 uct_dc_mlx5_iface_is_reachable
+  [633:2] libucp.so.0 0x14671418eee8 ucp_wireup_is_reachable
+  [633:3] libucp.so.0 0x14671418a704 
+  [633:4] libucp.so.0 0x14671418b2e3 
+  [633:5] libucp.so.0 0x14671418be7e ucp_wireup_select_lanes
+  [633:6] libucp.so.0 0x14671418ef8b ucp_wireup_init_lanes
+  [633:7] libucp.so.0 0x14671415d8b7 ucp_ep_create_to_worker_addr
+  [633:8] libucp.so.0 0x14671415e45b ucp_ep_create
+  [633:9] libmpi.so.40 0x146715b14493 
+  [633:10] libmpi.so.40 0x146715b1586b 
+  [633:11] libmpi.so.40 0x146715b16093 mca_pml_ucx_isend
+  [633:12] libmpi.so.40 0x1467159f3085 MPI_Isend
+  [633:13] iotest 0x65baa4 
+  [633:14] iotest 0x698b27 CldEnqueue
+  [633:15] iotest 0x543e95 
+  [633:16] iotest 0x526653 Ck::IO::impl::CProxy_ReadAssembler::shareData(unsigned long const&, unsigned long const&, char const*, CkEntryOptions const*)
+  [633:17] iotest 0x52eacb Ck::IO::impl::ReadSession::sendData(unsigned long, unsigned long, Ck::IO::impl::CProxy_ReadAssembler)
+  [633:18] iotest 0x5284c5 Ck::IO::impl::CkIndex_ReadSession::_call_sendData_marshall2(void*, void*)
+  [633:19] iotest 0x542002 CkDeliverMessageFree
+  [633:20] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [633:21] iotest 0x5459e6 _processHandler(void*, CkCoreState*)
+  [633:22] iotest 0x6369cb CsdScheduleForever
+  [633:23] iotest 0x636d05 CsdScheduler
+  [633:24] iotest 0x65d13a ConverseInit
+  [633:25] iotest 0x5c67c7 charm_main
+  [633:26] libc.so.6 0x146714d9a6a3 __libc_start_main
+  [633:27] iotest 0x503dae _start
+------------- Processor 633 Exiting: Caught Signal ------------
+Reason: Terminated
+[634] Stack Traceback:
+  [634:0] libpthread.so.0 0x15519ab79dd0 
+  [634:1] libc.so.6 0x15519a9030bb 
+  [634:2] iotest 0x53701a __gnu_cxx::__enable_if<std::__is_byte<char>::__value, void>::__type std::__fill_a1<char>(char*, char*, char const&)
+  [634:3] iotest 0x536754 void std::__fill_a<char*, char>(char*, char*, char const&)
+  [634:4] iotest 0x537861 char* std::__fill_n_a<char*, unsigned long, char>(char*, unsigned long, char const&, std::random_access_iterator_tag)
+  [634:5] iotest 0x5372da char* std::fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [634:6] iotest 0x537048 char* std::__uninitialized_fill_n<true>::__uninit_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [634:7] iotest 0x536786 char* std::uninitialized_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [634:8] iotest 0x535214 char* std::__uninitialized_fill_n_a<char*, unsigned long, char, char>(char*, unsigned long, char const&, std::allocator<char>&)
+  [634:9] iotest 0x53330a std::vector<char, std::allocator<char> >::_M_fill_insert(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, unsigned long, char const&)
+  [634:10] iotest 0x531ae0 std::vector<char, std::allocator<char> >::resize(unsigned long, char const&)
+  [634:11] iotest 0x52ecf6 Ck::IO::impl::ReadAssembler::ReadAssembler(Ck::IO::Session, unsigned long, unsigned long, CkCallback)
+  [634:12] iotest 0x52514f Ck::IO::impl::CkIndex_ReadAssembler::_call_ReadAssembler_marshall1(void*, void*)
+  [634:13] iotest 0x542002 CkDeliverMessageFree
+  [634:14] iotest 0x542c58 
+  [634:15] iotest 0x545922 _processHandler(void*, CkCoreState*)
+  [634:16] iotest 0x6369cb CsdScheduleForever
+  [634:17] iotest 0x636d05 CsdScheduler
+  [634:18] iotest 0x65d13a ConverseInit
+  [634:19] iotest 0x5c67c7 charm_main
+  [634:20] libc.so.6 0x15519a7c86a3 __libc_start_main
+  [634:21] iotest 0x503dae _start
+------------- Processor 634 Exiting: Caught Signal ------------
+Reason: Terminated
+[635] Stack Traceback:
+  [635:0] libpthread.so.0 0x14e7db48fdd0 
+  [635:1] libuct_ib.so.0 0x14e7d31c42f0 uct_rc_mlx5_release_desc
+  [635:2] libucp.so.0 0x14e7da4c3a65 ucp_tag_recv_nbx
+  [635:3] libmpi.so.40 0x14e7dbe591fe mca_pml_ucx_recv
+  [635:4] libmpi.so.40 0x14e7dbd3dcf5 PMPI_Recv
+  [635:5] iotest 0x65c3e7 
+  [635:6] iotest 0x65c6b2 CmiGetNonLocal
+  [635:7] iotest 0x6368cd CsdNextMessage
+  [635:8] iotest 0x63699a CsdScheduleForever
+  [635:9] iotest 0x636d05 CsdScheduler
+  [635:10] iotest 0x65d13a ConverseInit
+  [635:11] iotest 0x5c67c7 charm_main
+  [635:12] libc.so.6 0x14e7db0de6a3 __libc_start_main
+  [635:13] iotest 0x503dae _start
+------------- Processor 635 Exiting: Caught Signal ------------
+Reason: Terminated
+[637] Stack Traceback:
+  [637:0] libpthread.so.0 0x14aced4eadd0 
+  [637:1] libuct_ib.so.0 0x14ace927ff80 
+  [637:2] libuct_ib.so.0 0x14ace928075e 
+  [637:3] libucp.so.0 0x14acec508eea ucp_worker_progress
+  [637:4] libmpi.so.40 0x14acedeb40eb mca_pml_ucx_iprobe
+  [637:5] libmpi.so.40 0x14acedd9171c PMPI_Iprobe
+  [637:6] iotest 0x65c388 
+  [637:7] iotest 0x65c6b2 CmiGetNonLocal
+  [637:8] iotest 0x6368cd CsdNextMessage
+  [637:9] iotest 0x63699a CsdScheduleForever
+  [637:10] iotest 0x636d05 CsdScheduler
+  [637:11] iotest 0x65d13a ConverseInit
+  [637:12] iotest 0x5c67c7 charm_main
+  [637:13] libc.so.6 0x14aced1396a3 __libc_start_main
+  [637:14] iotest 0x503dae _start
+------------- Processor 637 Exiting: Caught Signal ------------
+Reason: Terminated
+[639] Stack Traceback:
+  [639:0] libpthread.so.0 0x14663d457dd0 
+  [639:1] libuct_ib.so.0 0x1466391c83f0 
+  [639:2] libucp.so.0 0x14663c46eb23 ucp_mem_rereg_mds
+  [639:3] libucp.so.0 0x14663c470e0a ucp_request_memory_reg
+  [639:4] libucp.so.0 0x14663c48878c ucp_tag_rndv_reg_send_buffer
+  [639:5] libucp.so.0 0x14663c48daa6 ucp_tag_send_nbx
+  [639:6] libmpi.so.40 0x14663de21f8a mca_pml_ucx_isend
+  [639:7] libmpi.so.40 0x14663dcff085 MPI_Isend
+  [639:8] iotest 0x65baa4 
+  [639:9] iotest 0x698b27 CldEnqueue
+  [639:10] iotest 0x543e95 
+  [639:11] iotest 0x526653 Ck::IO::impl::CProxy_ReadAssembler::shareData(unsigned long const&, unsigned long const&, char const*, CkEntryOptions const*)
+  [639:12] iotest 0x52eacb Ck::IO::impl::ReadSession::sendData(unsigned long, unsigned long, Ck::IO::impl::CProxy_ReadAssembler)
+  [639:13] iotest 0x5284c5 Ck::IO::impl::CkIndex_ReadSession::_call_sendData_marshall2(void*, void*)
+  [639:14] iotest 0x542002 CkDeliverMessageFree
+  [639:15] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [639:16] iotest 0x5459e6 _processHandler(void*, CkCoreState*)
+  [639:17] iotest 0x6369cb CsdScheduleForever
+  [639:18] iotest 0x636d05 CsdScheduler
+  [639:19] iotest 0x65d13a ConverseInit
+  [639:20] iotest 0x5c67c7 charm_main
+  [639:21] libc.so.6 0x14663d0a66a3 __libc_start_main
+  [639:22] iotest 0x503dae _start
+------------- Processor 639 Exiting: Caught Signal ------------
+Reason: Terminated
+[1675941104.569236] [r209:52563:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=52542 length=524288) returned -1: No such process
+[1675941104.575283] [r209:52563:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=52542 length=524288) returned -1: No such process
+[1675941104.575501] [r209:52563:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=52542 length=524288) returned -1: No such process
+[1675941104.575520] [r209:52563:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=52542 length=524288) returned -1: No such process
+[1675941104.575530] [r209:52563:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=52542 length=524288) returned -1: No such process
+[1675941104.575536] [r209:52563:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=52542 length=524288) returned -1: No such process
+[1675941104.575547] [r209:52563:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=52542 length=524288) returned -1: No such process
+[1675941104.575750] [r209:52563:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=52542 length=524288) returned -1: No such process
+[1675941104.575765] [r209:52563:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=52542 length=524288) returned -1: No such process
+[1675941104.575777] [r209:52563:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=52542 length=524288) returned -1: No such process
+[1675941104.575787] [r209:52563:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=52542 length=524288) returned -1: No such process
+[1675941104.575796] [r209:52563:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=52542 length=524288) returned -1: No such process
+[1675941104.575805] [r209:52563:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=52542 length=524288) returned -1: No such process
+[1675941104.575815] [r209:52563:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=52542 length=524288) returned -1: No such process
+[1675941104.575826] [r209:52563:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=52542 length=524288) returned -1: No such process
+[1675941104.575837] [r209:52563:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=52542 length=524288) returned -1: No such process
+[1675941104.575844] [r209:52563:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=52542 length=524288) returned -1: No such process
+[1675941104.575855] [r209:52563:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=52542 length=524288) returned -1: No such process
+[1675941104.575866] [r209:52563:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=52542 length=524288) returned -1: No such process
+[1675941104.575874] [r209:52563:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=52542 length=524288) returned -1: No such process
+[1675941104.575883] [r209:52563:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=52542 length=524288) returned -1: No such process
+[1675941104.575904] [r209:52563:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=52542 length=524288) returned -1: No such process
+[1675941104.575915] [r209:52563:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=52542 length=524288) returned -1: No such process
+[1675941104.575926] [r209:52563:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=52542 length=524288) returned -1: No such process
+[1675941104.575939] [r209:52563:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=52542 length=524288) returned -1: No such process
+[1675941104.575947] [r209:52563:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=52542 length=524288) returned -1: No such process
+------------- Processor 170 Exiting: Caught Signal ------------
+Reason: Segmentation fault
+[r206.ib.bridges2.psc.edu:41146] 234 more processes have sent help message help-mpi-api.txt / mpi-abort
+[r206.ib.bridges2.psc.edu:41146] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+mpirun noticed that process rank 1347 with PID 1582 on node r444 exited on signal 9 (Killed).
+--------------------------------------------------------------------------
+[r206.ib.bridges2.psc.edu:41146] PMIX ERROR: ERROR in file gds_ds21_lock_pthread.c at line 99
+[r206.ib.bridges2.psc.edu:41146] PMIX ERROR: ERROR in file gds_ds21_lock_pthread.c at line 99
+[r206.ib.bridges2.psc.edu:41146] PMIX ERROR: ERROR in file gds_ds21_lock_pthread.c at line 99
+[r206.ib.bridges2.psc.edu:41146] PMIX ERROR: ERROR in file gds_ds21_lock_pthread.c at line 99
+[r206.ib.bridges2.psc.edu:41146] PMIX ERROR: ERROR in file gds_ds21_lock_pthread.c at line 99
+[r206.ib.bridges2.psc.edu:41146] PMIX ERROR: ERROR in file gds_ds21_lock_pthread.c at line 99
+[r206.ib.bridges2.psc.edu:41146] PMIX ERROR: ERROR in file gds_ds21_lock_pthread.c at line 99
+[r206.ib.bridges2.psc.edu:41146] PMIX ERROR: ERROR in file gds_ds21_lock_pthread.c at line 99
+[r206.ib.bridges2.psc.edu:41146] PMIX ERROR: ERROR in file gds_ds21_lock_pthread.c at line 99
+[r206.ib.bridges2.psc.edu:41146] PMIX ERROR: ERROR in file gds_ds21_lock_pthread.c at line 99
+[r206.ib.bridges2.psc.edu:41146] PMIX ERROR: ERROR in file gds_ds21_lock_pthread.c at line 99
+[r206.ib.bridges2.psc.edu:41146] PMIX ERROR: ERROR in file gds_ds21_lock_pthread.c at line 99
+[r206.ib.bridges2.psc.edu:41146] PMIX ERROR: ERROR in file gds_ds21_lock_pthread.c at line 99
+[r206.ib.bridges2.psc.edu:41146] PMIX ERROR: ERROR in file gds_ds21_lock_pthread.c at line 99
+[r206.ib.bridges2.psc.edu:41146] PMIX ERROR: ERROR in file gds_ds21_lock_pthread.c at line 99
+[r206.ib.bridges2.psc.edu:41146] PMIX ERROR: ERROR in file gds_ds21_lock_pthread.c at line 99
+[r206.ib.bridges2.psc.edu:41146] PMIX ERROR: ERROR in file gds_ds21_lock_pthread.c at line 99
+[r206.ib.bridges2.psc.edu:41146] PMIX ERROR: ERROR in file gds_ds21_lock_pthread.c at line 99
+[r206.ib.bridges2.psc.edu:41146] PMIX ERROR: ERROR in file gds_ds21_lock_pthread.c at line 99
+[r206.ib.bridges2.psc.edu:41146] PMIX ERROR: ERROR in file gds_ds21_lock_pthread.c at line 99
+2 total processes killed (some possibly by mpirun during cleanup)
+slurmstepd: error: Detected 1 oom-kill event(s) in StepId=14318898.batch cgroup. Some of your processes may have been killed by the cgroup out-of-memory handler.

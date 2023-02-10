@@ -1,0 +1,2831 @@
+
+Running as 384 OS processes: ./iotest TEST_FILES/38.txt 384
+charmrun> /usr/bin/setarch x86_64 -R mpirun -np 384 ./iotest TEST_FILES/38.txt 384
+Charm++> Running on MPI library: Open MPI v4.0.5, package: Open MPI spack@br012.ib.bridges2.psc.edu Distribution, ident: 4.0.5, repo rev: v4.0.5, Aug 26, 2020 (MPI standard: 3.1)
+Charm++> Level of thread support used: MPI_THREAD_SINGLE (desired: MPI_THREAD_SINGLE)
+Charm++> Running in non-SMP mode: 384 processes (PEs)
+Converse/Charm++ Commit ID: v7.1.0-devel-237-ga3f055e15
+Isomalloc> Synchronized global address space.
+CharmLB> Load balancer assumes all CPUs are same.
+Charm++> Running on 3 hosts (2 sockets x 64 cores x 1 PUs = 128-way SMP)
+Charm++> cpu topology info is gathered in 0.057 seconds.
+CharmLB> Load balancing instrumentation for communication is off.
+[1675937817.599122] [r089:72036:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=72031 length=524288) returned -1: No such process
+[1675937818.233531] [r089:71964:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=72031 length=524288) returned -1: No such process
+[1675937818.285100] [r089:72036:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=72031 length=524288) returned -1: No such process
+[1675937818.285532] [r089:72036:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=72031 length=524288) returned -1: No such process
+[1675937818.285549] [r089:72036:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=72031 length=524288) returned -1: No such process
+[1675937818.285598] [r089:72036:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=72031 length=524288) returned -1: No such process
+[1675937818.285651] [r089:72036:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=72031 length=524288) returned -1: No such process
+[1675937818.285701] [r089:72036:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=72031 length=524288) returned -1: No such process
+[1675937818.285709] [r089:72036:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=72031 length=524288) returned -1: No such process
+[1675937818.285717] [r089:72036:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=72031 length=524288) returned -1: No such process
+[1675937818.285925] [r089:72036:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=72031 length=524288) returned -1: No such process
+[1675937818.285936] [r089:72036:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=72031 length=524288) returned -1: No such process
+[1675937818.285944] [r089:72036:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=72031 length=524288) returned -1: No such process
+[1675937818.285952] [r089:72036:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=72031 length=524288) returned -1: No such process
+[1675937818.285959] [r089:72036:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=72031 length=524288) returned -1: No such process
+[1675937818.285967] [r089:72036:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=72031 length=524288) returned -1: No such process
+[1675937818.285976] [r089:72036:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=72031 length=524288) returned -1: No such process
+[1675937818.285988] [r089:72036:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=72031 length=524288) returned -1: No such process
+------------- Processor 28 Exiting: Called CmiAbort ------------
+Reason: Converse zero handler executed-- was a message corrupted?
+
+[28] Stack Traceback:
+  [28:0] iotest 0x65a850 CmiAsyncBroadcastFn
+  [28:1] iotest 0x635880 
+  [28:2] iotest 0x6369cb CsdScheduleForever
+  [28:3] iotest 0x636d05 CsdScheduler
+  [28:4] iotest 0x65d13a ConverseInit
+  [28:5] iotest 0x5c67c7 charm_main
+  [28:6] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [28:7] iotest 0x503dae _start
+[1675937818.331230] [r089:72036:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=72031 length=524288) returned -1: No such process
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+MPI_ABORT was invoked on rank 28 in communicator MPI COMMUNICATOR 3 DUP FROM 0
+with errorcode 1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+[r089.ib.bridges2.psc.edu:71925] PMIX ERROR: UNREACHABLE in file server/pmix_server.c at line 2193
+[r089.ib.bridges2.psc.edu:71925] PMIX ERROR: UNREACHABLE in file server/pmix_server.c at line 2193
+[r089.ib.bridges2.psc.edu:71925] PMIX ERROR: UNREACHABLE in file server/pmix_server.c at line 2193
+[r089.ib.bridges2.psc.edu:71925] PMIX ERROR: UNREACHABLE in file server/pmix_server.c at line 2193
+------------- Processor 127 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 2 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 3 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 4 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 5 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 6 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 8 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 9 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 10 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 11 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 12 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 13 Exiting: Caught Signal ------------
+Reason: Terminated
+[2] Stack Traceback:
+  [2:0] libpthread.so.0 0x155553edcdd0 
+  [2:1] libucp.so.0 0x155552f0c2ae ucp_rndv_get_completion
+  [2:2] libuct.so.0 0x155552cbcb28 uct_scopy_ep_progress_tx
+  [2:3] libucs.so.0 0x15555285f4b2 ucs_arbiter_dispatch_nonempty
+  [2:4] libuct.so.0 0x155552cbc5e9 uct_scopy_iface_progress
+  [2:5] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [2:6] libmpi.so.40 0x1555548a6233 mca_pml_ucx_recv
+  [2:7] libmpi.so.40 0x15555478acf5 PMPI_Recv
+  [2:8] iotest 0x65c3e7 
+  [2:9] iotest 0x65c6b2 CmiGetNonLocal
+  [2:10] iotest 0x6368cd CsdNextMessage
+  [2:11] iotest 0x63699a CsdScheduleForever
+  [2:12] iotest 0x636d05 CsdScheduler
+  [2:13] iotest 0x65d13a ConverseInit
+  [2:14] iotest 0x5c67c7 charm_main
+  [2:15] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [2:16] iotest 0x503dae _start
+[4] Stack Traceback:
+  [4:0] libpthread.so.0 0x155553edcdd0 
+  [4:1] libucp.so.0 0x155552f1fee8 ucp_wireup_is_reachable
+  [4:2] libucp.so.0 0x155552f1b704 
+  [4:3] libucp.so.0 0x155552f1c2e3 
+  [4:4] libucp.so.0 0x155552f1ce7e ucp_wireup_select_lanes
+  [4:5] libucp.so.0 0x155552f1ff8b ucp_wireup_init_lanes
+  [4:6] libucp.so.0 0x155552f205c8 
+  [4:7] libucp.so.0 0x155552f20c8e 
+  [4:8] libuct.so.0 0x155552cb916c 
+  [4:9] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [4:10] libmpi.so.40 0x1555548a6233 mca_pml_ucx_recv
+  [4:11] libmpi.so.40 0x15555478acf5 PMPI_Recv
+  [4:12] iotest 0x65c3e7 
+  [4:13] iotest 0x65c6b2 CmiGetNonLocal
+  [4:14] iotest 0x6368cd CsdNextMessage
+  [4:15] iotest 0x63699a CsdScheduleForever
+  [4:16] iotest 0x636d05 CsdScheduler
+  [4:17] iotest 0x65d13a ConverseInit
+  [4:18] iotest 0x5c67c7 charm_main
+  [4:19] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [4:20] iotest 0x503dae _start
+------------- Processor 15 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 16 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 17 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 18 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 19 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 20 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 21 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 22 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 23 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 25 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 26 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 27 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 28 Exiting: Caught Signal ------------
+Reason: Terminated
+[5] Stack Traceback:
+  [5:0] libpthread.so.0 0x155553edcdd0 
+  [5:1] libopen-pal.so.40 0x1555531fefa0 
+  [5:2] libopen-pal.so.40 0x1555531fa699 opal_libevent2022_event_base_loop
+  [5:3] libopen-pal.so.40 0x15555319e64e 
+  [5:4] libopen-pal.so.40 0x15555319e7c3 opal_progress
+  [5:5] libmpi.so.40 0x155554752f9a ompi_request_default_test
+  [5:6] libmpi.so.40 0x15555479246e PMPI_Test
+  [5:7] iotest 0x65b380 
+  [5:8] iotest 0x65c609 
+  [5:9] iotest 0x6348a0 CcdRaiseCondition
+  [5:10] iotest 0x636a5a CsdScheduleForever
+  [5:11] iotest 0x636d05 CsdScheduler
+  [5:12] iotest 0x65d13a ConverseInit
+  [5:13] iotest 0x5c67c7 charm_main
+  [5:14] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [5:15] iotest 0x503dae _start
+[6] Stack Traceback:
+  [6:0] libpthread.so.0 0x155553edcdd0 
+[8] Stack Traceback:
+  [8:0] libpthread.so.0 0x155553edcdd0 
+  [8:1] libuct.so.0 0x155552cb8f50 
+  [8:2] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [8:3] libmpi.so.40 0x1555548a6233 mca_pml_ucx_recv
+  [8:4] libmpi.so.40 0x15555478acf5 PMPI_Recv
+  [8:5] iotest 0x65c3e7 
+  [8:6] iotest 0x65c6b2 CmiGetNonLocal
+  [8:7] iotest 0x6368cd CsdNextMessage
+  [8:8] iotest 0x63699a CsdScheduleForever
+  [8:9] iotest 0x636d05 CsdScheduler
+  [8:10] iotest 0x65d13a ConverseInit
+  [8:11] iotest 0x5c67c7 charm_main
+  [8:12] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [8:13] iotest 0x503dae _start
+------------- Processor 31 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 34 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 35 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 36 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 37 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 38 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 40 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 41 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 42 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 43 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 44 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 45 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 46 Exiting: Caught Signal ------------
+Reason: Terminated
+[9] Stack Traceback:
+  [9:0] libpthread.so.0 0x155553edcdd0 
+  [9:1] libc.so.6 0x155553c660bb 
+  [9:2] iotest 0x53701a __gnu_cxx::__enable_if<std::__is_byte<char>::__value, void>::__type std::__fill_a1<char>(char*, char*, char const&)
+  [9:3] iotest 0x536754 void std::__fill_a<char*, char>(char*, char*, char const&)
+  [9:4] iotest 0x537861 char* std::__fill_n_a<char*, unsigned long, char>(char*, unsigned long, char const&, std::random_access_iterator_tag)
+  [9:5] iotest 0x5372da char* std::fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [9:6] iotest 0x537048 char* std::__uninitialized_fill_n<true>::__uninit_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [9:7] iotest 0x536786 char* std::uninitialized_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [9:8] iotest 0x535214 char* std::__uninitialized_fill_n_a<char*, unsigned long, char, char>(char*, unsigned long, char const&, std::allocator<char>&)
+  [9:9] iotest 0x53330a std::vector<char, std::allocator<char> >::_M_fill_insert(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, unsigned long, char const&)
+  [9:10] iotest 0x531ae0 std::vector<char, std::allocator<char> >::resize(unsigned long, char const&)
+  [9:11] iotest 0x52ecf6 Ck::IO::impl::ReadAssembler::ReadAssembler(Ck::IO::Session, unsigned long, unsigned long, CkCallback)
+  [9:12] iotest 0x52514f Ck::IO::impl::CkIndex_ReadAssembler::_call_ReadAssembler_marshall1(void*, void*)
+  [9:13] iotest 0x542002 CkDeliverMessageFree
+  [9:14] iotest 0x542c58 
+  [9:15] iotest 0x545922 _processHandler(void*, CkCoreState*)
+  [9:16] iotest 0x6369cb CsdScheduleForever
+  [9:17] iotest 0x636d05 CsdScheduler
+  [9:18] iotest 0x65d13a ConverseInit
+  [9:19] iotest 0x5c67c7 charm_main
+  [9:20] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [9:21] iotest 0x503dae _start
+------------- Processor 47 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 50 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 51 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 53 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 54 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 55 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 56 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 57 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 58 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 59 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 60 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 61 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 62 Exiting: Caught Signal ------------
+Reason: Terminated
+[10] Stack Traceback:
+  [10:0] libpthread.so.0 0x155553edcdd0 
+  [10:1] libc.so.6 0x155553bfa87b ioctl
+  [10:2] libibverbs.so.1 0x15554b9ede5b execute_ioctl
+  [10:3] libibverbs.so.1 0x15554b9ed1ee 
+  [10:4] libibverbs.so.1 0x15554b9e9dfd ibv_cmd_reg_mr
+  [10:5] libmlx5.so.1 0x15554b7cdc4b 
+  [10:6] libibverbs.so.1 0x15554b9f7352 ibv_reg_mr_iova2
+[11] Stack Traceback:
+  [11:0] libpthread.so.0 0x155553edcdd0 
+[12] Stack Traceback:
+  [12:0] libpthread.so.0 0x155553edcdd0 
+  [12:1] libuct.so.0 0x155552cb8f50 
+  [12:2] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [12:3] libmpi.so.40 0x1555548a6233 mca_pml_ucx_recv
+  [12:4] libmpi.so.40 0x15555478acf5 PMPI_Recv
+  [12:5] iotest 0x65c3e7 
+  [12:6] iotest 0x65c6b2 CmiGetNonLocal
+  [12:7] iotest 0x6368cd CsdNextMessage
+  [12:8] iotest 0x63699a CsdScheduleForever
+  [12:9] iotest 0x636d05 CsdScheduler
+  [12:10] iotest 0x65d13a ConverseInit
+  [12:11] iotest 0x5c67c7 charm_main
+  [12:12] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [12:13] iotest 0x503dae _start
+[13] Stack Traceback:
+  [13:0] libpthread.so.0 0x155553edcdd0 
+------------- Processor 63 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 64 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 65 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 66 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 67 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 68 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 70 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 71 Exiting: Caught Signal ------------
+Reason: Segmentation fault
+------------- Processor 72 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 74 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 78 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 79 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 81 Exiting: Caught Signal ------------
+Reason: Terminated
+[15] Stack Traceback:
+  [15:0] libpthread.so.0 0x155553edcdd0 
+  [15:1] libuct_ib.so.0 0x1555500730a0 
+  [15:2] libucp.so.0 0x155552efaeea ucp_worker_progress
+[16] Stack Traceback:
+  [16:0] libpthread.so.0 0x155553edcdd0 
+  [16:1] libuct_ib.so.0 0x155550070a40 uct_dc_mlx5_ep_am_short
+  [16:2] libucp.so.0 0x155552efc70f ucp_do_am_single
+  [16:3] libucp.so.0 0x155552efc77f ucp_proto_progress_am_single
+  [16:4] libucp.so.0 0x155552f0a9a3 
+  [16:5] libucp.so.0 0x155552f0c2ae ucp_rndv_get_completion
+[17] Stack Traceback:
+  [17:0] libpthread.so.0 0x155553edcdd0 
+  [17:1] libmpi.so.40 0x155554783ffb MPI_Isend
+  [17:2] iotest 0x65baa4 
+  [17:3] iotest 0x698b27 CldEnqueue
+  [17:4] iotest 0x545208 _processHandler(void*, CkCoreState*)
+  [17:5] iotest 0x6369cb CsdScheduleForever
+  [17:6] iotest 0x636d05 CsdScheduler
+  [17:7] iotest 0x65d13a ConverseInit
+  [17:8] iotest 0x5c67c7 charm_main
+  [17:9] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [17:10] iotest 0x503dae _start
+[18] Stack Traceback:
+  [18:0] libpthread.so.0 0x155553edcdd0 
+  [18:1] libuct.so.0 0x155552cb8f50 
+  [18:2] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [18:3] libmpi.so.40 0x1555548a6233 mca_pml_ucx_recv
+  [18:4] libmpi.so.40 0x15555478acf5 PMPI_Recv
+  [18:5] iotest 0x65c3e7 
+  [18:6] iotest 0x65c6b2 CmiGetNonLocal
+  [18:7] iotest 0x6368cd CsdNextMessage
+  [18:8] iotest 0x63699a CsdScheduleForever
+  [18:9] iotest 0x636d05 CsdScheduler
+  [18:10] iotest 0x65d13a ConverseInit
+  [18:11] iotest 0x5c67c7 charm_main
+  [18:12] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [18:13] iotest 0x503dae _start
+------------- Processor 82 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 83 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 84 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 86 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 87 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 88 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 89 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 90 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 91 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 92 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 93 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 94 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 95 Exiting: Caught Signal ------------
+Reason: Terminated
+[19] Stack Traceback:
+  [19:0] libpthread.so.0 0x155553edcdd0 
+  [19:1] libc.so.6 0x155553bfa87b ioctl
+  [19:2] libibverbs.so.1 0x15554b9ede5b execute_ioctl
+  [19:3] libibverbs.so.1 0x15554b9ed1ee 
+  [19:4] libibverbs.so.1 0x15554b9e9dfd ibv_cmd_reg_mr
+  [19:5] libmlx5.so.1 0x15554b7cdc4b 
+  [19:6] libibverbs.so.1 0x15554b9f7352 ibv_reg_mr_iova2
+  [19:7] libuct_ib.so.0 0x15555004f3ef uct_ib_reg_mr
+  [19:8] libuct_ib.so.0 0x15555004f9c8 uct_ib_reg_key_impl
+  [19:9] libuct_ib.so.0 0x155550053da3 
+  [19:10] libuct_ib.so.0 0x15555004ec20 
+  [19:11] libucs.so.0 0x15555286cdad ucs_rcache_get
+  [19:12] libuct_ib.so.0 0x15555004e414 
+  [19:13] libucp.so.0 0x155552ef3b23 ucp_mem_rereg_mds
+  [19:14] libucp.so.0 0x155552ef5e0a ucp_request_memory_reg
+  [19:15] libucp.so.0 0x155552f09fad ucp_rndv_progress_rma_get_zcopy
+  [19:16] libucp.so.0 0x155552f0daa5 ucp_rndv_matched
+  [19:17] libucp.so.0 0x155552f10f8f ucp_tag_recv_nbx
+  [19:18] libmpi.so.40 0x1555548a61fe mca_pml_ucx_recv
+  [19:19] libmpi.so.40 0x15555478acf5 PMPI_Recv
+  [19:20] iotest 0x65c3e7 
+  [19:21] iotest 0x65c6b2 CmiGetNonLocal
+  [19:22] iotest 0x6368cd CsdNextMessage
+------------- Processor 96 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 98 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 99 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 100 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 101 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 102 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 104 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 105 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 106 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 108 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 109 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 110 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 111 Exiting: Caught Signal ------------
+Reason: Terminated
+[20] Stack Traceback:
+  [20:0] libpthread.so.0 0x155553edcdd0 
+  [20:1] libuct_ib.so.0 0x1555500730a0 
+  [20:2] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [20:3] libmpi.so.40 0x1555548a6233 mca_pml_ucx_recv
+  [20:4] libmpi.so.40 0x15555478acf5 PMPI_Recv
+  [20:5] iotest 0x65c3e7 
+  [20:6] iotest 0x65c6b2 CmiGetNonLocal
+  [20:7] iotest 0x6368cd CsdNextMessage
+[21] Stack Traceback:
+  [21:0] libpthread.so.0 0x155553edcdd0 
+  [21:1] libuct_ib.so.0 0x1555500730a0 
+  [21:2] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [21:3] libopen-pal.so.40 0x15555319e773 opal_progress
+  [21:4] libmpi.so.40 0x155554752f9a ompi_request_default_test
+  [21:5] libmpi.so.40 0x15555479246e PMPI_Test
+  [21:6] iotest 0x65b380 
+  [21:7] iotest 0x65c6ad CmiGetNonLocal
+  [21:8] iotest 0x6368cd CsdNextMessage
+[22] Stack Traceback:
+  [22:0] libpthread.so.0 0x155553edcdd0 
+  [22:1] libc.so.6 0x155553c660bb 
+  [22:2] iotest 0x53701a __gnu_cxx::__enable_if<std::__is_byte<char>::__value, void>::__type std::__fill_a1<char>(char*, char*, char const&)
+  [22:3] iotest 0x536754 void std::__fill_a<char*, char>(char*, char*, char const&)
+  [22:4] iotest 0x537861 char* std::__fill_n_a<char*, unsigned long, char>(char*, unsigned long, char const&, std::random_access_iterator_tag)
+  [22:5] iotest 0x5372da char* std::fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [22:6] iotest 0x537048 char* std::__uninitialized_fill_n<true>::__uninit_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [22:7] iotest 0x536786 char* std::uninitialized_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [22:8] iotest 0x535214 char* std::__uninitialized_fill_n_a<char*, unsigned long, char, char>(char*, unsigned long, char const&, std::allocator<char>&)
+  [22:9] iotest 0x53330a std::vector<char, std::allocator<char> >::_M_fill_insert(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, unsigned long, char const&)
+  [22:10] iotest 0x531ae0 std::vector<char, std::allocator<char> >::resize(unsigned long, char const&)
+  [22:11] iotest 0x52ecf6 Ck::IO::impl::ReadAssembler::ReadAssembler(Ck::IO::Session, unsigned long, unsigned long, CkCallback)
+  [22:12] iotest 0x52514f Ck::IO::impl::CkIndex_ReadAssembler::_call_ReadAssembler_marshall1(void*, void*)
+  [22:13] iotest 0x542002 CkDeliverMessageFree
+  [22:14] iotest 0x542c58 
+  [22:15] iotest 0x545922 _processHandler(void*, CkCoreState*)
+  [22:16] iotest 0x6369cb CsdScheduleForever
+  [22:17] iotest 0x636d05 CsdScheduler
+  [22:18] iotest 0x65d13a ConverseInit
+  [22:19] iotest 0x5c67c7 charm_main
+  [22:20] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [22:21] iotest 0x503dae _start
+------------- Processor 112 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 115 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 116 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 117 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 118 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 119 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 120 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 121 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 122 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 123 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 124 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 125 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 126 Exiting: Caught Signal ------------
+Reason: Terminated
+[23] Stack Traceback:
+  [23:0] libpthread.so.0 0x155553edcdd0 
+  [23:1] libuct_ib.so.0 0x1555500730a0 
+  [23:2] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [23:3] libopen-pal.so.40 0x15555319e773 opal_progress
+  [23:4] libmpi.so.40 0x155554752f9a ompi_request_default_test
+  [23:5] libmpi.so.40 0x15555479246e PMPI_Test
+  [23:6] iotest 0x65b380 
+  [23:7] iotest 0x65c6ad CmiGetNonLocal
+  [23:8] iotest 0x6368cd CsdNextMessage
+  [23:9] iotest 0x63699a CsdScheduleForever
+  [23:10] iotest 0x636d05 CsdScheduler
+  [23:11] iotest 0x65d13a ConverseInit
+[25] Stack Traceback:
+  [25:0] libpthread.so.0 0x155553edcdd0 
+  [25:1] libuct_ib.so.0 0x155550070a40 uct_dc_mlx5_ep_am_short
+  [25:2] libucp.so.0 0x155552efc70f ucp_do_am_single
+  [25:3] libucp.so.0 0x155552efc77f ucp_proto_progress_am_single
+  [25:4] libucp.so.0 0x155552f0a9a3 
+  [25:5] libucp.so.0 0x155552f0c2ae ucp_rndv_get_completion
+  [25:6] libuct_ib.so.0 0x155550055164 uct_rc_ep_send_op_completion_handler
+  [25:7] libuct_ib.so.0 0x155550073661 
+  [25:8] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [25:9] libmpi.so.40 0x1555548a6233 mca_pml_ucx_recv
+  [25:10] libmpi.so.40 0x15555478acf5 PMPI_Recv
+  [25:11] iotest 0x65c3e7 
+  [25:12] iotest 0x65c60e 
+  [25:13] iotest 0x6348a0 CcdRaiseCondition
+  [25:14] iotest 0x636a5a CsdScheduleForever
+  [25:15] iotest 0x636d05 CsdScheduler
+  [25:16] iotest 0x65d13a ConverseInit
+------------- Processor 273 Exiting: Called CmiAbort ------------
+Reason: Converse zero handler executed-- was a message corrupted?
+
+[26] Stack Traceback:
+  [26:0] libpthread.so.0 0x155553edcdd0 
+  [26:1] libuct.so.0 0x155552cb8f50 
+  [26:2] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [26:3] libmpi.so.40 0x1555548a6233 mca_pml_ucx_recv
+  [26:4] libmpi.so.40 0x15555478acf5 PMPI_Recv
+  [26:5] iotest 0x65c3e7 
+  [26:6] iotest 0x65c6b2 CmiGetNonLocal
+  [26:7] iotest 0x6368cd CsdNextMessage
+  [26:8] iotest 0x63699a CsdScheduleForever
+  [26:9] iotest 0x636d05 CsdScheduler
+  [26:10] iotest 0x65d13a ConverseInit
+  [26:11] iotest 0x5c67c7 charm_main
+  [26:12] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [26:13] iotest 0x503dae _start
+[27] Stack Traceback:
+  [27:0] libpthread.so.0 0x155553edcdd0 
+  [27:1] libuct_ib.so.0 0x1555500730a0 
+  [27:2] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [27:3] libmpi.so.40 0x1555548a6233 mca_pml_ucx_recv
+  [27:4] libmpi.so.40 0x15555478acf5 PMPI_Recv
+  [27:5] iotest 0x65c3e7 
+  [27:6] iotest 0x65c60e 
+  [27:7] iotest 0x6348a0 CcdRaiseCondition
+  [27:8] iotest 0x636a5a CsdScheduleForever
+  [27:9] iotest 0x636d05 CsdScheduler
+  [27:10] iotest 0x65d13a ConverseInit
+  [27:11] iotest 0x5c67c7 charm_main
+  [27:12] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [27:13] iotest 0x503dae _start
+[28] Stack Traceback:
+  [28:0] libpthread.so.0 0x155553edcdd0 
+  [28:1] libopen-rte.so.40 0x1555535eb4fa orte_show_help_norender
+  [28:2] libopen-rte.so.40 0x1555535eb867 orte_show_help
+  [28:3] libmpi.so.40 0x15555476743b PMPI_Abort
+  [28:4] iotest 0x65a6d5 
+  [28:5] iotest 0x65a742 CmiAbortHelper(char const*, char const*, char const*, int, int)
+  [28:6] iotest 0x65a850 CmiAsyncBroadcastFn
+  [28:7] iotest 0x635880 
+  [28:8] iotest 0x6369cb CsdScheduleForever
+  [28:9] iotest 0x636d05 CsdScheduler
+  [28:10] iotest 0x65d13a ConverseInit
+  [28:11] iotest 0x5c67c7 charm_main
+  [28:12] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [28:13] iotest 0x503dae _start
+[31] Stack Traceback:
+  [31:0] libpthread.so.0 0x155553edcdd0 
+  [31:1] libuct_ib.so.0 0x155550070a40 uct_dc_mlx5_ep_am_short
+  [31:2] libucp.so.0 0x155552efc70f ucp_do_am_single
+  [31:3] libucp.so.0 0x155552efc77f ucp_proto_progress_am_single
+  [31:4] libucp.so.0 0x155552f0a9a3 
+  [31:5] libucp.so.0 0x155552f0c2ae ucp_rndv_get_completion
+  [31:6] libuct_ib.so.0 0x155550055164 uct_rc_ep_send_op_completion_handler
+  [31:7] libuct_ib.so.0 0x155550073661 
+  [31:8] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [31:9] libmpi.so.40 0x1555548a6233 mca_pml_ucx_recv
+  [31:10] libmpi.so.40 0x15555478acf5 PMPI_Recv
+  [31:11] iotest 0x65c3e7 
+  [31:12] iotest 0x65c60e 
+  [31:13] iotest 0x6348a0 CcdRaiseCondition
+  [31:14] iotest 0x636a5a CsdScheduleForever
+  [31:15] iotest 0x636d05 CsdScheduler
+  [31:16] iotest 0x65d13a ConverseInit
+  [31:17] iotest 0x5c67c7 charm_main
+  [31:18] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [31:19] iotest 0x503dae _start
+[34] Stack Traceback:
+  [34:0] libpthread.so.0 0x155553edcdd0 
+  [34:1] libc.so.6 0x155553c04cee process_vm_readv
+  [34:2] libuct_cma.so.0 0x15554b16a5f8 uct_cma_ep_tx
+  [34:3] libuct.so.0 0x155552cbcac5 uct_scopy_ep_progress_tx
+  [34:4] libucs.so.0 0x15555285f4b2 ucs_arbiter_dispatch_nonempty
+  [34:5] libuct.so.0 0x155552cbc5e9 uct_scopy_iface_progress
+  [34:6] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [34:7] libmpi.so.40 0x1555548a6233 mca_pml_ucx_recv
+  [34:8] libmpi.so.40 0x15555478acf5 PMPI_Recv
+  [34:9] iotest 0x65c3e7 
+  [34:10] iotest 0x65c6b2 CmiGetNonLocal
+  [34:11] iotest 0x6368cd CsdNextMessage
+  [34:12] iotest 0x63699a CsdScheduleForever
+  [34:13] iotest 0x636d05 CsdScheduler
+  [34:14] iotest 0x65d13a ConverseInit
+  [34:15] iotest 0x5c67c7 charm_main
+  [34:16] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [34:17] iotest 0x503dae _start
+[35] Stack Traceback:
+  [35:0] libpthread.so.0 0x155553edcdd0 
+  [35:1] libuct_ib.so.0 0x1555500730a0 
+  [35:2] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [35:3] libopen-pal.so.40 0x15555319e773 opal_progress
+  [35:4] libmpi.so.40 0x155554752f9a ompi_request_default_test
+  [35:5] libmpi.so.40 0x15555479246e PMPI_Test
+  [35:6] iotest 0x65b380 
+  [35:7] iotest 0x65c609 
+  [35:8] iotest 0x6348a0 CcdRaiseCondition
+  [35:9] iotest 0x636a5a CsdScheduleForever
+  [35:10] iotest 0x636d05 CsdScheduler
+  [35:11] iotest 0x65d13a ConverseInit
+  [35:12] iotest 0x5c67c7 charm_main
+  [35:13] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [35:14] iotest 0x503dae _start
+[36] Stack Traceback:
+  [36:0] libpthread.so.0 0x155553edcdd0 
+  [36:1] libuct.so.0 0x155552cb8f50 
+  [36:2] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [36:3] libmpi.so.40 0x1555548a6233 mca_pml_ucx_recv
+  [36:4] libmpi.so.40 0x15555478acf5 PMPI_Recv
+  [36:5] iotest 0x65c3e7 
+  [36:6] iotest 0x65c6b2 CmiGetNonLocal
+  [36:7] iotest 0x6368cd CsdNextMessage
+  [36:8] iotest 0x63699a CsdScheduleForever
+  [36:9] iotest 0x636d05 CsdScheduler
+  [36:10] iotest 0x65d13a ConverseInit
+  [36:11] iotest 0x5c67c7 charm_main
+  [36:12] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [36:13] iotest 0x503dae _start
+[37] Stack Traceback:
+  [37:0] libpthread.so.0 0x155553edcdd0 
+  [37:1] iotest 0x5440c0 CkSendMsg
+  [37:2] iotest 0x526653 Ck::IO::impl::CProxy_ReadAssembler::shareData(unsigned long const&, unsigned long const&, char const*, CkEntryOptions const*)
+  [37:3] iotest 0x52eacb Ck::IO::impl::ReadSession::sendData(unsigned long, unsigned long, Ck::IO::impl::CProxy_ReadAssembler)
+  [37:4] iotest 0x5284c5 Ck::IO::impl::CkIndex_ReadSession::_call_sendData_marshall2(void*, void*)
+  [37:5] iotest 0x542002 CkDeliverMessageFree
+  [37:6] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [37:7] iotest 0x5459e6 _processHandler(void*, CkCoreState*)
+  [37:8] iotest 0x6369cb CsdScheduleForever
+  [37:9] iotest 0x636d05 CsdScheduler
+  [37:10] iotest 0x65d13a ConverseInit
+  [37:11] iotest 0x5c67c7 charm_main
+  [37:12] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [37:13] iotest 0x503dae _start
+[38] Stack Traceback:
+  [38:0] libpthread.so.0 0x155553edcdd0 
+  [38:1] libuct.so.0 0x155552cb8f50 
+  [38:2] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [38:3] libmpi.so.40 0x1555548a6233 mca_pml_ucx_recv
+  [38:4] libmpi.so.40 0x15555478acf5 PMPI_Recv
+  [38:5] iotest 0x65c3e7 
+  [38:6] iotest 0x65c6b2 CmiGetNonLocal
+  [38:7] iotest 0x6368cd CsdNextMessage
+  [38:8] iotest 0x63699a CsdScheduleForever
+  [38:9] iotest 0x636d05 CsdScheduler
+  [38:10] iotest 0x65d13a ConverseInit
+  [38:11] iotest 0x5c67c7 charm_main
+  [38:12] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [38:13] iotest 0x503dae _start
+[40] Stack Traceback:
+  [40:0] libpthread.so.0 0x155553edcdd0 
+  [40:1] libuct_ib.so.0 0x1555500730a0 
+  [40:2] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [40:3] libmpi.so.40 0x1555548a6233 mca_pml_ucx_recv
+  [40:4] libmpi.so.40 0x15555478acf5 PMPI_Recv
+  [40:5] iotest 0x65c3e7 
+  [40:6] iotest 0x65c6b2 CmiGetNonLocal
+  [40:7] iotest 0x6368cd CsdNextMessage
+  [40:8] iotest 0x63699a CsdScheduleForever
+  [40:9] iotest 0x636d05 CsdScheduler
+  [40:10] iotest 0x65d13a ConverseInit
+  [40:11] iotest 0x5c67c7 charm_main
+  [40:12] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [40:13] iotest 0x503dae _start
+[41] Stack Traceback:
+  [41:0] libpthread.so.0 0x155553edcdd0 
+  [41:1] libopen-pal.so.40 0x1555531fee30 
+  [41:2] libopen-pal.so.40 0x1555531fa6ea opal_libevent2022_event_base_loop
+  [41:3] libopen-pal.so.40 0x15555319e64e 
+  [41:4] libopen-pal.so.40 0x15555319e7c3 opal_progress
+  [41:5] libmpi.so.40 0x155554752f9a ompi_request_default_test
+  [41:6] libmpi.so.40 0x15555479246e PMPI_Test
+  [41:7] iotest 0x65b380 
+  [41:8] iotest 0x65c6ad CmiGetNonLocal
+  [41:9] iotest 0x6368cd CsdNextMessage
+  [41:10] iotest 0x63699a CsdScheduleForever
+  [41:11] iotest 0x636d05 CsdScheduler
+  [41:12] iotest 0x65d13a ConverseInit
+  [41:13] iotest 0x5c67c7 charm_main
+  [41:14] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [41:15] iotest 0x503dae _start
+[42] Stack Traceback:
+  [42:0] libpthread.so.0 0x155553edcdd0 
+  [42:1] libc.so.6 0x155553c660bb 
+  [42:2] iotest 0x53701a __gnu_cxx::__enable_if<std::__is_byte<char>::__value, void>::__type std::__fill_a1<char>(char*, char*, char const&)
+  [42:3] iotest 0x536754 void std::__fill_a<char*, char>(char*, char*, char const&)
+  [42:4] iotest 0x537861 char* std::__fill_n_a<char*, unsigned long, char>(char*, unsigned long, char const&, std::random_access_iterator_tag)
+  [42:5] iotest 0x5372da char* std::fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [42:6] iotest 0x537048 char* std::__uninitialized_fill_n<true>::__uninit_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [42:7] iotest 0x536786 char* std::uninitialized_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [42:8] iotest 0x535214 char* std::__uninitialized_fill_n_a<char*, unsigned long, char, char>(char*, unsigned long, char const&, std::allocator<char>&)
+  [42:9] iotest 0x53330a std::vector<char, std::allocator<char> >::_M_fill_insert(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, unsigned long, char const&)
+  [42:10] iotest 0x531ae0 std::vector<char, std::allocator<char> >::resize(unsigned long, char const&)
+  [42:11] iotest 0x52ecf6 Ck::IO::impl::ReadAssembler::ReadAssembler(Ck::IO::Session, unsigned long, unsigned long, CkCallback)
+  [42:12] iotest 0x52514f Ck::IO::impl::CkIndex_ReadAssembler::_call_ReadAssembler_marshall1(void*, void*)
+  [42:13] iotest 0x542002 CkDeliverMessageFree
+  [42:14] iotest 0x542c58 
+  [42:15] iotest 0x545922 _processHandler(void*, CkCoreState*)
+  [42:16] iotest 0x6369cb CsdScheduleForever
+  [42:17] iotest 0x636d05 CsdScheduler
+  [42:18] iotest 0x65d13a ConverseInit
+  [42:19] iotest 0x5c67c7 charm_main
+  [42:20] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [42:21] iotest 0x503dae _start
+[43] Stack Traceback:
+  [43:0] libpthread.so.0 0x155553edcdd0 
+  [43:1] libuct_ib.so.0 0x1555500730a0 
+  [43:2] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [43:3] libopen-pal.so.40 0x15555319e773 opal_progress
+  [43:4] libmpi.so.40 0x155554752f9a ompi_request_default_test
+  [43:5] libmpi.so.40 0x15555479246e PMPI_Test
+  [43:6] iotest 0x65b380 
+  [43:7] iotest 0x65c609 
+  [43:8] iotest 0x6348a0 CcdRaiseCondition
+  [43:9] iotest 0x636a5a CsdScheduleForever
+  [43:10] iotest 0x636d05 CsdScheduler
+  [43:11] iotest 0x65d13a ConverseInit
+  [43:12] iotest 0x5c67c7 charm_main
+  [43:13] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [43:14] iotest 0x503dae _start
+[44] Stack Traceback:
+  [44:0] libpthread.so.0 0x155553edcdd0 
+  [44:1] libc.so.6 0x155553c04cee process_vm_readv
+  [44:2] libuct_cma.so.0 0x15554b16a5f8 uct_cma_ep_tx
+  [44:3] libuct.so.0 0x155552cbcac5 uct_scopy_ep_progress_tx
+  [44:4] libucs.so.0 0x15555285f4b2 ucs_arbiter_dispatch_nonempty
+  [44:5] libuct.so.0 0x155552cbc5e9 uct_scopy_iface_progress
+  [44:6] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [44:7] libmpi.so.40 0x1555548a6233 mca_pml_ucx_recv
+  [44:8] libmpi.so.40 0x15555478acf5 PMPI_Recv
+  [44:9] iotest 0x65c3e7 
+  [44:10] iotest 0x65c6b2 CmiGetNonLocal
+  [44:11] iotest 0x6368cd CsdNextMessage
+  [44:12] iotest 0x63699a CsdScheduleForever
+  [44:13] iotest 0x636d05 CsdScheduler
+  [44:14] iotest 0x65d13a ConverseInit
+  [44:15] iotest 0x5c67c7 charm_main
+  [44:16] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [44:17] iotest 0x503dae _start
+[45] Stack Traceback:
+  [45:0] libpthread.so.0 0x155553edcdd0 
+  [45:1] libopen-pal.so.40 0x1555531fefa0 
+  [45:2] libopen-pal.so.40 0x1555531fa699 opal_libevent2022_event_base_loop
+  [45:3] libopen-pal.so.40 0x15555319e64e 
+  [45:4] libopen-pal.so.40 0x15555319e7c3 opal_progress
+  [45:5] libmpi.so.40 0x155554752f9a ompi_request_default_test
+  [45:6] libmpi.so.40 0x15555479246e PMPI_Test
+  [45:7] iotest 0x65b380 
+  [45:8] iotest 0x65c6ad CmiGetNonLocal
+  [45:9] iotest 0x6368cd CsdNextMessage
+  [45:10] iotest 0x63699a CsdScheduleForever
+  [45:11] iotest 0x636d05 CsdScheduler
+  [45:12] iotest 0x65d13a ConverseInit
+  [45:13] iotest 0x5c67c7 charm_main
+  [45:14] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [45:15] iotest 0x503dae _start
+[46] Stack Traceback:
+  [46:0] libpthread.so.0 0x155553edcdd0 
+  [46:1] libc.so.6 0x155553c660bb 
+  [46:2] iotest 0x53701a __gnu_cxx::__enable_if<std::__is_byte<char>::__value, void>::__type std::__fill_a1<char>(char*, char*, char const&)
+  [46:3] iotest 0x536754 void std::__fill_a<char*, char>(char*, char*, char const&)
+  [46:4] iotest 0x537861 char* std::__fill_n_a<char*, unsigned long, char>(char*, unsigned long, char const&, std::random_access_iterator_tag)
+  [46:5] iotest 0x5372da char* std::fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [46:6] iotest 0x537048 char* std::__uninitialized_fill_n<true>::__uninit_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [46:7] iotest 0x536786 char* std::uninitialized_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [46:8] iotest 0x535214 char* std::__uninitialized_fill_n_a<char*, unsigned long, char, char>(char*, unsigned long, char const&, std::allocator<char>&)
+  [46:9] iotest 0x53330a std::vector<char, std::allocator<char> >::_M_fill_insert(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, unsigned long, char const&)
+  [46:10] iotest 0x531ae0 std::vector<char, std::allocator<char> >::resize(unsigned long, char const&)
+  [46:11] iotest 0x52ecf6 Ck::IO::impl::ReadAssembler::ReadAssembler(Ck::IO::Session, unsigned long, unsigned long, CkCallback)
+  [46:12] iotest 0x52514f Ck::IO::impl::CkIndex_ReadAssembler::_call_ReadAssembler_marshall1(void*, void*)
+  [46:13] iotest 0x542002 CkDeliverMessageFree
+  [46:14] iotest 0x542c58 
+  [46:15] iotest 0x545922 _processHandler(void*, CkCoreState*)
+  [46:16] iotest 0x6369cb CsdScheduleForever
+  [46:17] iotest 0x636d05 CsdScheduler
+  [46:18] iotest 0x65d13a ConverseInit
+  [46:19] iotest 0x5c67c7 charm_main
+  [46:20] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [46:21] iotest 0x503dae _start
+[47] Stack Traceback:
+  [47:0] libpthread.so.0 0x155553edcdd0 
+  [47:1] libuct_ib.so.0 0x1555500730a0 
+  [47:2] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [47:3] libmpi.so.40 0x1555548a6233 mca_pml_ucx_recv
+  [47:4] libmpi.so.40 0x15555478acf5 PMPI_Recv
+  [47:5] iotest 0x65c3e7 
+  [47:6] iotest 0x65c6b2 CmiGetNonLocal
+  [47:7] iotest 0x6368cd CsdNextMessage
+  [47:8] iotest 0x63699a CsdScheduleForever
+  [47:9] iotest 0x636d05 CsdScheduler
+  [47:10] iotest 0x65d13a ConverseInit
+  [47:11] iotest 0x5c67c7 charm_main
+  [47:12] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [47:13] iotest 0x503dae _start
+[50] Stack Traceback:
+  [50:0] libpthread.so.0 0x155553edcdd0 
+  [50:1] libc.so.6 0x155553c660bb 
+  [50:2] iotest 0x53701a __gnu_cxx::__enable_if<std::__is_byte<char>::__value, void>::__type std::__fill_a1<char>(char*, char*, char const&)
+  [50:3] iotest 0x536754 void std::__fill_a<char*, char>(char*, char*, char const&)
+  [50:4] iotest 0x537861 char* std::__fill_n_a<char*, unsigned long, char>(char*, unsigned long, char const&, std::random_access_iterator_tag)
+  [50:5] iotest 0x5372da char* std::fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [50:6] iotest 0x537048 char* std::__uninitialized_fill_n<true>::__uninit_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [50:7] iotest 0x536786 char* std::uninitialized_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [50:8] iotest 0x535214 char* std::__uninitialized_fill_n_a<char*, unsigned long, char, char>(char*, unsigned long, char const&, std::allocator<char>&)
+  [50:9] iotest 0x53330a std::vector<char, std::allocator<char> >::_M_fill_insert(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, unsigned long, char const&)
+  [50:10] iotest 0x531ae0 std::vector<char, std::allocator<char> >::resize(unsigned long, char const&)
+  [50:11] iotest 0x52ecf6 Ck::IO::impl::ReadAssembler::ReadAssembler(Ck::IO::Session, unsigned long, unsigned long, CkCallback)
+  [50:12] iotest 0x52514f Ck::IO::impl::CkIndex_ReadAssembler::_call_ReadAssembler_marshall1(void*, void*)
+  [50:13] iotest 0x542002 CkDeliverMessageFree
+  [50:14] iotest 0x542c58 
+  [50:15] iotest 0x545922 _processHandler(void*, CkCoreState*)
+  [50:16] iotest 0x6369cb CsdScheduleForever
+  [50:17] iotest 0x636d05 CsdScheduler
+  [50:18] iotest 0x65d13a ConverseInit
+  [50:19] iotest 0x5c67c7 charm_main
+  [50:20] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [50:21] iotest 0x503dae _start
+[51] Stack Traceback:
+  [51:0] libpthread.so.0 0x155553edcdd0 
+  [51:1] libc.so.6 0x155553c65d55 
+  [51:2] iotest 0x526570 Ck::IO::impl::CProxy_ReadAssembler::shareData(unsigned long const&, unsigned long const&, char const*, CkEntryOptions const*)
+  [51:3] iotest 0x52eacb Ck::IO::impl::ReadSession::sendData(unsigned long, unsigned long, Ck::IO::impl::CProxy_ReadAssembler)
+  [51:4] iotest 0x5284c5 Ck::IO::impl::CkIndex_ReadSession::_call_sendData_marshall2(void*, void*)
+  [51:5] iotest 0x542002 CkDeliverMessageFree
+  [51:6] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [51:7] iotest 0x5459e6 _processHandler(void*, CkCoreState*)
+  [51:8] iotest 0x6369cb CsdScheduleForever
+  [51:9] iotest 0x636d05 CsdScheduler
+  [51:10] iotest 0x65d13a ConverseInit
+  [51:11] iotest 0x5c67c7 charm_main
+  [51:12] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [51:13] iotest 0x503dae _start
+[53] Stack Traceback:
+  [53:0] libpthread.so.0 0x155553edcdd0 
+  [53:1] libuct_ib.so.0 0x1555500730a0 
+  [53:2] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [53:3] libmpi.so.40 0x1555548a6233 mca_pml_ucx_recv
+  [53:4] libmpi.so.40 0x15555478acf5 PMPI_Recv
+  [53:5] iotest 0x65c3e7 
+  [53:6] iotest 0x65c6b2 CmiGetNonLocal
+  [53:7] iotest 0x6368cd CsdNextMessage
+  [53:8] iotest 0x63699a CsdScheduleForever
+  [53:9] iotest 0x636d05 CsdScheduler
+  [53:10] iotest 0x65d13a ConverseInit
+  [53:11] iotest 0x5c67c7 charm_main
+  [53:12] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [53:13] iotest 0x503dae _start
+[54] Stack Traceback:
+  [54:0] libpthread.so.0 0x155553edcdd0 
+  [54:1] libuct_ib.so.0 0x155550070a40 uct_dc_mlx5_ep_am_short
+  [54:2] libucp.so.0 0x155552efc70f ucp_do_am_single
+  [54:3] libucp.so.0 0x155552efc77f ucp_proto_progress_am_single
+  [54:4] libucp.so.0 0x155552f0a9a3 
+  [54:5] libucp.so.0 0x155552f0c2ae ucp_rndv_get_completion
+  [54:6] libuct_ib.so.0 0x155550055164 uct_rc_ep_send_op_completion_handler
+  [54:7] libuct_ib.so.0 0x155550073661 
+  [54:8] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [54:9] libmpi.so.40 0x1555548a6233 mca_pml_ucx_recv
+  [54:10] libmpi.so.40 0x15555478acf5 PMPI_Recv
+  [54:11] iotest 0x65c3e7 
+  [54:12] iotest 0x65c6b2 CmiGetNonLocal
+  [54:13] iotest 0x6368cd CsdNextMessage
+  [54:14] iotest 0x63699a CsdScheduleForever
+  [54:15] iotest 0x636d05 CsdScheduler
+  [54:16] iotest 0x65d13a ConverseInit
+  [54:17] iotest 0x5c67c7 charm_main
+  [54:18] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [54:19] iotest 0x503dae _start
+[55] Stack Traceback:
+  [55:0] libpthread.so.0 0x155553edcdd0 
+  [55:1] libuct_ib.so.0 0x1555500730a0 
+  [55:2] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [55:3] libopen-pal.so.40 0x15555319e773 opal_progress
+  [55:4] libmpi.so.40 0x155554752f9a ompi_request_default_test
+  [55:5] libmpi.so.40 0x15555479246e PMPI_Test
+  [55:6] iotest 0x65b380 
+  [55:7] iotest 0x65c6ad CmiGetNonLocal
+  [55:8] iotest 0x6368cd CsdNextMessage
+  [55:9] iotest 0x63699a CsdScheduleForever
+  [55:10] iotest 0x636d05 CsdScheduler
+  [55:11] iotest 0x65d13a ConverseInit
+  [55:12] iotest 0x5c67c7 charm_main
+  [55:13] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [55:14] iotest 0x503dae _start
+[56] Stack Traceback:
+  [56:0] libpthread.so.0 0x155553edcdd0 
+  [56:1] libuct.so.0 0x155552cb8f50 
+  [56:2] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [56:3] libmpi.so.40 0x1555548a6233 mca_pml_ucx_recv
+  [56:4] libmpi.so.40 0x15555478acf5 PMPI_Recv
+  [56:5] iotest 0x65c3e7 
+  [56:6] iotest 0x65c6b2 CmiGetNonLocal
+  [56:7] iotest 0x6368cd CsdNextMessage
+  [56:8] iotest 0x63699a CsdScheduleForever
+  [56:9] iotest 0x636d05 CsdScheduler
+  [56:10] iotest 0x65d13a ConverseInit
+  [56:11] iotest 0x5c67c7 charm_main
+  [56:12] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [56:13] iotest 0x503dae _start
+[57] Stack Traceback:
+  [57:0] libpthread.so.0 0x155553edcdd0 
+  [57:1] libuct_ib.so.0 0x1555500730a0 
+  [57:2] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [57:3] libmpi.so.40 0x1555548a6233 mca_pml_ucx_recv
+  [57:4] libmpi.so.40 0x15555478acf5 PMPI_Recv
+  [57:5] iotest 0x65c3e7 
+  [57:6] iotest 0x65c6b2 CmiGetNonLocal
+  [57:7] iotest 0x6368cd CsdNextMessage
+  [57:8] iotest 0x63699a CsdScheduleForever
+  [57:9] iotest 0x636d05 CsdScheduler
+  [57:10] iotest 0x65d13a ConverseInit
+  [57:11] iotest 0x5c67c7 charm_main
+  [57:12] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [57:13] iotest 0x503dae _start
+[58] Stack Traceback:
+  [58:0] libpthread.so.0 0x155553edcdd0 
+  [58:1] libucp.so.0 0x155552f1fee8 ucp_wireup_is_reachable
+  [58:2] libucp.so.0 0x155552f1b704 
+  [58:3] libucp.so.0 0x155552f1c2e3 
+  [58:4] libucp.so.0 0x155552f1ce7e ucp_wireup_select_lanes
+  [58:5] libucp.so.0 0x155552f1ff8b ucp_wireup_init_lanes
+  [58:6] libucp.so.0 0x155552f205c8 
+  [58:7] libucp.so.0 0x155552f20c8e 
+  [58:8] libuct.so.0 0x155552cb916c 
+  [58:9] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [58:10] libmpi.so.40 0x1555548a60eb mca_pml_ucx_iprobe
+  [58:11] libmpi.so.40 0x15555478371c PMPI_Iprobe
+  [58:12] iotest 0x65c388 
+  [58:13] iotest 0x65c6b2 CmiGetNonLocal
+  [58:14] iotest 0x6368cd CsdNextMessage
+  [58:15] iotest 0x63699a CsdScheduleForever
+  [58:16] iotest 0x636d05 CsdScheduler
+  [58:17] iotest 0x65d13a ConverseInit
+  [58:18] iotest 0x5c67c7 charm_main
+  [58:19] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [58:20] iotest 0x503dae _start
+[59] Stack Traceback:
+  [59:0] libpthread.so.0 0x155553edcdd0 
+  [59:1] libc.so.6 0x155553c65d55 
+  [59:2] iotest 0x526570 Ck::IO::impl::CProxy_ReadAssembler::shareData(unsigned long const&, unsigned long const&, char const*, CkEntryOptions const*)
+  [59:3] iotest 0x52eacb Ck::IO::impl::ReadSession::sendData(unsigned long, unsigned long, Ck::IO::impl::CProxy_ReadAssembler)
+  [59:4] iotest 0x5284c5 Ck::IO::impl::CkIndex_ReadSession::_call_sendData_marshall2(void*, void*)
+  [59:5] iotest 0x542002 CkDeliverMessageFree
+  [59:6] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [59:7] iotest 0x5459e6 _processHandler(void*, CkCoreState*)
+  [59:8] iotest 0x6369cb CsdScheduleForever
+  [59:9] iotest 0x636d05 CsdScheduler
+  [59:10] iotest 0x65d13a ConverseInit
+  [59:11] iotest 0x5c67c7 charm_main
+  [59:12] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [59:13] iotest 0x503dae _start
+[60] Stack Traceback:
+  [60:0] libpthread.so.0 0x155553edcdd0 
+  [60:1] libuct.so.0 0x155552cb8f50 
+  [60:2] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [60:3] libmpi.so.40 0x1555548a6233 mca_pml_ucx_recv
+  [60:4] libmpi.so.40 0x15555478acf5 PMPI_Recv
+  [60:5] iotest 0x65c3e7 
+  [60:6] iotest 0x65c6b2 CmiGetNonLocal
+  [60:7] iotest 0x6368cd CsdNextMessage
+  [60:8] iotest 0x63699a CsdScheduleForever
+  [60:9] iotest 0x636d05 CsdScheduler
+  [60:10] iotest 0x65d13a ConverseInit
+  [60:11] iotest 0x5c67c7 charm_main
+  [60:12] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [60:13] iotest 0x503dae _start
+[61] Stack Traceback:
+  [61:0] libpthread.so.0 0x155553edcdd0 
+  [61:1] libuct_ib.so.0 0x1555500730a0 
+  [61:2] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [61:3] libopen-pal.so.40 0x15555319e773 opal_progress
+  [61:4] libmpi.so.40 0x155554752f9a ompi_request_default_test
+  [61:5] libmpi.so.40 0x15555479246e PMPI_Test
+  [61:6] iotest 0x65b380 
+  [61:7] iotest 0x65c6ad CmiGetNonLocal
+  [61:8] iotest 0x6368cd CsdNextMessage
+  [61:9] iotest 0x63699a CsdScheduleForever
+  [61:10] iotest 0x636d05 CsdScheduler
+  [61:11] iotest 0x65d13a ConverseInit
+  [61:12] iotest 0x5c67c7 charm_main
+  [61:13] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [61:14] iotest 0x503dae _start
+[62] Stack Traceback:
+  [62:0] libpthread.so.0 0x155553edcdd0 
+  [62:1] libuct_ib.so.0 0x1555500730a0 
+  [62:2] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [62:3] libmpi.so.40 0x1555548a6233 mca_pml_ucx_recv
+  [62:4] libmpi.so.40 0x15555478acf5 PMPI_Recv
+  [62:5] iotest 0x65c3e7 
+  [62:6] iotest 0x65c6b2 CmiGetNonLocal
+  [62:7] iotest 0x6368cd CsdNextMessage
+  [62:8] iotest 0x63699a CsdScheduleForever
+  [62:9] iotest 0x636d05 CsdScheduler
+  [62:10] iotest 0x65d13a ConverseInit
+  [62:11] iotest 0x5c67c7 charm_main
+  [62:12] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [62:13] iotest 0x503dae _start
+[63] Stack Traceback:
+  [63:0] libpthread.so.0 0x155553edcdd0 
+  [63:1] libuct_ib.so.0 0x1555500730a0 
+  [63:2] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [63:3] libopen-pal.so.40 0x15555319e773 opal_progress
+  [63:4] libmpi.so.40 0x155554752f9a ompi_request_default_test
+  [63:5] libmpi.so.40 0x15555479246e PMPI_Test
+  [63:6] iotest 0x65b380 
+  [63:7] iotest 0x65c609 
+  [63:8] iotest 0x6348a0 CcdRaiseCondition
+  [63:9] iotest 0x636a5a CsdScheduleForever
+  [63:10] iotest 0x636d05 CsdScheduler
+  [63:11] iotest 0x65d13a ConverseInit
+  [63:12] iotest 0x5c67c7 charm_main
+  [63:13] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [63:14] iotest 0x503dae _start
+[64] Stack Traceback:
+  [64:0] libpthread.so.0 0x155553edcdd0 
+  [64:1] libuct.so.0 0x155552cb8f50 
+  [64:2] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [64:3] libmpi.so.40 0x1555548a6233 mca_pml_ucx_recv
+  [64:4] libmpi.so.40 0x15555478acf5 PMPI_Recv
+  [64:5] iotest 0x65c3e7 
+  [64:6] iotest 0x65c6b2 CmiGetNonLocal
+  [64:7] iotest 0x6368cd CsdNextMessage
+  [64:8] iotest 0x63699a CsdScheduleForever
+  [64:9] iotest 0x636d05 CsdScheduler
+  [64:10] iotest 0x65d13a ConverseInit
+  [64:11] iotest 0x5c67c7 charm_main
+  [64:12] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [64:13] iotest 0x503dae _start
+[65] Stack Traceback:
+  [65:0] libpthread.so.0 0x155553edcdd0 
+  [65:1] libibverbs.so.1 0x15554b9ee2d1 ibv_cmd_dereg_mr
+  [65:2] libmlx5.so.1 0x15554b7cde1f 
+  [65:3] libibverbs.so.1 0x15554b9f755a ibv_dereg_mr
+  [65:4] libuct_ib.so.0 0x15555004f41c uct_ib_dereg_mr
+  [65:5] libucs.so.0 0x15555286ca11 ucs_rcache_get
+  [65:6] libuct_ib.so.0 0x15555004e414 
+  [65:7] libucp.so.0 0x155552ef3b23 ucp_mem_rereg_mds
+  [65:8] libucp.so.0 0x155552ef5e0a ucp_request_memory_reg
+  [65:9] libucp.so.0 0x155552f0d78c ucp_tag_rndv_reg_send_buffer
+  [65:10] libucp.so.0 0x155552f12aa6 ucp_tag_send_nbx
+  [65:11] libmpi.so.40 0x1555548a6f8a mca_pml_ucx_isend
+  [65:12] libmpi.so.40 0x155554784085 MPI_Isend
+  [65:13] iotest 0x65baa4 
+  [65:14] iotest 0x698b27 CldEnqueue
+  [65:15] iotest 0x545208 _processHandler(void*, CkCoreState*)
+  [65:16] iotest 0x6369cb CsdScheduleForever
+  [65:17] iotest 0x636d05 CsdScheduler
+  [65:18] iotest 0x65d13a ConverseInit
+  [65:19] iotest 0x5c67c7 charm_main
+  [65:20] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [65:21] iotest 0x503dae _start
+[66] Stack Traceback:
+  [66:0] libpthread.so.0 0x155553edcdd0 
+  [66:1] libc.so.6 0x155553c660bb 
+  [66:2] iotest 0x53701a __gnu_cxx::__enable_if<std::__is_byte<char>::__value, void>::__type std::__fill_a1<char>(char*, char*, char const&)
+  [66:3] iotest 0x536754 void std::__fill_a<char*, char>(char*, char*, char const&)
+  [66:4] iotest 0x537861 char* std::__fill_n_a<char*, unsigned long, char>(char*, unsigned long, char const&, std::random_access_iterator_tag)
+  [66:5] iotest 0x5372da char* std::fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [66:6] iotest 0x537048 char* std::__uninitialized_fill_n<true>::__uninit_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [66:7] iotest 0x536786 char* std::uninitialized_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [66:8] iotest 0x535214 char* std::__uninitialized_fill_n_a<char*, unsigned long, char, char>(char*, unsigned long, char const&, std::allocator<char>&)
+  [66:9] iotest 0x53330a std::vector<char, std::allocator<char> >::_M_fill_insert(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, unsigned long, char const&)
+  [66:10] iotest 0x531ae0 std::vector<char, std::allocator<char> >::resize(unsigned long, char const&)
+  [66:11] iotest 0x52ecf6 Ck::IO::impl::ReadAssembler::ReadAssembler(Ck::IO::Session, unsigned long, unsigned long, CkCallback)
+  [66:12] iotest 0x52514f Ck::IO::impl::CkIndex_ReadAssembler::_call_ReadAssembler_marshall1(void*, void*)
+  [66:13] iotest 0x542002 CkDeliverMessageFree
+  [66:14] iotest 0x542c58 
+  [66:15] iotest 0x545922 _processHandler(void*, CkCoreState*)
+  [66:16] iotest 0x6369cb CsdScheduleForever
+  [66:17] iotest 0x636d05 CsdScheduler
+  [66:18] iotest 0x65d13a ConverseInit
+  [66:19] iotest 0x5c67c7 charm_main
+  [66:20] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [66:21] iotest 0x503dae _start
+[67] Stack Traceback:
+  [67:0] libpthread.so.0 0x155553edcdd0 
+  [67:1] libopen-pal.so.40 0x1555531fee30 
+  [67:2] libopen-pal.so.40 0x1555531fa6ea opal_libevent2022_event_base_loop
+  [67:3] libopen-pal.so.40 0x15555319e64e 
+  [67:4] libopen-pal.so.40 0x15555319e7c3 opal_progress
+  [67:5] libmpi.so.40 0x155554752f9a ompi_request_default_test
+  [67:6] libmpi.so.40 0x15555479246e PMPI_Test
+  [67:7] iotest 0x65b380 
+  [67:8] iotest 0x65c609 
+  [67:9] iotest 0x6348a0 CcdRaiseCondition
+  [67:10] iotest 0x636a5a CsdScheduleForever
+  [67:11] iotest 0x636d05 CsdScheduler
+  [67:12] iotest 0x65d13a ConverseInit
+  [67:13] iotest 0x5c67c7 charm_main
+  [67:14] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [67:15] iotest 0x503dae _start
+[68] Stack Traceback:
+  [68:0] libpthread.so.0 0x155553edcdd0 
+  [68:1] libc.so.6 0x155553c660bb 
+  [68:2] iotest 0x53701a __gnu_cxx::__enable_if<std::__is_byte<char>::__value, void>::__type std::__fill_a1<char>(char*, char*, char const&)
+  [68:3] iotest 0x536754 void std::__fill_a<char*, char>(char*, char*, char const&)
+  [68:4] iotest 0x537861 char* std::__fill_n_a<char*, unsigned long, char>(char*, unsigned long, char const&, std::random_access_iterator_tag)
+  [68:5] iotest 0x5372da char* std::fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [68:6] iotest 0x537048 char* std::__uninitialized_fill_n<true>::__uninit_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [68:7] iotest 0x536786 char* std::uninitialized_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [68:8] iotest 0x535214 char* std::__uninitialized_fill_n_a<char*, unsigned long, char, char>(char*, unsigned long, char const&, std::allocator<char>&)
+  [68:9] iotest 0x53330a std::vector<char, std::allocator<char> >::_M_fill_insert(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, unsigned long, char const&)
+  [68:10] iotest 0x531ae0 std::vector<char, std::allocator<char> >::resize(unsigned long, char const&)
+  [68:11] iotest 0x52ecf6 Ck::IO::impl::ReadAssembler::ReadAssembler(Ck::IO::Session, unsigned long, unsigned long, CkCallback)
+  [68:12] iotest 0x52514f Ck::IO::impl::CkIndex_ReadAssembler::_call_ReadAssembler_marshall1(void*, void*)
+  [68:13] iotest 0x542002 CkDeliverMessageFree
+  [68:14] iotest 0x542c58 
+  [68:15] iotest 0x545922 _processHandler(void*, CkCoreState*)
+  [68:16] iotest 0x6369cb CsdScheduleForever
+  [68:17] iotest 0x636d05 CsdScheduler
+  [68:18] iotest 0x65d13a ConverseInit
+  [68:19] iotest 0x5c67c7 charm_main
+  [68:20] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [68:21] iotest 0x503dae _start
+[70] Stack Traceback:
+  [70:0] libpthread.so.0 0x155553edcdd0 
+  [70:1] libuct_ib.so.0 0x1555500730a0 
+  [70:2] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [70:3] libopen-pal.so.40 0x15555319e773 opal_progress
+  [70:4] libmpi.so.40 0x155554752f9a ompi_request_default_test
+  [70:5] libmpi.so.40 0x15555479246e PMPI_Test
+  [70:6] iotest 0x65b380 
+  [70:7] iotest 0x65c6ad CmiGetNonLocal
+  [70:8] iotest 0x6368cd CsdNextMessage
+  [70:9] iotest 0x63699a CsdScheduleForever
+  [70:10] iotest 0x636d05 CsdScheduler
+  [70:11] iotest 0x65d13a ConverseInit
+  [70:12] iotest 0x5c67c7 charm_main
+  [70:13] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [70:14] iotest 0x503dae _start
+[72] Stack Traceback:
+  [72:0] libpthread.so.0 0x155553edcdd0 
+  [72:1] libucp.so.0 0x155552ef60e0 ucp_request_test
+  [72:2] libmpi.so.40 0x1555548a620b mca_pml_ucx_recv
+  [72:3] libmpi.so.40 0x15555478acf5 PMPI_Recv
+  [72:4] iotest 0x65c3e7 
+  [72:5] iotest 0x65c6b2 CmiGetNonLocal
+  [72:6] iotest 0x6368cd CsdNextMessage
+  [72:7] iotest 0x63699a CsdScheduleForever
+  [72:8] iotest 0x636d05 CsdScheduler
+  [72:9] iotest 0x65d13a ConverseInit
+  [72:10] iotest 0x5c67c7 charm_main
+  [72:11] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [72:12] iotest 0x503dae _start
+[74] Stack Traceback:
+  [74:0] libpthread.so.0 0x155553edcdd0 
+  [74:1] libuct_ib.so.0 0x1555500730a0 
+  [74:2] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [74:3] libmpi.so.40 0x1555548a6233 mca_pml_ucx_recv
+  [74:4] libmpi.so.40 0x15555478acf5 PMPI_Recv
+  [74:5] iotest 0x65c3e7 
+  [74:6] iotest 0x65c6b2 CmiGetNonLocal
+  [74:7] iotest 0x6368cd CsdNextMessage
+  [74:8] iotest 0x63699a CsdScheduleForever
+  [74:9] iotest 0x636d05 CsdScheduler
+  [74:10] iotest 0x65d13a ConverseInit
+  [74:11] iotest 0x5c67c7 charm_main
+  [74:12] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [74:13] iotest 0x503dae _start
+[71] Stack Traceback:
+  [71:0] libpthread.so.0 0x155553edcdd0 
+[127] Stack Traceback:
+  [127:0] libpthread.so.0 0x155553edcdd0 
+  [127:1] libuct.so.0 0x155552cb5260 uct_md_mkey_pack
+  [127:2] libucp.so.0 0x155552ef6638 ucp_rkey_pack_uct
+  [127:3] libucp.so.0 0x155552f09340 ucp_tag_rndv_rts_pack
+  [127:4] libucp.so.0 0x155552efc6ef ucp_do_am_single
+  [127:5] libucp.so.0 0x155552f1da61 
+  [127:6] libucs.so.0 0x15555285f987 
+  [127:7] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [127:8] libopen-pal.so.40 0x15555319e773 opal_progress
+  [127:9] libmpi.so.40 0x155554752f9a ompi_request_default_test
+  [127:10] libmpi.so.40 0x15555479246e PMPI_Test
+  [127:11] iotest 0x65b380 
+  [127:12] iotest 0x65c609 
+  [127:13] iotest 0x6348a0 CcdRaiseCondition
+  [127:14] iotest 0x636a5a CsdScheduleForever
+  [127:15] iotest 0x636d05 CsdScheduler
+  [127:16] iotest 0x65d13a ConverseInit
+  [127:17] iotest 0x5c67c7 charm_main
+  [127:18] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [127:19] iotest 0x503dae _start
+[78] Stack Traceback:
+  [78:0] libpthread.so.0 0x155553edcdd0 
+  [78:1] libuct_ib.so.0 0x155550070a40 uct_dc_mlx5_ep_am_short
+  [78:2] libucp.so.0 0x155552efc70f ucp_do_am_single
+  [78:3] libucp.so.0 0x155552efc77f ucp_proto_progress_am_single
+  [78:4] libucp.so.0 0x155552f0a9a3 
+  [78:5] libucp.so.0 0x155552f0c2ae ucp_rndv_get_completion
+  [78:6] libuct_ib.so.0 0x155550055164 uct_rc_ep_send_op_completion_handler
+  [78:7] libuct_ib.so.0 0x155550073661 
+  [78:8] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [78:9] libmpi.so.40 0x1555548a6233 mca_pml_ucx_recv
+  [78:10] libmpi.so.40 0x15555478acf5 PMPI_Recv
+  [78:11] iotest 0x65c3e7 
+  [78:12] iotest 0x65c6b2 CmiGetNonLocal
+  [78:13] iotest 0x6368cd CsdNextMessage
+  [78:14] iotest 0x63699a CsdScheduleForever
+  [78:15] iotest 0x636d05 CsdScheduler
+  [78:16] iotest 0x65d13a ConverseInit
+  [78:17] iotest 0x5c67c7 charm_main
+  [78:18] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [78:19] iotest 0x503dae _start
+[81] Stack Traceback:
+  [81:0] libpthread.so.0 0x155553edcdd0 
+  [81:1] libc.so.6 0x155553c04cee process_vm_readv
+  [81:2] libuct_cma.so.0 0x15554b16a5f8 uct_cma_ep_tx
+  [81:3] libuct.so.0 0x155552cbcac5 uct_scopy_ep_progress_tx
+  [81:4] libucs.so.0 0x15555285f4b2 ucs_arbiter_dispatch_nonempty
+  [81:5] libuct.so.0 0x155552cbc5e9 uct_scopy_iface_progress
+  [81:6] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [81:7] libmpi.so.40 0x1555548a6233 mca_pml_ucx_recv
+  [81:8] libmpi.so.40 0x15555478acf5 PMPI_Recv
+  [81:9] iotest 0x65c3e7 
+  [81:10] iotest 0x65c6b2 CmiGetNonLocal
+  [81:11] iotest 0x6368cd CsdNextMessage
+  [81:12] iotest 0x63699a CsdScheduleForever
+  [81:13] iotest 0x636d05 CsdScheduler
+  [81:14] iotest 0x65d13a ConverseInit
+  [81:15] iotest 0x5c67c7 charm_main
+  [81:16] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [81:17] iotest 0x503dae _start
+[82] Stack Traceback:
+  [82:0] libpthread.so.0 0x155553edcdd0 
+  [82:1] iotest 0x543e95 
+  [82:2] iotest 0x526653 Ck::IO::impl::CProxy_ReadAssembler::shareData(unsigned long const&, unsigned long const&, char const*, CkEntryOptions const*)
+  [82:3] iotest 0x52eacb Ck::IO::impl::ReadSession::sendData(unsigned long, unsigned long, Ck::IO::impl::CProxy_ReadAssembler)
+  [82:4] iotest 0x5284c5 Ck::IO::impl::CkIndex_ReadSession::_call_sendData_marshall2(void*, void*)
+  [82:5] iotest 0x542002 CkDeliverMessageFree
+  [82:6] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [82:7] iotest 0x5459e6 _processHandler(void*, CkCoreState*)
+  [82:8] iotest 0x6369cb CsdScheduleForever
+  [82:9] iotest 0x636d05 CsdScheduler
+  [82:10] iotest 0x65d13a ConverseInit
+  [82:11] iotest 0x5c67c7 charm_main
+  [82:12] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [82:13] iotest 0x503dae _start
+[83] Stack Traceback:
+  [83:0] libpthread.so.0 0x155553edcdd0 
+  [83:1] libuct_ib.so.0 0x1555500730a0 
+  [83:2] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [83:3] libopen-pal.so.40 0x15555319e773 opal_progress
+  [83:4] libmpi.so.40 0x155554752f9a ompi_request_default_test
+  [83:5] libmpi.so.40 0x15555479246e PMPI_Test
+  [83:6] iotest 0x65b380 
+  [83:7] iotest 0x65c6ad CmiGetNonLocal
+  [83:8] iotest 0x6368cd CsdNextMessage
+  [83:9] iotest 0x63699a CsdScheduleForever
+  [83:10] iotest 0x636d05 CsdScheduler
+  [83:11] iotest 0x65d13a ConverseInit
+  [83:12] iotest 0x5c67c7 charm_main
+  [83:13] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [83:14] iotest 0x503dae _start
+[84] Stack Traceback:
+  [84:0] libpthread.so.0 0x155553edcdd0 
+  [84:1] libuct.so.0 0x155552cb8f50 
+  [84:2] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [84:3] libmpi.so.40 0x1555548a6233 mca_pml_ucx_recv
+  [84:4] libmpi.so.40 0x15555478acf5 PMPI_Recv
+  [84:5] iotest 0x65c3e7 
+  [84:6] iotest 0x65c6b2 CmiGetNonLocal
+  [84:7] iotest 0x6368cd CsdNextMessage
+  [84:8] iotest 0x63699a CsdScheduleForever
+  [84:9] iotest 0x636d05 CsdScheduler
+  [84:10] iotest 0x65d13a ConverseInit
+  [84:11] iotest 0x5c67c7 charm_main
+  [84:12] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [84:13] iotest 0x503dae _start
+[86] Stack Traceback:
+  [86:0] libpthread.so.0 0x155553edcdd0 
+  [86:1] libc.so.6 0x155553bfa87b ioctl
+  [86:2] libibverbs.so.1 0x15554b9ede5b execute_ioctl
+  [86:3] libibverbs.so.1 0x15554b9ed1ee 
+  [86:4] libibverbs.so.1 0x15554b9e9dfd ibv_cmd_reg_mr
+  [86:5] libmlx5.so.1 0x15554b7cdc4b 
+  [86:6] libibverbs.so.1 0x15554b9f7352 ibv_reg_mr_iova2
+  [86:7] libuct_ib.so.0 0x15555004f3ef uct_ib_reg_mr
+  [86:8] libuct_ib.so.0 0x15555004f9c8 uct_ib_reg_key_impl
+  [86:9] libuct_ib.so.0 0x155550053da3 
+  [86:10] libuct_ib.so.0 0x15555004ec20 
+  [86:11] libucs.so.0 0x15555286cdad ucs_rcache_get
+  [86:12] libuct_ib.so.0 0x15555004e414 
+  [86:13] libucp.so.0 0x155552ef3b23 ucp_mem_rereg_mds
+  [86:14] libucp.so.0 0x155552ef5e0a ucp_request_memory_reg
+  [86:15] libucp.so.0 0x155552f09fad ucp_rndv_progress_rma_get_zcopy
+  [86:16] libucp.so.0 0x155552f0daa5 ucp_rndv_matched
+  [86:17] libucp.so.0 0x155552f10f8f ucp_tag_recv_nbx
+  [86:18] libmpi.so.40 0x1555548a61fe mca_pml_ucx_recv
+  [86:19] libmpi.so.40 0x15555478acf5 PMPI_Recv
+  [86:20] iotest 0x65c3e7 
+  [86:21] iotest 0x65c6b2 CmiGetNonLocal
+  [86:22] iotest 0x6368cd CsdNextMessage
+  [86:23] iotest 0x63699a CsdScheduleForever
+  [86:24] iotest 0x636d05 CsdScheduler
+  [86:25] iotest 0x65d13a ConverseInit
+  [86:26] iotest 0x5c67c7 charm_main
+  [86:27] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [86:28] iotest 0x503dae _start
+[87] Stack Traceback:
+  [87:0] libpthread.so.0 0x155553edcdd0 
+  [87:1] libc.so.6 0x155553c65d55 
+  [87:2] iotest 0x526570 Ck::IO::impl::CProxy_ReadAssembler::shareData(unsigned long const&, unsigned long const&, char const*, CkEntryOptions const*)
+  [87:3] iotest 0x52eacb Ck::IO::impl::ReadSession::sendData(unsigned long, unsigned long, Ck::IO::impl::CProxy_ReadAssembler)
+  [87:4] iotest 0x5284c5 Ck::IO::impl::CkIndex_ReadSession::_call_sendData_marshall2(void*, void*)
+  [87:5] iotest 0x542002 CkDeliverMessageFree
+  [87:6] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [87:7] iotest 0x5459e6 _processHandler(void*, CkCoreState*)
+  [87:8] iotest 0x6369cb CsdScheduleForever
+  [87:9] iotest 0x636d05 CsdScheduler
+  [87:10] iotest 0x65d13a ConverseInit
+  [87:11] iotest 0x5c67c7 charm_main
+  [87:12] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [87:13] iotest 0x503dae _start
+[88] Stack Traceback:
+  [88:0] libpthread.so.0 0x155553edcdd0 
+  [88:1] iotest 0x545208 _processHandler(void*, CkCoreState*)
+  [88:2] iotest 0x6369cb CsdScheduleForever
+  [88:3] iotest 0x636d05 CsdScheduler
+  [88:4] iotest 0x65d13a ConverseInit
+  [88:5] iotest 0x5c67c7 charm_main
+  [88:6] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [88:7] iotest 0x503dae _start
+[89] Stack Traceback:
+  [89:0] libpthread.so.0 0x155553edcdd0 
+  [89:1] libuct_ib.so.0 0x1555500730a0 
+  [89:2] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [89:3] libopen-pal.so.40 0x15555319e773 opal_progress
+  [89:4] libmpi.so.40 0x155554752f9a ompi_request_default_test
+  [89:5] libmpi.so.40 0x15555479246e PMPI_Test
+  [89:6] iotest 0x65b380 
+  [89:7] iotest 0x65c609 
+  [89:8] iotest 0x6348a0 CcdRaiseCondition
+  [89:9] iotest 0x636a5a CsdScheduleForever
+  [89:10] iotest 0x636d05 CsdScheduler
+  [89:11] iotest 0x65d13a ConverseInit
+  [89:12] iotest 0x5c67c7 charm_main
+  [89:13] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [89:14] iotest 0x503dae _start
+[90] Stack Traceback:
+  [90:0] libpthread.so.0 0x155553edcdd0 
+  [90:1] libuct.so.0 0x155552cb8f50 
+  [90:2] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [90:3] libmpi.so.40 0x1555548a6233 mca_pml_ucx_recv
+  [90:4] libmpi.so.40 0x15555478acf5 PMPI_Recv
+  [90:5] iotest 0x65c3e7 
+  [90:6] iotest 0x65c6b2 CmiGetNonLocal
+  [90:7] iotest 0x6368cd CsdNextMessage
+  [90:8] iotest 0x63699a CsdScheduleForever
+  [90:9] iotest 0x636d05 CsdScheduler
+  [90:10] iotest 0x65d13a ConverseInit
+  [90:11] iotest 0x5c67c7 charm_main
+  [90:12] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [90:13] iotest 0x503dae _start
+[91] Stack Traceback:
+  [91:0] libpthread.so.0 0x155553edcdd0 
+  [91:1] libc.so.6 0x155553c65d63 
+  [91:2] iotest 0x526570 Ck::IO::impl::CProxy_ReadAssembler::shareData(unsigned long const&, unsigned long const&, char const*, CkEntryOptions const*)
+  [91:3] iotest 0x52eacb Ck::IO::impl::ReadSession::sendData(unsigned long, unsigned long, Ck::IO::impl::CProxy_ReadAssembler)
+  [91:4] iotest 0x5284c5 Ck::IO::impl::CkIndex_ReadSession::_call_sendData_marshall2(void*, void*)
+  [91:5] iotest 0x542002 CkDeliverMessageFree
+  [91:6] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [91:7] iotest 0x5459e6 _processHandler(void*, CkCoreState*)
+  [91:8] iotest 0x6369cb CsdScheduleForever
+  [91:9] iotest 0x636d05 CsdScheduler
+  [91:10] iotest 0x65d13a ConverseInit
+  [91:11] iotest 0x5c67c7 charm_main
+  [91:12] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [91:13] iotest 0x503dae _start
+[92] Stack Traceback:
+  [92:0] libpthread.so.0 0x155553edcdd0 
+  [92:1] libuct_ib.so.0 0x1555500730a0 
+  [92:2] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [92:3] libmpi.so.40 0x1555548a6233 mca_pml_ucx_recv
+  [92:4] libmpi.so.40 0x15555478acf5 PMPI_Recv
+  [92:5] iotest 0x65c3e7 
+  [92:6] iotest 0x65c6b2 CmiGetNonLocal
+  [92:7] iotest 0x6368cd CsdNextMessage
+  [92:8] iotest 0x63699a CsdScheduleForever
+  [92:9] iotest 0x636d05 CsdScheduler
+  [92:10] iotest 0x65d13a ConverseInit
+  [92:11] iotest 0x5c67c7 charm_main
+  [92:12] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [92:13] iotest 0x503dae _start
+[93] Stack Traceback:
+  [93:0] libpthread.so.0 0x155553edcdd0 
+  [93:1] libuct_ib.so.0 0x1555500730a0 
+  [93:2] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [93:3] libopen-pal.so.40 0x15555319e773 opal_progress
+  [93:4] libmpi.so.40 0x155554752f9a ompi_request_default_test
+  [93:5] libmpi.so.40 0x15555479246e PMPI_Test
+  [93:6] iotest 0x65b380 
+  [93:7] iotest 0x65c609 
+  [93:8] iotest 0x6348a0 CcdRaiseCondition
+  [93:9] iotest 0x636a5a CsdScheduleForever
+  [93:10] iotest 0x636d05 CsdScheduler
+  [93:11] iotest 0x65d13a ConverseInit
+  [93:12] iotest 0x5c67c7 charm_main
+  [93:13] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [93:14] iotest 0x503dae _start
+[94] Stack Traceback:
+  [94:0] libpthread.so.0 0x155553edcdd0 
+  [94:1] libucs.so.0 0x15555285f4b2 ucs_arbiter_dispatch_nonempty
+  [94:2] libuct.so.0 0x155552cbc5e9 uct_scopy_iface_progress
+  [94:3] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [94:4] libmpi.so.40 0x1555548a6233 mca_pml_ucx_recv
+  [94:5] libmpi.so.40 0x15555478acf5 PMPI_Recv
+  [94:6] iotest 0x65c3e7 
+  [94:7] iotest 0x65c6b2 CmiGetNonLocal
+  [94:8] iotest 0x6368cd CsdNextMessage
+  [94:9] iotest 0x63699a CsdScheduleForever
+  [94:10] iotest 0x636d05 CsdScheduler
+  [94:11] iotest 0x65d13a ConverseInit
+  [94:12] iotest 0x5c67c7 charm_main
+  [94:13] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [94:14] iotest 0x503dae _start
+[95] Stack Traceback:
+  [95:0] libpthread.so.0 0x155553edcdd0 
+  [95:1] libuct_ib.so.0 0x1555500730a0 
+  [95:2] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [95:3] libopen-pal.so.40 0x15555319e773 opal_progress
+  [95:4] libmpi.so.40 0x155554752f9a ompi_request_default_test
+  [95:5] libmpi.so.40 0x15555479246e PMPI_Test
+  [95:6] iotest 0x65b380 
+  [95:7] iotest 0x65c6ad CmiGetNonLocal
+  [95:8] iotest 0x6368cd CsdNextMessage
+  [95:9] iotest 0x63699a CsdScheduleForever
+  [95:10] iotest 0x636d05 CsdScheduler
+  [95:11] iotest 0x65d13a ConverseInit
+  [95:12] iotest 0x5c67c7 charm_main
+  [95:13] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [95:14] iotest 0x503dae _start
+[96] Stack Traceback:
+  [96:0] libpthread.so.0 0x155553edcdd0 
+  [96:1] libc.so.6 0x155553c660bb 
+  [96:2] iotest 0x53701a __gnu_cxx::__enable_if<std::__is_byte<char>::__value, void>::__type std::__fill_a1<char>(char*, char*, char const&)
+  [96:3] iotest 0x536754 void std::__fill_a<char*, char>(char*, char*, char const&)
+  [96:4] iotest 0x537861 char* std::__fill_n_a<char*, unsigned long, char>(char*, unsigned long, char const&, std::random_access_iterator_tag)
+  [96:5] iotest 0x5372da char* std::fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [96:6] iotest 0x537048 char* std::__uninitialized_fill_n<true>::__uninit_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [96:7] iotest 0x536786 char* std::uninitialized_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [96:8] iotest 0x535214 char* std::__uninitialized_fill_n_a<char*, unsigned long, char, char>(char*, unsigned long, char const&, std::allocator<char>&)
+  [96:9] iotest 0x53330a std::vector<char, std::allocator<char> >::_M_fill_insert(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, unsigned long, char const&)
+  [96:10] iotest 0x531ae0 std::vector<char, std::allocator<char> >::resize(unsigned long, char const&)
+  [96:11] iotest 0x52ecf6 Ck::IO::impl::ReadAssembler::ReadAssembler(Ck::IO::Session, unsigned long, unsigned long, CkCallback)
+  [96:12] iotest 0x52514f Ck::IO::impl::CkIndex_ReadAssembler::_call_ReadAssembler_marshall1(void*, void*)
+  [96:13] iotest 0x542002 CkDeliverMessageFree
+  [96:14] iotest 0x542c58 
+  [96:15] iotest 0x545922 _processHandler(void*, CkCoreState*)
+  [96:16] iotest 0x6369cb CsdScheduleForever
+  [96:17] iotest 0x636d05 CsdScheduler
+  [96:18] iotest 0x65d13a ConverseInit
+  [96:19] iotest 0x5c67c7 charm_main
+  [96:20] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [96:21] iotest 0x503dae _start
+[98] Stack Traceback:
+  [98:0] libpthread.so.0 0x155553edcdd0 
+  [98:1] libuct_ib.so.0 0x155550070a40 uct_dc_mlx5_ep_am_short
+  [98:2] libucp.so.0 0x155552efc70f ucp_do_am_single
+  [98:3] libucp.so.0 0x155552efc77f ucp_proto_progress_am_single
+  [98:4] libucp.so.0 0x155552f0a9a3 
+  [98:5] libucp.so.0 0x155552f0c2ae ucp_rndv_get_completion
+  [98:6] libuct_ib.so.0 0x155550055164 uct_rc_ep_send_op_completion_handler
+  [98:7] libuct_ib.so.0 0x155550073661 
+  [98:8] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [98:9] libmpi.so.40 0x1555548a6233 mca_pml_ucx_recv
+  [98:10] libmpi.so.40 0x15555478acf5 PMPI_Recv
+  [98:11] iotest 0x65c3e7 
+  [98:12] iotest 0x65c6b2 CmiGetNonLocal
+  [98:13] iotest 0x6368cd CsdNextMessage
+  [98:14] iotest 0x63699a CsdScheduleForever
+  [98:15] iotest 0x636d05 CsdScheduler
+  [98:16] iotest 0x65d13a ConverseInit
+  [98:17] iotest 0x5c67c7 charm_main
+  [98:18] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [98:19] iotest 0x503dae _start
+[99] Stack Traceback:
+  [99:0] libpthread.so.0 0x155553edcdd0 
+  [99:1] libuct_ib.so.0 0x1555500707a0 uct_dc_mlx5_ep_pending_purge
+  [99:2] libucp.so.0 0x155552f20da3 ucp_wireup_connect_remote
+  [99:3] libucp.so.0 0x155552f0d83f ucp_tag_send_start_rndv
+  [99:4] libucp.so.0 0x155552f12aa6 ucp_tag_send_nbx
+  [99:5] libmpi.so.40 0x1555548a6f8a mca_pml_ucx_isend
+  [99:6] libmpi.so.40 0x155554784085 MPI_Isend
+  [99:7] iotest 0x65baa4 
+  [99:8] iotest 0x698b27 CldEnqueue
+  [99:9] iotest 0x54515d _processHandler(void*, CkCoreState*)
+  [99:10] iotest 0x6369cb CsdScheduleForever
+  [99:11] iotest 0x636d05 CsdScheduler
+  [99:12] iotest 0x65d13a ConverseInit
+  [99:13] iotest 0x5c67c7 charm_main
+  [99:14] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [99:15] iotest 0x503dae _start
+[100] Stack Traceback:
+  [100:0] libpthread.so.0 0x155553edcdd0 
+  [100:1] libc.so.6 0x155553c04cee process_vm_readv
+  [100:2] libuct_cma.so.0 0x15554b16a5f8 uct_cma_ep_tx
+  [100:3] libuct.so.0 0x155552cbcac5 uct_scopy_ep_progress_tx
+  [100:4] libucs.so.0 0x15555285f4b2 ucs_arbiter_dispatch_nonempty
+  [100:5] libuct.so.0 0x155552cbc5e9 uct_scopy_iface_progress
+  [100:6] libucs.so.0 0x15555285f987 
+  [100:7] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [100:8] libmpi.so.40 0x1555548a6233 mca_pml_ucx_recv
+  [100:9] libmpi.so.40 0x15555478acf5 PMPI_Recv
+  [100:10] iotest 0x65c3e7 
+  [100:11] iotest 0x65c6b2 CmiGetNonLocal
+  [100:12] iotest 0x6368cd CsdNextMessage
+  [100:13] iotest 0x63699a CsdScheduleForever
+  [100:14] iotest 0x636d05 CsdScheduler
+  [100:15] iotest 0x65d13a ConverseInit
+  [100:16] iotest 0x5c67c7 charm_main
+  [100:17] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [100:18] iotest 0x503dae _start
+[101] Stack Traceback:
+  [101:0] libpthread.so.0 0x155553edcdd0 
+  [101:1] iotest 0x53564d void std::_Destroy_aux<true>::__destroy<char*>(char*, char*)
+  [101:2] iotest 0x533a5a void std::_Destroy<char*>(char*, char*)
+  [101:3] iotest 0x53255b void std::_Destroy<char*, char>(char*, char*, std::allocator<char>&)
+  [101:4] iotest 0x5310ab std::vector<char, std::allocator<char> >::~vector()
+  [101:5] iotest 0x53824c Ck::IO::impl::ReadAssembler::~ReadAssembler()
+  [101:6] iotest 0x53827c Ck::IO::impl::ReadAssembler::~ReadAssembler()
+  [101:7] iotest 0x52ef86 Ck::IO::impl::ReadAssembler::shareData(unsigned long, unsigned long, char*)
+  [101:8] iotest 0x52680a Ck::IO::impl::CkIndex_ReadAssembler::_call_shareData_marshall3(void*, void*)
+  [101:9] iotest 0x542002 CkDeliverMessageFree
+  [101:10] iotest 0x542c58 
+  [101:11] iotest 0x5453f1 _processHandler(void*, CkCoreState*)
+  [101:12] iotest 0x6369cb CsdScheduleForever
+  [101:13] iotest 0x636d05 CsdScheduler
+  [101:14] iotest 0x65d13a ConverseInit
+  [101:15] iotest 0x5c67c7 charm_main
+  [101:16] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [101:17] iotest 0x503dae _start
+[102] Stack Traceback:
+  [102:0] libpthread.so.0 0x155553edcdd0 
+  [102:1] libuct.so.0 0x155552cb8f50 
+  [102:2] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [102:3] libmpi.so.40 0x1555548a6233 mca_pml_ucx_recv
+  [102:4] libmpi.so.40 0x15555478acf5 PMPI_Recv
+  [102:5] iotest 0x65c3e7 
+  [102:6] iotest 0x65c6b2 CmiGetNonLocal
+  [102:7] iotest 0x6368cd CsdNextMessage
+  [102:8] iotest 0x63699a CsdScheduleForever
+  [102:9] iotest 0x636d05 CsdScheduler
+  [102:10] iotest 0x65d13a ConverseInit
+  [102:11] iotest 0x5c67c7 charm_main
+  [102:12] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [102:13] iotest 0x503dae _start
+[104] Stack Traceback:
+  [104:0] libpthread.so.0 0x155553edcdd0 
+  [104:1] iotest 0x53701a __gnu_cxx::__enable_if<std::__is_byte<char>::__value, void>::__type std::__fill_a1<char>(char*, char*, char const&)
+  [104:2] iotest 0x536754 void std::__fill_a<char*, char>(char*, char*, char const&)
+  [104:3] iotest 0x537861 char* std::__fill_n_a<char*, unsigned long, char>(char*, unsigned long, char const&, std::random_access_iterator_tag)
+  [104:4] iotest 0x5372da char* std::fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [104:5] iotest 0x537048 char* std::__uninitialized_fill_n<true>::__uninit_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [104:6] iotest 0x536786 char* std::uninitialized_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [104:7] iotest 0x535214 char* std::__uninitialized_fill_n_a<char*, unsigned long, char, char>(char*, unsigned long, char const&, std::allocator<char>&)
+  [104:8] iotest 0x53330a std::vector<char, std::allocator<char> >::_M_fill_insert(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, unsigned long, char const&)
+  [104:9] iotest 0x531ae0 std::vector<char, std::allocator<char> >::resize(unsigned long, char const&)
+  [104:10] iotest 0x52ecf6 Ck::IO::impl::ReadAssembler::ReadAssembler(Ck::IO::Session, unsigned long, unsigned long, CkCallback)
+  [104:11] iotest 0x52514f Ck::IO::impl::CkIndex_ReadAssembler::_call_ReadAssembler_marshall1(void*, void*)
+  [104:12] iotest 0x542002 CkDeliverMessageFree
+  [104:13] iotest 0x542c58 
+  [104:14] iotest 0x545922 _processHandler(void*, CkCoreState*)
+  [104:15] iotest 0x6369cb CsdScheduleForever
+  [104:16] iotest 0x636d05 CsdScheduler
+  [104:17] iotest 0x65d13a ConverseInit
+  [104:18] iotest 0x5c67c7 charm_main
+  [104:19] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [104:20] iotest 0x503dae _start
+[105] Stack Traceback:
+  [105:0] libpthread.so.0 0x155553edcdd0 
+  [105:1] libuct_ib.so.0 0x155550070a40 uct_dc_mlx5_ep_am_short
+  [105:2] libucp.so.0 0x155552efc70f ucp_do_am_single
+  [105:3] libucp.so.0 0x155552efc77f ucp_proto_progress_am_single
+  [105:4] libucp.so.0 0x155552f0a9a3 
+  [105:5] libucp.so.0 0x155552f0c2ae ucp_rndv_get_completion
+  [105:6] libuct_ib.so.0 0x155550055164 uct_rc_ep_send_op_completion_handler
+  [105:7] libuct_ib.so.0 0x155550073661 
+  [105:8] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [105:9] libmpi.so.40 0x1555548a6233 mca_pml_ucx_recv
+  [105:10] libmpi.so.40 0x15555478acf5 PMPI_Recv
+  [105:11] iotest 0x65c3e7 
+  [105:12] iotest 0x65c60e 
+  [105:13] iotest 0x6348a0 CcdRaiseCondition
+  [105:14] iotest 0x636a5a CsdScheduleForever
+  [105:15] iotest 0x636d05 CsdScheduler
+  [105:16] iotest 0x65d13a ConverseInit
+  [105:17] iotest 0x5c67c7 charm_main
+  [105:18] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [105:19] iotest 0x503dae _start
+[106] Stack Traceback:
+  [106:0] libpthread.so.0 0x155553edcdd0 
+  [106:1] libuct_ib.so.0 0x155550070a40 uct_dc_mlx5_ep_am_short
+  [106:2] libucp.so.0 0x155552efc70f ucp_do_am_single
+  [106:3] libucp.so.0 0x155552efc77f ucp_proto_progress_am_single
+  [106:4] libucp.so.0 0x155552f0a9a3 
+  [106:5] libucp.so.0 0x155552f0c2ae ucp_rndv_get_completion
+  [106:6] libuct_ib.so.0 0x155550055164 uct_rc_ep_send_op_completion_handler
+  [106:7] libuct_ib.so.0 0x155550073661 
+  [106:8] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [106:9] libmpi.so.40 0x1555548a6233 mca_pml_ucx_recv
+  [106:10] libmpi.so.40 0x15555478acf5 PMPI_Recv
+  [106:11] iotest 0x65c3e7 
+  [106:12] iotest 0x65c6b2 CmiGetNonLocal
+  [106:13] iotest 0x6368cd CsdNextMessage
+  [106:14] iotest 0x63699a CsdScheduleForever
+  [106:15] iotest 0x636d05 CsdScheduler
+  [106:16] iotest 0x65d13a ConverseInit
+  [106:17] iotest 0x5c67c7 charm_main
+  [106:18] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [106:19] iotest 0x503dae _start
+[108] Stack Traceback:
+  [108:0] libpthread.so.0 0x155553edcdd0 
+  [108:1] libucp.so.0 0x155552ef60e0 ucp_request_test
+  [108:2] libmpi.so.40 0x1555548a620b mca_pml_ucx_recv
+  [108:3] libmpi.so.40 0x15555478acf5 PMPI_Recv
+  [108:4] iotest 0x65c3e7 
+  [108:5] iotest 0x65c6b2 CmiGetNonLocal
+  [108:6] iotest 0x6368cd CsdNextMessage
+  [108:7] iotest 0x63699a CsdScheduleForever
+  [108:8] iotest 0x636d05 CsdScheduler
+  [108:9] iotest 0x65d13a ConverseInit
+  [108:10] iotest 0x5c67c7 charm_main
+  [108:11] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [108:12] iotest 0x503dae _start
+[109] Stack Traceback:
+  [109:0] libpthread.so.0 0x155553edcdd0 
+  [109:1] libuct_ib.so.0 0x1555500730a0 
+  [109:2] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [109:3] libmpi.so.40 0x1555548a6233 mca_pml_ucx_recv
+  [109:4] libmpi.so.40 0x15555478acf5 PMPI_Recv
+  [109:5] iotest 0x65c3e7 
+  [109:6] iotest 0x65c6b2 CmiGetNonLocal
+  [109:7] iotest 0x6368cd CsdNextMessage
+  [109:8] iotest 0x63699a CsdScheduleForever
+  [109:9] iotest 0x636d05 CsdScheduler
+  [109:10] iotest 0x65d13a ConverseInit
+  [109:11] iotest 0x5c67c7 charm_main
+  [109:12] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [109:13] iotest 0x503dae _start
+[110] Stack Traceback:
+  [110:0] libpthread.so.0 0x155553edcdd0 
+  [110:1] libc.so.6 0x155553bfa87b ioctl
+  [110:2] libibverbs.so.1 0x15554b9ede5b execute_ioctl
+  [110:3] libibverbs.so.1 0x15554b9ed1ee 
+  [110:4] libibverbs.so.1 0x15554b9e9dfd ibv_cmd_reg_mr
+  [110:5] libmlx5.so.1 0x15554b7cdc4b 
+  [110:6] libibverbs.so.1 0x15554b9f7352 ibv_reg_mr_iova2
+  [110:7] libuct_ib.so.0 0x15555004f3ef uct_ib_reg_mr
+  [110:8] libuct_ib.so.0 0x15555004f9c8 uct_ib_reg_key_impl
+  [110:9] libuct_ib.so.0 0x155550053da3 
+  [110:10] libuct_ib.so.0 0x15555004ec20 
+  [110:11] libucs.so.0 0x15555286cdad ucs_rcache_get
+  [110:12] libuct_ib.so.0 0x15555004e414 
+  [110:13] libucp.so.0 0x155552ef3b23 ucp_mem_rereg_mds
+  [110:14] libucp.so.0 0x155552ef5e0a ucp_request_memory_reg
+  [110:15] libucp.so.0 0x155552f09fad ucp_rndv_progress_rma_get_zcopy
+  [110:16] libucp.so.0 0x155552f0daa5 ucp_rndv_matched
+  [110:17] libucp.so.0 0x155552f10f8f ucp_tag_recv_nbx
+  [110:18] libmpi.so.40 0x1555548a61fe mca_pml_ucx_recv
+  [110:19] libmpi.so.40 0x15555478acf5 PMPI_Recv
+  [110:20] iotest 0x65c3e7 
+  [110:21] iotest 0x65c6b2 CmiGetNonLocal
+  [110:22] iotest 0x6368cd CsdNextMessage
+  [110:23] iotest 0x63699a CsdScheduleForever
+  [110:24] iotest 0x636d05 CsdScheduler
+  [110:25] iotest 0x65d13a ConverseInit
+  [110:26] iotest 0x5c67c7 charm_main
+  [110:27] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [110:28] iotest 0x503dae _start
+[111] Stack Traceback:
+  [111:0] libpthread.so.0 0x155553edcdd0 
+  [111:1] libc.so.6 0x155553c660bb 
+  [111:2] iotest 0x53701a __gnu_cxx::__enable_if<std::__is_byte<char>::__value, void>::__type std::__fill_a1<char>(char*, char*, char const&)
+  [111:3] iotest 0x536754 void std::__fill_a<char*, char>(char*, char*, char const&)
+  [111:4] iotest 0x537861 char* std::__fill_n_a<char*, unsigned long, char>(char*, unsigned long, char const&, std::random_access_iterator_tag)
+  [111:5] iotest 0x5372da char* std::fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [111:6] iotest 0x537048 char* std::__uninitialized_fill_n<true>::__uninit_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [111:7] iotest 0x536786 char* std::uninitialized_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [111:8] iotest 0x535214 char* std::__uninitialized_fill_n_a<char*, unsigned long, char, char>(char*, unsigned long, char const&, std::allocator<char>&)
+  [111:9] iotest 0x53330a std::vector<char, std::allocator<char> >::_M_fill_insert(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, unsigned long, char const&)
+  [111:10] iotest 0x531ae0 std::vector<char, std::allocator<char> >::resize(unsigned long, char const&)
+  [111:11] iotest 0x52ecf6 Ck::IO::impl::ReadAssembler::ReadAssembler(Ck::IO::Session, unsigned long, unsigned long, CkCallback)
+  [111:12] iotest 0x52514f Ck::IO::impl::CkIndex_ReadAssembler::_call_ReadAssembler_marshall1(void*, void*)
+  [111:13] iotest 0x542002 CkDeliverMessageFree
+  [111:14] iotest 0x542c58 
+  [111:15] iotest 0x545922 _processHandler(void*, CkCoreState*)
+  [111:16] iotest 0x6369cb CsdScheduleForever
+  [111:17] iotest 0x636d05 CsdScheduler
+  [111:18] iotest 0x65d13a ConverseInit
+  [111:19] iotest 0x5c67c7 charm_main
+  [111:20] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [111:21] iotest 0x503dae _start
+[112] Stack Traceback:
+  [112:0] libpthread.so.0 0x155553edcdd0 
+  [112:1] iotest 0x53f265 _skipCldEnqueue(int, envelope*, int)
+  [112:2] iotest 0x557772 CkArray::sendToPe(CkArrayMessage*, int, CkDeliver_t, int)
+  [112:3] iotest 0x52ef68 Ck::IO::impl::ReadAssembler::shareData(unsigned long, unsigned long, char*)
+  [112:4] iotest 0x52680a Ck::IO::impl::CkIndex_ReadAssembler::_call_shareData_marshall3(void*, void*)
+  [112:5] iotest 0x542002 CkDeliverMessageFree
+  [112:6] iotest 0x542c58 
+  [112:7] iotest 0x5453f1 _processHandler(void*, CkCoreState*)
+  [112:8] iotest 0x6369cb CsdScheduleForever
+  [112:9] iotest 0x636d05 CsdScheduler
+  [112:10] iotest 0x65d13a ConverseInit
+  [112:11] iotest 0x5c67c7 charm_main
+  [112:12] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [112:13] iotest 0x503dae _start
+[115] Stack Traceback:
+  [115:0] libpthread.so.0 0x155553edcdd0 
+  [115:1] libuct_ib.so.0 0x1555500730a0 
+  [115:2] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [115:3] libmpi.so.40 0x1555548a6233 mca_pml_ucx_recv
+  [115:4] libmpi.so.40 0x15555478acf5 PMPI_Recv
+  [115:5] iotest 0x65c3e7 
+  [115:6] iotest 0x65c60e 
+  [115:7] iotest 0x6348a0 CcdRaiseCondition
+  [115:8] iotest 0x636a5a CsdScheduleForever
+  [115:9] iotest 0x636d05 CsdScheduler
+  [115:10] iotest 0x65d13a ConverseInit
+  [115:11] iotest 0x5c67c7 charm_main
+  [115:12] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [115:13] iotest 0x503dae _start
+[116] Stack Traceback:
+  [116:0] libpthread.so.0 0x155553edcdd0 
+  [116:1] libuct.so.0 0x155552cb8f50 
+  [116:2] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [116:3] libmpi.so.40 0x1555548a6233 mca_pml_ucx_recv
+  [116:4] libmpi.so.40 0x15555478acf5 PMPI_Recv
+  [116:5] iotest 0x65c3e7 
+  [116:6] iotest 0x65c6b2 CmiGetNonLocal
+  [116:7] iotest 0x6368cd CsdNextMessage
+  [116:8] iotest 0x63699a CsdScheduleForever
+  [116:9] iotest 0x636d05 CsdScheduler
+  [116:10] iotest 0x65d13a ConverseInit
+  [116:11] iotest 0x5c67c7 charm_main
+  [116:12] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [116:13] iotest 0x503dae _start
+[117] Stack Traceback:
+  [117:0] libpthread.so.0 0x155553edcdd0 
+  [117:1] libc.so.6 0x155553c65d59 
+  [117:2] iotest 0x526570 Ck::IO::impl::CProxy_ReadAssembler::shareData(unsigned long const&, unsigned long const&, char const*, CkEntryOptions const*)
+  [117:3] iotest 0x52eacb Ck::IO::impl::ReadSession::sendData(unsigned long, unsigned long, Ck::IO::impl::CProxy_ReadAssembler)
+  [117:4] iotest 0x5284c5 Ck::IO::impl::CkIndex_ReadSession::_call_sendData_marshall2(void*, void*)
+  [117:5] iotest 0x542002 CkDeliverMessageFree
+  [117:6] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [117:7] iotest 0x5459e6 _processHandler(void*, CkCoreState*)
+  [117:8] iotest 0x6369cb CsdScheduleForever
+  [117:9] iotest 0x636d05 CsdScheduler
+  [117:10] iotest 0x65d13a ConverseInit
+  [117:11] iotest 0x5c67c7 charm_main
+  [117:12] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [117:13] iotest 0x503dae _start
+[118] Stack Traceback:
+  [118:0] libpthread.so.0 0x155553edcdd0 
+  [118:1] libc.so.6 0x155553c660bb 
+  [118:2] iotest 0x53701a __gnu_cxx::__enable_if<std::__is_byte<char>::__value, void>::__type std::__fill_a1<char>(char*, char*, char const&)
+  [118:3] iotest 0x536754 void std::__fill_a<char*, char>(char*, char*, char const&)
+  [118:4] iotest 0x537861 char* std::__fill_n_a<char*, unsigned long, char>(char*, unsigned long, char const&, std::random_access_iterator_tag)
+  [118:5] iotest 0x5372da char* std::fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [118:6] iotest 0x537048 char* std::__uninitialized_fill_n<true>::__uninit_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [118:7] iotest 0x536786 char* std::uninitialized_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [118:8] iotest 0x535214 char* std::__uninitialized_fill_n_a<char*, unsigned long, char, char>(char*, unsigned long, char const&, std::allocator<char>&)
+  [118:9] iotest 0x53330a std::vector<char, std::allocator<char> >::_M_fill_insert(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, unsigned long, char const&)
+  [118:10] iotest 0x531ae0 std::vector<char, std::allocator<char> >::resize(unsigned long, char const&)
+  [118:11] iotest 0x52ecf6 Ck::IO::impl::ReadAssembler::ReadAssembler(Ck::IO::Session, unsigned long, unsigned long, CkCallback)
+  [118:12] iotest 0x52514f Ck::IO::impl::CkIndex_ReadAssembler::_call_ReadAssembler_marshall1(void*, void*)
+  [118:13] iotest 0x542002 CkDeliverMessageFree
+  [118:14] iotest 0x542c58 
+  [118:15] iotest 0x545922 _processHandler(void*, CkCoreState*)
+  [118:16] iotest 0x6369cb CsdScheduleForever
+  [118:17] iotest 0x636d05 CsdScheduler
+  [118:18] iotest 0x65d13a ConverseInit
+  [118:19] iotest 0x5c67c7 charm_main
+  [118:20] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [118:21] iotest 0x503dae _start
+[119] Stack Traceback:
+  [119:0] libpthread.so.0 0x155553edcdd0 
+  [119:1] libuct_ib.so.0 0x1555500730a0 
+  [119:2] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [119:3] libopen-pal.so.40 0x15555319e773 opal_progress
+  [119:4] libmpi.so.40 0x155554752f9a ompi_request_default_test
+  [119:5] libmpi.so.40 0x15555479246e PMPI_Test
+  [119:6] iotest 0x65b380 
+  [119:7] iotest 0x65c6ad CmiGetNonLocal
+  [119:8] iotest 0x6368cd CsdNextMessage
+  [119:9] iotest 0x63699a CsdScheduleForever
+  [119:10] iotest 0x636d05 CsdScheduler
+  [119:11] iotest 0x65d13a ConverseInit
+  [119:12] iotest 0x5c67c7 charm_main
+  [119:13] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [119:14] iotest 0x503dae _start
+[120] Stack Traceback:
+  [120:0] libpthread.so.0 0x155553edcdd0 
+  [120:1] libucp.so.0 0x155552ef60e0 ucp_request_test
+  [120:2] libmpi.so.40 0x1555548a620b mca_pml_ucx_recv
+  [120:3] libmpi.so.40 0x15555478acf5 PMPI_Recv
+  [120:4] iotest 0x65c3e7 
+  [120:5] iotest 0x65c6b2 CmiGetNonLocal
+  [120:6] iotest 0x6368cd CsdNextMessage
+  [120:7] iotest 0x63699a CsdScheduleForever
+  [120:8] iotest 0x636d05 CsdScheduler
+  [120:9] iotest 0x65d13a ConverseInit
+  [120:10] iotest 0x5c67c7 charm_main
+  [120:11] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [120:12] iotest 0x503dae _start
+[121] Stack Traceback:
+  [121:0] libpthread.so.0 0x155553edcdd0 
+  [121:1] libopen-pal.so.40 0x1555531fee30 
+  [121:2] libopen-pal.so.40 0x1555531fa6ea opal_libevent2022_event_base_loop
+  [121:3] libopen-pal.so.40 0x15555319e64e 
+  [121:4] libopen-pal.so.40 0x15555319e7c3 opal_progress
+  [121:5] libmpi.so.40 0x155554752f9a ompi_request_default_test
+  [121:6] libmpi.so.40 0x15555479246e PMPI_Test
+  [121:7] iotest 0x65b380 
+  [121:8] iotest 0x65c6ad CmiGetNonLocal
+  [121:9] iotest 0x6368cd CsdNextMessage
+  [121:10] iotest 0x63699a CsdScheduleForever
+  [121:11] iotest 0x636d05 CsdScheduler
+  [121:12] iotest 0x65d13a ConverseInit
+  [121:13] iotest 0x5c67c7 charm_main
+  [121:14] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [121:15] iotest 0x503dae _start
+[122] Stack Traceback:
+  [122:0] libpthread.so.0 0x155553edcdd0 
+  [122:1] libc.so.6 0x155553c660bb 
+  [122:2] iotest 0x53701a __gnu_cxx::__enable_if<std::__is_byte<char>::__value, void>::__type std::__fill_a1<char>(char*, char*, char const&)
+  [122:3] iotest 0x536754 void std::__fill_a<char*, char>(char*, char*, char const&)
+  [122:4] iotest 0x537861 char* std::__fill_n_a<char*, unsigned long, char>(char*, unsigned long, char const&, std::random_access_iterator_tag)
+  [122:5] iotest 0x5372da char* std::fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [122:6] iotest 0x537048 char* std::__uninitialized_fill_n<true>::__uninit_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [122:7] iotest 0x536786 char* std::uninitialized_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [122:8] iotest 0x535214 char* std::__uninitialized_fill_n_a<char*, unsigned long, char, char>(char*, unsigned long, char const&, std::allocator<char>&)
+  [122:9] iotest 0x53330a std::vector<char, std::allocator<char> >::_M_fill_insert(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, unsigned long, char const&)
+  [122:10] iotest 0x531ae0 std::vector<char, std::allocator<char> >::resize(unsigned long, char const&)
+  [122:11] iotest 0x52ecf6 Ck::IO::impl::ReadAssembler::ReadAssembler(Ck::IO::Session, unsigned long, unsigned long, CkCallback)
+  [122:12] iotest 0x52514f Ck::IO::impl::CkIndex_ReadAssembler::_call_ReadAssembler_marshall1(void*, void*)
+  [122:13] iotest 0x542002 CkDeliverMessageFree
+  [122:14] iotest 0x542c58 
+  [122:15] iotest 0x545922 _processHandler(void*, CkCoreState*)
+  [122:16] iotest 0x6369cb CsdScheduleForever
+  [122:17] iotest 0x636d05 CsdScheduler
+  [122:18] iotest 0x65d13a ConverseInit
+  [122:19] iotest 0x5c67c7 charm_main
+  [122:20] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [122:21] iotest 0x503dae _start
+[123] Stack Traceback:
+  [123:0] libpthread.so.0 0x155553edcdd0 
+  [123:1] libc.so.6 0x155553c660bb 
+  [123:2] iotest 0x53701a __gnu_cxx::__enable_if<std::__is_byte<char>::__value, void>::__type std::__fill_a1<char>(char*, char*, char const&)
+  [123:3] iotest 0x536754 void std::__fill_a<char*, char>(char*, char*, char const&)
+  [123:4] iotest 0x537861 char* std::__fill_n_a<char*, unsigned long, char>(char*, unsigned long, char const&, std::random_access_iterator_tag)
+  [123:5] iotest 0x5372da char* std::fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [123:6] iotest 0x537048 char* std::__uninitialized_fill_n<true>::__uninit_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [123:7] iotest 0x536786 char* std::uninitialized_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [123:8] iotest 0x535214 char* std::__uninitialized_fill_n_a<char*, unsigned long, char, char>(char*, unsigned long, char const&, std::allocator<char>&)
+  [123:9] iotest 0x53330a std::vector<char, std::allocator<char> >::_M_fill_insert(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, unsigned long, char const&)
+  [123:10] iotest 0x531ae0 std::vector<char, std::allocator<char> >::resize(unsigned long, char const&)
+  [123:11] iotest 0x52ecf6 Ck::IO::impl::ReadAssembler::ReadAssembler(Ck::IO::Session, unsigned long, unsigned long, CkCallback)
+  [123:12] iotest 0x52514f Ck::IO::impl::CkIndex_ReadAssembler::_call_ReadAssembler_marshall1(void*, void*)
+  [123:13] iotest 0x542002 CkDeliverMessageFree
+  [123:14] iotest 0x542c58 
+  [123:15] iotest 0x545922 _processHandler(void*, CkCoreState*)
+  [123:16] iotest 0x6369cb CsdScheduleForever
+  [123:17] iotest 0x636d05 CsdScheduler
+  [123:18] iotest 0x65d13a ConverseInit
+  [123:19] iotest 0x5c67c7 charm_main
+  [123:20] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [123:21] iotest 0x503dae _start
+[124] Stack Traceback:
+  [124:0] libpthread.so.0 0x155553edcdd0 
+  [124:1] libibverbs.so.1 0x15554bb87f0a 
+  [124:2] libibverbs.so.1 0x15554bb88773 
+  [124:3] libibverbs.so.1 0x15554bb8a57b ibv_dereg_mr
+  [124:4] libuct_ib.so.0 0x15554bdb041c uct_ib_dereg_mr
+  [124:5] libucs.so.0 0x15555286ca11 ucs_rcache_get
+  [124:6] libuct_ib.so.0 0x15554bdaf414 
+  [124:7] libucp.so.0 0x155552ef3b23 ucp_mem_rereg_mds
+  [124:8] libucp.so.0 0x155552ef5e0a ucp_request_memory_reg
+  [124:9] libucp.so.0 0x155552f0d78c ucp_tag_rndv_reg_send_buffer
+  [124:10] libucp.so.0 0x155552f12aa6 ucp_tag_send_nbx
+  [124:11] libmpi.so.40 0x1555548a6f8a mca_pml_ucx_isend
+  [124:12] libmpi.so.40 0x155554784085 MPI_Isend
+  [124:13] iotest 0x65baa4 
+  [124:14] iotest 0x698b27 CldEnqueue
+  [124:15] iotest 0x545208 _processHandler(void*, CkCoreState*)
+  [124:16] iotest 0x6369cb CsdScheduleForever
+  [124:17] iotest 0x636d05 CsdScheduler
+  [124:18] iotest 0x65d13a ConverseInit
+  [124:19] iotest 0x5c67c7 charm_main
+  [124:20] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [124:21] iotest 0x503dae _start
+[125] Stack Traceback:
+  [125:0] libpthread.so.0 0x155553edcdd0 
+  [125:1] libc.so.6 0x155553c660bb 
+  [125:2] iotest 0x53701a __gnu_cxx::__enable_if<std::__is_byte<char>::__value, void>::__type std::__fill_a1<char>(char*, char*, char const&)
+  [125:3] iotest 0x536754 void std::__fill_a<char*, char>(char*, char*, char const&)
+  [125:4] iotest 0x537861 char* std::__fill_n_a<char*, unsigned long, char>(char*, unsigned long, char const&, std::random_access_iterator_tag)
+  [125:5] iotest 0x5372da char* std::fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [125:6] iotest 0x537048 char* std::__uninitialized_fill_n<true>::__uninit_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [125:7] iotest 0x536786 char* std::uninitialized_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [125:8] iotest 0x535214 char* std::__uninitialized_fill_n_a<char*, unsigned long, char, char>(char*, unsigned long, char const&, std::allocator<char>&)
+  [125:9] iotest 0x53330a std::vector<char, std::allocator<char> >::_M_fill_insert(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, unsigned long, char const&)
+  [125:10] iotest 0x531ae0 std::vector<char, std::allocator<char> >::resize(unsigned long, char const&)
+  [125:11] iotest 0x52ecf6 Ck::IO::impl::ReadAssembler::ReadAssembler(Ck::IO::Session, unsigned long, unsigned long, CkCallback)
+  [125:12] iotest 0x52514f Ck::IO::impl::CkIndex_ReadAssembler::_call_ReadAssembler_marshall1(void*, void*)
+  [125:13] iotest 0x542002 CkDeliverMessageFree
+  [125:14] iotest 0x542c58 
+  [125:15] iotest 0x545922 _processHandler(void*, CkCoreState*)
+  [125:16] iotest 0x6369cb CsdScheduleForever
+  [125:17] iotest 0x636d05 CsdScheduler
+  [125:18] iotest 0x65d13a ConverseInit
+  [125:19] iotest 0x5c67c7 charm_main
+  [125:20] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [125:21] iotest 0x503dae _start
+[126] Stack Traceback:
+  [126:0] libpthread.so.0 0x155553edcdd0 
+  [126:1] libuct.so.0 0x155552cb8f50 
+  [126:2] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [126:3] libmpi.so.40 0x1555548a6233 mca_pml_ucx_recv
+  [126:4] libmpi.so.40 0x15555478acf5 PMPI_Recv
+  [126:5] iotest 0x65c3e7 
+  [126:6] iotest 0x65c6b2 CmiGetNonLocal
+  [126:7] iotest 0x6368cd CsdNextMessage
+  [126:8] iotest 0x63699a CsdScheduleForever
+  [126:9] iotest 0x636d05 CsdScheduler
+  [126:10] iotest 0x65d13a ConverseInit
+  [126:11] iotest 0x5c67c7 charm_main
+  [126:12] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [126:13] iotest 0x503dae _start
+[1675937820.468802] [r486:15596:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=15673 length=524288) returned -1: No such process
+[273] Stack Traceback:
+  [273:0] iotest 0x65a850 CmiAsyncBroadcastFn
+  [273:1] iotest 0x635880 
+  [273:2] iotest 0x6369cb CsdScheduleForever
+  [273:3] iotest 0x636d05 CsdScheduler
+  [273:4] iotest 0x65d13a ConverseInit
+  [273:5] iotest 0x5c67c7 charm_main
+  [273:6] libc.so.6 0x14655506a6a3 __libc_start_main
+  [273:7] iotest 0x503dae _start
+[1675937823.911166] [r486:15623:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=15654 length=524288) returned -1: No such process
+[1675937824.212430] [r486:15585:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=15654 length=524288) returned -1: No such process
+[r089.ib.bridges2.psc.edu:71925] 80 more processes have sent help message help-mpi-api.txt / mpi-abort
+[r089.ib.bridges2.psc.edu:71925] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[r465:66955] *** An error occurred in MPI_Isend
+[r465:66955] *** reported by process [4178378753,214]
+[r465:66955] *** on communicator MPI COMMUNICATOR 3 DUP FROM 0
+[r465:66955] *** MPI_ERR_OTHER: known error not in list
+[r465:66955] *** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+[r465:66955] ***    and potentially your MPI job)
+[129] Stack Traceback:
+  [129:0] libpthread.so.0 0x150a9ced7dd0 
+  [129:1] libucm.so.0 0x150a9ba8d570 ucm_madvise
+  [129:2] libibverbs.so.1 0x150a98a215ed 
+  [129:3] libibverbs.so.1 0x150a98a23330 ibv_reg_mr_iova2
+  [129:4] libuct_ib.so.0 0x150a98c493ef uct_ib_reg_mr
+  [129:5] libuct_ib.so.0 0x150a98c499c8 uct_ib_reg_key_impl
+  [129:6] libuct_ib.so.0 0x150a98c4dda3 
+  [129:7] libuct_ib.so.0 0x150a98c48c20 
+  [129:8] libucs.so.0 0x150a9b867dad ucs_rcache_get
+  [129:9] libuct_ib.so.0 0x150a98c48414 
+  [129:10] libucp.so.0 0x150a9beeeb23 ucp_mem_rereg_mds
+  [129:11] libucp.so.0 0x150a9bef0e0a ucp_request_memory_reg
+  [129:12] libucp.so.0 0x150a9bf0878c ucp_tag_rndv_reg_send_buffer
+  [129:13] libucp.so.0 0x150a9bf0daa6 ucp_tag_send_nbx
+  [129:14] libmpi.so.40 0x150a9d8a1f8a mca_pml_ucx_isend
+  [129:15] libmpi.so.40 0x150a9d77f085 MPI_Isend
+  [129:16] iotest 0x65baa4 
+  [129:17] iotest 0x53f265 _skipCldEnqueue(int, envelope*, int)
+  [129:18] iotest 0x557772 CkArray::sendToPe(CkArrayMessage*, int, CkDeliver_t, int)
+  [129:19] iotest 0x52ef68 Ck::IO::impl::ReadAssembler::shareData(unsigned long, unsigned long, char*)
+------------- Processor 129 Exiting: Caught Signal ------------
+Reason: Terminated
+[130] Stack Traceback:
+  [130:0] libpthread.so.0 0x14b19dabedd0 
+  [130:1] libuct.so.0 0x14b19c89c880 uct_mm_ep_am_short
+  [130:2] libucp.so.0 0x14b19cade70f ucp_do_am_single
+  [130:3] libucp.so.0 0x14b19cade77f ucp_proto_progress_am_single
+  [130:4] libucp.so.0 0x14b19caec9a3 
+  [130:5] libucp.so.0 0x14b19caee2ae ucp_rndv_get_completion
+  [130:6] libuct.so.0 0x14b19c89eb28 uct_scopy_ep_progress_tx
+  [130:7] libucs.so.0 0x14b19c4414b2 ucs_arbiter_dispatch_nonempty
+  [130:8] libuct.so.0 0x14b19c89e5e9 uct_scopy_iface_progress
+  [130:9] libucp.so.0 0x14b19cadceea ucp_worker_progress
+  [130:10] libmpi.so.40 0x14b19e488233 mca_pml_ucx_recv
+  [130:11] libmpi.so.40 0x14b19e36ccf5 PMPI_Recv
+  [130:12] iotest 0x65c3e7 
+  [130:13] iotest 0x65c6b2 CmiGetNonLocal
+  [130:14] iotest 0x6368cd CsdNextMessage
+  [130:15] iotest 0x63699a CsdScheduleForever
+------------- Processor 130 Exiting: Caught Signal ------------
+Reason: Terminated
+[131] Stack Traceback:
+  [131:0] libpthread.so.0 0x153541d6edd0 
+  [131:1] libopen-pal.so.40 0x153541094690 
+  [131:2] libopen-pal.so.40 0x15354108c8c9 opal_libevent2022_event_base_loop
+  [131:3] libopen-pal.so.40 0x15354103064e 
+  [131:4] libopen-pal.so.40 0x1535410307c3 opal_progress
+  [131:5] libmpi.so.40 0x153542738245 mca_pml_ucx_recv
+  [131:6] libmpi.so.40 0x15354261ccf5 PMPI_Recv
+  [131:7] iotest 0x65c3e7 
+  [131:8] iotest 0x65c6b2 CmiGetNonLocal
+  [131:9] iotest 0x6368cd CsdNextMessage
+------------- Processor 131 Exiting: Caught Signal ------------
+Reason: Terminated
+[132] Stack Traceback:
+  [132:0] libpthread.so.0 0x14979f863dd0 
+  [132:1] libc.so.6 0x14979f58bcee process_vm_readv
+  [132:2] libuct_cma.so.0 0x149796afc5f8 uct_cma_ep_tx
+  [132:3] libuct.so.0 0x14979e643ac5 uct_scopy_ep_progress_tx
+  [132:4] libucs.so.0 0x14979e1e64b2 ucs_arbiter_dispatch_nonempty
+  [132:5] libuct.so.0 0x14979e6435e9 uct_scopy_iface_progress
+  [132:6] libucp.so.0 0x14979e881eea ucp_worker_progress
+  [132:7] libmpi.so.40 0x1497a022d233 mca_pml_ucx_recv
+  [132:8] libmpi.so.40 0x1497a0111cf5 PMPI_Recv
+  [132:9] iotest 0x65c3e7 
+  [132:10] iotest 0x65c6b2 CmiGetNonLocal
+  [132:11] iotest 0x6368cd CsdNextMessage
+  [132:12] iotest 0x63699a CsdScheduleForever
+------------- Processor 132 Exiting: Caught Signal ------------
+Reason: Terminated
+[133] Stack Traceback:
+  [133:0] libpthread.so.0 0x154dd6d21dd0 
+  [133:1] libmpi.so.40 0x154dd76eaff0 mca_pml_ucx_iprobe
+  [133:2] libmpi.so.40 0x154dd75c871c PMPI_Iprobe
+  [133:3] iotest 0x65c388 
+  [133:4] iotest 0x65c6b2 CmiGetNonLocal
+  [133:5] iotest 0x6368cd CsdNextMessage
+  [133:6] iotest 0x63699a CsdScheduleForever
+  [133:7] iotest 0x636d05 CsdScheduler
+------------- Processor 133 Exiting: Caught Signal ------------
+Reason: Terminated
+[134] Stack Traceback:
+  [134:0] libpthread.so.0 0x148ba5176dd0 
+  [134:1] libopen-pal.so.40 0x148ba44c791e OPAL_MCA_PMIX3X_pmix_bfrop_get_data_type
+  [134:2] libopen-pal.so.40 0x148ba44cdf50 OPAL_MCA_PMIX3X_pmix_bfrops_base_unpack_sizet
+  [134:3] libopen-pal.so.40 0x148ba44cecbd OPAL_MCA_PMIX3X_pmix_bfrops_base_unpack_bo
+  [134:4] libopen-pal.so.40 0x148ba44cfbf3 OPAL_MCA_PMIX3X_pmix_bfrops_base_unpack_val
+  [134:5] libopen-pal.so.40 0x148ba44d009b OPAL_MCA_PMIX3X_pmix_bfrops_base_unpack_value
+  [134:6] libopen-pal.so.40 0x148ba44cd86b OPAL_MCA_PMIX3X_pmix_bfrops_base_unpack
+  [134:7] libopen-pal.so.40 0x148ba44eb1b9 
+  [134:8] libopen-pal.so.40 0x148ba44ecdbe pmix_common_dstor_fetch
+  [134:9] libopen-pal.so.40 0x148ba44f0d89 
+  [134:10] libopen-pal.so.40 0x148ba4524da5 
+  [134:11] libopen-pal.so.40 0x148ba4526cad OPAL_MCA_PMIX3X_PMIx_Get_nb
+  [134:12] libopen-pal.so.40 0x148ba4527aee OPAL_MCA_PMIX3X_PMIx_Get
+  [134:13] libopen-pal.so.40 0x148ba44b64a7 pmix3x_get
+  [134:14] libmpi.so.40 0x148ba5b3f3c4 
+  [134:15] libmpi.so.40 0x148ba5b4086b 
+  [134:16] libmpi.so.40 0x148ba5b41093 mca_pml_ucx_isend
+  [134:17] libmpi.so.40 0x148ba5a1e085 MPI_Isend
+  [134:18] iotest 0x65baa4 
+  [134:19] iotest 0x544f47 _processHandler(void*, CkCoreState*)
+  [134:20] iotest 0x6369cb CsdScheduleForever
+------------- Processor 134 Exiting: Caught Signal ------------
+Reason: Terminated
+[136] Stack Traceback:
+  [136:0] libpthread.so.0 0x14cf5f68edd0 
+  [136:1] libuct_ib.so.0 0x14cf571ae3d0 
+  [136:2] libucp.so.0 0x14cf5e6a5a7f ucp_mem_rereg_mds
+  [136:3] libucp.so.0 0x14cf5e6a80cf ucp_request_memory_dereg
+  [136:4] libucp.so.0 0x14cf5e6be213 ucp_rndv_get_completion
+  [136:5] libuct_ib.so.0 0x14cf571b5164 uct_rc_ep_send_op_completion_handler
+  [136:6] libuct_ib.so.0 0x14cf571d3661 
+  [136:7] libucp.so.0 0x14cf5e6aceea ucp_worker_progress
+  [136:8] libmpi.so.40 0x14cf60058233 mca_pml_ucx_recv
+  [136:9] libmpi.so.40 0x14cf5ff3ccf5 PMPI_Recv
+  [136:10] iotest 0x65c3e7 
+  [136:11] iotest 0x65c6b2 CmiGetNonLocal
+  [136:12] iotest 0x6368cd CsdNextMessage
+  [136:13] iotest 0x63699a CsdScheduleForever
+  [136:14] iotest 0x636d05 CsdScheduler
+------------- Processor 136 Exiting: Caught Signal ------------
+Reason: Terminated
+[137] Stack Traceback:
+  [137:0] libpthread.so.0 0x14a0c3a74dd0 
+  [137:1] libc.so.6 0x14a0c379ccee process_vm_readv
+  [137:2] libuct_cma.so.0 0x14a0bad195f8 uct_cma_ep_tx
+  [137:3] libuct.so.0 0x14a0c2854ac5 uct_scopy_ep_progress_tx
+  [137:4] libucs.so.0 0x14a0c23f74b2 ucs_arbiter_dispatch_nonempty
+  [137:5] libuct.so.0 0x14a0c28545e9 uct_scopy_iface_progress
+  [137:6] libucs.so.0 0x14a0c23f7987 
+  [137:7] libucp.so.0 0x14a0c2a92eea ucp_worker_progress
+  [137:8] libmpi.so.40 0x14a0c443e233 mca_pml_ucx_recv
+  [137:9] libmpi.so.40 0x14a0c4322cf5 PMPI_Recv
+  [137:10] iotest 0x65c3e7 
+  [137:11] iotest 0x65c6b2 CmiGetNonLocal
+  [137:12] iotest 0x6368cd CsdNextMessage
+  [137:13] iotest 0x63699a CsdScheduleForever
+------------- Processor 137 Exiting: Caught Signal ------------
+Reason: Terminated
+[138] Stack Traceback:
+  [138:0] libpthread.so.0 0x1555208a2dd0 
+  [138:1] libucs.so.0 0x15551f218b00 
+  [138:2] libucs.so.0 0x15551f232d54 ucs_rcache_get
+  [138:3] libuct_ib.so.0 0x15551c613414 
+  [138:4] libucp.so.0 0x15551f8b9b23 ucp_mem_rereg_mds
+  [138:5] libucp.so.0 0x15551f8bbe0a ucp_request_memory_reg
+  [138:6] libucp.so.0 0x15551f8d378c ucp_tag_rndv_reg_send_buffer
+  [138:7] libucp.so.0 0x15551f8d8aa6 ucp_tag_send_nbx
+  [138:8] libmpi.so.40 0x15552126cf8a mca_pml_ucx_isend
+  [138:9] libmpi.so.40 0x15552114a085 MPI_Isend
+  [138:10] iotest 0x65baa4 
+  [138:11] iotest 0x698b27 CldEnqueue
+  [138:12] iotest 0x54515d _processHandler(void*, CkCoreState*)
+------------- Processor 138 Exiting: Caught Signal ------------
+Reason: Terminated
+[140] Stack Traceback:
+  [140:0] libpthread.so.0 0x14797d88bdd0 
+  [140:1] libucp.so.0 0x14797c8c1aa6 ucp_tag_send_nbx
+  [140:2] libmpi.so.40 0x14797e255f8a mca_pml_ucx_isend
+  [140:3] libmpi.so.40 0x14797e133085 MPI_Isend
+  [140:4] iotest 0x65baa4 
+  [140:5] iotest 0x698b27 CldEnqueue
+  [140:6] iotest 0x54515d _processHandler(void*, CkCoreState*)
+  [140:7] iotest 0x6369cb CsdScheduleForever
+  [140:8] iotest 0x636d05 CsdScheduler
+------------- Processor 140 Exiting: Caught Signal ------------
+Reason: Terminated
+[141] Stack Traceback:
+  [141:0] libpthread.so.0 0x152fd79c2dd0 
+  [141:1] libmpi.so.40 0x152fd838bff0 mca_pml_ucx_iprobe
+  [141:2] libmpi.so.40 0x152fd826971c PMPI_Iprobe
+  [141:3] iotest 0x65c388 
+  [141:4] iotest 0x65c6b2 CmiGetNonLocal
+  [141:5] iotest 0x6368cd CsdNextMessage
+  [141:6] iotest 0x63699a CsdScheduleForever
+------------- Processor 141 Exiting: Caught Signal ------------
+Reason: Terminated
+[142] Stack Traceback:
+  [142:0] libpthread.so.0 0x148691af2dd0 
+  [142:1] libmpi.so.40 0x1486924bbffe mca_pml_ucx_iprobe
+  [142:2] libmpi.so.40 0x14869239971c PMPI_Iprobe
+  [142:3] iotest 0x65c388 
+  [142:4] iotest 0x65c6b2 CmiGetNonLocal
+  [142:5] iotest 0x6368cd CsdNextMessage
+  [142:6] iotest 0x63699a CsdScheduleForever
+------------- Processor 142 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 254 Exiting: Caught Signal ------------
+Reason: Terminated
+[254] Stack Traceback:
+  [254:0] libpthread.so.0 0x148e50fabdd0 
+  [254:1] iotest 0x65c3e7 
+  [254:2] iotest 0x65c6b2 CmiGetNonLocal
+  [254:3] iotest 0x6368cd CsdNextMessage
+  [254:4] iotest 0x63699a CsdScheduleForever
+  [254:5] iotest 0x636d05 CsdScheduler
+[145] Stack Traceback:
+  [145:0] libpthread.so.0 0x153351bc3dd0 
+  [145:1] libuct_ib.so.0 0x15334d9343d0 
+  [145:2] libucp.so.0 0x153350bdaa7f ucp_mem_rereg_mds
+  [145:3] libucp.so.0 0x153350bdd0cf ucp_request_memory_dereg
+  [145:4] libucp.so.0 0x153350bf3213 ucp_rndv_get_completion
+  [145:5] libuct_ib.so.0 0x15334d93b164 uct_rc_ep_send_op_completion_handler
+  [145:6] libuct_ib.so.0 0x15334d959661 
+  [145:7] libucp.so.0 0x153350be1eea ucp_worker_progress
+  [145:8] libmpi.so.40 0x15335258d233 mca_pml_ucx_recv
+  [145:9] libmpi.so.40 0x153352471cf5 PMPI_Recv
+  [145:10] iotest 0x65c3e7 
+  [145:11] iotest 0x65c6b2 CmiGetNonLocal
+  [145:12] iotest 0x6368cd CsdNextMessage
+  [145:13] iotest 0x63699a CsdScheduleForever
+  [145:14] iotest 0x636d05 CsdScheduler
+------------- Processor 145 Exiting: Caught Signal ------------
+Reason: Terminated
+[146] Stack Traceback:
+  [146:0] libpthread.so.0 0x1552d9146dd0 
+  [146:1] libuct.so.0 0x1552d7f23049 
+  [146:2] libucp.so.0 0x1552d8164eea ucp_worker_progress
+  [146:3] libopen-pal.so.40 0x1552d8408773 opal_progress
+  [146:4] libmpi.so.40 0x1552d99bcf9a ompi_request_default_test
+  [146:5] libmpi.so.40 0x1552d99fc46e PMPI_Test
+  [146:6] iotest 0x65b380 
+  [146:7] iotest 0x65c6ad CmiGetNonLocal
+  [146:8] iotest 0x6368cd CsdNextMessage
+------------- Processor 146 Exiting: Caught Signal ------------
+Reason: Terminated
+[147] Stack Traceback:
+  [147:0] libpthread.so.0 0x1515d615add0 
+  [147:1] libopen-pal.so.40 0x1515d54d4fd0 
+  [147:2] libopen-pal.so.40 0x1515d54ce5c2 
+  [147:3] libopen-pal.so.40 0x1515d54d0dbe pmix_common_dstor_fetch
+  [147:4] libopen-pal.so.40 0x1515d54d4d89 
+  [147:5] libopen-pal.so.40 0x1515d5508da5 
+  [147:6] libopen-pal.so.40 0x1515d550acad OPAL_MCA_PMIX3X_PMIx_Get_nb
+  [147:7] libopen-pal.so.40 0x1515d550baee OPAL_MCA_PMIX3X_PMIx_Get
+  [147:8] libopen-pal.so.40 0x1515d549a4a7 pmix3x_get
+  [147:9] libmpi.so.40 0x1515d6b233c4 
+  [147:10] libmpi.so.40 0x1515d6b2486b 
+  [147:11] libmpi.so.40 0x1515d6b25093 mca_pml_ucx_isend
+  [147:12] libmpi.so.40 0x1515d6a02085 MPI_Isend
+  [147:13] iotest 0x65baa4 
+  [147:14] iotest 0x544f47 _processHandler(void*, CkCoreState*)
+  [147:15] iotest 0x6369cb CsdScheduleForever
+  [147:16] iotest 0x636d05 CsdScheduler
+------------- Processor 147 Exiting: Caught Signal ------------
+Reason: Terminated
+[1675937826.231799] [r465:66896:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=66893 length=524288) returned -1: No such process
+[1675937826.247038] [r465:66896:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=66893 length=524288) returned -1: No such process
+[1675937826.248143] [r465:66896:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=66893 length=524288) returned -1: No such process
+[1675937826.248167] [r465:66896:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=66893 length=524288) returned -1: No such process
+[1675937826.248181] [r465:66896:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=66893 length=524288) returned -1: No such process
+[1675937826.248193] [r465:66896:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=66893 length=524288) returned -1: No such process
+[1675937826.248206] [r465:66896:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=66893 length=524288) returned -1: No such process
+[1675937826.248218] [r465:66896:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=66893 length=524288) returned -1: No such process
+[1675937826.248232] [r465:66896:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=66893 length=524288) returned -1: No such process
+[1675937826.248575] [r465:66896:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=66893 length=524288) returned -1: No such process
+[1675937826.248598] [r465:66896:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=66893 length=524288) returned -1: No such process
+[1675937826.248613] [r465:66896:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=66893 length=524288) returned -1: No such process
+[1675937826.248632] [r465:66896:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=66893 length=524288) returned -1: No such process
+[1675937826.248670] [r465:66896:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=66893 length=524288) returned -1: No such process
+[1675937826.248682] [r465:66896:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=66893 length=524288) returned -1: No such process
+[1675937826.248693] [r465:66896:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=66893 length=524288) returned -1: No such process
+[1675937826.248700] [r465:66896:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=66893 length=524288) returned -1: No such process
+[1675937826.248721] [r465:66896:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=66893 length=524288) returned -1: No such process
+[1675937826.248731] [r465:66896:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=66893 length=524288) returned -1: No such process
+[1675937826.248744] [r465:66896:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=66893 length=524288) returned -1: No such process
+[1675937826.249219] [r465:66896:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=66893 length=524288) returned -1: No such process
+[1675937826.249237] [r465:66896:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=66893 length=524288) returned -1: No such process
+[1675937826.249248] [r465:66896:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=66893 length=524288) returned -1: No such process
+[1675937826.249260] [r465:66896:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=66893 length=524288) returned -1: No such process
+[1675937826.249271] [r465:66896:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=66893 length=524288) returned -1: No such process
+[1675937826.249283] [r465:66896:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=66893 length=524288) returned -1: No such process
+[1675937826.249302] [r465:66896:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=66893 length=524288) returned -1: No such process
+[1675937826.249315] [r465:66896:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=66893 length=524288) returned -1: No such process
+[1675937826.249663] [r465:66896:0]         cma_ep.c:85   UCX  ERROR process_vm_readv(pid=66893 length=524288) returned -1: No such process
+[1675937826.249678] [r465:66896:0]         cma_ep.c:85   UCX  ER------------- Processor 148 Exiting: Caught Signal ------------
+Reason: Segmentation fault
+[149] Stack Traceback:
+  [149:0] libpthread.so.0 0x151db39a0dd0 
+  [149:1] libopen-pal.so.40 0x151db2cc5760 opal_libevent2022_evutil_tv_to_msec
+  [149:2] libopen-pal.so.40 0x151db2cc672c 
+  [149:3] libopen-pal.so.40 0x151db2cbe8c9 opal_libevent2022_event_base_loop
+  [149:4] libopen-pal.so.40 0x151db2c6264e 
+  [149:5] libopen-pal.so.40 0x151db2c627c3 opal_progress
+  [149:6] libmpi.so.40 0x151db436a245 mca_pml_ucx_recv
+  [149:7] libmpi.so.40 0x151db424ecf5 PMPI_Recv
+  [149:8] iotest 0x65c3e7 
+  [149:9] iotest 0x65c6b2 CmiGetNonLocal
+  [149:10] iotest 0x6368cd CsdNextMessage
+  [149:11] iotest 0x63699a CsdScheduleForever
+------------- Processor 149 Exiting: Caught Signal ------------
+Reason: Terminated
+[150] Stack Traceback:
+  [150:0] libpthread.so.0 0x145ff5db6dd0 
+  [150:1] libopen-pal.so.40 0x145ff510791e OPAL_MCA_PMIX3X_pmix_bfrop_get_data_type
+  [150:2] libopen-pal.so.40 0x145ff510df50 OPAL_MCA_PMIX3X_pmix_bfrops_base_unpack_sizet
+  [150:3] libopen-pal.so.40 0x145ff510ecbd OPAL_MCA_PMIX3X_pmix_bfrops_base_unpack_bo
+  [150:4] libopen-pal.so.40 0x145ff510fbf3 OPAL_MCA_PMIX3X_pmix_bfrops_base_unpack_val
+  [150:5] libopen-pal.so.40 0x145ff511009b OPAL_MCA_PMIX3X_pmix_bfrops_base_unpack_value
+  [150:6] libopen-pal.so.40 0x145ff510d86b OPAL_MCA_PMIX3X_pmix_bfrops_base_unpack
+  [150:7] libopen-pal.so.40 0x145ff512b1b9 
+  [150:8] libopen-pal.so.40 0x145ff512cdbe pmix_common_dstor_fetch
+  [150:9] libopen-pal.so.40 0x145ff5130d89 
+  [150:10] libopen-pal.so.40 0x145ff5164da5 
+  [150:11] libopen-pal.so.40 0x145ff5166cad OPAL_MCA_PMIX3X_PMIx_Get_nb
+  [150:12] libopen-pal.so.40 0x145ff5167aee OPAL_MCA_PMIX3X_PMIx_Get
+  [150:13] libopen-pal.so.40 0x145ff50f64a7 pmix3x_get
+  [150:14] libmpi.so.40 0x145ff677f3c4 
+  [150:15] libmpi.so.40 0x145ff678086b 
+  [150:16] libmpi.so.40 0x145ff6781093 mca_pml_ucx_isend
+  [150:17] libmpi.so.40 0x145ff665e085 MPI_Isend
+  [150:18] iotest 0x65baa4 
+  [150:19] iotest 0x544f47 _processHandler(void*, CkCoreState*)
+  [150:20] iotest 0x6369cb CsdScheduleForever
+  [150:21] iotest 0x636d05 CsdScheduler
+------------- Processor 150 Exiting: Caught Signal ------------
+Reason: Terminated
+[151] Stack Traceback:
+  [151:0] libpthread.so.0 0x153eaed7edd0 
+  [151:1] libucs.so.0 0x153ead703808 ucs_mpool_get
+  [151:2] libucs.so.0 0x153ead70d8ec 
+  [151:3] libucs.so.0 0x153ead70546f ucs_pgtable_insert
+  [151:4] libucs.so.0 0x153ead70ed71 ucs_rcache_get
+  [151:5] libuct_ib.so.0 0x153eaaaef414 
+  [151:6] libucp.so.0 0x153eadd95b23 ucp_mem_rereg_mds
+  [151:7] libucp.so.0 0x153eadd97e0a ucp_request_memory_reg
+  [151:8] libucp.so.0 0x153eaddabfad ucp_rndv_progress_rma_get_zcopy
+  [151:9] libucp.so.0 0x153eaddafaa5 ucp_rndv_matched
+  [151:10] libucp.so.0 0x153eaddb2f8f ucp_tag_recv_nbx
+  [151:11] libmpi.so.40 0x153eaf7481fe mca_pml_ucx_recv
+  [151:12] libmpi.so.40 0x153eaf62ccf5 PMPI_Recv
+  [151:13] iotest 0x65c3e7 
+  [151:14] iotest 0x65c6b2 CmiGetNonLocal
+  [151:15] iotest 0x6368cd CsdNextMessage
+  [151:16] iotest 0x63699a CsdScheduleForever
+------------- Processor 151 Exiting: Caught Signal ------------
+Reason: Terminated
+[152] Stack Traceback:
+  [152:0] libpthread.so.0 0x147749d86dd0 
+  [152:1] libmpi.so.40 0x14774a750245 mca_pml_ucx_recv
+  [152:2] libmpi.so.40 0x14774a634cf5 PMPI_Recv
+  [152:3] iotest 0x65c3e7 
+  [152:4] iotest 0x65c6b2 CmiGetNonLocal
+  [152:5] iotest 0x6368cd CsdNextMessage
+  [152:6] iotest 0x63699a CsdScheduleForever
+  [152:7] iotest 0x636d05 CsdScheduler
+------------- Processor 152 Exiting: Caught Signal ------------
+Reason: Terminated
+[153] Stack Traceback:
+  [153:0] libpthread.so.0 0x147c9a265dd0 
+  [153:1] libc.so.6 0x147c99f8dcee process_vm_readv
+  [153:2] libuct_cma.so.0 0x147c955245f8 uct_cma_ep_tx
+  [153:3] libuct.so.0 0x147c99045ac5 uct_scopy_ep_progress_tx
+  [153:4] libucs.so.0 0x147c98be84b2 ucs_arbiter_dispatch_nonempty
+  [153:5] libuct.so.0 0x147c990455e9 uct_scopy_iface_progress
+  [153:6] libucs.so.0 0x147c98be8987 
+  [153:7] libucp.so.0 0x147c99283eea ucp_worker_progress
+  [153:8] libmpi.so.40 0x147c9ac2f233 mca_pml_ucx_recv
+  [153:9] libmpi.so.40 0x147c9ab13cf5 PMPI_Recv
+  [153:10] iotest 0x65c3e7 
+  [153:11] iotest 0x65c6b2 CmiGetNonLocal
+  [153:12] iotest 0x6368cd CsdNextMessage
+  [153:13] iotest 0x63699a CsdScheduleForever
+------------- Processor 153 Exiting: Caught Signal ------------
+Reason: Terminated
+[154] Stack Traceback:
+  [154:0] libpthread.so.0 0x153d7e51ddd0 
+  [154:1] libopen-pal.so.40 0x153d7d86e91e OPAL_MCA_PMIX3X_pmix_bfrop_get_data_type
+  [154:2] libopen-pal.so.40 0x153d7d874f50 OPAL_MCA_PMIX3X_pmix_bfrops_base_unpack_sizet
+  [154:3] libopen-pal.so.40 0x153d7d875cbd OPAL_MCA_PMIX3X_pmix_bfrops_base_unpack_bo
+  [154:4] libopen-pal.so.40 0x153d7d876bf3 OPAL_MCA_PMIX3X_pmix_bfrops_base_unpack_val
+  [154:5] libopen-pal.so.40 0x153d7d87709b OPAL_MCA_PMIX3X_pmix_bfrops_base_unpack_value
+  [154:6] libopen-pal.so.40 0x153d7d87486b OPAL_MCA_PMIX3X_pmix_bfrops_base_unpack
+  [154:7] libopen-pal.so.40 0x153d7d8921b9 
+  [154:8] libopen-pal.so.40 0x153d7d893dbe pmix_common_dstor_fetch
+  [154:9] libopen-pal.so.40 0x153d7d897d89 
+  [154:10] libopen-pal.so.40 0x153d7d8cbda5 
+  [154:11] libopen-pal.so.40 0x153d7d8cdcad OPAL_MCA_PMIX3X_PMIx_Get_nb
+  [154:12] libopen-pal.so.40 0x153d7d8ceaee OPAL_MCA_PMIX3X_PMIx_Get
+  [154:13] libopen-pal.so.40 0x153d7d85d4a7 pmix3x_get
+  [154:14] libmpi.so.40 0x153d7eee63c4 
+  [154:15] libmpi.so.40 0x153d7eee786b 
+  [154:16] libmpi.so.40 0x153d7eee8093 mca_pml_ucx_isend
+  [154:17] libmpi.so.40 0x153d7edc5085 MPI_Isend
+  [154:18] iotest 0x65baa4 
+  [154:19] iotest 0x544f47 _processHandler(void*, CkCoreState*)
+  [154:20] iotest 0x6369cb CsdScheduleForever
+  [154:21] iotest 0x636d05 CsdScheduler
+------------- Processor 154 Exiting: Caught Signal ------------
+Reason: Terminated
+[155] Stack Traceback:
+  [155:0] libpthread.so.0 0x151fd01e2dd0 
+  [155:1] libopen-pal.so.40 0x151fcf4fdd0c 
+  [155:2] libopen-pal.so.40 0x151fcf500a1f opal_libevent2022_event_base_loop
+  [155:3] libopen-pal.so.40 0x151fcf4a464e 
+  [155:4] libopen-pal.so.40 0x151fcf4a47c3 opal_progress
+  [155:5] libmpi.so.40 0x151fd0bac245 mca_pml_ucx_recv
+  [155:6] libmpi.so.40 0x151fd0a90cf5 PMPI_Recv
+  [155:7] iotest 0x65c3e7 
+  [155:8] iotest 0x65c6b2 CmiGetNonLocal
+  [155:9] iotest 0x6368cd CsdNextMessage
+------------- Processor 155 Exiting: Caught Signal ------------
+Reason: Terminated
+[156] Stack Traceback:
+  [156:0] libpthread.so.0 0x151a2af35dd0 
+  [156:1] libopen-pal.so.40 0x151a2a25a760 opal_libevent2022_evutil_tv_to_msec
+  [156:2] libopen-pal.so.40 0x151a2a25b72c 
+  [156:3] libopen-pal.so.40 0x151a2a2538c9 opal_libevent2022_event_base_loop
+  [156:4] libopen-pal.so.40 0x151a2a1f764e 
+  [156:5] libopen-pal.so.40 0x151a2a1f77c3 opal_progress
+  [156:6] libmpi.so.40 0x151a2b8ff245 mca_pml_ucx_recv
+  [156:7] libmpi.so.40 0x151a2b7e3cf5 PMPI_Recv
+  [156:8] iotest 0x65c3e7 
+  [156:9] iotest 0x65c6b2 CmiGetNonLocal
+  [156:10] iotest 0x6368cd CsdNextMessage
+  [156:11] iotest 0x63699a CsdScheduleForever
+------------- Processor 156 Exiting: Caught Signal ------------
+Reason: Terminated
+[157] Stack Traceback:
+  [157:0] libpthread.so.0 0x14bff2801dd0 
+  [157:1] libucp.so.0 0x14bff1813400 ucp_ep_config_key_reset
+  [157:2] libucp.so.0 0x14bff1844f65 ucp_wireup_init_lanes
+  [157:3] libucp.so.0 0x14bff18455c8 
+  [157:4] libucp.so.0 0x14bff1845c8e 
+  [157:5] libuct.so.0 0x14bff15de16c 
+  [157:6] libucp.so.0 0x14bff181feea ucp_worker_progress
+  [157:7] libmpi.so.40 0x14bff31cb233 mca_pml_ucx_recv
+  [157:8] libmpi.so.40 0x14bff30afcf5 PMPI_Recv
+  [157:9] iotest 0x65c3e7 
+  [157:10] iotest 0x65c6b2 CmiGetNonLocal
+  [157:11] iotest 0x6368cd CsdNextMessage
+  [157:12] iotest 0x63699a CsdScheduleForever
+  [157:13] iotest 0x636d05 CsdScheduler
+------------- Processor 157 Exiting: Caught Signal ------------
+Reason: Terminated
+[158] Stack Traceback:
+  [158:0] libpthread.so.0 0x150132207dd0 
+  [158:1] iotest 0x6463d0 CqsDequeue
+  [158:2] iotest 0x636901 CsdNextMessage
+  [158:3] iotest 0x63699a CsdScheduleForever
+  [158:4] iotest 0x636d05 CsdScheduler
+  [158:5] iotest 0x65d13a ConverseInit
+------------- Processor 158 Exiting: Caught Signal ------------
+Reason: Terminated
+[159] Stack Traceback:
+  [159:0] libpthread.so.0 0x155229d7edd0 
+  [159:1] libc.so.6 0x155229aa6cee process_vm_readv
+  [159:2] libuct_cma.so.0 0x15522503d5f8 uct_cma_ep_tx
+  [159:3] libuct.so.0 0x155228b5eac5 uct_scopy_ep_progress_tx
+  [159:4] libucs.so.0 0x1552287014b2 ucs_arbiter_dispatch_nonempty
+  [159:5] libuct.so.0 0x155228b5e5e9 uct_scopy_iface_progress
+  [159:6] libucp.so.0 0x155228d9ceea ucp_worker_progress
+  [159:7] libmpi.so.40 0x15522a748233 mca_pml_ucx_recv
+  [159:8] libmpi.so.40 0x15522a62ccf5 PMPI_Recv
+  [159:9] iotest 0x65c3e7 
+  [159:10] iotest 0x65c6b2 CmiGetNonLocal
+  [159:11] iotest 0x6368cd CsdNextMessage
+  [159:12] iotest 0x63699a CsdScheduleForever
+------------- Processor 159 Exiting: Caught Signal ------------
+Reason: Terminated
+[160] Stack Traceback:
+  [160:0] libpthread.so.0 0x14ac1feabdd0 
+  [160:1] libc.so.6 0x14ac1fbd3cee process_vm_readv
+  [160:2] libuct_cma.so.0 0x14ac1716a5f8 uct_cma_ep_tx
+  [160:3] libuct.so.0 0x14ac1ec8bac5 uct_scopy_ep_progress_tx
+  [160:4] libucs.so.0 0x14ac1e82e4b2 ucs_arbiter_dispatch_nonempty
+  [160:5] libuct.so.0 0x14ac1ec8b5e9 uct_scopy_iface_progress
+  [160:6] libucp.so.0 0x14ac1eec9eea ucp_worker_progress
+  [160:7] libmpi.so.40 0x14ac20875233 mca_pml_ucx_recv
+  [160:8] libmpi.so.40 0x14ac20759cf5 PMPI_Recv
+  [160:9] iotest 0x65c3e7 
+  [160:10] iotest 0x65c6b2 CmiGetNonLocal
+  [160:11] iotest 0x6368cd CsdNextMessage
+------------- Processor 160 Exiting: Caught Signal ------------
+Reason: Terminated
+[161] Stack Traceback:
+  [161:0] libpthread.so.0 0x149e27c8cdd0 
+  [161:1] libmpi.so.40 0x149e28655ffe mca_pml_ucx_iprobe
+  [161:2] libmpi.so.40 0x149e2853371c PMPI_Iprobe
+  [161:3] iotest 0x65c388 
+  [161:4] iotest 0x65c6b2 CmiGetNonLocal
+  [161:5] iotest 0x6368cd CsdNextMessage
+  [161:6] iotest 0x63699a CsdScheduleForever
+  [161:7] iotest 0x636d05 CsdScheduler
+------------- Processor 161 Exiting: Caught Signal ------------
+Reason: Terminated
+[162] Stack Traceback:
+  [162:0] libpthread.so.0 0x154177a66dd0 
+  [162:1] libuct.so.0 0x154176844c50 uct_mm_ep_process_pending
+  [162:2] libucs.so.0 0x1541763e94b2 ucs_arbiter_dispatch_nonempty
+  [162:3] libuct.so.0 0x154176843115 
+  [162:4] libucp.so.0 0x154176a84eea ucp_worker_progress
+  [162:5] libmpi.so.40 0x154178430233 mca_pml_ucx_recv
+  [162:6] libmpi.so.40 0x154178314cf5 PMPI_Recv
+  [162:7] iotest 0x65c3e7 
+  [162:8] iotest 0x65c6b2 CmiGetNonLocal
+  [162:9] iotest 0x6368cd CsdNextMessage
+  [162:10] iotest 0x63699a CsdScheduleForever
+  [162:11] iotest 0x636d05 CsdScheduler
+------------- Processor 162 Exiting: Caught Signal ------------
+Reason: Terminated
+[163] Stack Traceback:
+  [163:0] libpthread.so.0 0x14c0e7a23dd0 
+  [163:1] libc.so.6 0x14c0e77ad0bb 
+  [163:2] iotest 0x53701a __gnu_cxx::__enable_if<std::__is_byte<char>::__value, void>::__type std::__fill_a1<char>(char*, char*, char const&)
+  [163:3] iotest 0x536754 void std::__fill_a<char*, char>(char*, char*, char const&)
+  [163:4] iotest 0x537861 char* std::__fill_n_a<char*, unsigned long, char>(char*, unsigned long, char const&, std::random_access_iterator_tag)
+  [163:5] iotest 0x5372da char* std::fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [163:6] iotest 0x537048 char* std::__uninitialized_fill_n<true>::__uninit_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+------------- Processor 163 Exiting: Caught Signal ------------
+Reason: Terminated
+[164] Stack Traceback:
+  [164:0] libpthread.so.0 0x14772054ddd0 
+  [164:1] iotest 0x50bcde void PUP::er::operator()<int>(int*, unsigned long)
+  [164:2] iotest 0x50bcba void PUP::er::operator()<int>(int&)
+  [164:3] iotest 0x5082ba PUP::operator|(PUP::er&, int&)
+  [164:4] iotest 0x52679a Ck::IO::impl::CkIndex_ReadAssembler::_call_shareData_marshall3(void*, void*)
+  [164:5] iotest 0x542002 CkDeliverMessageFree
+------------- Processor 164 Exiting: Caught Signal ------------
+Reason: Terminated
+[166] Stack Traceback:
+  [166:0] libpthread.so.0 0x15531f4a9dd0 
+  [166:1] libc.so.6 0x15531f1c787b ioctl
+  [166:2] libibverbs.so.1 0x155316f7fe5b execute_ioctl
+  [166:3] libibverbs.so.1 0x155316f7f1ee 
+  [166:4] libibverbs.so.1 0x155316f7bdfd ibv_cmd_reg_mr
+  [166:5] libmlx5.so.1 0x155316d5fc4b 
+  [166:6] libibverbs.so.1 0x155316f89352 ibv_reg_mr_iova2
+  [166:7] libuct_ib.so.0 0x1553171af3ef uct_ib_reg_mr
+  [166:8] libuct_ib.so.0 0x1553171af9c8 uct_ib_reg_key_impl
+  [166:9] libuct_ib.so.0 0x1553171b3da3 
+  [166:10] libuct_ib.so.0 0x1553171aec20 
+  [166:11] libucs.so.0 0x15531de39dad ucs_rcache_get
+  [166:12] libuct_ib.so.0 0x1553171ae414 
+  [166:13] libucp.so.0 0x15531e4c0b23 ucp_mem_rereg_mds
+  [166:14] libucp.so.0 0x15531e4c2e0a ucp_request_memory_reg
+  [166:15] libucp.so.0 0x15531e4d6fad ucp_rndv_progress_rma_get_zcopy
+  [166:16] libucp.so.0 0x15531e4daaa5 ucp_rndv_matched
+  [166:17] libucp.so.0 0x15531e4ddf8f ucp_tag_recv_nbx
+  [166:18] libmpi.so.40 0x15531fe731fe mca_pml_ucx_recv
+  [166:19] libmpi.so.40 0x15531fd57cf5 PMPI_Recv
+  [166:20] iotest 0x65c3e7 
+  [166:21] iotest 0x65c6b2 CmiGetNonLocal
+  [166:22] iotest 0x6368cd CsdNextMessage
+  [166:23] iotest 0x63699a CsdScheduleForever
+------------- Processor 166 Exiting: Caught Signal ------------
+Reason: Terminated
+[167] Stack Traceback:
+  [167:0] libpthread.so.0 0x15192afa5dd0 
+  [167:1] libucp.so.0 0x151929fae260 
+  [167:2] libucp.so.0 0x151929fd5213 ucp_rndv_get_completion
+  [167:3] libuct_ib.so.0 0x151926d1d164 uct_rc_ep_send_op_completion_handler
+  [167:4] libuct_ib.so.0 0x151926d3b661 
+  [167:5] libucp.so.0 0x151929fc3eea ucp_worker_progress
+  [167:6] libmpi.so.40 0x15192b96f233 mca_pml_ucx_recv
+  [167:7] libmpi.so.40 0x15192b853cf5 PMPI_Recv
+  [167:8] iotest 0x65c3e7 
+  [167:9] iotest 0x65c6b2 CmiGetNonLocal
+  [167:10] iotest 0x6368cd CsdNextMessage
+  [167:11] iotest 0x63699a CsdScheduleForever
+  [167:12] iotest 0x636d05 CsdScheduler
+------------- Processor 167 Exiting: Caught Signal ------------
+Reason: Terminated
+[168] Stack Traceback:
+  [168:0] libpthread.so.0 0x14b770999dd0 
+  [168:1] libopen-pal.so.40 0x14b76fc4b250 
+  [168:2] libopen-pal.so.40 0x14b76fcb76ea opal_libevent2022_event_base_loop
+  [168:3] libopen-pal.so.40 0x14b76fc5b64e 
+  [168:4] libopen-pal.so.40 0x14b76fc5b7c3 opal_progress
+  [168:5] libmpi.so.40 0x14b771363245 mca_pml_ucx_recv
+  [168:6] libmpi.so.40 0x14b771247cf5 PMPI_Recv
+  [168:7] iotest 0x65c3e7 
+  [168:8] iotest 0x65c6b2 CmiGetNonLocal
+  [168:9] iotest 0x6368cd CsdNextMessage
+  [168:10] iotest 0x63699a CsdScheduleForever
+------------- Processor 168 Exiting: Caught Signal ------------
+Reason: Terminated
+[169] Stack Traceback:
+  [169:0] libpthread.so.0 0x1518596f9dd0 
+  [169:1] libuct.so.0 0x1518584d7880 uct_mm_ep_am_short
+  [169:2] libucp.so.0 0x15185871970f ucp_do_am_single
+  [169:3] libucp.so.0 0x15185871977f ucp_proto_progress_am_single
+  [169:4] libucp.so.0 0x1518587279a3 
+  [169:5] libucp.so.0 0x1518587292ae ucp_rndv_get_completion
+  [169:6] libuct.so.0 0x1518584d9b28 uct_scopy_ep_progress_tx
+  [169:7] libucs.so.0 0x15185807c4b2 ucs_arbiter_dispatch_nonempty
+  [169:8] libuct.so.0 0x1518584d95e9 uct_scopy_iface_progress
+  [169:9] libucp.so.0 0x151858717eea ucp_worker_progress
+  [169:10] libmpi.so.40 0x15185a0c3233 mca_pml_ucx_recv
+  [169:11] libmpi.so.40 0x151859fa7cf5 PMPI_Recv
+  [169:12] iotest 0x65c3e7 
+  [169:13] iotest 0x65c6b2 CmiGetNonLocal
+  [169:14] iotest 0x6368cd CsdNextMessage
+------------- Processor 169 Exiting: Caught Signal ------------
+Reason: Terminated
+[170] Stack Traceback:
+  [170:0] libpthread.so.0 0x149f4fee1dd0 
+  [170:1] libc.so.6 0x149f4fc6ad7f 
+  [170:2] iotest 0x526570 Ck::IO::impl::CProxy_ReadAssembler::shareData(unsigned long const&, unsigned long const&, char const*, CkEntryOptions const*)
+  [170:3] iotest 0x52eacb Ck::IO::impl::ReadSession::sendData(unsigned long, unsigned long, Ck::IO::impl::CProxy_ReadAssembler)
+  [170:4] iotest 0x5284c5 Ck::IO::impl::CkIndex_ReadSession::_call_sendData_marshall2(void*, void*)
+  [170:5] iotest 0x542002 CkDeliverMessageFree
+  [170:6] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+------------- Processor 170 Exiting: Caught Signal ------------
+Reason: Terminated
+[172] Stack Traceback:
+  [172:0] libpthread.so.0 0x14acc74fedd0 
+  [172:1] libc.so.6 0x14acc7226cee process_vm_readv
+  [172:2] libuct_cma.so.0 0x14acbe6fc5f8 uct_cma_ep_tx
+  [172:3] libuct.so.0 0x14acc62deac5 uct_scopy_ep_progress_tx
+  [172:4] libucs.so.0 0x14acc5e814b2 ucs_arbiter_dispatch_nonempty
+  [172:5] libuct.so.0 0x14acc62de5e9 uct_scopy_iface_progress
+  [172:6] libucp.so.0 0x14acc651ceea ucp_worker_progress
+  [172:7] libmpi.so.40 0x14acc7ec8233 mca_pml_ucx_recv
+  [172:8] libmpi.so.40 0x14acc7daccf5 PMPI_Recv
+  [172:9] iotest 0x65c3e7 
+  [172:10] iotest 0x65c6b2 CmiGetNonLocal
+  [172:11] iotest 0x6368cd CsdNextMessage
+  [172:12] iotest 0x63699a CsdScheduleForever
+------------- Processor 172 Exiting: Caught Signal ------------
+Reason: Terminated
+[173] Stack Traceback:
+  [173:0] libpthread.so.0 0x15522b4c8dd0 
+  [173:1] libopen-pal.so.40 0x15522a7ee690 
+  [173:2] libopen-pal.so.40 0x15522a7e68c9 opal_libevent2022_event_base_loop
+  [173:3] libopen-pal.so.40 0x15522a78a64e 
+  [173:4] libopen-pal.so.40 0x15522a78a7c3 opal_progress
+  [173:5] libmpi.so.40 0x15522be92245 mca_pml_ucx_recv
+  [173:6] libmpi.so.40 0x15522bd76cf5 PMPI_Recv
+  [173:7] iotest 0x65c3e7 
+  [173:8] iotest 0x65c6b2 CmiGetNonLocal
+  [173:9] iotest 0x6368cd CsdNextMessage
+  [173:10] iotest 0x63699a CsdScheduleForever
+------------- Processor 173 Exiting: Caught Signal ------------
+Reason: Terminated
+[175] Stack Traceback:
+  [175:0] libpthread.so.0 0x152fe3655dd0 
+  [175:1] iotest 0x558b1e CkArray::sendMsg(CkArrayMessage*, CkArrayIndex const&, CkDeliver_t, int)
+  [175:2] iotest 0x52ef68 Ck::IO::impl::ReadAssembler::shareData(unsigned long, unsigned long, char*)
+  [175:3] iotest 0x52680a Ck::IO::impl::CkIndex_ReadAssembler::_call_shareData_marshall3(void*, void*)
+  [175:4] iotest 0x542002 CkDeliverMessageFree
+  [175:5] iotest 0x542c58 
+------------- Processor 175 Exiting: Caught Signal ------------
+Reason: Terminated
+[176] Stack Traceback:
+  [176:0] libpthread.so.0 0x1496f27e2dd0 
+  [176:1] iotest 0x6368df CsdNextMessage
+  [176:2] iotest 0x63699a CsdScheduleForever
+  [176:3] iotest 0x636d05 CsdScheduler
+  [176:4] iotest 0x65d13a ConverseInit
+  [176:5] iotest 0x5c67c7 charm_main
+  [176:6] libc.so.6 0x1496f24316a3 __libc_start_main
+------------- Processor 176 Exiting: Caught Signal ------------
+Reason: Terminated
+[177] Stack Traceback:
+  [177:0] libpthread.so.0 0x14c6c35afdd0 
+  [177:1] libopen-pal.so.40 0x14c6c28d1f90 
+  [177:2] libopen-pal.so.40 0x14c6c28cd9d3 opal_libevent2022_event_base_loop
+  [177:3] libopen-pal.so.40 0x14c6c287164e 
+  [177:4] libopen-pal.so.40 0x14c6c28717c3 opal_progress
+  [177:5] libmpi.so.40 0x14c6c3e25f9a ompi_request_default_test
+  [177:6] libmpi.so.40 0x14c6c3e6546e PMPI_Test
+  [177:7] iotest 0x65b380 
+  [177:8] iotest 0x65c6ad CmiGetNonLocal
+  [177:9] iotest 0x6368cd CsdNextMessage
+  [177:10] iotest 0x63699a CsdScheduleForever
+------------- Processor 177 Exiting: Caught Signal ------------
+Reason: Terminated
+[178] Stack Traceback:
+  [178:0] libpthread.so.0 0x1465e02ffdd0 
+  [178:1] libuct_ib.so.0 0x1465dc0703d0 
+  [178:2] libucp.so.0 0x1465df316a7f ucp_mem_rereg_mds
+  [178:3] libucp.so.0 0x1465df3190cf ucp_request_memory_dereg
+  [178:4] libucp.so.0 0x1465df32f213 ucp_rndv_get_completion
+  [178:5] libuct_ib.so.0 0x1465dc077164 uct_rc_ep_send_op_completion_handler
+  [178:6] libuct_ib.so.0 0x1465dc095661 
+  [178:7] libucp.so.0 0x1465df31deea ucp_worker_progress
+  [178:8] libmpi.so.40 0x1465e0cc9233 mca_pml_ucx_recv
+  [178:9] libmpi.so.40 0x1465e0badcf5 PMPI_Recv
+  [178:10] iotest 0x65c3e7 
+  [178:11] iotest 0x65c6b2 CmiGetNonLocal
+  [178:12] iotest 0x6368cd CsdNextMessage
+  [178:13] iotest 0x63699a CsdScheduleForever
+------------- Processor 178 Exiting: Caught Signal ------------
+Reason: Terminated
+[180] Stack Traceback:
+  [180:0] libpthread.so.0 0x150e651c9dd0 
+  [180:1] libucs.so.0 0x150e63b4e9e0 
+  [180:2] libucs.so.0 0x150e63b508dd ucs_pgtable_search_range
+  [180:3] libucs.so.0 0x150e63b59a85 ucs_rcache_get
+  [180:4] libuct_ib.so.0 0x150e60f3a414 
+  [180:5] libucp.so.0 0x150e641e0b23 ucp_mem_rereg_mds
+  [180:6] libucp.so.0 0x150e641e2e0a ucp_request_memory_reg
+  [180:7] libucp.so.0 0x150e641fa78c ucp_tag_rndv_reg_send_buffer
+  [180:8] libucp.so.0 0x150e641ffaa6 ucp_tag_send_nbx
+  [180:9] libmpi.so.40 0x150e65b93f8a mca_pml_ucx_isend
+  [180:10] libmpi.so.40 0x150e65a71085 MPI_Isend
+  [180:11] iotest 0x65baa4 
+  [180:12] iotest 0x698b27 CldEnqueue
+  [180:13] iotest 0x54515d _processHandler(void*, CkCoreState*)
+  [180:14] iotest 0x6369cb CsdScheduleForever
+------------- Processor 180 Exiting: Caught Signal ------------
+Reason: Terminated
+[181] Stack Traceback:
+  [181:0] libpthread.so.0 0x1494c674cdd0 
+  [181:1] libucp.so.0 0x1494c5755350 
+  [181:2] libucp.so.0 0x1494c578b33b 
+  [181:3] libucp.so.0 0x1494c578bcf9 
+  [181:4] libucp.so.0 0x1494c578c65c 
+  [181:5] libucp.so.0 0x1494c578ce7e ucp_wireup_select_lanes
+  [181:6] libucp.so.0 0x1494c578ff8b ucp_wireup_init_lanes
+  [181:7] libucp.so.0 0x1494c57905c8 
+  [181:8] libucp.so.0 0x1494c5790c8e 
+  [181:9] libuct.so.0 0x1494c552916c 
+  [181:10] libucp.so.0 0x1494c576aeea ucp_worker_progress
+  [181:11] libopen-pal.so.40 0x1494c5a0e773 opal_progress
+  [181:12] libmpi.so.40 0x1494c6fc2f9a ompi_request_default_test
+  [181:13] libmpi.so.40 0x1494c700246e PMPI_Test
+  [181:14] iotest 0x65b380 
+  [181:15] iotest 0x65c6ad CmiGetNonLocal
+  [181:16] iotest 0x6368cd CsdNextMessage
+  [181:17] iotest 0x63699a CsdScheduleForever
+[256] Stack Traceback:
+  [256:0] libpthread.so.0 0x14f3769dbdd0 
+  [256:1] iotest 0x53d040 _skipCldHandler(void*)
+  [256:2] iotest 0x6369cb CsdScheduleForever
+  [256:3] iotest 0x636d05 CsdScheduler
+  [256:4] iotest 0x65d13a ConverseInit
+  [256:5] iotest 0x5c67c7 charm_main
+  [256:6] libc.so.6 0x14f37662a6a3 __libc_start_main
+  [256:7] iotest 0x503dae _start
+------------- Processor 256 Exiting: Caught Signal ------------
+Reason: Terminated
+[257] Stack Traceback:
+  [257:0] libpthread.so.0 0x151ab3dd4dd0 
+  [257:1] iotest 0x53f000 _infoFn(void*, void (**)(void*), int*, int*, int*, unsigned int**)
+  [257:2] iotest 0x698a9d CldEnqueue
+  [257:3] iotest 0x545208 _processHandler(void*, CkCoreState*)
+  [257:4] iotest 0x6369cb CsdScheduleForever
+  [257:5] iotest 0x636d05 CsdScheduler
+  [257:6] iotest 0x65d13a ConverseInit
+  [257:7] iotest 0x5c67c7 charm_main
+  [257:8] libc.so.6 0x151ab3a236a3 __libc_start_main
+  [257:9] iotest 0x503dae _start
+------------- Processor 257 Exiting: Caught Signal ------------
+Reason: Terminated
+[258] Stack Traceback:
+  [258:0] libpthread.so.0 0x14d5f75a2dd0 
+  [258:1] iotest 0x53f000 _infoFn(void*, void (**)(void*), int*, int*, int*, unsigned int**)
+  [258:2] iotest 0x698782 CldHandler(char*)
+  [258:3] iotest 0x6369cb CsdScheduleForever
+  [258:4] iotest 0x636d05 CsdScheduler
+  [258:5] iotest 0x65d13a ConverseInit
+  [258:6] iotest 0x5c67c7 charm_main
+  [258:7] libc.so.6 0x14d5f71f16a3 __libc_start_main
+  [258:8] iotest 0x503dae _start
+------------- Processor 258 Exiting: Caught Signal ------------
+Reason: Terminated
+[259] Stack Traceback:
+  [259:0] libpthread.so.0 0x15405b463dd0 
+  [259:1] iotest 0x53d040 _skipCldHandler(void*)
+  [259:2] iotest 0x6369cb CsdScheduleForever
+  [259:3] iotest 0x636d05 CsdScheduler
+  [259:4] iotest 0x65d13a ConverseInit
+  [259:5] iotest 0x5c67c7 charm_main
+  [259:6] libc.so.6 0x15405b0b26a3 __libc_start_main
+  [259:7] iotest 0x503dae _start
+------------- Processor 259 Exiting: Caught Signal ------------
+Reason: Terminated
+[260] Stack Traceback:
+  [260:0] libpthread.so.0 0x14b239999dd0 
+  [260:1] iotest 0x53d040 _skipCldHandler(void*)
+  [260:2] iotest 0x6369cb CsdScheduleForever
+  [260:3] iotest 0x636d05 CsdScheduler
+  [260:4] iotest 0x65d13a ConverseInit
+  [260:5] iotest 0x5c67c7 charm_main
+  [260:6] libc.so.6 0x14b2395e86a3 __libc_start_main
+  [260:7] iotest 0x503dae _start
+------------- Processor 260 Exiting: Caught Signal ------------
+Reason: Terminated
+[261] Stack Traceback:
+  [261:0] libpthread.so.0 0x150fb15bcdd0 
+  [261:1] libuct_ib.so.0 0x150fad3520a0 
+  [261:2] libucp.so.0 0x150fb05daeea ucp_worker_progress
+  [261:3] libopen-pal.so.40 0x150fb087e773 opal_progress
+  [261:4] libmpi.so.40 0x150fb1e32f9a ompi_request_default_test
+  [261:5] libmpi.so.40 0x150fb1e7246e PMPI_Test
+  [261:6] iotest 0x65b380 
+  [261:7] iotest 0x65c609 
+  [261:8] iotest 0x6348a0 CcdRaiseCondition
+  [261:9] iotest 0x636a5a CsdScheduleForever
+  [261:10] iotest 0x636d05 CsdScheduler
+  [261:11] iotest 0x65d13a ConverseInit
+  [261:12] iotest 0x5c67c7 charm_main
+  [261:13] libc.so.6 0x150fb120b6a3 __libc_start_main
+  [261:14] iotest 0x503dae _start
+------------- Processor 261 Exiting: Caught Signal ------------
+Reason: Terminated
+[262] Stack Traceback:
+  [262:0] libpthread.so.0 0x152c71afadd0 
+  [262:1] iotest 0x5404b0 CkArrayManagerDeliver
+  [262:2] iotest 0x557772 CkArray::sendToPe(CkArrayMessage*, int, CkDeliver_t, int)
+  [262:3] iotest 0x52ef68 Ck::IO::impl::ReadAssembler::shareData(unsigned long, unsigned long, char*)
+  [262:4] iotest 0x52680a Ck::IO::impl::CkIndex_ReadAssembler::_call_shareData_marshall3(void*, void*)
+  [262:5] iotest 0x542002 CkDeliverMessageFree
+  [262:6] iotest 0x542c58 
+  [262:7] iotest 0x5453f1 _processHandler(void*, CkCoreState*)
+  [262:8] iotest 0x6369cb CsdScheduleForever
+  [262:9] iotest 0x636d05 CsdScheduler
+  [262:10] iotest 0x65d13a ConverseInit
+  [262:11] iotest 0x5c67c7 charm_main
+  [262:12] libc.so.6 0x152c717496a3 __libc_start_main
+  [262:13] iotest 0x503dae _start
+------------- Processor 262 Exiting: Caught Signal ------------
+Reason: Terminated
+[263] Stack Traceback:
+  [263:0] libpthread.so.0 0x145c99c53dd0 
+  [263:1] iotest 0x53d040 _skipCldHandler(void*)
+  [263:2] iotest 0x6369cb CsdScheduleForever
+  [263:3] iotest 0x636d05 CsdScheduler
+  [263:4] iotest 0x65d13a ConverseInit
+  [263:5] iotest 0x5c67c7 charm_main
+  [263:6] libc.so.6 0x145c998a26a3 __libc_start_main
+  [263:7] iotest 0x503dae _start
+------------- Processor 263 Exiting: Caught Signal ------------
+Reason: Terminated
+[264] Stack Traceback:
+  [264:0] libpthread.so.0 0x14f50aecddd0 
+  [264:1] iotest 0x53701a __gnu_cxx::__enable_if<std::__is_byte<char>::__value, void>::__type std::__fill_a1<char>(char*, char*, char const&)
+  [264:2] iotest 0x536754 void std::__fill_a<char*, char>(char*, char*, char const&)
+  [264:3] iotest 0x537861 char* std::__fill_n_a<char*, unsigned long, char>(char*, unsigned long, char const&, std::random_access_iterator_tag)
+  [264:4] iotest 0x5372da char* std::fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [264:5] iotest 0x537048 char* std::__uninitialized_fill_n<true>::__uninit_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [264:6] iotest 0x536786 char* std::uninitialized_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [264:7] iotest 0x535214 char* std::__uninitialized_fill_n_a<char*, unsigned long, char, char>(char*, unsigned long, char const&, std::allocator<char>&)
+  [264:8] iotest 0x53330a std::vector<char, std::allocator<char> >::_M_fill_insert(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, unsigned long, char const&)
+  [264:9] iotest 0x531ae0 std::vector<char, std::allocator<char> >::resize(unsigned long, char const&)
+  [264:10] iotest 0x52ecf6 Ck::IO::impl::ReadAssembler::ReadAssembler(Ck::IO::Session, unsigned long, unsigned long, CkCallback)
+  [264:11] iotest 0x52514f Ck::IO::impl::CkIndex_ReadAssembler::_call_ReadAssembler_marshall1(void*, void*)
+  [264:12] iotest 0x542002 CkDeliverMessageFree
+  [264:13] iotest 0x542c58 
+  [264:14] iotest 0x545922 _processHandler(void*, CkCoreState*)
+  [264:15] iotest 0x6369cb CsdScheduleForever
+  [264:16] iotest 0x636d05 CsdScheduler
+  [264:17] iotest 0x65d13a ConverseInit
+  [264:18] iotest 0x5c67c7 charm_main
+  [264:19] libc.so.6 0x14f50ab1c6a3 __libc_start_main
+  [264:20] iotest 0x503dae _start
+--------------------------------------------------------------------------
+mpirun noticed that process rank 349 with PID 15673 on node r486 exited on signal 9 (Killed).
+--------------------------------------------------------------------------
+[r089.ib.bridges2.psc.edu:71925] 105 more processes have sent help message help-mpi-api.txt / mpi-abort
+2 total processes killed (some possibly by mpirun during cleanup)
+slurmstepd: error: Detected 4 oom-kill event(s) in StepId=14318850.batch cgroup. Some of your processes may have been killed by the cgroup out-of-memory handler.

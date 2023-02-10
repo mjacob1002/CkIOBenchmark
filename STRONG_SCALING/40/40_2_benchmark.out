@@ -1,0 +1,439 @@
+
+Running as 256 OS processes: ./iotest TEST_FILES/40.txt 256
+charmrun> /usr/bin/setarch x86_64 -R mpirun -np 256 ./iotest TEST_FILES/40.txt 256
+Charm++> Running on MPI library: Open MPI v4.0.5, package: Open MPI spack@br012.ib.bridges2.psc.edu Distribution, ident: 4.0.5, repo rev: v4.0.5, Aug 26, 2020 (MPI standard: 3.1)
+Charm++> Level of thread support used: MPI_THREAD_SINGLE (desired: MPI_THREAD_SINGLE)
+Charm++> Running in non-SMP mode: 256 processes (PEs)
+Converse/Charm++ Commit ID: v7.1.0-devel-237-ga3f055e15
+Isomalloc> Synchronized global address space.
+CharmLB> Load balancer assumes all CPUs are same.
+Charm++> Running on 2 hosts (2 sockets x 64 cores x 1 PUs = 128-way SMP)
+Charm++> cpu topology info is gathered in 0.061 seconds.
+CharmLB> Load balancing instrumentation for communication is off.
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+------------- Processor 5 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 6 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 13 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 16 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 18 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 20 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 27 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 28 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 29 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 30 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 34 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 35 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 36 Exiting: Caught Signal ------------
+Reason: Terminated
+[6] Stack Traceback:
+  [6:0] libpthread.so.0 0x155553edcdd0 
+  [6:1] libc.so.6 0x155553c660bb 
+  [6:2] iotest 0x53701a __gnu_cxx::__enable_if<std::__is_byte<char>::__value, void>::__type std::__fill_a1<char>(char*, char*, char const&)
+  [6:3] iotest 0x536754 void std::__fill_a<char*, char>(char*, char*, char const&)
+  [6:4] iotest 0x537861 char* std::__fill_n_a<char*, unsigned long, char>(char*, unsigned long, char const&, std::random_access_iterator_tag)
+  [6:5] iotest 0x5372da char* std::fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [6:6] iotest 0x537048 char* std::__uninitialized_fill_n<true>::__uninit_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [6:7] iotest 0x536786 char* std::uninitialized_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [6:8] iotest 0x535214 char* std::__uninitialized_fill_n_a<char*, unsigned long, char, char>(char*, unsigned long, char const&, std::allocator<char>&)
+  [6:9] iotest 0x53330a std::vector<char, std::allocator<char> >::_M_fill_insert(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, unsigned long, char const&)
+  [6:10] iotest 0x531ae0 std::vector<char, std::allocator<char> >::resize(unsigned long, char const&)
+  [6:11] iotest 0x52e910 Ck::IO::impl::ReadSession::readData()
+  [6:12] iotest 0x52e7ad Ck::IO::impl::ReadSession::ReadSession(int, unsigned long, unsigned long)
+------------- Processor 38 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 41 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 45 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 48 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 50 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 51 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 52 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 54 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 59 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 61 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 62 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 64 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 67 Exiting: Caught Signal ------------
+Reason: Terminated
+[13] Stack Traceback:
+  [13:0] libpthread.so.0 0x155553edcdd0 
+  [13:1] libc.so.6 0x155553c660bb 
+  [13:2] iotest 0x53701a __gnu_cxx::__enable_if<std::__is_byte<char>::__value, void>::__type std::__fill_a1<char>(char*, char*, char const&)
+  [13:3] iotest 0x536754 void std::__fill_a<char*, char>(char*, char*, char const&)
+  [13:4] iotest 0x537861 char* std::__fill_n_a<char*, unsigned long, char>(char*, unsigned long, char const&, std::random_access_iterator_tag)
+  [13:5] iotest 0x5372da char* std::fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [13:6] iotest 0x537048 char* std::__uninitialized_fill_n<true>::__uninit_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [13:7] iotest 0x536786 char* std::uninitialized_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [13:8] iotest 0x535214 char* std::__uninitialized_fill_n_a<char*, unsigned long, char, char>(char*, unsigned long, char const&, std::allocator<char>&)
+  [13:9] iotest 0x53330a std::vector<char, std::allocator<char> >::_M_fill_insert(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, unsigned long, char const&)
+  [13:10] iotest 0x531ae0 std::vector<char, std::allocator<char> >::resize(unsigned long, char const&)
+  [13:11] iotest 0x52e910 Ck::IO::impl::ReadSession::readData()
+  [13:12] iotest 0x52e7ad Ck::IO::impl::ReadSession::ReadSession(int, unsigned long, unsigned long)
+------------- Processor 68 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 69 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 70 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 71 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 72 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 73 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 74 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 75 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 78 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 79 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 82 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 84 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 85 Exiting: Caught Signal ------------
+Reason: Terminated
+[18] Stack Traceback:
+  [18:0] libpthread.so.0 0x155553edcdd0 
+  [18:1] libpthread.so.0 0x155553edbb94 __read
+  [18:2] libstdc++.so.6 0x1555543d05d7 std::__basic_file<char>::xsgetn(char*, long)
+  [18:3] libstdc++.so.6 0x15555440a191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+  [18:4] libstdc++.so.6 0x155554416dae std::istream::read(char*, long)
+  [18:5] iotest 0x52e965 Ck::IO::impl::ReadSession::readData()
+  [18:6] iotest 0x52e7ad Ck::IO::impl::ReadSession::ReadSession(int, unsigned long, unsigned long)
+[20] Stack Traceback:
+  [20:0] libpthread.so.0 0x155553edcdd0 
+  [20:1] libpthread.so.0 0x155553edbb94 __read
+  [20:2] libstdc++.so.6 0x1555543d05d7 std::__basic_file<char>::xsgetn(char*, long)
+  [20:3] libstdc++.so.6 0x15555440a191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+  [20:4] libstdc++.so.6 0x155554416dae std::istream::read(char*, long)
+  [20:5] iotest 0x52e965 Ck::IO::impl::ReadSession::readData()
+[27] Stack Traceback:
+  [27:0] libpthread.so.0 0x155553edcdd0 
+  [27:1] libpthread.so.0 0x155553edbb94 __read
+  [27:2] libstdc++.so.6 0x1555543d05d7 std::__basic_file<char>::xsgetn(char*, long)
+  [27:3] libstdc++.so.6 0x15555440a191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+  [27:4] libstdc++.so.6 0x155554416dae std::istream::read(char*, long)
+  [27:5] iotest 0x52e965 Ck::IO::impl::ReadSession::readData()
+  [27:6] iotest 0x52e7ad Ck::IO::impl::ReadSession::ReadSession(int, unsigned long, unsigned long)
+  [27:7] iotest 0x527e34 Ck::IO::impl::CkIndex_ReadSession::_call_ReadSession_marshall1(void*, void*)
+  [27:8] iotest 0x542002 CkDeliverMessageFree
+  [27:9] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [27:10] iotest 0x5573e5 CkArray::insertElement(CkArrayMessage*, CkArrayIndex const&, int*)
+  [27:11] iotest 0x557622 CkArray::insertInitial(CkArrayIndex const&, void*)
+------------- Processor 86 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 88 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 89 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 91 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 92 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 94 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 95 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 96 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 98 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 99 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 100 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 102 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 106 Exiting: Caught Signal ------------
+Reason: Terminated
+[28] Stack Traceback:
+  [28:0] libpthread.so.0 0x155553edcdd0 
+  [28:1] libpthread.so.0 0x155553edbb94 __read
+  [28:2] libstdc++.so.6 0x1555543d05d7 std::__basic_file<char>::xsgetn(char*, long)
+  [28:3] libstdc++.so.6 0x15555440a191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+  [28:4] libstdc++.so.6 0x155554416dae std::istream::read(char*, long)
+[29] Stack Traceback:
+  [29:0] libpthread.so.0 0x155553edcdd0 
+  [29:1] libpthread.so.0 0x155553edbb94 __read
+  [29:2] libstdc++.so.6 0x1555543d05d7 std::__basic_file<char>::xsgetn(char*, long)
+  [29:3] libstdc++.so.6 0x15555440a191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+  [29:4] libstdc++.so.6 0x155554416dae std::istream::read(char*, long)
+  [29:5] iotest 0x52e965 Ck::IO::impl::ReadSession::readData()
+[30] Stack Traceback:
+  [30:0] libpthread.so.0 0x155553edcdd0 
+  [30:1] libpthread.so.0 0x155553edbb94 __read
+  [30:2] libstdc++.so.6 0x1555543d05d7 std::__basic_file<char>::xsgetn(char*, long)
+  [30:3] libstdc++.so.6 0x15555440a191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+  [30:4] libstdc++.so.6 0x155554416dae std::istream::read(char*, long)
+------------- Processor 108 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 111 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 112 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 114 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 115 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 120 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 121 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 122 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 126 Exiting: Caught Signal ------------
+Reason: Terminated
+[36] Stack Traceback:
+  [36:0] libpthread.so.0 0x155553edcdd0 
+  [36:1] libpthread.so.0 0x155553edbb94 __read
+  [36:2] libstdc++.so.6 0x1555543d05d7 std::__basic_file<char>::xsgetn(char*, long)
+  [36:3] libstdc++.so.6 0x15555440a191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+  [36:4] libstdc++.so.6 0x155554416dae std::istream::read(char*, long)
+  [36:5] iotest 0x52e965 Ck::IO::impl::ReadSession::readData()
+[45] Stack Traceback:
+  [45:0] libpthread.so.0 0x155553edcdd0 
+  [45:1] libpthread.so.0 0x155553edbb94 __read
+  [45:2] libstdc++.so.6 0x1555543d05d7 std::__basic_file<char>::xsgetn(char*, long)
+  [45:3] libstdc++.so.6 0x15555440a191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+  [45:4] libstdc++.so.6 0x155554416dae std::istream::read(char*, long)
+  [45:5] iotest 0x52e965 Ck::IO::impl::ReadSession::readData()
+  [45:6] iotest 0x52e7ad Ck::IO::impl::ReadSession::ReadSession(int, unsigned long, unsigned long)
+  [45:7] iotest 0x527e34 Ck::IO::impl::CkIndex_ReadSession::_call_ReadSession_marshall1(void*, void*)
+  [45:8] iotest 0x542002 CkDeliverMessageFree
+[48] Stack Traceback:
+  [48:0] libpthread.so.0 0x155553edcdd0 
+  [48:1] libpthread.so.0 0x155553edbb94 __read
+[61] Stack Traceback:
+  [61:0] libpthread.so.0 0x155553edcdd0 
+  [61:1] libpthread.so.0 0x155553edbb94 __read
+  [61:2] libstdc++.so.6 0x1555543d05d7 std::__basic_file<char>::xsgetn(char*, long)
+  [61:3] libstdc++.so.6 0x15555440a191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+  [61:4] libstdc++.so.6 0x155554416dae std::istream::read(char*, long)
+  [61:5] iotest 0x52e965 Ck::IO::impl::ReadSession::readData()
+  [61:6] iotest 0x52e7ad Ck::IO::impl::ReadSession::ReadSession(int, unsigned long, unsigned long)
+[82] Stack Traceback:
+  [82:0] libpthread.so.0 0x155553edcdd0 
+  [82:1] libpthread.so.0 0x155553edbb94 __read
+  [82:2] libstdc++.so.6 0x1555543d05d7 std::__basic_file<char>::xsgetn(char*, long)
+  [82:3] libstdc++.so.6 0x15555440a191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+[84] Stack Traceback:
+  [84:0] libpthread.so.0 0x155553edcdd0 
+  [84:1] libc.so.6 0x155553c660bb 
+  [84:2] iotest 0x53701a __gnu_cxx::__enable_if<std::__is_byte<char>::__value, void>::__type std::__fill_a1<char>(char*, char*, char const&)
+  [84:3] iotest 0x536754 void std::__fill_a<char*, char>(char*, char*, char const&)
+  [84:4] iotest 0x537861 char* std::__fill_n_a<char*, unsigned long, char>(char*, unsigned long, char const&, std::random_access_iterator_tag)
+  [84:5] iotest 0x5372da char* std::fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [84:6] iotest 0x537048 char* std::__uninitialized_fill_n<true>::__uninit_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [84:7] iotest 0x536786 char* std::uninitialized_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [84:8] iotest 0x535214 char* std::__uninitialized_fill_n_a<char*, unsigned long, char, char>(char*, unsigned long, char const&, std::allocator<char>&)
+  [84:9] iotest 0x53330a std::vector<char, std::allocator<char> >::_M_fill_insert(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, unsigned long, char const&)
+  [84:10] iotest 0x531ae0 std::vector<char, std::allocator<char> >::resize(unsigned long, char const&)
+  [84:11] iotest 0x52e910 Ck::IO::impl::ReadSession::readData()
+  [84:12] iotest 0x52e7ad Ck::IO::impl::ReadSession::ReadSession(int, unsigned long, unsigned long)
+  [84:13] iotest 0x527e34 Ck::IO::impl::CkIndex_ReadSession::_call_ReadSession_marshall1(void*, void*)
+  [84:14] iotest 0x542002 CkDeliverMessageFree
+  [84:15] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [84:16] iotest 0x5573e5 CkArray::insertElement(CkArrayMessage*, CkArrayIndex const&, int*)
+  [84:17] iotest 0x557622 CkArray::insertInitial(CkArrayIndex const&, void*)
+[85] Stack Traceback:
+  [85:0] libpthread.so.0 0x155553edcdd0 
+  [85:1] libc.so.6 0x155553c66088 
+  [85:2] iotest 0x53701a __gnu_cxx::__enable_if<std::__is_byte<char>::__value, void>::__type std::__fill_a1<char>(char*, char*, char const&)
+  [85:3] iotest 0x536754 void std::__fill_a<char*, char>(char*, char*, char const&)
+  [85:4] iotest 0x537861 char* std::__fill_n_a<char*, unsigned long, char>(char*, unsigned long, char const&, std::random_access_iterator_tag)
+  [85:5] iotest 0x5372da char* std::fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [85:6] iotest 0x537048 char* std::__uninitialized_fill_n<true>::__uninit_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [85:7] iotest 0x536786 char* std::uninitialized_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [85:8] iotest 0x535214 char* std::__uninitialized_fill_n_a<char*, unsigned long, char, char>(char*, unsigned long, char const&, std::allocator<char>&)
+  [85:9] iotest 0x53330a std::vector<char, std::allocator<char> >::_M_fill_insert(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, unsigned long, char const&)
+  [85:10] iotest 0x531ae0 std::vector<char, std::allocator<char> >::resize(unsigned long, char const&)
+  [85:11] iotest 0x52e910 Ck::IO::impl::ReadSession::readData()
+  [85:12] iotest 0x52e7ad Ck::IO::impl::ReadSession::ReadSession(int, unsigned long, unsigned long)
+  [85:13] iotest 0x527e34 Ck::IO::impl::CkIndex_ReadSession::_call_ReadSession_marshall1(void*, void*)
+  [85:14] iotest 0x542002 CkDeliverMessageFree
+  [85:15] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [85:16] iotest 0x5573e5 CkArray::insertElement(CkArrayMessage*, CkArrayIndex const&, int*)
+  [85:17] iotest 0x557622 CkArray::insertInitial(CkArrayIndex const&, void*)
+[86] Stack Traceback:
+  [86:0] libpthread.so.0 0x155553edcdd0 
+  [86:1] libpthread.so.0 0x155553edbb94 __read
+[91] Stack Traceback:
+  [91:0] libpthread.so.0 0x155553edcdd0 
+  [91:1] libpthread.so.0 0x155553edbb94 __read
+  [91:2] libstdc++.so.6 0x1555543d05d7 std::__basic_file<char>::xsgetn(char*, long)
+  [91:3] libstdc++.so.6 0x15555440a191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+  [91:4] libstdc++.so.6 0x155554416dae std::istream::read(char*, long)
+  [91:5] iotest 0x52e965 Ck::IO::impl::ReadSession::readData()
+  [91:6] iotest 0x52e7ad Ck::IO::impl::ReadSession::ReadSession(int, unsigned long, unsigned long)
+  [91:7] iotest 0x527e34 Ck::IO::impl::CkIndex_ReadSession::_call_ReadSession_marshall1(void*, void*)
+  [91:8] iotest 0x542002 CkDeliverMessageFree
+  [91:9] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [91:10] iotest 0x5573e5 CkArray::insertElement(CkArrayMessage*, CkArrayIndex const&, int*)
+  [91:11] iotest 0x557622 CkArray::insertInitial(CkArrayIndex const&, void*)
+  [91:12] iotest 0x56bab2 CkArrayMap::populateInitial(int, CkArrayOptions&, void*, CkArray*)
+[95] Stack Traceback:
+  [95:0] libpthread.so.0 0x155553edcdd0 
+  [95:1] libpthread.so.0 0x155553edbb94 __read
+  [95:2] libstdc++.so.6 0x1555543d05d7 std::__basic_file<char>::xsgetn(char*, long)
+  [95:3] libstdc++.so.6 0x15555440a191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+  [95:4] libstdc++.so.6 0x155554416dae std::istream::read(char*, long)
+  [95:5] iotest 0x52e965 Ck::IO::impl::ReadSession::readData()
+  [95:6] iotest 0x52e7ad Ck::IO::impl::ReadSession::ReadSession(int, unsigned long, unsigned long)
+  [95:7] iotest 0x527e34 Ck::IO::impl::CkIndex_ReadSession::_call_ReadSession_marshall1(void*, void*)
+  [95:8] iotest 0x542002 CkDeliverMessageFree
+  [95:9] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [95:10] iotest 0x5573e5 CkArray::insertElement(CkArrayMessage*, CkArrayIndex const&, int*)
+  [95:11] iotest 0x557622 CkArray::insertInitial(CkArrayIndex const&, void*)
+[96] Stack Traceback:
+[98] Stack Traceback:
+  [98:0] libpthread.so.0 0x155553edcdd0 
+  [98:1] libc.so.6 0x155553c660bb 
+  [98:2] iotest 0x53701a __gnu_cxx::__enable_if<std::__is_byte<char>::__value, void>::__type std::__fill_a1<char>(char*, char*, char const&)
+  [98:3] iotest 0x536754 void std::__fill_a<char*, char>(char*, char*, char const&)
+  [98:4] iotest 0x537861 char* std::__fill_n_a<char*, unsigned long, char>(char*, unsigned long, char const&, std::random_access_iterator_tag)
+  [98:5] iotest 0x5372da char* std::fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [98:6] iotest 0x537048 char* std::__uninitialized_fill_n<true>::__uninit_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [98:7] iotest 0x536786 char* std::uninitialized_fill_n<char*, unsigned long, char>(char*, unsigned long, char const&)
+  [98:8] iotest 0x535214 char* std::__uninitialized_fill_n_a<char*, unsigned long, char, char>(char*, unsigned long, char const&, std::allocator<char>&)
+  [98:9] iotest 0x53330a std::vector<char, std::allocator<char> >::_M_fill_insert(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, unsigned long, char const&)
+  [98:10] iotest 0x531ae0 std::vector<char, std::allocator<char> >::resize(unsigned long, char const&)
+  [98:11] iotest 0x52e910 Ck::IO::impl::ReadSession::readData()
+  [98:12] iotest 0x52e7ad Ck::IO::impl::ReadSession::ReadSession(int, unsigned long, unsigned long)
+  [98:13] iotest 0x527e34 Ck::IO::impl::CkIndex_ReadSession::_call_ReadSession_marshall1(void*, void*)
+  [98:14] iotest 0x542002 CkDeliverMessageFree
+  [98:15] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [98:16] iotest 0x5573e5 CkArray::insertElement(CkArrayMessage*, CkArrayIndex const&, int*)
+  [98:17] iotest 0x557622 CkArray::insertInitial(CkArrayIndex const&, void*)
+  [98:18] iotest 0x56bab2 CkArrayMap::populateInitial(int, CkArrayOptions&, void*, CkArray*)
+  [98:19] iotest 0x55554d CkArray::CkArray(CkArrayOptions&&, CkMarshalledMessage&&)
+[99] Stack Traceback:
+  [99:0] libpthread.so.0 0x155553edcdd0 
+  [99:1] libpthread.so.0 0x155553edbb94 __read
+  [99:2] libstdc++.so.6 0x1555543d05d7 std::__basic_file<char>::xsgetn(char*, long)
+  [99:3] libstdc++.so.6 0x15555440a191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+  [99:4] libstdc++.so.6 0x155554416dae std::istream::read(char*, long)
+  [99:5] iotest 0x52e965 Ck::IO::impl::ReadSession::readData()
+  [99:6] iotest 0x52e7ad Ck::IO::impl::ReadSession::ReadSession(int, unsigned long, unsigned long)
+  [99:7] iotest 0x527e34 Ck::IO::impl::CkIndex_ReadSession::_call_ReadSession_marshall1(void*, void*)
+  [99:8] iotest 0x542002 CkDeliverMessageFree
+  [99:9] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [99:10] iotest 0x5573e5 CkArray::insertElement(CkArrayMessage*, CkArrayIndex const&, int*)
+  [99:11] iotest 0x557622 CkArray::insertInitial(CkArrayIndex const&, void*)
+[100] Stack Traceback:
+  [100:0] libpthread.so.0 0x155553edcdd0 
+  [100:1] libpthread.so.0 0x155553edbb94 __read
+  [100:2] libstdc++.so.6 0x1555543d05d7 std::__basic_file<char>::xsgetn(char*, long)
+  [100:3] libstdc++.so.6 0x15555440a191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+  [100:4] libstdc++.so.6 0x155554416dae std::istream::read(char*, long)
+[102] Stack Traceback:
+[106] Stack Traceback:
+[111] Stack Traceback:
+[112] Stack Traceback:
+  [112:0] libpthread.so.0 0x155553edcdd0 
+  [112:1] iotest 0x531985 CBaseT1<ArrayElementT<int>, Ck::IO::impl::CProxy_ReadSession>::CBaseT1<>()
+  [112:2] iotest 0x52e69a Ck::IO::impl::ReadSession::ReadSession(int, unsigned long, unsigned long)
+  [112:3] iotest 0x527e34 Ck::IO::impl::CkIndex_ReadSession::_call_ReadSession_marshall1(void*, void*)
+  [112:4] iotest 0x542002 CkDeliverMessageFree
+  [112:5] iotest 0x57a67c CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [112:6] iotest 0x5573e5 CkArray::insertElement(CkArrayMessage*, CkArrayIndex const&, int*)
+  [112:7] iotest 0x557622 CkArray::insertInitial(CkArrayIndex const&, void*)
+  [112:8] iotest 0x56bab2 CkArrayMap::populateInitial(int, CkArrayOptions&, void*, CkArray*)
+  [112:9] iotest 0x55554d CkArray::CkArray(CkArrayOptions&&, CkMarshalledMessage&&)
+  [112:10] iotest 0x555a15 CkIndex_CkArray::_call_CkArray_marshall1(void*, void*)
+  [112:11] iotest 0x542002 CkDeliverMessageFree
+  [112:12] iotest 0x542368 CkCreateLocalGroup
+  [112:13] iotest 0x544fbf _processHandler(void*, CkCoreState*)
+  [112:14] iotest 0x6369cb CsdScheduleForever
+  [112:15] iotest 0x636d05 CsdScheduler
+  [112:16] iotest 0x65d13a ConverseInit
+  [112:17] iotest 0x5c67c7 charm_main
+  [112:18] libc.so.6 0x155553b2b6a3 __libc_start_main
+  [112:19] iotest 0x503dae _start
+[114] Stack Traceback:
+  [114:0] libpthread.so.0 0x155553edcdd0 
+  [114:1] libpthread.so.0 0x155553edbb94 __read
+  [114:2] libstdc++.so.6 0x1555543d05d7 std::__basic_file<char>::xsgetn(char*, long)
+  [114:3] libstdc++.so.6 0x15555440a191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+  [114:4] libstdc++.so.6 0x155554416dae std::istream::read(char*, long)
+[115] Stack Traceback:
+  [115:0] libpthread.so.0 0x155553edcdd0 
+  [115:1] libpthread.so.0 0x155553edbb94 __read
+[120] Stack Traceback:
+  [120:0] libpthread.so.0 0x155553edcdd0 
+  [120:1] libpthread.so.0 0x155553edbb94 __read
+  [120:2] libstdc++.so.6 0x1555543d05d7 std::__basic_file<char>::xsgetn(char*, long)
+  [120:3] libstdc++.so.6 0x15555440a191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+  [120:4] libstdc++.so.6 0x155554416dae std::istream::read(char*, long)
+[121] Stack Traceback:
+  [121:0] libpthread.so.0 0x155553edcdd0 
+  [121:1] libpthread.so.0 0x155553edbb94 __read
+  [121:2] libstdc++.so.6 0x1555543d05d7 std::__basic_file<char>::xsgetn(char*, long)
+  [121:3] libstdc++.so.6 0x15555440a191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+  [121:4] libstdc++.so.6 0x155554416dae std::istream::read(char*, long)
+  [121:5] iotest 0x52e965 Ck::IO::impl::ReadSession::readData()
+[122] Stack Traceback:
+  [122:0] libpthread.so.0 0x155553edcdd0 
+  [122:1] libpthread.so.0 0x155553edbb94 __read
+[147] Stack Traceback:
+  [147:0] libpthread.so.0 0x150a4c77cdd0 
+  [147:1] libc.so.6 0x150a4c5060bb 
+------------- Processor 147 Exiting: Caught Signal ------------
+Reason: Terminated
+[150] Stack Traceback:
+  [150:0] libpthread.so.0 0x147f2d1f6dd0 
+  [150:1] libstdc++.so.6 0x147f2d727eb0 std::basic_filebuf<char, std::char_traits<char> >::close()
+  [150:2] libstdc++.so.6 0x147f2d729bcd std::basic_ifstream<char, std::char_traits<char> >::close()
+------------- Processor 150 Exiting: Caught Signal ------------
+Reason: Terminated
+[166] Stack Traceback:
+  [166:0] libpthread.so.0 0x152666edbdd0 
+  [166:1] libstdc++.so.6 0x1526673cf5ca std::__basic_file<char>::xsgetn(char*, long)
+  [166:2] libstdc++.so.6 0x152667409191 std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long)
+  [166:3] libstdc++.so.6 0x152667415dae std::istream::read(char*, long)
+------------- Processor 166 Exiting: Caught Signal ------------
+Reason: Terminated
+[179] Stack Traceback:
+  [179:0] libpthread.so.0 0x150e76018dd0 
+  [179:1] libc.so.6 0x150e75da20bb 
+------------- Processor 179 Exiting: Caught Signal ------------
+Reason: Terminated
+[180] Stack Traceback:
+  [180:0] libpthread.so.0 0x14c35fbc7dd0 
+  [180:1] libstdc++.so.6 0x14c36010a040 std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > > const& std::use_facet<std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > > >(std::locale const&)
+  [180:2] libstdc++.so.6 0x14c3600fe5eb std::basic_ios<char, std::char_traits<char> >::_M_cache_locale(std::locale const&)
+  [180:3] libstdc++.so.6 0x14c3600fea10 std::basic_ios<char, std::char_traits<char> >::init(std::basic_streambuf<char, std::char_traits<char> >*)
+  [180:4] libstdc++.so.6 0x14c3600fa5cc std::basic_ifstream<char, std::char_traits<char> >::basic_ifstream(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Ios_Openmode)
+------------- Processor 180 Exiting: Caught Signal ------------
+Reason: Terminated
+--------------------------------------------------------------------------
+mpirun noticed that process rank 194 with PID 32100 on node r406 exited on signal 9 (Killed).
+--------------------------------------------------------------------------
+slurmstepd: error: Detected 1 oom-kill event(s) in StepId=14318889.batch cgroup. Some of your processes may have been killed by the cgroup out-of-memory handler.

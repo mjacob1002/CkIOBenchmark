@@ -1,0 +1,14 @@
+
+Running as 5 OS processes: ./iotest TEST_FILES/22.txt
+charmrun> /usr/bin/setarch x86_64 -R mpirun -np 5 ./iotest TEST_FILES/22.txt
+Charm++> Running on MPI library: Open MPI v4.0.5, package: Open MPI spack@br012.ib.bridges2.psc.edu Distribution, ident: 4.0.5, repo rev: v4.0.5, Aug 26, 2020 (MPI standard: 3.1)
+Charm++> Level of thread support used: MPI_THREAD_SINGLE (desired: MPI_THREAD_SINGLE)
+Charm++> Running in non-SMP mode: 5 processes (PEs)
+Converse/Charm++ Commit ID: v7.1.0-devel-234-gbb975858f
+Isomalloc> Synchronized global address space.
+CharmLB> Load balancer assumes all CPUs are same.
+Charm++> Running on 5 hosts (2 sockets x 64 cores x 1 PUs = 128-way SMP)
+Charm++> cpu topology info is gathered in 0.002 seconds.
+CharmLB> Load balancing instrumentation for communication is off.
+Total time: 0.024377
+[Partition 0][Node 0] End of program

@@ -1,6 +1,5 @@
 mainmodule iotest {
 	include "ckio.h";
-	#define TEST_FILE "large_test.txt"
 	readonly CProxy_Main mainProxy;	 // the proxy to be used
 	mainchare Main {
 		entry Main(CkArgMsg*);
@@ -35,9 +34,10 @@ mainmodule iotest {
 			serial {
 				// ckout << "Starting the reading\n";
 				Ck::IO::Options opts;
-				opts.read_stripe = 1000 * 1024; // how much each ReadSession chare will read_
+				opts.read_stripe = 64 * 1024* 1024; // how much each ReadSession chare will read_
 				CkCallback open_cb(CkIndex_Main::ready(NULL), thisProxy);
 				open_cb.setRefNum(0);
+				start_time = CkWallTimer(); // start before opening the file
 				Ck::IO::open(TEST_FILE, open_cb, opts);
 			
 			}
@@ -52,8 +52,8 @@ mainmodule iotest {
 			when startRead[0](Ck::IO::SessionReadyMsg* msg) serial {
 				current_session = msg -> session;
 				CkCallback test_read_cb(CkIndex_Reader::testRead(0), thisProxy); // this is a bug; you shouldn't use thisProxy. However, I don't invoke this callback so it's ok to leave in for now because I'm too lazy to rework code.	
-				start_time = CkWallTimer();
-				readers = CProxy_Reader::ckNew(msg -> session, 1024*10000, 0, test_read_cb,100); // create 5 readers which will each read 23 bytes and start from offset 5 i.e 0 will read bytes [5,28), 1 is [10, 33).
+				size_t chare_array_size = num_pes * num_readers_per_pe;
+				readers = CProxy_Reader::ckNew(msg -> session, file_size, file_size / chare_array_size, 0, chare_array_size, chare_array_size); // create 5 readers which will each read 23 bytes and start from offset 5 i.e 0 will read bytes [5,28), 1 is [10, 33).
 
 			}
 		}
@@ -61,7 +61,7 @@ mainmodule iotest {
 
 
 	array [1D] Reader {
-		entry Reader(Ck::IO::Session session, size_t bytes, size_t offsets, CkCallback after_read);
+		entry Reader(Ck::IO::Session session, size_t file_size, size_t bytes, size_t offsets, size_t num_chares);
 		// method that verifies the read is correct
 		entry void testRead(Ck::IO::ReadCompleteMsg* msg) {
 			serial {
@@ -91,4 +91,3 @@ mainmodule iotest {
 	}
 
 }
-#undef TEST_FILE

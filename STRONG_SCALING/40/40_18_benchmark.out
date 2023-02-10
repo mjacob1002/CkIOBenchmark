@@ -1,0 +1,159 @@
+
+Running as 2304 OS processes: ./iotest TEST_FILES/40.txt 2304
+charmrun> /usr/bin/setarch x86_64 -R mpirun -np 2304 ./iotest TEST_FILES/40.txt 2304
+Charm++> Running on MPI library: Open MPI v4.0.5, package: Open MPI spack@br012.ib.bridges2.psc.edu Distribution, ident: 4.0.5, repo rev: v4.0.5, Aug 26, 2020 (MPI standard: 3.1)
+Charm++> Level of thread support used: MPI_THREAD_SINGLE (desired: MPI_THREAD_SINGLE)
+Charm++> Running in non-SMP mode: 2304 processes (PEs)
+Converse/Charm++ Commit ID: v7.1.0-devel-237-ga3f055e15
+Isomalloc> Synchronized global address space.
+CharmLB> Load balancer assumes all CPUs are same.
+Charm++> Running on 18 hosts (2 sockets x 64 cores x 1 PUs = 128-way SMP)
+Charm++> cpu topology info is gathered in 0.083 seconds.
+CharmLB> Load balancing instrumentation for communication is off.
+Total time: 149.751232
+[Partition 0][Node 0] End of program
+[1675941856.320709] [r382:83926:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x147d8368c640 was not matched
+[1675941856.332506] [r470:81824:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14e35b64c440 was not matched
+[1675941856.333331] [r470:81824:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14e35b62c340 was not matched
+[1675941856.333334] [r470:81824:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14e35b74cc40 was not matched
+[1675941856.333446] [r470:81839:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14b55d344b40 was not matched
+[1675941856.333466] [r470:81839:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14b55d384d40 was not matched
+[1675941856.333471] [r470:81839:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14b55d3b4ec0 was not matched
+[1675941856.340240] [r406:44340:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x151d0fe7e440 was not matched
+[1675941856.334059] [r087:5435 :0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x1542acf41e40 was not matched
+[1675941856.356196] [r406:44394:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x149bd17ddf40 was not matched
+[1675941856.356225] [r406:44394:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x149bd178dcc0 was not matched
+[1675941856.356230] [r406:44394:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x149bd17edfc0 was not matched
+[1675941856.367237] [r406:44291:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x150ecf343cc0 was not matched
+[1675941856.370860] [r382:83997:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14cba2708d40 was not matched
+[1675941856.370889] [r382:83997:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14cba2748f40 was not matched
+[1675941856.370892] [r382:83997:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14cba2728e40 was not matched
+[1675941856.377957] [r470:81807:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x148b99c9dec0 was not matched
+[1675941856.380720] [r406:44284:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14f52cb32c40 was not matched
+[1675941856.392046] [r406:44284:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14f52cb12b40 was not matched
+[1675941856.392052] [r406:44284:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14f52cad2940 was not matched
+[1675941856.394822] [r406:44399:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x1513e4f6bd40 was not matched
+[1675941856.399325] [r470:81790:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x1486b17235c0 was not matched
+[1675941856.400400] [r470:81790:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x1486b19f4c40 was not matched
+[1675941856.399320] [r470:81801:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14688cf77e40 was not matched
+[1675941856.400400] [r470:81801:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14688cec78c0 was not matched
+[1675941856.406871] [r063:72336:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x1555417edfc0 was not matched
+[1675941856.406901] [r063:72336:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x15554178dcc0 was not matched
+[1675941856.406906] [r063:72336:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x15554176dbc0 was not matched
+[1675941856.413082] [r470:81764:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x153b2d7edfc0 was not matched
+[1675941856.413113] [r470:81764:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x153b2d75db40 was not matched
+[1675941856.413089] [r470:81853:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x147329396440 was not matched
+[1675941856.422705] [r382:83964:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14c024e57140 was not matched
+[1675941856.424455] [r382:83908:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14cebba5c8c0 was not matched
+[1675941856.426937] [r382:84011:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14a37ce5bdc0 was not matched
+[1675941856.429265] [r339:24654:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x1459dd52e140 was not matched
+[1675941856.430769] [r339:24630:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14c2e1c5fd40 was not matched
+[1675941856.431168] [r339:24619:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x147836f1ac40 was not matched
+[1675941856.431673] [r339:24634:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14b984b6cc40 was not matched
+[1675941856.432808] [r079:13111:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14789beee7c0 was not matched
+[1675941856.433603] [r079:13111:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14789bf0e8c0 was not matched
+[1675941856.434290] [r382:84005:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x154a23bd5fc0 was not matched
+[1675941856.434319] [r382:84005:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x154a23b75cc0 was not matched
+[1675941856.434322] [r382:84005:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x154a23bb5ec0 was not matched
+[1675941856.428692] [r072:29784:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x15185f373e40 was not matched
+[1675941856.430258] [r072:29793:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14ac4bf2e9c0 was not matched
+[1675941856.430831] [r149:19150:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14c8d90b4dc0 was not matched
+[1675941856.433317] [r064:94586:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14f94e4d9240 was not matched
+[1675941856.434855] [r064:94586:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14f94e4c91c0 was not matched
+[1675941856.441090] [r382:83965:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14f8fe6e8c40 was not matched
+[1675941856.433313] [r064:94613:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x145abb71cac0 was not matched
+[1675941856.433322] [r064:94615:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14b28d75db40 was not matched
+[1675941856.433319] [r064:94627:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x148e2bb85d40 was not matched
+[1675941856.433317] [r064:94697:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x150027fbee40 was not matched
+[1675941856.433334] [r064:94700:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x1459a1b8d140 was not matched
+[1675941856.433312] [r064:94619:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x154e387cea40 was not matched
+[1675941856.434603] [r332:28561:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14c4c37acf40 was not matched
+[1675941856.434586] [r332:28587:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x1515022ffdc0 was not matched
+[1675941856.434589] [r332:28626:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x1463f8f7bdc0 was not matched
+[1675941856.443878] [r332:28555:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14d199b5cd40 was not matched
+[1675941856.434106] [r074:93209:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14ca52ce9ac0 was not matched
+[1675941856.438582] [r074:93209:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14ca52cb9940 was not matched
+[1675941856.432314] [r074:93246:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x1535706e9ac0 was not matched
+[1675941856.433271] [r074:93292:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14b261811b40 was not matched
+[1675941856.434463] [r087:5427 :0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x155237e9e540 was not matched
+[1675941856.438244] [r087:5427 :0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x155237faedc0 was not matched
+[1675941856.438248] [r087:5427 :0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x155237e6e3c0 was not matched
+[1675941856.433262] [r074:93302:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14e577bb5ec0 was not matched
+[1675941856.433328] [r064:94683:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x1535df7acf40 was not matched
+[1675941856.441689] [r075:45514:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14a4dd3d4fc0 was not matched
+[1675941856.441707] [r075:45530:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x154518a92740 was not matched
+[1675941856.454585] [r470:81745:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14f6655bbbc0 was not matched
+[1675941856.454998] [r470:81745:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14f66559bac0 was not matched
+[1675941856.454587] [r470:81759:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x145f4ca76cc0 was not matched
+[1675941856.455013] [r470:81759:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x145f4ca46b40 was not matched
+[1675941856.455020] [r470:81759:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x145f4ca86d40 was not matched
+[1675941856.454585] [r470:81797:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x15492f70ca40 was not matched
+[1675941856.455006] [r470:81797:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x15492f7bcfc0 was not matched
+[1675941856.455009] [r470:81797:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x15492f71cac0 was not matched
+[1675941856.454591] [r470:81830:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x1470eef7af40 was not matched
+[1675941856.455006] [r470:81830:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x1470eef2acc0 was not matched
+[1675941856.455009] [r470:81830:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x1470eef3ad40 was not matched
+[1675941856.456738] [r470:81811:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14d7df73cbc0 was not matched
+[1675941856.455417] [r406:44341:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14e6dfb95dc0 was not matched
+[1675941856.457896] [r406:44390:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14c9124b0dc0 was not matched
+[1675941856.459956] [r470:81803:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x15184076f3c0 was not matched
+[1675941856.459980] [r470:81803:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x1518408cfec0 was not matched
+[1675941856.460328] [r087:5420 :0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x151b30fd2bc0 was not matched
+[1675941856.460357] [r087:5420 :0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x151b30fe2c40 was not matched
+[1675941856.460361] [r087:5420 :0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x151b30fc2b40 was not matched
+[1675941856.462103] [r087:5438 :0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14d443233440 was not matched
+[1675941856.463693] [r063:72276:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x155548b811c0 was not matched
+[1675941856.463721] [r063:72276:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x155548ba12c0 was not matched
+[1675941856.463724] [r063:72276:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x155548bb1340 was not matched
+[1675941856.465883] [r470:81742:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x1463e0f4bc40 was not matched
+[1675941856.467083] [r079:13089:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x15120cd3fbc0 was not matched
+[1675941856.469991] [r406:44357:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14db0fece6c0 was not matched
+[1675941856.471024] [r406:44336:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x150494f2bb40 was not matched
+[1675941856.475625] [r406:44327:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x1548a32e39c0 was not matched
+[1675941856.475650] [r406:44327:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x1548a32f3a40 was not matched
+[1675941856.476307] [r382:84001:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14aa7972d9c0 was not matched
+[1675941856.476928] [r406:44314:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x1533648f5c40 was not matched
+[1675941856.454607] [r486:57957:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14cadaefab40 was not matched
+[1675941856.454597] [r486:57968:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14d3b0971e40 was not matched
+[1675941856.454605] [r486:57972:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x1455b558ccc0 was not matched
+[1675941856.454606] [r486:57979:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x152da57ddf40 was not matched
+[1675941856.454603] [r486:57987:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x154962e9a840 was not matched
+[1675941856.454607] [r486:57989:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14ccf8e87ac0 was not matched
+[1675941856.454604] [r486:57990:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x149b08b22bc0 was not matched
+[1675941856.454604] [r486:57998:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14b5c3ba5e40 was not matched
+[1675941856.454606] [r486:58005:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x1458ca50bec0 was not matched
+[1675941856.454601] [r486:58013:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14e4609f0d40 was not matched
+[1675941856.454603] [r486:58024:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x1467bc9f7f40 was not matched
+[1675941856.454588] [r486:58025:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x15344dc0de40 was not matched
+[1675941856.478866] [r406:44324:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14a7e51d05c0 was not matched
+[1675941856.479703] [r406:44404:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x1553a0bda5c0 was not matched
+[1675941856.487339] [r087:5448 :0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14e000b9fdc0 was not matched
+[1675941856.489484] [r079:13133:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x150f7fa523c0 was not matched
+[1675941856.493369] [r406:44379:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x15152173da40 was not matched
+[1675941856.493392] [r406:44379:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x15152174dac0 was not matched
+[1675941856.487904] [r470:81849:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x153981166840 was not matched
+[1675941856.494142] [r406:44369:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14f119f5cdc0 was not matched
+[1675941856.494163] [r406:44369:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14f119f9cfc0 was not matched
+[1675941856.494865] [r079:13104:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x1538d3fceec0 was not matched
+[1675941856.487762] [r470:81850:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x151e88e1e8c0 was not matched
+[1675941856.496922] [r079:13118:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x148d588e4ec0 was not matched
+[1675941856.496965] [r079:13118:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x148d588b4d40 was not matched
+[1675941856.496977] [r079:13118:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x148d58854a40 was not matched
+[1675941856.497917] [r470:81799:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x154601384d40 was not matched
+[1675941856.497941] [r470:81799:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x1546013b4ec0 was not matched
+[1675941856.497946] [r470:81799:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x154601374cc0 was not matched
+[1675941856.504251] [r470:81821:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x150d98a08bc0 was not matched
+[1675941856.504483] [r470:81821:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x150d98a18c40 was not matched
+[1675941856.507446] [r470:81834:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x1552663f13c0 was not matched
+[1675941856.507475] [r470:81834:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x155266511cc0 was not matched
+[1675941856.511761] [r470:81818:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14c9dcfbbcc0 was not matched
+[1675941856.513603] [r087:5453 :0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14c150be8f40 was not matched
+[1675941856.516083] [r087:5426 :0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x146a2179dd40 was not matched
+[1675941856.516107] [r087:5426 :0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x146a217ddf40 was not matched
+[1675941856.524068] [r406:44295:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x153b0ff8ecc0 was not matched
+[1675941856.524589] [r406:44295:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x153b0ffdef40 was not matched
+[1675941856.525267] [r406:44365:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14aaa4c4ccc0 was not matched
+[1675941856.527622] [r470:81845:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14f290e80e40 was not matched
+[1675941856.546654] [r087:5430 :0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x154e77d2d9c0 was not matched
+[1675941856.546680] [r087:5430 :0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x154e77e4e2c0 was not matched
+[1675941856.568359] [r406:44358:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14d45566d3c0 was not matched

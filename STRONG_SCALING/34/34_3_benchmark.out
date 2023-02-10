@@ -1,0 +1,21 @@
+
+Running as 384 OS processes: ./iotest TEST_FILES/34.txt 384
+charmrun> /usr/bin/setarch x86_64 -R mpirun -np 384 ./iotest TEST_FILES/34.txt 384
+Charm++> Running on MPI library: Open MPI v4.0.5, package: Open MPI spack@br012.ib.bridges2.psc.edu Distribution, ident: 4.0.5, repo rev: v4.0.5, Aug 26, 2020 (MPI standard: 3.1)
+Charm++> Level of thread support used: MPI_THREAD_SINGLE (desired: MPI_THREAD_SINGLE)
+Charm++> Running in non-SMP mode: 384 processes (PEs)
+Converse/Charm++ Commit ID: v7.1.0-devel-237-ga3f055e15
+Isomalloc> Synchronized global address space.
+CharmLB> Load balancer assumes all CPUs are same.
+Charm++> Running on 3 hosts (2 sockets x 64 cores x 1 PUs = 128-way SMP)
+Charm++> cpu topology info is gathered in 0.062 seconds.
+CharmLB> Load balancing instrumentation for communication is off.
+Total time: 3.887486
+[Partition 0][Node 0] End of program
+[1675931145.559670] [r206:2286 :0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x1555494134c0 was not matched
+[1675931145.567841] [r412:55564:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14eb80fb3540 was not matched
+[1675931145.579457] [r206:2313 :0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x155549403440 was not matched
+[1675931145.764705] [r206:2354 :0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x15554985c640 was not matched
+[1675931145.764737] [r206:2354 :0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x15554982c4c0 was not matched
+[1675931145.764741] [r206:2354 :0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x15554990cbc0 was not matched
+[1675931145.791858] [r206:2256 :0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x15554168d4c0 was not matched

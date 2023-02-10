@@ -1,0 +1,47 @@
+
+Running as 896 OS processes: ./iotest TEST_FILES/35.txt 896
+charmrun> /usr/bin/setarch x86_64 -R mpirun -np 896 ./iotest TEST_FILES/35.txt 896
+Charm++> Running on MPI library: Open MPI v4.0.5, package: Open MPI spack@br012.ib.bridges2.psc.edu Distribution, ident: 4.0.5, repo rev: v4.0.5, Aug 26, 2020 (MPI standard: 3.1)
+Charm++> Level of thread support used: MPI_THREAD_SINGLE (desired: MPI_THREAD_SINGLE)
+Charm++> Running in non-SMP mode: 896 processes (PEs)
+Converse/Charm++ Commit ID: v7.1.0-devel-237-ga3f055e15
+Isomalloc> Synchronized global address space.
+CharmLB> Load balancer assumes all CPUs are same.
+Charm++> Running on 7 hosts (2 sockets x 64 cores x 1 PUs = 128-way SMP)
+Charm++> cpu topology info is gathered in 0.067 seconds.
+CharmLB> Load balancing instrumentation for communication is off.
+Total time: 4.577230
+[Partition 0][Node 0] End of program
+[1675935666.564458] [r430:25945:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x151fc11c3f40 was not matched
+[1675935666.564950] [r430:25945:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x151fc1133ac0 was not matched
+[1675935666.565062] [r430:25945:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x151fc1204140 was not matched
+[1675935666.565168] [r430:25945:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x151fc12744c0 was not matched
+[1675935666.566054] [r413:39288:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x1488707c7c40 was not matched
+[1675935666.567801] [r413:39360:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x151b5bf3ea40 was not matched
+[1675935666.567209] [r430:25877:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14e9bce3d740 was not matched
+[1675935666.567229] [r430:25877:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14e9bcefdd40 was not matched
+[1675935666.566912] [r430:26000:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14722fac5740 was not matched
+[1675935666.566930] [r430:26000:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14722fa45340 was not matched
+[1675935666.568985] [r413:39291:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14f8d998b1c0 was not matched
+[1675935666.569536] [r413:39382:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14c867f4eac0 was not matched
+[1675935666.569556] [r413:39382:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14c867f5eb40 was not matched
+[1675935666.569609] [r413:39358:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x151c739a4e40 was not matched
+[1675935666.569667] [r413:39306:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x154c5bfbee40 was not matched
+[1675935666.570644] [r053:82470:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x15554174dac0 was not matched
+[1675935666.570665] [r053:82470:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x15554175db40 was not matched
+[1675935666.571259] [r413:39369:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14695fb95dc0 was not matched
+[1675935666.571282] [r413:39369:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14695fbd5fc0 was not matched
+[1675935666.571179] [r444:29347:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14bcbd857dc0 was not matched
+[1675935666.571714] [r444:29347:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14bcbda58dc0 was not matched
+[1675935666.571829] [r444:29347:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14bcbd817bc0 was not matched
+[1675935666.572260] [r053:82487:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x1555488a8bc0 was not matched
+[1675935666.572123] [r444:29382:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14fabc800a40 was not matched
+[1675935666.572312] [r444:29382:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x14fabc7f09c0 was not matched
+[1675935666.572818] [r053:82439:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x1555417ddf40 was not matched
+[1675935666.572804] [r053:82484:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x1555417edfc0 was not matched
+[1675935666.572823] [r053:82484:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x1555417bde40 was not matched
+[1675935666.572826] [r053:82484:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x15554179dd40 was not matched
+[1675935666.573154] [r053:82430:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x155549553ec0 was not matched
+[1675935666.573194] [r053:82430:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x1555494a3940 was not matched
+[1675935666.573199] [r053:82430:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x155549503c40 was not matched
+[1675935666.573203] [r053:82430:0]      tag_match.c:61   UCX  WARN  unexpected tag-receive descriptor 0x155549513cc0 was not matched

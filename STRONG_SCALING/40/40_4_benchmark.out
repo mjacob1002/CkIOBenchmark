@@ -1,0 +1,830 @@
+
+Running as 512 OS processes: ./iotest TEST_FILES/40.txt 512
+charmrun> /usr/bin/setarch x86_64 -R mpirun -np 512 ./iotest TEST_FILES/40.txt 512
+Charm++> Running on MPI library: Open MPI v4.0.5, package: Open MPI spack@br012.ib.bridges2.psc.edu Distribution, ident: 4.0.5, repo rev: v4.0.5, Aug 26, 2020 (MPI standard: 3.1)
+Charm++> Level of thread support used: MPI_THREAD_SINGLE (desired: MPI_THREAD_SINGLE)
+Charm++> Running in non-SMP mode: 512 processes (PEs)
+Converse/Charm++ Commit ID: v7.1.0-devel-237-ga3f055e15
+Isomalloc> Synchronized global address space.
+CharmLB> Load balancer assumes all CPUs are same.
+Charm++> Running on 4 hosts (2 sockets x 64 cores x 1 PUs = 128-way SMP)
+Charm++> cpu topology info is gathered in 0.081 seconds.
+CharmLB> Load balancing instrumentation for communication is off.
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+------------- Processor 127 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 3 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 4 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 5 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 6 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 8 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 9 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 12 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 13 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 16 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 17 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 19 Exiting: Caught Signal ------------
+Reason: Terminated
+[4] Stack Traceback:
+  [4:0] libpthread.so.0 0x155553edcdd0 
+  [4:1] iotest 0x5cecd6 LBDatabase::RegisterObj(LDOMHandle, unsigned long, void*, int)
+[6] Stack Traceback:
+  [6:0] libpthread.so.0 0x155553edcdd0 
+  [6:1] libmpi.so.40 0x155554783660 PMPI_Iprobe
+  [6:2] iotest 0x65c388 
+  [6:3] iotest 0x65c6b2 CmiGetNonLocal
+[8] Stack Traceback:
+  [8:0] libpthread.so.0 0x155553edcdd0 
+  [8:1] libuct.so.0 0x155552cb9078 
+  [8:2] libucp.so.0 0x155552efaeea ucp_worker_progress
+  [8:3] libmpi.so.40 0x1555548a60eb mca_pml_ucx_iprobe
+  [8:4] libmpi.so.40 0x15555478371c PMPI_Iprobe
+  [8:5] iotest 0x65c388 
+[20] Stack Traceback:
+  [20:0] libpthread.so.0 0x155553edcdd0 
+  [20:1] libucp.so.0 0x155552f08ea0 ucp_tag_probe_nb
+  [20:2] libmpi.so.40 0x1555548a6079 mca_pml_ucx_iprobe
+  [20:3] libmpi.so.40 0x15555478371c PMPI_Iprobe
+  [20:4] iotest 0x65c388 
+[30] Stack Traceback:
+  [30:0] libpthread.so.0 0x155553edcdd0 
+  [30:1] libucp.so.0 0x155552f08ea0 ucp_tag_probe_nb
+  [30:2] libmpi.so.40 0x1555548a6079 mca_pml_ucx_iprobe
+  [30:3] libmpi.so.40 0x15555478371c PMPI_Iprobe
+  [30:4] iotest 0x65c388 
+--------------------------------------------------------------------------
+MPI_ABORT was invoked on rank 503 in communicator MPI COMMUNICATOR 3 DUP FROM 0
+with errorcode 1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+------------- Processor 20 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 21 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 22 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 23 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 26 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 28 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 30 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 31 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 32 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 33 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 35 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 36 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 37 Exiting: Caught Signal ------------
+Reason: Terminated
+[61] Stack Traceback:
+  [61:0] libpthread.so.0 0x155553edcdd0 
+[62] Stack Traceback:
+  [62:0] libpthread.so.0 0x155553edcdd0 
+[79] Stack Traceback:
+  [79:0] libpthread.so.0 0x155553edcdd0 
+[80] Stack Traceback:
+  [80:0] libpthread.so.0 0x155553edcdd0 
+[86] Stack Traceback:
+  [86:0] libpthread.so.0 0x155553edcdd0 
+  [86:1] libmpi.so.40 0x15555472f1d0 
+[90] Stack Traceback:
+  [90:0] libpthread.so.0 0x155553edcdd0 
+[91] Stack Traceback:
+  [91:0] libpthread.so.0 0x155553edcdd0 
+[92] Stack Traceback:
+  [92:0] libpthread.so.0 0x155553edcdd0 
+[93] Stack Traceback:
+  [93:0] libpthread.so.0 0x155553edcdd0 
+[94] Stack Traceback:
+  [94:0] libpthread.so.0 0x155553edcdd0 
+[96] Stack Traceback:
+  [96:0] libpthread.so.0 0x155553edcdd0 
+[97] Stack Traceback:
+  [97:0] libpthread.so.0 0x155553edcdd0 
+[98] Stack Traceback:
+  [98:0] libpthread.so.0 0x155553edcdd0 
+[102] Stack Traceback:
+  [102:0] libpthread.so.0 0x155553edcdd0 
+[104] Stack Traceback:
+  [104:0] libpthread.so.0 0x155553edcdd0 
+  [104:1] libmpi.so.40 0x15555472be30 
+------------- Processor 38 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 41 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 42 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 45 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 46 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 47 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 50 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 53 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 54 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 56 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 57 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 58 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 59 Exiting: Caught Signal ------------
+Reason: Terminated
+[105] Stack Traceback:
+  [105:0] libpthread.so.0 0x155553edcdd0 
+  [105:1] libuct.so.0 0x155552cb9078 
+[106] Stack Traceback:
+  [106:0] libpthread.so.0 0x155553edcdd0 
+  [106:1] libmpi.so.40 0x15555472f1d0 
+[107] Stack Traceback:
+  [107:0] libpthread.so.0 0x155553edcdd0 
+  [107:1] libmpi.so.40 0x15555472f1d0 
+[108] Stack Traceback:
+  [108:0] libpthread.so.0 0x155553edcdd0 
+  [108:1] libmpi.so.40 0x15555472be30 
+[109] Stack Traceback:
+  [109:0] libpthread.so.0 0x155553edcdd0 
+  [109:1] libmpi.so.40 0x15555472be30 
+[110] Stack Traceback:
+  [110:0] libpthread.so.0 0x155553edcdd0 
+[111] Stack Traceback:
+  [111:0] libpthread.so.0 0x155553edcdd0 
+  [111:1] libmpi.so.40 0x15555472f1d0 
+[112] Stack Traceback:
+  [112:0] libpthread.so.0 0x155553edcdd0 
+  [112:1] libmpi.so.40 0x15555472f1d0 
+[113] Stack Traceback:
+  [113:0] libpthread.so.0 0x155553edcdd0 
+[114] Stack Traceback:
+  [114:0] libpthread.so.0 0x155553edcdd0 
+  [114:1] libmpi.so.40 0x15555472f1d0 
+[116] Stack Traceback:
+  [116:0] libpthread.so.0 0x155553edcdd0 
+------------- Processor 60 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 61 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 62 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 63 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 70 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 71 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 72 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 74 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 75 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 76 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 78 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 79 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 80 Exiting: Caught Signal ------------
+Reason: Terminated
+[117] Stack Traceback:
+  [117:0] libpthread.so.0 0x155553edcdd0 
+[120] Stack Traceback:
+  [120:0] libpthread.so.0 0x155553edcdd0 
+  [120:1] iotest 0x659da0 
+  [120:2] iotest 0x65c627 
+[124] Stack Traceback:
+  [124:0] libpthread.so.0 0x155553edcdd0 
+  [124:1] libmpi.so.40 0x15555472f1d0 
+[125] Stack Traceback:
+  [125:0] libpthread.so.0 0x155553edcdd0 
+  [125:1] iotest 0x4f6840 
+  [125:2] iotest 0x65c388 
+[127] Stack Traceback:
+  [127:0] libpthread.so.0 0x155553edcdd0 
+  [127:1] libmpi.so.40 0x15555472be30 
+------------- Processor 81 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 84 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 85 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 86 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 90 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 91 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 92 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 93 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 94 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 96 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 97 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 98 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 102 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 104 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 105 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 106 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 107 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 108 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 109 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 110 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 111 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 112 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 113 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 114 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 116 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 117 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 120 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 124 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 125 Exiting: Caught Signal ------------
+Reason: Terminated
+[384] Stack Traceback:
+  [384:0] libpthread.so.0 0x1511cefb7dd0 
+  [384:1] iotest 0x65c394 
+  [384:2] iotest 0x65c6b2 CmiGetNonLocal
+  [384:3] iotest 0x6368cd CsdNextMessage
+  [384:4] iotest 0x63699a CsdScheduleForever
+  [384:5] iotest 0x636d05 CsdScheduler
+  [384:6] iotest 0x65d13a ConverseInit
+  [384:7] iotest 0x5c67c7 charm_main
+  [384:8] libc.so.6 0x1511cec066a3 __libc_start_main
+  [384:9] iotest 0x503dae _start
+------------- Processor 384 Exiting: Caught Signal ------------
+Reason: Terminated
+[385] Stack Traceback:
+  [385:0] libpthread.so.0 0x15553c721dd0 
+  [385:1] libmpi.so.40 0x15553d0eb0da mca_pml_ucx_iprobe
+  [385:2] libmpi.so.40 0x15553cfc871c PMPI_Iprobe
+  [385:3] iotest 0x65c388 
+  [385:4] iotest 0x65c60e 
+  [385:5] iotest 0x6348a0 CcdRaiseCondition
+  [385:6] iotest 0x636a5a CsdScheduleForever
+  [385:7] iotest 0x636d05 CsdScheduler
+  [385:8] iotest 0x65d13a ConverseInit
+  [385:9] iotest 0x5c67c7 charm_main
+  [385:10] libc.so.6 0x15553c3706a3 __libc_start_main
+  [385:11] iotest 0x503dae _start
+------------- Processor 385 Exiting: Caught Signal ------------
+Reason: Terminated
+[386] Stack Traceback:
+  [386:0] libpthread.so.0 0x149d731dcdd0 
+  [386:1] libuct_ib.so.0 0x149d6ef720c7 
+  [386:2] libucp.so.0 0x149d721faeea ucp_worker_progress
+  [386:3] libmpi.so.40 0x149d73ba60eb mca_pml_ucx_iprobe
+  [386:4] libmpi.so.40 0x149d73a8371c PMPI_Iprobe
+  [386:5] iotest 0x65c388 
+  [386:6] iotest 0x65c6b2 CmiGetNonLocal
+  [386:7] iotest 0x6368cd CsdNextMessage
+  [386:8] iotest 0x63699a CsdScheduleForever
+  [386:9] iotest 0x636d05 CsdScheduler
+  [386:10] iotest 0x65d13a ConverseInit
+  [386:11] iotest 0x5c67c7 charm_main
+  [386:12] libc.so.6 0x149d72e2b6a3 __libc_start_main
+  [386:13] iotest 0x503dae _start
+------------- Processor 386 Exiting: Caught Signal ------------
+Reason: Terminated
+[387] Stack Traceback:
+  [387:0] libpthread.so.0 0x15440126fdd0 
+  [387:1] iotest 0x6348a0 CcdRaiseCondition
+  [387:2] iotest 0x636a5a CsdScheduleForever
+  [387:3] iotest 0x636d05 CsdScheduler
+  [387:4] iotest 0x65d13a ConverseInit
+  [387:5] iotest 0x5c67c7 charm_main
+  [387:6] libc.so.6 0x154400ebe6a3 __libc_start_main
+  [387:7] iotest 0x503dae _start
+------------- Processor 387 Exiting: Caught Signal ------------
+Reason: Terminated
+[388] Stack Traceback:
+  [388:0] libpthread.so.0 0x147804a7edd0 
+  [388:1] iotest 0x659d8b 
+  [388:2] iotest 0x659e37 
+  [388:3] iotest 0x65c6cb CmiGetNonLocal
+  [388:4] iotest 0x6368cd CsdNextMessage
+  [388:5] iotest 0x63699a CsdScheduleForever
+  [388:6] iotest 0x636d05 CsdScheduler
+  [388:7] iotest 0x65d13a ConverseInit
+  [388:8] iotest 0x5c67c7 charm_main
+  [388:9] libc.so.6 0x1478046cd6a3 __libc_start_main
+  [388:10] iotest 0x503dae _start
+------------- Processor 388 Exiting: Caught Signal ------------
+Reason: Terminated
+[389] Stack Traceback:
+  [389:0] libpthread.so.0 0x14dc78bc4dd0 
+  [389:1] iotest 0x659d8b 
+  [389:2] iotest 0x659e37 
+  [389:3] iotest 0x65c627 
+  [389:4] iotest 0x6348a0 CcdRaiseCondition
+  [389:5] iotest 0x636a5a CsdScheduleForever
+  [389:6] iotest 0x636d05 CsdScheduler
+  [389:7] iotest 0x65d13a ConverseInit
+  [389:8] iotest 0x5c67c7 charm_main
+  [389:9] libc.so.6 0x14dc788136a3 __libc_start_main
+  [389:10] iotest 0x503dae _start
+------------- Processor 389 Exiting: Caught Signal ------------
+Reason: Terminated
+[390] Stack Traceback:
+  [390:0] libpthread.so.0 0x14fdcc36bdd0 
+  [390:1] iotest 0x659d8b 
+  [390:2] iotest 0x65c6d7 CmiGetNonLocal
+  [390:3] iotest 0x6368cd CsdNextMessage
+  [390:4] iotest 0x63699a CsdScheduleForever
+  [390:5] iotest 0x636d05 CsdScheduler
+  [390:6] iotest 0x65d13a ConverseInit
+  [390:7] iotest 0x5c67c7 charm_main
+  [390:8] libc.so.6 0x14fdcbfba6a3 __libc_start_main
+  [390:9] iotest 0x503dae _start
+------------- Processor 390 Exiting: Caught Signal ------------
+Reason: Terminated
+[391] Stack Traceback:
+  [391:0] libpthread.so.0 0x14e7b1237dd0 
+  [391:1] libmpi.so.40 0x14e7b1c00ffe mca_pml_ucx_iprobe
+  [391:2] libmpi.so.40 0x14e7b1ade71c PMPI_Iprobe
+  [391:3] iotest 0x65c388 
+  [391:4] iotest 0x65c6b2 CmiGetNonLocal
+  [391:5] iotest 0x6368cd CsdNextMessage
+  [391:6] iotest 0x63699a CsdScheduleForever
+  [391:7] iotest 0x636d05 CsdScheduler
+  [391:8] iotest 0x65d13a ConverseInit
+  [391:9] iotest 0x5c67c7 charm_main
+  [391:10] libc.so.6 0x14e7b0e866a3 __libc_start_main
+  [391:11] iotest 0x503dae _start
+------------- Processor 391 Exiting: Caught Signal ------------
+Reason: Terminated
+[392] Stack Traceback:
+  [392:0] libpthread.so.0 0x14fd18109dd0 
+  [392:1] iotest 0x6368c8 CsdNextMessage
+  [392:2] iotest 0x63699a CsdScheduleForever
+  [392:3] iotest 0x636d05 CsdScheduler
+  [392:4] iotest 0x65d13a ConverseInit
+  [392:5] iotest 0x5c67c7 charm_main
+  [392:6] libc.so.6 0x14fd17d586a3 __libc_start_main
+  [392:7] iotest 0x503dae _start
+------------- Processor 392 Exiting: Caught Signal ------------
+Reason: Terminated
+[393] Stack Traceback:
+  [393:0] libpthread.so.0 0x1481e8900dd0 
+  [393:1] iotest 0x659d8b 
+  [393:2] iotest 0x659df7 
+  [393:3] iotest 0x65c6cb CmiGetNonLocal
+  [393:4] iotest 0x6368cd CsdNextMessage
+  [393:5] iotest 0x63699a CsdScheduleForever
+  [393:6] iotest 0x636d05 CsdScheduler
+  [393:7] iotest 0x65d13a ConverseInit
+  [393:8] iotest 0x5c67c7 charm_main
+  [393:9] libc.so.6 0x1481e854f6a3 __libc_start_main
+  [393:10] iotest 0x503dae _start
+------------- Processor 393 Exiting: Caught Signal ------------
+Reason: Terminated
+[394] Stack Traceback:
+  [394:0] libpthread.so.0 0x152492cabdd0 
+  [394:1] libmpi.so.40 0x152493552660 PMPI_Iprobe
+  [394:2] iotest 0x65c388 
+  [394:3] iotest 0x65c60e 
+  [394:4] iotest 0x6348a0 CcdRaiseCondition
+  [394:5] iotest 0x636a5a CsdScheduleForever
+  [394:6] iotest 0x636d05 CsdScheduler
+  [394:7] iotest 0x65d13a ConverseInit
+  [394:8] iotest 0x5c67c7 charm_main
+  [394:9] libc.so.6 0x1524928fa6a3 __libc_start_main
+  [394:10] iotest 0x503dae _start
+------------- Processor 394 Exiting: Caught Signal ------------
+Reason: Terminated
+[395] Stack Traceback:
+  [395:0] libpthread.so.0 0x14ef9abe5dd0 
+  [395:1] iotest 0x659d8b 
+  [395:2] iotest 0x659df7 
+  [395:3] iotest 0x65c627 
+  [395:4] iotest 0x6348a0 CcdRaiseCondition
+  [395:5] iotest 0x636a5a CsdScheduleForever
+  [395:6] iotest 0x636d05 CsdScheduler
+  [395:7] iotest 0x65d13a ConverseInit
+  [395:8] iotest 0x5c67c7 charm_main
+  [395:9] libc.so.6 0x14ef9a8346a3 __libc_start_main
+  [395:10] iotest 0x503dae _start
+------------- Processor 395 Exiting: Caught Signal ------------
+Reason: Terminated
+[396] Stack Traceback:
+  [396:0] libpthread.so.0 0x1521d6187dd0 
+  [396:1] libucp.so.0 0x1521d51b3ea0 ucp_tag_probe_nb
+  [396:2] libmpi.so.40 0x1521d6b51079 mca_pml_ucx_iprobe
+  [396:3] libmpi.so.40 0x1521d6a2e71c PMPI_Iprobe
+  [396:4] iotest 0x65c388 
+  [396:5] iotest 0x65c6b2 CmiGetNonLocal
+  [396:6] iotest 0x6368cd CsdNextMessage
+  [396:7] iotest 0x63699a CsdScheduleForever
+  [396:8] iotest 0x636d05 CsdScheduler
+  [396:9] iotest 0x65d13a ConverseInit
+  [396:10] iotest 0x5c67c7 charm_main
+  [396:11] libc.so.6 0x1521d5dd66a3 __libc_start_main
+  [396:12] iotest 0x503dae _start
+------------- Processor 396 Exiting: Caught Signal ------------
+Reason: Terminated
+[397] Stack Traceback:
+  [397:0] libpthread.so.0 0x149644517dd0 
+  [397:1] iotest 0x659d30 
+  [397:2] iotest 0x659df7 
+  [397:3] iotest 0x65c6cb CmiGetNonLocal
+  [397:4] iotest 0x6368cd CsdNextMessage
+  [397:5] iotest 0x63699a CsdScheduleForever
+  [397:6] iotest 0x636d05 CsdScheduler
+  [397:7] iotest 0x65d13a ConverseInit
+  [397:8] iotest 0x5c67c7 charm_main
+  [397:9] libc.so.6 0x1496441666a3 __libc_start_main
+  [397:10] iotest 0x503dae _start
+------------- Processor 397 Exiting: Caught Signal ------------
+Reason: Terminated
+[398] Stack Traceback:
+  [398:0] libpthread.so.0 0x14a8ae003dd0 
+  [398:1] iotest 0x6348a0 CcdRaiseCondition
+  [398:2] iotest 0x636a5a CsdScheduleForever
+  [398:3] iotest 0x636d05 CsdScheduler
+  [398:4] iotest 0x65d13a ConverseInit
+  [398:5] iotest 0x5c67c7 charm_main
+  [398:6] libc.so.6 0x14a8adc526a3 __libc_start_main
+  [398:7] iotest 0x503dae _start
+------------- Processor 398 Exiting: Caught Signal ------------
+Reason: Terminated
+[399] Stack Traceback:
+  [399:0] libpthread.so.0 0x148154448dd0 
+  [399:1] iotest 0x634780 CcdRaiseCondition
+  [399:2] iotest 0x636992 CsdScheduleForever
+  [399:3] iotest 0x636d05 CsdScheduler
+  [399:4] iotest 0x65d13a ConverseInit
+  [399:5] iotest 0x5c67c7 charm_main
+  [399:6] libc.so.6 0x1481540976a3 __libc_start_main
+  [399:7] iotest 0x503dae _start
+------------- Processor 399 Exiting: Caught Signal ------------
+Reason: Terminated
+[400] Stack Traceback:
+  [400:0] libpthread.so.0 0x1458966b1dd0 
+  [400:1] iotest 0x65c6b2 CmiGetNonLocal
+  [400:2] iotest 0x6368cd CsdNextMessage
+  [400:3] iotest 0x63699a CsdScheduleForever
+  [400:4] iotest 0x636d05 CsdScheduler
+  [400:5] iotest 0x65d13a ConverseInit
+  [400:6] iotest 0x5c67c7 charm_main
+  [400:7] libc.so.6 0x1458963006a3 __libc_start_main
+  [400:8] iotest 0x503dae _start
+------------- Processor 400 Exiting: Caught Signal ------------
+Reason: Terminated
+[401] Stack Traceback:
+  [401:0] libpthread.so.0 0x14f0c459bdd0 
+  [401:1] iotest 0x634756 CcdRaiseCondition
+  [401:2] iotest 0x636a5a CsdScheduleForever
+  [401:3] iotest 0x636d05 CsdScheduler
+  [401:4] iotest 0x65d13a ConverseInit
+  [401:5] iotest 0x5c67c7 charm_main
+  [401:6] libc.so.6 0x14f0c41ea6a3 __libc_start_main
+  [401:7] iotest 0x503dae _start
+------------- Processor 401 Exiting: Caught Signal ------------
+Reason: Terminated
+[402] Stack Traceback:
+  [402:0] libpthread.so.0 0x146365a94dd0 
+  [402:1] iotest 0x634788 CcdRaiseCondition
+  [402:2] iotest 0x636a5a CsdScheduleForever
+  [402:3] iotest 0x636d05 CsdScheduler
+  [402:4] iotest 0x65d13a ConverseInit
+  [402:5] iotest 0x5c67c7 charm_main
+  [402:6] libc.so.6 0x1463656e36a3 __libc_start_main
+  [402:7] iotest 0x503dae _start
+------------- Processor 402 Exiting: Caught Signal ------------
+Reason: Terminated
+[403] Stack Traceback:
+  [403:0] libpthread.so.0 0x14de54848dd0 
+  [403:1] libmpi.so.40 0x14de550ef691 PMPI_Iprobe
+  [403:2] iotest 0x65c388 
+  [403:3] iotest 0x65c6b2 CmiGetNonLocal
+  [403:4] iotest 0x6368cd CsdNextMessage
+  [403:5] iotest 0x63699a CsdScheduleForever
+  [403:6] iotest 0x636d05 CsdScheduler
+  [403:7] iotest 0x65d13a ConverseInit
+  [403:8] iotest 0x5c67c7 charm_main
+  [403:9] libc.so.6 0x14de544976a3 __libc_start_main
+  [403:10] iotest 0x503dae _start
+------------- Processor 403 Exiting: Caught Signal ------------
+Reason: Terminated
+[404] Stack Traceback:
+  [404:0] libpthread.so.0 0x14781200fdd0 
+  [404:1] iotest 0x64642b CqsDequeue
+  [404:2] iotest 0x636901 CsdNextMessage
+  [404:3] iotest 0x63699a CsdScheduleForever
+  [404:4] iotest 0x636d05 CsdScheduler
+  [404:5] iotest 0x65d13a ConverseInit
+  [404:6] iotest 0x5c67c7 charm_main
+  [404:7] libc.so.6 0x147811c5e6a3 __libc_start_main
+  [404:8] iotest 0x503dae _start
+------------- Processor 404 Exiting: Caught Signal ------------
+Reason: Terminated
+[405] Stack Traceback:
+  [405:0] libpthread.so.0 0x14593ad8cdd0 
+  [405:1] iotest 0x65c600 
+  [405:2] iotest 0x6348a0 CcdRaiseCondition
+  [405:3] iotest 0x636a5a CsdScheduleForever
+  [405:4] iotest 0x636d05 CsdScheduler
+  [405:5] iotest 0x65d13a ConverseInit
+  [405:6] iotest 0x5c67c7 charm_main
+  [405:7] libc.so.6 0x14593a9db6a3 __libc_start_main
+  [405:8] iotest 0x503dae _start
+------------- Processor 405 Exiting: Caught Signal ------------
+Reason: Terminated
+[406] Stack Traceback:
+  [406:0] libpthread.so.0 0x147b7c6f0dd0 
+  [406:1] libmpi.so.40 0x147b7cf97680 PMPI_Iprobe
+  [406:2] iotest 0x65c388 
+  [406:3] iotest 0x65c6b2 CmiGetNonLocal
+  [406:4] iotest 0x6368cd CsdNextMessage
+  [406:5] iotest 0x63699a CsdScheduleForever
+  [406:6] iotest 0x636d05 CsdScheduler
+  [406:7] iotest 0x65d13a ConverseInit
+  [406:8] iotest 0x5c67c7 charm_main
+  [406:9] libc.so.6 0x147b7c33f6a3 __libc_start_main
+  [406:10] iotest 0x503dae _start
+------------- Processor 406 Exiting: Caught Signal ------------
+Reason: Terminated
+[407] Stack Traceback:
+  [407:0] libpthread.so.0 0x14acf107edd0 
+  [407:1] libuct.so.0 0x14acefe5b05b 
+  [407:2] libucp.so.0 0x14acf009ceea ucp_worker_progress
+  [407:3] libmpi.so.40 0x14acf1a480eb mca_pml_ucx_iprobe
+  [407:4] libmpi.so.40 0x14acf192571c PMPI_Iprobe
+  [407:5] iotest 0x65c388 
+  [407:6] iotest 0x65c6b2 CmiGetNonLocal
+  [407:7] iotest 0x6368cd CsdNextMessage
+  [407:8] iotest 0x63699a CsdScheduleForever
+  [407:9] iotest 0x636d05 CsdScheduler
+  [407:10] iotest 0x65d13a ConverseInit
+  [407:11] iotest 0x5c67c7 charm_main
+  [407:12] libc.so.6 0x14acf0ccd6a3 __libc_start_main
+  [407:13] iotest 0x503dae _start
+------------- Processor 407 Exiting: Caught Signal ------------
+Reason: Terminated
+[408] Stack Traceback:
+  [408:0] libpthread.so.0 0x14ad4409bdd0 
+  [408:1] iotest 0x659d8b 
+  [408:2] iotest 0x65c66c CmiGetNonLocal
+  [408:3] iotest 0x6368cd CsdNextMessage
+  [408:4] iotest 0x63699a CsdScheduleForever
+  [408:5] iotest 0x636d05 CsdScheduler
+  [408:6] iotest 0x65d13a ConverseInit
+  [408:7] iotest 0x5c67c7 charm_main
+  [408:8] libc.so.6 0x14ad43cea6a3 __libc_start_main
+  [408:9] iotest 0x503dae _start
+------------- Processor 408 Exiting: Caught Signal ------------
+Reason: Terminated
+[409] Stack Traceback:
+  [409:0] libpthread.so.0 0x1485f7571dd0 
+  [409:1] libmpi.so.40 0x1485f7f3b0da mca_pml_ucx_iprobe
+  [409:2] libmpi.so.40 0x1485f7e1871c PMPI_Iprobe
+  [409:3] iotest 0x65c388 
+  [409:4] iotest 0x65c60e 
+  [409:5] iotest 0x6348a0 CcdRaiseCondition
+  [409:6] iotest 0x636a5a CsdScheduleForever
+  [409:7] iotest 0x636d05 CsdScheduler
+  [409:8] iotest 0x65d13a ConverseInit
+  [409:9] iotest 0x5c67c7 charm_main
+  [409:10] libc.so.6 0x1485f71c06a3 __libc_start_main
+  [409:11] iotest 0x503dae _start
+------------- Processor 409 Exiting: Caught Signal ------------
+Reason: Terminated
+[410] Stack Traceback:
+  [410:0] libpthread.so.0 0x14696ccb7dd0 
+  [410:1] iotest 0x634752 CcdRaiseCondition
+  [410:2] iotest 0x636a5a CsdScheduleForever
+  [410:3] iotest 0x636d05 CsdScheduler
+  [410:4] iotest 0x65d13a ConverseInit
+  [410:5] iotest 0x5c67c7 charm_main
+  [410:6] libc.so.6 0x14696c9066a3 __libc_start_main
+  [410:7] iotest 0x503dae _start
+------------- Processor 410 Exiting: Caught Signal ------------
+Reason: Terminated
+[411] Stack Traceback:
+  [411:0] libpthread.so.0 0x15109392fdd0 
+  [411:1] iotest 0x65c521 
+  [411:2] iotest 0x65c60e 
+  [411:3] iotest 0x6348a0 CcdRaiseCondition
+  [411:4] iotest 0x636a5a CsdScheduleForever
+  [411:5] iotest 0x636d05 CsdScheduler
+  [411:6] iotest 0x65d13a ConverseInit
+  [411:7] iotest 0x5c67c7 charm_main
+  [411:8] libc.so.6 0x15109357e6a3 __libc_start_main
+  [411:9] iotest 0x503dae _start
+------------- Processor 411 Exiting: Caught Signal ------------
+Reason: Terminated
+[412] Stack Traceback:
+  [412:0] libpthread.so.0 0x1470f4b7ddd0 
+  [412:1] iotest 0x659e79 
+  [412:2] iotest 0x65c6cb CmiGetNonLocal
+  [412:3] iotest 0x6368cd CsdNextMessage
+  [412:4] iotest 0x63699a CsdScheduleForever
+  [412:5] iotest 0x636d05 CsdScheduler
+  [412:6] iotest 0x65d13a ConverseInit
+  [412:7] iotest 0x5c67c7 charm_main
+  [412:8] libc.so.6 0x1470f47cc6a3 __libc_start_main
+  [412:9] iotest 0x503dae _start
+------------- Processor 412 Exiting: Caught Signal ------------
+Reason: Terminated
+[413] Stack Traceback:
+  [413:0] libpthread.so.0 0x14f46c35edd0 
+  [413:1] iotest 0x65c518 
+  [413:2] iotest 0x65c60e 
+  [413:3] iotest 0x6348a0 CcdRaiseCondition
+  [413:4] iotest 0x636a5a CsdScheduleForever
+  [413:5] iotest 0x636d05 CsdScheduler
+  [413:6] iotest 0x65d13a ConverseInit
+  [413:7] iotest 0x5c67c7 charm_main
+  [413:8] libc.so.6 0x14f46bfad6a3 __libc_start_main
+  [413:9] iotest 0x503dae _start
+------------- Processor 413 Exiting: Caught Signal ------------
+Reason: Terminated
+[414] Stack Traceback:
+  [414:0] libpthread.so.0 0x1460cf559dd0 
+  [414:1] libuct_ib.so.0 0x1460c71d30e8 
+  [414:2] libucp.so.0 0x1460ce577eea ucp_worker_progress
+  [414:3] libopen-pal.so.40 0x1460ce81b773 opal_progress
+  [414:4] libmpi.so.40 0x1460cff23105 mca_pml_ucx_iprobe
+  [414:5] libmpi.so.40 0x1460cfe0071c PMPI_Iprobe
+  [414:6] iotest 0x65c388 
+  [414:7] iotest 0x65c6b2 CmiGetNonLocal
+  [414:8] iotest 0x6368cd CsdNextMessage
+  [414:9] iotest 0x63699a CsdScheduleForever
+  [414:10] iotest 0x636d05 CsdScheduler
+  [414:11] iotest 0x65d13a ConverseInit
+  [414:12] iotest 0x5c67c7 charm_main
+  [414:13] libc.so.6 0x1460cf1a86a3 __libc_start_main
+  [414:14] iotest 0x503dae _start
+------------- Processor 414 Exiting: Caught Signal ------------
+Reason: Terminated
+[415] Stack Traceback:
+  [415:0] libpthread.so.0 0x1522bb85cdd0 
+  [415:1] iotest 0x634750 CcdRaiseCondition
+  [415:2] iotest 0x636a5a CsdScheduleForever
+  [415:3] iotest 0x636d05 CsdScheduler
+  [415:4] iotest 0x65d13a ConverseInit
+  [415:5] iotest 0x5c67c7 charm_main
+  [415:6] libc.so.6 0x1522bb4ab6a3 __libc_start_main
+  [415:7] iotest 0x503dae _start
+------------- Processor 415 Exiting: Caught Signal ------------
+Reason: Terminated
+[416] Stack Traceback:
+  [416:0] libpthread.so.0 0x14adbbf6bdd0 
+  [416:1] libuct_ib.so.0 0x14adb81020ee 
+  [416:2] libucp.so.0 0x14adbaf89eea ucp_worker_progress
+  [416:3] libmpi.so.40 0x14adbc9350eb mca_pml_ucx_iprobe
+  [416:4] libmpi.so.40 0x14adbc81271c PMPI_Iprobe
+  [416:5] iotest 0x65c388 
+  [416:6] iotest 0x65c60e 
+  [416:7] iotest 0x6348a0 CcdRaiseCondition
+  [416:8] iotest 0x636a5a CsdScheduleForever
+  [416:9] iotest 0x636d05 CsdScheduler
+  [416:10] iotest 0x65d13a ConverseInit
+  [416:11] iotest 0x5c67c7 charm_main
+  [416:12] libc.so.6 0x14adbbbba6a3 __libc_start_main
+  [416:13] iotest 0x503dae _start
+------------- Processor 416 Exiting: Caught Signal ------------
+Reason: Terminated
+[417] Stack Traceback:
+  [417:0] libpthread.so.0 0x14e83614add0 
+  [417:1] iotest 0x659d8b 
+  [417:2] iotest 0x659e37 
+  [417:3] iotest 0x65c6cb CmiGetNonLocal
+  [417:4] iotest 0x6368cd CsdNextMessage
+  [417:5] iotest 0x63699a CsdScheduleForever
+  [417:6] iotest 0x636d05 CsdScheduler
+  [417:7] iotest 0x65d13a ConverseInit
+  [417:8] iotest 0x5c67c7 charm_main
+  [417:9] libc.so.6 0x14e835d996a3 __libc_start_main
+  [417:10] iotest 0x503dae _start
+------------- Processor 417 Exiting: Caught Signal ------------
+Reason: Terminated
+[418] Stack Traceback:
+  [418:0] libpthread.so.0 0x14ed29944dd0 
+  [418:1] libmpi.so.40 0x14ed2a1eb704 PMPI_Iprobe
+  [418:2] iotest 0x65c388 
+  [418:3] iotest 0x65c60e 
+  [418:4] iotest 0x6348a0 CcdRaiseCondition
+  [418:5] iotest 0x636a5a CsdScheduleForever
+  [418:6] iotest 0x636d05 CsdScheduler
+  [418:7] iotest 0x65d13a ConverseInit
+  [418:8] iotest 0x5c67c7 charm_main
+  [418:9] libc.so.6 0x14ed295936a3 __libc_start_main
+  [418:10] iotest 0x503dae _start
+------------- Processor 418 Exiting: Caught Signal ------------
+Reason: Terminated
+[419] Stack Traceback:
+  [419:0] libpthread.so.0 0x1499505d6dd0 
+  [419:1] libmpi.so.40 0x149950e7d691 PMPI_Iprobe
+  [419:2] iotest 0x65c388 
+  [419:3] iotest 0x65c6b2 CmiGetNonLocal
+  [419:4] iotest 0x6368cd CsdNextMessage
+  [419:5] iotest 0x63699a CsdScheduleForever
+  [419:6] iotest 0x636d05 CsdScheduler
+  [419:7] iotest 0x65d13a ConverseInit
+  [419:8] iotest 0x5c67c7 charm_main
+  [419:9] libc.so.6 0x1499502256a3 __libc_start_main
+  [419:10] iotest 0x503dae _start
+------------- Processor 419 Exiting: Caught Signal ------------
+Reason: Terminated
+[420] Stack Traceback:
+  [420:0] libpthread.so.0 0x14ab04e30dd0 
+  [420:1] libuct.so.0 0x14ab03c0d05d 
+  [420:2] libucp.so.0 0x14ab03e4eeea ucp_worker_progress
+  [420:3] libmpi.so.40 0x14ab057fa0eb mca_pml_ucx_iprobe
+  [420:4] libmpi.so.40 0x14ab056d771c PMPI_Iprobe
+  [420:5] iotest 0x65c388 
+  [420:6] iotest 0x65c6b2 CmiGetNonLocal
+  [420:7] iotest 0x6368cd CsdNextMessage
+  [420:8] iotest 0x63699a CsdScheduleForever
+  [420:9] iotest 0x636d05 CsdScheduler
+  [420:10] iotest 0x65d13a ConverseInit
+  [420:11] iotest 0x5c67c7 charm_main
+  [420:12] libc.so.6 0x14ab04a7f6a3 __libc_start_main
+  [420:13] iotest 0x503dae _start
+------------- Processor 420 Exiting: Caught Signal ------------
+Reason: Terminated
+[421] Stack Traceback:
+  [421:0] libpthread.so.0 0x14b198012dd0 
+  [421:1] iotest 0x659d8b 
+  [421:2] iotest 0x659e37 
+  [421:3] iotest 0x65c627 
+  [421:4] iotest 0x6348a0 CcdRaiseCondition
+  [421:5] iotest 0x636a5a CsdScheduleForever
+  [421:6] iotest 0x636d05 CsdScheduler
+  [421:7] iotest 0x65d13a ConverseInit
+  [421:8] iotest 0x5c67c7 charm_main
+  [421:9] libc.so.6 0x14b197c616a3 __libc_start_main
+  [421:10] iotest 0x503dae _start
+------------- Processor 421 Exiting: Caught Signal ------------
+Reason: Terminated
+[422] Stack Traceback:
+  [422:0] libpthread.so.0 0x14aaa0419dd0 
+  [422:1] libuct_ib.so.0 0x14aa9c1af2b6 
+  [422:2] libucp.so.0 0x14aa9f437eea ucp_worker_progress
+  [422:3] libmpi.so.40 0x14aaa0de30eb mca_pml_ucx_iprobe
+  [422:4] libmpi.so.40 0x14aaa0cc071c PMPI_Iprobe
+  [422:5] iotest 0x65c388 
+  [422:6] iotest 0x65c6b2 CmiGetNonLocal
+  [422:7] iotest 0x6368cd CsdNextMessage
+  [422:8] iotest 0x63699a CsdScheduleForever
+  [422:9] iotest 0x636d05 CsdScheduler
+  [422:10] iotest 0x65d13a ConverseInit
+  [422:11] iotest 0x5c67c7 charm_main
+  [422:12] libc.so.6 0x14aaa00686a3 __libc_start_main
+  [422:13] iotest 0x503dae _start
+------------- Processor 422 Exiting: Caught Signal ------------
+Reason: Terminated
+--------------------------------------------------------------------------
+mpirun noticed that process rank 462 with PID 65198 on node r472 exited on signal 9 (Killed).
+--------------------------------------------------------------------------
+[r087.ib.bridges2.psc.edu:100737] 118 more processes have sent help message help-mpi-api.txt / mpi-abort
+[r087.ib.bridges2.psc.edu:100737] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages

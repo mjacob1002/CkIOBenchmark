@@ -23,13 +23,13 @@ int main(int argc, char** argv){
 		fprintf(stderr, "I need 2 arguments\n");
 		exit(2);
 	}
-	fprintf(stderr, "Filename to be opened: %s\n", argv[1]);
+	// fprintf(stderr, "Filename to be opened: %s\n", argv[1]);
 	MPI_Init(&argc, &argv);
 	MPI_Comm_size(MPI_COMM_WORLD, &nprocs);
 	MPI_Comm_rank(MPI_COMM_WORLD, &rank);
 	
 	MPI_Barrier(MPI_COMM_WORLD); // wait for all of the processes to gather	
-	start_time = MPI_Wtime();
+	start_time = MPI_Wtime(); // measure from the opening of the file
 	error = MPI_File_open(MPI_COMM_WORLD, argv[1], MPI_MODE_RDONLY, MPI_INFO_NULL, &fh);
 	if(error != MPI_SUCCESS) {
 		fprintf(stderr, "Proccess %d had an error when opening %s\n", rank, argv[1]);
@@ -43,14 +43,13 @@ int main(int argc, char** argv){
 		MPI_Finalize();
 		exit(-1);
 	}
-	fprintf(stderr, "Processor %d says filesize is %zu\n", rank, filesize);
+	// fprintf(stderr, "Processor %d says filesize is %zu\n", rank, filesize);
 	length = filesize / nprocs;
 	start = rank * length;
 	if(rank == nprocs - 1)
 		end = filesize;
 	else 
 		end = start + length;
-
 	buffer = malloc((end-start) * sizeof(char) + sizeof(char));
 	if(!buffer){
 		fprintf(stderr, "Proccess %d had an error when getting mallocing %d bytes\n", rank, (end-start));
@@ -69,9 +68,9 @@ int main(int argc, char** argv){
 	MPI_Barrier(MPI_COMM_WORLD);
 	end_time = MPI_Wtime();
 	if(!rank){
-		fprintf(stderr, "Total time for the program was %f\n", end_time-start_time);
+		fprintf(stderr, "Total time: %f\n", end_time-start_time);
 	}
-	fprintf(stdout, "From process %d: read %zu bytes\n", rank, strlen(buffer));
+	// fprintf(stdout, "From process %d: read %zu bytes\n", rank, strlen(buffer));
 	MPI_File_close(&fh);
 
 	MPI_Finalize();
