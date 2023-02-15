@@ -63,12 +63,15 @@ int main(int argc, char** argv){
 		MPI_Finalize();
 		exit(-1);
 	}
-
+	int num_bytes_read;
+	MPI_Get_count(&status, MPI_BYTE, &num_bytes_read);
 	buffer[end-start] = '\0';
 	MPI_Barrier(MPI_COMM_WORLD);
 	end_time = MPI_Wtime();
 	if(!rank){
 		fprintf(stderr, "Total time: %f\n", end_time-start_time);
+		fprintf(stderr, "Total bytes read: %d\n", num_bytes_read);
+		fprintf(stderr, "Total bandwidth: %f\n", (1.0 * filesize / ((1 << 30) * (end_time - start_time))));
 	}
 	// fprintf(stdout, "From process %d: read %zu bytes\n", rank, strlen(buffer));
 	MPI_File_close(&fh);

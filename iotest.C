@@ -16,7 +16,7 @@ class Main : public CBase_Main {
 	double end_time;
 	size_t file_size;
 	size_t num_pes;
-	size_t num_readers_per_pe = 50;
+	size_t num_readers_per_pe = 5;
 	std::string TEST_FILE;
 public:
 	Main(CkArgMsg* msg){
