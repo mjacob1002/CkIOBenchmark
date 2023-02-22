@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <mpi.h>
-
+char* sequentialRead(char* filename, size_t offset, size_t num_bytes);
 int main(int argc, char** argv){
 
 	double start_time, end_time;
@@ -27,7 +27,7 @@ int main(int argc, char** argv){
 	MPI_Init(&argc, &argv);
 	MPI_Comm_size(MPI_COMM_WORLD, &nprocs);
 	MPI_Comm_rank(MPI_COMM_WORLD, &rank);
-	
+	fprintf(stdout, "Filename: %s\n. Number of processes: %d\n.", argv[1], nprocs);	
 	MPI_Barrier(MPI_COMM_WORLD); // wait for all of the processes to gather	
 	start_time = MPI_Wtime(); // measure from the opening of the file
 	error = MPI_File_open(MPI_COMM_WORLD, argv[1], MPI_MODE_RDONLY, MPI_INFO_NULL, &fh);
@@ -75,8 +75,23 @@ int main(int argc, char** argv){
 	}
 	// fprintf(stdout, "From process %d: read %zu bytes\n", rank, strlen(buffer));
 	MPI_File_close(&fh);
-
+	char* seq_buffer = sequentialRead(argv[1], start, (end - start));
+	for(size_t i = 0; i < (end-start); ++i) {
+		if(seq_buffer[i] != buffer[i]){
+			printf("Rank %d: seq_buffer[%d]=%d, while buffer[%d] = %d\n", rank, i, (int)(seq_buffer[i]), i, (int)(buffer[i]));
+			exit(5);
+		}
+	}
 	MPI_Finalize();
 	return 0;
 
+}
+
+char* sequentialRead(char* filename, size_t offset, size_t num_bytes){
+	FILE* fp = fopen(filename, "r");
+	char* buffer= malloc(num_bytes); // allocate this amount of bytes
+	fseek(fp, offset, SEEK_SET);
+	int bytes_read = fread(buffer, 1, num_bytes,fp);
+	fclose(fp);
+	return buffer;
 }

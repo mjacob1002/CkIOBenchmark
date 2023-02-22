@@ -6,6 +6,7 @@ mainmodule iotest {
 		entry void ready(Ck::IO::FileReadyMsg* msg);
 		entry void startRead(Ck::IO::SessionReadyMsg* msg);
 		entry [reductiontarget] void doneReading(CkReductionMsg* msg);
+		entry [reductiontarget] void logging(CkReductionMsg* msg);
 
 		entry void postClose(CkReductionMsg* msg){
 			serial {
@@ -34,7 +35,7 @@ mainmodule iotest {
 			serial {
 				// ckout << "Starting the reading\n";
 				Ck::IO::Options opts;
-				opts.read_stripe = 64 * 1024* 1024; // how much each ReadSession chare will read_
+				opts.read_stripe = mbs_per_buffer; // how much each ReadSession chare will read_
 				CkCallback open_cb(CkIndex_Main::ready(NULL), thisProxy);
 				open_cb.setRefNum(0);
 				start_time = CkWallTimer(); // start before opening the file
@@ -62,6 +63,7 @@ mainmodule iotest {
 
 	array [1D] Reader {
 		entry Reader(Ck::IO::Session session, size_t file_size, size_t bytes, size_t offsets, size_t num_chares);
+		entry void verify(std::string test_file);
 		// method that verifies the read is correct
 		entry void testRead(Ck::IO::ReadCompleteMsg* msg) {
 			serial {
@@ -83,7 +85,7 @@ mainmodule iotest {
 				// CkPrintf("Chare number %d has reached the testRead function\n", thisIndex);
 				CkCallback cb(CkReductionTarget(Main, doneReading), mainProxy);	
 				size_t bytes = msg -> bytes;
-				delete msg;
+				og_msg = msg; // store the msg to be verified later
 				contribute(sizeof(bytes), &bytes, CkReduction::nop, cb);
 			}
 
