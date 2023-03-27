@@ -32,6 +32,30 @@ def readOutputFilesize(filesize: int, start_node: int, end_node: int, dir_of_cho
     return np.array(nodes), np.array(times)
 
 
+def readDiskReadData(filesize: int, num_node: int, dir_of_choice: str):
+    nodes = []
+    times = []
+
+    for num_nodes in range(start_node, end_node + 1):
+       	filename = dir_of_choice + str(filesize) + "/" + str(filesize) + "_" + str(num_nodes) + "_benchmark.out"
+        try:
+            f = open(filename, "r")
+        except IOError:
+            print(filename, " couldn't be opened because it didn't exist")
+            continue
+        for line in f:
+            if len(line) <= len("Total time:"):
+                continue
+            tokens = line.split()
+            if tokens[0] != "Total" or tokens[1] != "time:":
+                continue
+            time = float(tokens[2])
+            times.append(time) # append the time found
+            nodes.append(num_nodes) # append the number of nodes used
+            break
+
+    return np.array(nodes), np.array(times)
+
 # start_node and end_node are inclusive
 def plotFilesizeConstant(filesize: int, start_node:int , end_node:int, dir_of_choice: str ):
     nodes, times = readOutputFilesize(filesize, start_node, end_node, dir_of_choice)

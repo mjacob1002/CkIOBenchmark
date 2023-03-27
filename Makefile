@@ -4,8 +4,8 @@ CHARMC=~/charm/bin/charmc $(OPTS)
 all: iotest
 
 iotest: iotest.ci iotest.C
-	$(CHARMC) iotest.ci # -pg 
-	$(CHARMC) iotest.C -o $@ -module CkIO # -tracemode projections
+	$(CHARMC) iotest.ci -g 
+	$(CHARMC) iotest.C -o $@ -module CkIO -tracemode projections -g
 
 test: iotest
 	$(call run, ./iotest +p4 4 )

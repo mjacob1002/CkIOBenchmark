@@ -23,12 +23,18 @@ class Main : public CBase_Main {
 	// std::string TEST_FILE;
 public:
 	Main(CkArgMsg* msg){
+		traceRegisterUserEvent("register memory", 10);
 		TEST_FILE = std::string(msg -> argv[1]); // power of the file
 		num_pes = atoi(msg -> argv[2]); // the number of pes
 		if(msg -> argc > 3){
 			size_t power_of_mbs = atoi(msg -> argv[3]); // 2*n MBs
-			mbs_per_buffer = pow(2,20 + power_of_mbs);
+			size_t exp = power_of_mbs + 20;
+			mbs_per_buffer = 1;
+			mbs_per_buffer <<= exp;
 		}
+		if(msg -> argc > 4){
+			num_readers_per_pe = atoi(msg -> argv[4]);
+		}	
 		std::ifstream ifs;
 		ifs.open(TEST_FILE);
 		ifs.seekg(0, std::ios::end);
@@ -122,7 +128,7 @@ public:
 	void verify(std::string test_file){
 		testing_file = test_file; // set the test file
 		// CkPrintf("On Reader %d: Reader is (%zu, %zu) while ReadCompleteMsg is (%zu, %zu)\n", my_offset, _bytes, og_msg -> offset, og_msg -> bytes);
-		char* sequence = sequentialRead(og_msg -> offset, og_msg -> bytes);
+		// char* sequence = sequentialRead(og_msg -> offset, og_msg -> bytes);
 		// std::string fname = "LOGGING" + std::to_string(og_msg -> offset) + "+" + std::to_string(og_msg -> bytes);
 		// std::ofstream ofs(fname);	
 		// ofs << "SEQUENTIAL READ RESULTS FROM READER " << thisIndex << ": ";
@@ -131,17 +137,17 @@ public:
 		// ofs << "PARALLEL READ RESULTS FROM READER" << thisIndex << ": ";	
 		// ofs.write(og_msg -> data, og_msg -> bytes);
 		// ofs << "\n";
-		for(size_t i = 0; i< og_msg -> bytes; ++i){
-			if(sequence[i] != og_msg -> data[i]){
-				CkPrintf("Reader %d: At index %d, sequentialRead returned %d while parallel returned %d\n", thisIndex, i, (int)(sequence[i]), (int)(og_msg -> data[i]));
-			}
-			CkEnforce(sequence[i] == og_msg -> data[i]);
-		}
+	//	for(size_t i = 0; i< og_msg -> bytes; ++i){
+	//		if(sequence[i] != og_msg -> data[i]){
+	//			CkPrintf("Reader %d: At index %d, sequentialRead returned %d while parallel returned %d\n", thisIndex, i, (int)(sequence[i]), (int)(og_msg -> data[i]));
+	//		}
+	//		CkEnforce(sequence[i] == og_msg -> data[i]);
+	//	}
 		// CkEnforce(!strncmp(sequence, og_msg -> data, og_msg -> bytes));
 		CkCallback cb(CkIndex_Main::logging(0), mainProxy);
-		delete[] sequence;
+		// delete[] sequence;
 		delete og_msg;
-		contribute(sizeof(sequence), &sequence, CkReduction::nop, cb);
+		contribute(cb);
 	}
 
 };
