@@ -1,0 +1,121 @@
+mainmodule cyclic{
+	include "ckio.h";
+	#define SORTING_ON
+	readonly CProxy_Main mainProxy;	 // the proxy to be used
+	mainchare Main {
+		entry Main(CkArgMsg*);
+		entry void ready(Ck::IO::FileReadyMsg* msg);
+		entry void startRead(Ck::IO::SessionReadyMsg* msg);
+		entry [reductiontarget] void doneReading(CkReductionMsg* msg);
+		entry [reductiontarget] void logging(CkReductionMsg* msg);
+
+		entry void postClose(CkReductionMsg* msg){
+			serial {
+				ckout << "Entered the postClose function\n";
+				// sleep (5);
+				CkExit();
+			}
+		}
+	
+		entry void decrementCount() {
+			serial {
+				num_reads_done--;
+				ckout << "decremented the count to " << num_reads_done << endl;
+				if(!num_reads_done){
+					CkCallback cb(CkIndex_Main::postClose(0), thisProxy);
+					std::cout << "About to enter closing session\n";
+					Ck::IO::closeReadSession(current_session, cb);
+				}
+			}
+
+		}
+
+
+		
+		entry void startReading(){
+			serial {
+				// ckout << "Starting the reading\n";
+				#ifdef SORTING_ON
+					CkPrintf("Data Streaming/ Cyclic access benchmark with Sorting enabled\n");
+				#else
+					CkPrintf("Data Streaming/Cyclic access benchmark without Sorting.\n");
+				#endif
+				Ck::IO::Options opts;
+				opts.num_readers = num_io_buffers;
+				CkCallback open_cb(CkIndex_Main::ready(NULL), thisProxy);
+				open_cb.setRefNum(0);
+				start_time = CkWallTimer(); // start before opening the file
+				Ck::IO::open(TEST_FILE, open_cb, opts);
+			
+			}
+			// after the open call, invoke this as the callback
+			when ready[0](Ck::IO::FileReadyMsg* msg) serial {
+				 _file = msg -> file;
+				 CkCallback start_read_session(CkIndex_Main::startRead(NULL), thisProxy);
+				 start_read_session.setRefNum(0);
+				 // std::vector<int> pes_to_map = {2, 4, 5, 7, 8, 12, 14, 15, 17, 25};	
+				 Ck::IO::startReadSession(_file, file_size, 0, start_read_session/*, pes_to_map*/); // load in 100 bytes from offset 0
+			}
+			// callback that is invoked after the read session is started
+			when startRead[0](Ck::IO::SessionReadyMsg* msg) serial {
+				// CkPrintf("The read session has been set up. Moving on to the reads\n");
+				current_session = msg -> session;
+				size_t chare_array_size = num_readers;
+				// CkPrintf("About to start the reading process\n");
+				readers = CProxy_Reader::ckNew(msg -> session, file_size, size_chunks, 0, chare_array_size, chare_array_size); // create 5 readers which will each read 23 bytes and start from offset 5 i.e 0 will read bytes [5,28), 1 is [10, 33).
+				// CkPrintf("We just passed the invocation creating the Clients\n");
+
+			}
+		}
+	}
+
+
+	array [1D] Reader {
+		entry Reader(Ck::IO::Session session, size_t file_size, size_t read_size, size_t offset, size_t num_chares);
+		entry void verify(std::string test_file);
+		// method that verifies the read is correct
+		entry void testRead(Ck::IO::ReadCompleteMsg* msg) {
+			serial {
+				// CkPrintf("Client %d has received the read from %zu of size %zu\n", thisIndex, msg -> offset, msg -> bytes);
+				my_offset += (_num_chares * _read_size);
+				if(my_offset >= _file_size){
+					// CkPrintf("Reader %d is about to try sorting data\n", thisIndex);
+					std::string str = std::string(msg -> data, msg -> bytes);
+					std::sort(str.begin(), str.end());
+					for(int i = 1; i < str.size(); ++i){
+						CkEnforce(str[i] >= str[i-1]);
+					}
+					// CkPrintf("Sorting done\n");
+					CkCallback cb(CkReductionTarget(Main, logging), mainProxy);	
+					// CkPrintf("Reader[%d] read %zu bytes\n", thisIndex, bytes);
+					delete msg;
+					contribute(sizeof(my_offset), &my_offset, CkReduction::nop, cb);
+				} else {
+					size_t bytes = std::min(_read_size, _file_size - my_offset);
+					CkCallback test_read_cb(CkIndex_Reader::testRead(0), thisProxy[thisIndex]);	
+					Ck::IO::read(_session, bytes, my_offset, test_read_cb);
+				#ifdef SORTING_ON	
+					// CkPrintf("Reader %d is about to try to sort the data\n", thisIndex);
+					double b4_sort = CkWallTimer();
+					std::string s(msg -> data, msg -> bytes);
+					CkEnforce(s.size() == msg -> bytes);
+					CkEnforce(msg -> bytes >= 1024 * 1024 * 64);
+					std::sort(s.begin(), s.end());
+//					for(int i = 1; i < msg -> bytes; ++i){
+//						CkEnforce(s[i] >= s[i-1]);
+//					}
+					double post_sort = CkWallTimer();
+					if(!thisIndex)
+						CkPrintf("Client %d has finished sorting from offset %zu and bytes = %zu; took %f seconds. To prevent deadcode elim: %x\n", thisIndex, msg -> offset, msg -> bytes, (post_sort - b4_sort), s[0]);
+				#endif
+					//CkPrintf("Client %d finished sorting from offset %zu\n", thisIndex, my_offset);
+					delete msg;
+				}
+			}
+
+		}
+
+		entry void verifyFullFileRead(std::string test_file, size_t file_size, size_t num_chares);
+	}
+
+}
