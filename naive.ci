@@ -1,0 +1,31 @@
+mainmodule naive{
+	include "ckio.h";
+	readonly CProxy_Main mainProxy;	 // the proxy to be used
+	mainchare Main {
+		entry Main(CkArgMsg*);
+		entry [reductiontarget] void doneReading(CkReductionMsg* msg);
+
+		entry void postClose(CkReductionMsg* msg){
+			serial {
+				ckout << "Entered the postClose function\n";
+				// sleep (5);
+				CkExit();
+			}
+		}
+	
+		
+		entry void startReading(){
+			serial {
+				// ckout << "Starting the reading\n";
+				start_time = CkWallTimer(); // start before opening the file
+				readers = CProxy_Reader::ckNew(TEST_FILE, file_size, file_size / num_readers, 0, num_readers, num_readers); // create 5 readers which will each read 23 bytes and start from offset 5 i.e 0 will read bytes [5,28), 1 is [10, 33).
+			}
+		}
+	}
+
+
+	array [1D] Reader {
+		entry Reader(std::string test_file, size_t file_size, size_t bytes, size_t offsets, size_t num_chares);
+	}
+
+}
