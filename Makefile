@@ -1,5 +1,5 @@
--include ~/charm/common.mk
-CHARMC=~/charm/bin/charmc $(OPTS)
+-include ../benchmark/common.mk
+CHARMC=../bin/charmc $(OPTS)
 
 all: iotest
 

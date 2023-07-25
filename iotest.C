@@ -26,7 +26,7 @@ public:
 	Main(CkArgMsg* msg){
 		traceRegisterUserEvent("register memory", 10);
 		if(msg -> argc < 3) {
-			CkPrintf("Usage: iotest <test_file> <number of pes> <number of io buffers(optional)> <number of client readers pe pe (optioal)>\n");
+			CkPrintf("Usage: iotest <test_file> <number of pes> <number of io buffers(optional)> <number of client readers(optional)>\n");
 			CkExit();
 
 		}
@@ -118,6 +118,7 @@ public:
 		// ckout << "My offset for reader " << thisIndex << " is " << my_offset << endl;
 		CkCallback test_read_cb(CkIndex_Reader::testRead(0), thisProxy[thisIndex]);	
 		// CkPrintf("From Reader[%d] before issuing read: _bytes=%zu, my_offset=%zu\n", thisIndex, _bytes, my_offset); 
+		//CmiPrintf("NUMBYTES: %zu", _bytes);
 		Ck::IO::read(session, _bytes, my_offset, test_read_cb);
 	}
 

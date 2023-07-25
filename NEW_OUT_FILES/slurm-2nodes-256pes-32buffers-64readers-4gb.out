@@ -1,0 +1,3556 @@
+job is starting p, process cnt per node=4, node=2 on cn039.delta.ncsa.illinois.edu
+
+Running as 256 OS processes: ./iotest /scratch/mzu/yanniz3/CkIOBenchmark/TEST_FILES/file4gb 256
+charmrun> /usr/bin/setarch x86_64 -R mpirun -np 256 ./iotest /scratch/mzu/yanniz3/CkIOBenchmark/TEST_FILES/file4gb 256
+Charm++> Running on MPI library: Open MPI v4.1.2, package: Open MPI svcdeltaswmgt@dt-login01.delta.internal.ncsa.edu Distribution, ident: 4.1.2, repo rev: v4.1.2, Nov 24, 2021 (MPI standard: 3.1)
+Charm++> Level of thread support used: MPI_THREAD_SINGLE (desired: MPI_THREAD_SINGLE)
+Charm++> Running in non-SMP mode: 256 processes (PEs)
+Converse/Charm++ Commit ID: v7.1.0-devel-394-ga074df49d
+Isomalloc> Synchronized global address space.
+CharmLB> Load balancer assumes all CPUs are same.
+Charm++> Running on 2 hosts (2 sockets x 64 cores x 1 PUs = 128-way SMP)
+Charm++> cpu topology info is gathered in 0.075 seconds.
+CharmLB> Load balancing instrumentation for communication is off.
+Args: TEST_FILE=/scratch/mzu/yanniz3/CkIOBenchmark/TEST_FILES/file4gb, num_pes=256, num_io_bufers = 32, num_readers=64, dump_file=
+NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864Reader[63] is the last reader; has to read 67108864 bytes
+NUMBYTES: 67108864The read session has been set up. Moving on to the reads
+NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864NUMBYTES: 67108864DISK_TIME: 2.984787
+About to try verifying the full read
+Reader 0: starting the verification of full file read
+Reader 0 verification: starting sequential read
+Just finished reading
+Reader 0 verification: finished sequential read
+Reader 0 verification: starting verification of the data
+Reader 0 verification: finished verification of the data
+Reader 0: finished the verification of full file read
+Total time: 3.051660
+------------- Processor 0 Exiting: Caught Signal ------------
+Reason: Segmentation fault
+[0] Stack Traceback:
+  [0:0] libpthread.so.0 0x7ffff68aace0 
+  [0:1] libc.so.6 0x7ffff6539b74 _IO_vfprintf
+  [0:2] libc.so.6 0x7ffff6542988 _IO_fprintf
+  [0:3] iotest 0x4df2c3 CkIndex_Main::_call_logging_CkReductionMsg(void*, void*)
+  [0:4] iotest 0x5200d8 CkDeliverMessageFree
+  [0:5] iotest 0x524d9d _processHandler(void*, CkCoreState*)
+  [0:6] iotest 0x637f90 CsdScheduleForever
+  [0:7] iotest 0x6383e5 CsdScheduler
+  [0:8] iotest 0x66a35a ConverseInit
+  [0:9] iotest 0x5bbea7 charm_main
+  [0:10] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [0:11] iotest 0x4def0e _start
+--------------------------------------------------------------------------
+MPI_ABORT was invoked on rank 0 in communicator MPI COMMUNICATOR 3 DUP FROM 0
+with errorcode 1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+[82] Stack Traceback:
+  [82:0] libpthread.so.0 0x7ffff68aace0 
+  [82:1] iotest 0x632550 CcdNumTimerCBs
+  [82:2] iotest 0x637fa6 CsdScheduleForever
+  [82:3] iotest 0x6383e5 CsdScheduler
+  [82:4] iotest 0x66a35a ConverseInit
+  [82:5] iotest 0x5bbea7 charm_main
+  [82:6] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [82:7] iotest 0x4def0e _start
+[83] Stack Traceback:
+  [83:0] libpthread.so.0 0x7ffff68aace0 
+  [83:1] iotest 0x6341e7 CcdRaiseCondition
+  [83:2] iotest 0x63801a CsdScheduleForever
+  [83:3] iotest 0x6383e5 CsdScheduler
+  [83:4] iotest 0x66a35a ConverseInit
+  [83:5] iotest 0x5bbea7 charm_main
+  [83:6] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [83:7] iotest 0x4def0e _start
+[84] Stack Traceback:
+  [84:0] libpthread.so.0 0x7ffff68aace0 
+  [84:1] libucp.so.0 0x7ffff5a065a4 ucp_tag_probe_nb
+  [84:2] libmpi.so.40 0x7ffff732dc4b mca_pml_ucx_iprobe
+  [84:3] libmpi.so.40 0x7ffff719e4bc PMPI_Iprobe
+  [84:4] iotest 0x669055 
+  [84:5] iotest 0x66a51a CmiGetNonLocal
+  [84:6] iotest 0x637e8d CsdNextMessage
+  [84:7] iotest 0x637f5f CsdScheduleForever
+  [84:8] iotest 0x6383e5 CsdScheduler
+  [84:9] iotest 0x66a35a ConverseInit
+  [84:10] iotest 0x5bbea7 charm_main
+  [84:11] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [84:12] iotest 0x4def0e _start
+------------- Processor 82 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 83 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 84 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 85 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 86 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 87 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 88 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 89 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 90 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 91 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 92 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 93 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 94 Exiting: Caught Signal ------------
+Reason: Terminated
+[85] Stack Traceback:
+  [85:0] libpthread.so.0 0x7ffff68aace0 
+  [85:1] iotest 0x4cb880 
+  [85:2] iotest 0x634640 CcdCallBacks
+  [85:3] iotest 0x637fcf CsdScheduleForever
+  [85:4] iotest 0x6383e5 CsdScheduler
+  [85:5] iotest 0x66a35a ConverseInit
+  [85:6] iotest 0x5bbea7 charm_main
+  [85:7] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [85:8] iotest 0x4def0e _start
+[86] Stack Traceback:
+  [86:0] libpthread.so.0 0x7ffff68aace0 
+  [86:1] linux-vdso.so.1 0x7ffff7ffab34 clock_gettime
+  [86:2] libc.so.6 0x7ffff65c82ca __clock_gettime
+  [86:3] libmpi.so.40 0x7ffff71b2b11 PMPI_Wtime
+  [86:4] iotest 0x66b299 CmiWallTimer
+  [86:5] iotest 0x6345e9 CcdCallBacks
+  [86:6] iotest 0x637fcf CsdScheduleForever
+  [86:7] iotest 0x6383e5 CsdScheduler
+  [86:8] iotest 0x66a35a ConverseInit
+  [86:9] iotest 0x5bbea7 charm_main
+  [86:10] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [86:11] iotest 0x4def0e _start
+[87] Stack Traceback:
+  [87:0] libpthread.so.0 0x7ffff68aace0 
+  [87:1] libuct_ib.so.0 0x7fffe9bb3672 
+  [87:2] libucp.so.0 0x7ffff59dfaaa ucp_worker_progress
+  [87:3] libmpi.so.40 0x7ffff732dccb mca_pml_ucx_iprobe
+  [87:4] libmpi.so.40 0x7ffff719e4bc PMPI_Iprobe
+  [87:5] iotest 0x669055 
+  [87:6] iotest 0x66a5fe 
+  [87:7] iotest 0x6344a4 CcdRaiseCondition
+  [87:8] iotest 0x63801a CsdScheduleForever
+  [87:9] iotest 0x6383e5 CsdScheduler
+  [87:10] iotest 0x66a35a ConverseInit
+  [87:11] iotest 0x5bbea7 charm_main
+  [87:12] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [87:13] iotest 0x4def0e _start
+------------- Processor 95 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 96 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 97 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 98 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 99 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 100 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 101 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 102 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 103 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 104 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 105 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 106 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 107 Exiting: Caught Signal ------------
+Reason: Terminated
+[88] Stack Traceback:
+  [88:0] libpthread.so.0 0x7ffff68aace0 
+  [88:1] libmpi.so.40 0x7ffff719e4b9 PMPI_Iprobe
+  [88:2] iotest 0x669055 
+  [88:3] iotest 0x66a5fe 
+  [88:4] iotest 0x6344a4 CcdRaiseCondition
+  [88:5] iotest 0x63801a CsdScheduleForever
+  [88:6] iotest 0x6383e5 CsdScheduler
+  [88:7] iotest 0x66a35a ConverseInit
+  [88:8] iotest 0x5bbea7 charm_main
+  [88:9] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [88:10] iotest 0x4def0e _start
+[89] Stack Traceback:
+  [89:0] libpthread.so.0 0x7ffff68aace0 
+  [89:1] iotest 0x637fdb CsdScheduleForever
+  [89:2] iotest 0x6383e5 CsdScheduler
+  [89:3] iotest 0x66a35a ConverseInit
+  [89:4] iotest 0x5bbea7 charm_main
+  [89:5] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [89:6] iotest 0x4def0e _start
+[90] Stack Traceback:
+  [90:0] libpthread.so.0 0x7ffff68aace0 
+  [90:1] linux-vdso.so.1 0x7ffff7ffab34 clock_gettime
+  [90:2] libc.so.6 0x7ffff65c82ca __clock_gettime
+  [90:3] libmpi.so.40 0x7ffff71b2b11 PMPI_Wtime
+  [90:4] iotest 0x66b299 CmiWallTimer
+  [90:5] iotest 0x6345e9 CcdCallBacks
+  [90:6] iotest 0x637fcf CsdScheduleForever
+  [90:7] iotest 0x6383e5 CsdScheduler
+  [90:8] iotest 0x66a35a ConverseInit
+  [90:9] iotest 0x5bbea7 charm_main
+  [90:10] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [90:11] iotest 0x4def0e _start
+------------- Processor 108 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 109 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 110 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 111 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 112 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 113 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 114 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 115 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 116 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 117 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 118 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 119 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 120 Exiting: Caught Signal ------------
+Reason: Terminated
+[91] Stack Traceback:
+  [91:0] libpthread.so.0 0x7ffff68aace0 
+  [91:1] libmpi.so.40 0x7ffff71b2b3a PMPI_Wtime
+  [91:2] iotest 0x66b299 CmiWallTimer
+  [91:3] iotest 0x6345e9 CcdCallBacks
+  [91:4] iotest 0x637fcf CsdScheduleForever
+  [91:5] iotest 0x6383e5 CsdScheduler
+  [91:6] iotest 0x66a35a ConverseInit
+  [91:7] iotest 0x5bbea7 charm_main
+  [91:8] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [91:9] iotest 0x4def0e _start
+[92] Stack Traceback:
+  [92:0] libpthread.so.0 0x7ffff68aace0 
+  [92:1] iotest 0x63442d CcdRaiseCondition
+  [92:2] iotest 0x63801a CsdScheduleForever
+  [92:3] iotest 0x6383e5 CsdScheduler
+  [92:4] iotest 0x66a35a ConverseInit
+  [92:5] iotest 0x5bbea7 charm_main
+  [92:6] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [92:7] iotest 0x4def0e _start
+[93] Stack Traceback:
+  [93:0] libpthread.so.0 0x7ffff68aace0 
+  [93:1] linux-vdso.so.1 0x7ffff7ffab34 clock_gettime
+  [93:2] libc.so.6 0x7ffff65c82ca __clock_gettime
+  [93:3] libmpi.so.40 0x7ffff71b2b11 PMPI_Wtime
+  [93:4] iotest 0x66b299 CmiWallTimer
+  [93:5] iotest 0x6345e9 CcdCallBacks
+  [93:6] iotest 0x637fcf CsdScheduleForever
+  [93:7] iotest 0x6383e5 CsdScheduler
+  [93:8] iotest 0x66a35a ConverseInit
+  [93:9] iotest 0x5bbea7 charm_main
+  [93:10] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [93:11] iotest 0x4def0e _start
+------------- Processor 121 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 122 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 123 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 124 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 125 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 126 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 127 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 1 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 2 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 3 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 4 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 5 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 6 Exiting: Caught Signal ------------
+Reason: Terminated
+[94] Stack Traceback:
+  [94:0] libpthread.so.0 0x7ffff68aace0 
+  [94:1] libuct_ib.so.0 0x7fffe9bb364e 
+  [94:2] libucp.so.0 0x7ffff59dfaaa ucp_worker_progress
+  [94:3] libmpi.so.40 0x7ffff732dccb mca_pml_ucx_iprobe
+  [94:4] libmpi.so.40 0x7ffff719e4bc PMPI_Iprobe
+  [94:5] iotest 0x669055 
+  [94:6] iotest 0x66a51a CmiGetNonLocal
+  [94:7] iotest 0x637e8d CsdNextMessage
+  [94:8] iotest 0x637f5f CsdScheduleForever
+  [94:9] iotest 0x6383e5 CsdScheduler
+  [94:10] iotest 0x66a35a ConverseInit
+  [94:11] iotest 0x5bbea7 charm_main
+  [94:12] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [94:13] iotest 0x4def0e _start
+[95] Stack Traceback:
+  [95:0] libpthread.so.0 0x7ffff68aace0 
+  [95:1] iotest 0x632537 CcdNumTimerCBs
+  [95:2] iotest 0x637fa6 CsdScheduleForever
+  [95:3] iotest 0x6383e5 CsdScheduler
+  [95:4] iotest 0x66a35a ConverseInit
+  [95:5] iotest 0x5bbea7 charm_main
+  [95:6] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [95:7] iotest 0x4def0e _start
+[96] Stack Traceback:
+  [96:0] libpthread.so.0 0x7ffff68aace0 
+  [96:1] linux-vdso.so.1 0x7ffff7ffab34 clock_gettime
+  [96:2] libc.so.6 0x7ffff65c82ca __clock_gettime
+  [96:3] libmpi.so.40 0x7ffff71b2b11 PMPI_Wtime
+  [96:4] iotest 0x66b299 CmiWallTimer
+  [96:5] iotest 0x6345e9 CcdCallBacks
+  [96:6] iotest 0x637fcf CsdScheduleForever
+  [96:7] iotest 0x6383e5 CsdScheduler
+  [96:8] iotest 0x66a35a ConverseInit
+  [96:9] iotest 0x5bbea7 charm_main
+  [96:10] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [96:11] iotest 0x4def0e _start
+------------- Processor 7 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 8 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 9 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 10 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 11 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 12 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 13 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 14 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 15 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 16 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 17 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 18 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 19 Exiting: Caught Signal ------------
+Reason: Terminated
+[97] Stack Traceback:
+  [97:0] libpthread.so.0 0x7ffff68aace0 
+  [97:1] iotest 0x66903f 
+  [97:2] iotest 0x66a5fe 
+  [97:3] iotest 0x6344a4 CcdRaiseCondition
+  [97:4] iotest 0x63801a CsdScheduleForever
+  [97:5] iotest 0x6383e5 CsdScheduler
+  [97:6] iotest 0x66a35a ConverseInit
+  [97:7] iotest 0x5bbea7 charm_main
+  [97:8] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [97:9] iotest 0x4def0e _start
+[98] Stack Traceback:
+  [98:0] libpthread.so.0 0x7ffff68aace0 
+  [98:1] linux-vdso.so.1 0x7ffff7ffab34 clock_gettime
+  [98:2] libc.so.6 0x7ffff65c82ca __clock_gettime
+  [98:3] libmpi.so.40 0x7ffff71b2b11 PMPI_Wtime
+  [98:4] iotest 0x66b299 CmiWallTimer
+  [98:5] iotest 0x6345e9 CcdCallBacks
+  [98:6] iotest 0x637fcf CsdScheduleForever
+  [98:7] iotest 0x6383e5 CsdScheduler
+  [98:8] iotest 0x66a35a ConverseInit
+  [98:9] iotest 0x5bbea7 charm_main
+  [98:10] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [98:11] iotest 0x4def0e _start
+[99] Stack Traceback:
+  [99:0] libpthread.so.0 0x7ffff68aace0 
+  [99:1] iotest 0x632550 CcdNumTimerCBs
+  [99:2] iotest 0x637fa6 CsdScheduleForever
+  [99:3] iotest 0x6383e5 CsdScheduler
+  [99:4] iotest 0x66a35a ConverseInit
+  [99:5] iotest 0x5bbea7 charm_main
+  [99:6] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [99:7] iotest 0x4def0e _start
+------------- Processor 20 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 21 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 22 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 23 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 24 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 25 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 26 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 27 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 28 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 29 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 30 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 31 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 32 Exiting: Caught Signal ------------
+Reason: Terminated
+[100] Stack Traceback:
+  [100:0] libpthread.so.0 0x7ffff68aace0 
+  [100:1] linux-vdso.so.1 0x7ffff7ffab34 clock_gettime
+  [100:2] libc.so.6 0x7ffff65c82ca __clock_gettime
+  [100:3] libmpi.so.40 0x7ffff71b2b11 PMPI_Wtime
+  [100:4] iotest 0x66b299 CmiWallTimer
+  [100:5] iotest 0x6345e9 CcdCallBacks
+  [100:6] iotest 0x637fcf CsdScheduleForever
+  [100:7] iotest 0x6383e5 CsdScheduler
+  [100:8] iotest 0x66a35a ConverseInit
+  [100:9] iotest 0x5bbea7 charm_main
+  [100:10] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [100:11] iotest 0x4def0e _start
+[101] Stack Traceback:
+  [101:0] libpthread.so.0 0x7ffff68aace0 
+  [101:1] iotest 0x6341c9 CcdRaiseCondition
+  [101:2] iotest 0x637f57 CsdScheduleForever
+  [101:3] iotest 0x6383e5 CsdScheduler
+  [101:4] iotest 0x66a35a ConverseInit
+  [101:5] iotest 0x5bbea7 charm_main
+  [101:6] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [101:7] iotest 0x4def0e _start
+[102] Stack Traceback:
+  [102:0] libpthread.so.0 0x7ffff68aace0 
+  [102:1] iotest 0x637fc2 CsdScheduleForever
+  [102:2] iotest 0x6383e5 CsdScheduler
+  [102:3] iotest 0x66a35a ConverseInit
+  [102:4] iotest 0x5bbea7 charm_main
+  [102:5] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [102:6] iotest 0x4def0e _start
+------------- Processor 33 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 34 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 35 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 36 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 37 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 38 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 39 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 40 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 41 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 42 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 43 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 44 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 45 Exiting: Caught Signal ------------
+Reason: Terminated
+[103] Stack Traceback:
+  [103:0] libpthread.so.0 0x7ffff68aace0 
+  [103:1] libuct_ib.so.0 0x7fffe9bb3672 
+  [103:2] libucp.so.0 0x7ffff59dfaaa ucp_worker_progress
+  [103:3] libmpi.so.40 0x7ffff732dccb mca_pml_ucx_iprobe
+  [103:4] libmpi.so.40 0x7ffff719e4bc PMPI_Iprobe
+  [103:5] iotest 0x669055 
+  [103:6] iotest 0x66a51a CmiGetNonLocal
+  [103:7] iotest 0x637e8d CsdNextMessage
+  [103:8] iotest 0x637f5f CsdScheduleForever
+  [103:9] iotest 0x6383e5 CsdScheduler
+  [103:10] iotest 0x66a35a ConverseInit
+  [103:11] iotest 0x5bbea7 charm_main
+  [103:12] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [103:13] iotest 0x4def0e _start
+[104] Stack Traceback:
+  [104:0] libpthread.so.0 0x7ffff68aace0 
+  [104:1] iotest 0x634215 CcdRaiseCondition
+  [104:2] iotest 0x63801a CsdScheduleForever
+  [104:3] iotest 0x6383e5 CsdScheduler
+  [104:4] iotest 0x66a35a ConverseInit
+  [104:5] iotest 0x5bbea7 charm_main
+  [104:6] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [104:7] iotest 0x4def0e _start
+[105] Stack Traceback:
+  [105:0] libpthread.so.0 0x7ffff68aace0 
+  [105:1] iotest 0x63443d CcdRaiseCondition
+  [105:2] iotest 0x63801a CsdScheduleForever
+  [105:3] iotest 0x6383e5 CsdScheduler
+  [105:4] iotest 0x66a35a ConverseInit
+  [105:5] iotest 0x5bbea7 charm_main
+  [105:6] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [105:7] iotest 0x4def0e _start
+------------- Processor 46 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 47 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 48 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 49 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 50 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 51 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 52 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 53 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 54 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 55 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 56 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 57 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 58 Exiting: Caught Signal ------------
+Reason: Terminated
+[106] Stack Traceback:
+  [106:0] libpthread.so.0 0x7ffff68aace0 
+  [106:1] iotest 0x666802 
+  [106:2] iotest 0x66a533 CmiGetNonLocal
+  [106:3] iotest 0x637e8d CsdNextMessage
+  [106:4] iotest 0x637f5f CsdScheduleForever
+  [106:5] iotest 0x6383e5 CsdScheduler
+  [106:6] iotest 0x66a35a ConverseInit
+  [106:7] iotest 0x5bbea7 charm_main
+  [106:8] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [106:9] iotest 0x4def0e _start
+[107] Stack Traceback:
+  [107:0] libpthread.so.0 0x7ffff68aace0 
+  [107:1] iotest 0x632537 CcdNumTimerCBs
+  [107:2] iotest 0x637fa6 CsdScheduleForever
+  [107:3] iotest 0x6383e5 CsdScheduler
+  [107:4] iotest 0x66a35a ConverseInit
+  [107:5] iotest 0x5bbea7 charm_main
+  [107:6] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [107:7] iotest 0x4def0e _start
+[108] Stack Traceback:
+  [108:0] libpthread.so.0 0x7ffff68aace0 
+  [108:1] libmpi.so.40 0x7ffff732dbd7 mca_pml_ucx_iprobe
+  [108:2] libmpi.so.40 0x7ffff719e4bc PMPI_Iprobe
+  [108:3] iotest 0x669055 
+  [108:4] iotest 0x66a5fe 
+  [108:5] iotest 0x6344a4 CcdRaiseCondition
+  [108:6] iotest 0x63801a CsdScheduleForever
+  [108:7] iotest 0x6383e5 CsdScheduler
+  [108:8] iotest 0x66a35a ConverseInit
+  [108:9] iotest 0x5bbea7 charm_main
+  [108:10] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [108:11] iotest 0x4def0e _start
+------------- Processor 59 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 60 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 61 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 62 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 63 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 64 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 65 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 66 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 67 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 68 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 69 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 70 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 71 Exiting: Caught Signal ------------
+Reason: Terminated
+[109] Stack Traceback:
+  [109:0] libpthread.so.0 0x7ffff68aace0 
+  [109:1] libucp.so.0 0x7ffff59dfab8 ucp_worker_progress
+  [109:2] libmpi.so.40 0x7ffff732dccb mca_pml_ucx_iprobe
+  [109:3] libmpi.so.40 0x7ffff719e4bc PMPI_Iprobe
+  [109:4] iotest 0x669055 
+  [109:5] iotest 0x66a5fe 
+  [109:6] iotest 0x6344a4 CcdRaiseCondition
+  [109:7] iotest 0x63801a CsdScheduleForever
+  [109:8] iotest 0x6383e5 CsdScheduler
+  [109:9] iotest 0x66a35a ConverseInit
+  [109:10] iotest 0x5bbea7 charm_main
+  [109:11] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [109:12] iotest 0x4def0e _start
+[110] Stack Traceback:
+  [110:0] libpthread.so.0 0x7ffff68aace0 
+  [110:1] iotest 0x669062 
+  [110:2] iotest 0x66a5fe 
+  [110:3] iotest 0x6344a4 CcdRaiseCondition
+  [110:4] iotest 0x63801a CsdScheduleForever
+  [110:5] iotest 0x6383e5 CsdScheduler
+  [110:6] iotest 0x66a35a ConverseInit
+  [110:7] iotest 0x5bbea7 charm_main
+  [110:8] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [110:9] iotest 0x4def0e _start
+[111] Stack Traceback:
+  [111:0] libpthread.so.0 0x7ffff68aace0 
+  [111:1] iotest 0x66903f 
+  [111:2] iotest 0x66a5fe 
+  [111:3] iotest 0x6344a4 CcdRaiseCondition
+  [111:4] iotest 0x63801a CsdScheduleForever
+  [111:5] iotest 0x6383e5 CsdScheduler
+  [111:6] iotest 0x66a35a ConverseInit
+  [111:7] iotest 0x5bbea7 charm_main
+  [111:8] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [111:9] iotest 0x4def0e _start
+------------- Processor 72 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 73 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 74 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 75 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 76 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 77 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 78 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 79 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 80 Exiting: Caught Signal ------------
+Reason: Terminated
+------------- Processor 81 Exiting: Caught Signal ------------
+Reason: Terminated
+[112] Stack Traceback:
+  [112:0] libpthread.so.0 0x7ffff68aace0 
+  [112:1] iotest 0x634611 CcdCallBacks
+  [112:2] iotest 0x637fcf CsdScheduleForever
+  [112:3] iotest 0x6383e5 CsdScheduler
+  [112:4] iotest 0x66a35a ConverseInit
+  [112:5] iotest 0x5bbea7 charm_main
+  [112:6] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [112:7] iotest 0x4def0e _start
+[113] Stack Traceback:
+  [113:0] libpthread.so.0 0x7ffff68aace0 
+  [113:1] iotest 0x666802 
+  [113:2] iotest 0x66a617 
+  [113:3] iotest 0x6344a4 CcdRaiseCondition
+  [113:4] iotest 0x63801a CsdScheduleForever
+  [113:5] iotest 0x6383e5 CsdScheduler
+  [113:6] iotest 0x66a35a ConverseInit
+  [113:7] iotest 0x5bbea7 charm_main
+  [113:8] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [113:9] iotest 0x4def0e _start
+[114] Stack Traceback:
+  [114:0] libpthread.so.0 0x7ffff68aace0 
+  [114:1] iotest 0x634622 CcdCallBacks
+  [114:2] iotest 0x637fcf CsdScheduleForever
+  [114:3] iotest 0x6383e5 CsdScheduler
+  [114:4] iotest 0x66a35a ConverseInit
+  [114:5] iotest 0x5bbea7 charm_main
+  [114:6] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [114:7] iotest 0x4def0e _start
+[115] Stack Traceback:
+  [115:0] libpthread.so.0 0x7ffff68aace0 
+  [115:1] libucp.so.0 0x7ffff5a065a4 ucp_tag_probe_nb
+  [115:2] libmpi.so.40 0x7ffff732dc4b mca_pml_ucx_iprobe
+  [115:3] libmpi.so.40 0x7ffff719e4bc PMPI_Iprobe
+  [115:4] iotest 0x669055 
+  [115:5] iotest 0x66a51a CmiGetNonLocal
+  [115:6] iotest 0x637e8d CsdNextMessage
+  [115:7] iotest 0x637f5f CsdScheduleForever
+  [115:8] iotest 0x6383e5 CsdScheduler
+  [115:9] iotest 0x66a35a ConverseInit
+  [115:10] iotest 0x5bbea7 charm_main
+  [115:11] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [115:12] iotest 0x4def0e _start
+[116] Stack Traceback:
+  [116:0] libpthread.so.0 0x7ffff68aace0 
+  [116:1] iotest 0x63444d CcdRaiseCondition
+  [116:2] iotest 0x63801a CsdScheduleForever
+  [116:3] iotest 0x6383e5 CsdScheduler
+  [116:4] iotest 0x66a35a ConverseInit
+  [116:5] iotest 0x5bbea7 charm_main
+  [116:6] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [116:7] iotest 0x4def0e _start
+[117] Stack Traceback:
+  [117:0] libpthread.so.0 0x7ffff68aace0 
+  [117:1] linux-vdso.so.1 0x7ffff7ffab34 clock_gettime
+  [117:2] libc.so.6 0x7ffff65c82ca __clock_gettime
+  [117:3] libmpi.so.40 0x7ffff71b2b11 PMPI_Wtime
+  [117:4] iotest 0x66b299 CmiWallTimer
+  [117:5] iotest 0x6345e9 CcdCallBacks
+  [117:6] iotest 0x637fcf CsdScheduleForever
+  [117:7] iotest 0x6383e5 CsdScheduler
+  [117:8] iotest 0x66a35a ConverseInit
+  [117:9] iotest 0x5bbea7 charm_main
+  [117:10] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [117:11] iotest 0x4def0e _start
+[118] Stack Traceback:
+  [118:0] libpthread.so.0 0x7ffff68aace0 
+  [118:1] libmpi.so.40 0x7ffff71b2b32 PMPI_Wtime
+  [118:2] iotest 0x66b299 CmiWallTimer
+  [118:3] iotest 0x6345e9 CcdCallBacks
+  [118:4] iotest 0x637fcf CsdScheduleForever
+  [118:5] iotest 0x6383e5 CsdScheduler
+  [118:6] iotest 0x66a35a ConverseInit
+  [118:7] iotest 0x5bbea7 charm_main
+  [118:8] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [118:9] iotest 0x4def0e _start
+[119] Stack Traceback:
+  [119:0] libpthread.so.0 0x7ffff68aace0 
+  [119:1] iotest 0x634611 CcdCallBacks
+  [119:2] iotest 0x637fcf CsdScheduleForever
+  [119:3] iotest 0x6383e5 CsdScheduler
+  [119:4] iotest 0x66a35a ConverseInit
+  [119:5] iotest 0x5bbea7 charm_main
+  [119:6] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [119:7] iotest 0x4def0e _start
+[120] Stack Traceback:
+  [120:0] libpthread.so.0 0x7ffff68aace0 
+  [120:1] libuct.so.0 0x7ffff578b949 
+  [120:2] libucp.so.0 0x7ffff59dfaaa ucp_worker_progress
+  [120:3] libmpi.so.40 0x7ffff732dccb mca_pml_ucx_iprobe
+  [120:4] libmpi.so.40 0x7ffff719e4bc PMPI_Iprobe
+  [120:5] iotest 0x669055 
+  [120:6] iotest 0x66a5fe 
+  [120:7] iotest 0x6344a4 CcdRaiseCondition
+  [120:8] iotest 0x63801a CsdScheduleForever
+  [120:9] iotest 0x6383e5 CsdScheduler
+  [120:10] iotest 0x66a35a ConverseInit
+  [120:11] iotest 0x5bbea7 charm_main
+  [120:12] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [120:13] iotest 0x4def0e _start
+[121] Stack Traceback:
+  [121:0] libpthread.so.0 0x7ffff68aace0 
+  [121:1] iotest 0x638022 CsdScheduleForever
+  [121:2] iotest 0x6383e5 CsdScheduler
+  [121:3] iotest 0x66a35a ConverseInit
+  [121:4] iotest 0x5bbea7 charm_main
+  [121:5] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [121:6] iotest 0x4def0e _start
+[122] Stack Traceback:
+  [122:0] libpthread.so.0 0x7ffff68aace0 
+  [122:1] libmpi.so.40 0x7ffff732dbc2 mca_pml_ucx_iprobe
+  [122:2] libmpi.so.40 0x7ffff719e4bc PMPI_Iprobe
+  [122:3] iotest 0x669055 
+  [122:4] iotest 0x66a5fe 
+  [122:5] iotest 0x6344a4 CcdRaiseCondition
+  [122:6] iotest 0x63801a CsdScheduleForever
+  [122:7] iotest 0x6383e5 CsdScheduler
+  [122:8] iotest 0x66a35a ConverseInit
+  [122:9] iotest 0x5bbea7 charm_main
+  [122:10] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [122:11] iotest 0x4def0e _start
+[123] Stack Traceback:
+  [123:0] libpthread.so.0 0x7ffff68aace0 
+  [123:1] iotest 0x669062 
+  [123:2] iotest 0x66a5fe 
+  [123:3] iotest 0x6344a4 CcdRaiseCondition
+  [123:4] iotest 0x63801a CsdScheduleForever
+  [123:5] iotest 0x6383e5 CsdScheduler
+  [123:6] iotest 0x66a35a ConverseInit
+  [123:7] iotest 0x5bbea7 charm_main
+  [123:8] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [123:9] iotest 0x4def0e _start
+[124] Stack Traceback:
+  [124:0] libpthread.so.0 0x7ffff68aace0 
+  [124:1] iotest 0x6344a4 CcdRaiseCondition
+  [124:2] iotest 0x63801a CsdScheduleForever
+  [124:3] iotest 0x6383e5 CsdScheduler
+  [124:4] iotest 0x66a35a ConverseInit
+  [124:5] iotest 0x5bbea7 charm_main
+  [124:6] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [124:7] iotest 0x4def0e _start
+[125] Stack Traceback:
+  [125:0] libpthread.so.0 0x7ffff68aace0 
+  [125:1] libmpi.so.40 0x7ffff732dcba mca_pml_ucx_iprobe
+  [125:2] libmpi.so.40 0x7ffff719e4bc PMPI_Iprobe
+  [125:3] iotest 0x669055 
+  [125:4] iotest 0x66a5fe 
+  [125:5] iotest 0x6344a4 CcdRaiseCondition
+  [125:6] iotest 0x63801a CsdScheduleForever
+  [125:7] iotest 0x6383e5 CsdScheduler
+  [125:8] iotest 0x66a35a ConverseInit
+  [125:9] iotest 0x5bbea7 charm_main
+  [125:10] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [125:11] iotest 0x4def0e _start
+[126] Stack Traceback:
+  [126:0] libpthread.so.0 0x7ffff68aace0 
+  [126:1] libuct.so.0 0x7ffff578b837 
+  [126:2] libucp.so.0 0x7ffff59dfaaa ucp_worker_progress
+  [126:3] libmpi.so.40 0x7ffff732dccb mca_pml_ucx_iprobe
+  [126:4] libmpi.so.40 0x7ffff719e4bc PMPI_Iprobe
+  [126:5] iotest 0x669055 
+  [126:6] iotest 0x66a5fe 
+  [126:7] iotest 0x6344a4 CcdRaiseCondition
+  [126:8] iotest 0x63801a CsdScheduleForever
+  [126:9] iotest 0x6383e5 CsdScheduler
+  [126:10] iotest 0x66a35a ConverseInit
+  [126:11] iotest 0x5bbea7 charm_main
+  [126:12] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [126:13] iotest 0x4def0e _start
+[127] Stack Traceback:
+  [127:0] libpthread.so.0 0x7ffff68aace0 
+  [127:1] linux-vdso.so.1 0x7ffff7ffaaf7 clock_gettime
+  [127:2] libc.so.6 0x7ffff65c82ca __clock_gettime
+  [127:3] libmpi.so.40 0x7ffff71b2b11 PMPI_Wtime
+  [127:4] iotest 0x66b299 CmiWallTimer
+  [127:5] iotest 0x6345e9 CcdCallBacks
+  [127:6] iotest 0x637fcf CsdScheduleForever
+  [127:7] iotest 0x6383e5 CsdScheduler
+  [127:8] iotest 0x66a35a ConverseInit
+  [127:9] iotest 0x5bbea7 charm_main
+  [127:10] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [127:11] iotest 0x4def0e _start
+[50] Stack Traceback:
+  [50:0] libpthread.so.0 0x7ffff68aace0 
+  [50:1] libucp.so.0 0x7ffff5a065a4 ucp_tag_probe_nb
+  [50:2] libmpi.so.40 0x7ffff732dc4b mca_pml_ucx_iprobe
+  [50:3] libmpi.so.40 0x7ffff719e4bc PMPI_Iprobe
+  [50:4] iotest 0x669055 
+  [50:5] iotest 0x66a5fe 
+  [50:6] iotest 0x6344a4 CcdRaiseCondition
+  [50:7] iotest 0x63801a CsdScheduleForever
+  [50:8] iotest 0x6383e5 CsdScheduler
+  [50:9] iotest 0x66a35a ConverseInit
+  [50:10] iotest 0x5bbea7 charm_main
+  [50:11] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [50:12] iotest 0x4def0e _start
+[1] Stack Traceback:
+  [1:0] libpthread.so.0 0x7ffff68aace0 
+  [1:1] libmpi.so.40 0x7ffff71b2b3a PMPI_Wtime
+  [1:2] iotest 0x66b299 CmiWallTimer
+  [1:3] iotest 0x6345e9 CcdCallBacks
+  [1:4] iotest 0x637fcf CsdScheduleForever
+  [1:5] iotest 0x6383e5 CsdScheduler
+  [1:6] iotest 0x66a35a ConverseInit
+  [1:7] iotest 0x5bbea7 charm_main
+  [1:8] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [1:9] iotest 0x4def0e _start
+[2] Stack Traceback:
+  [2:0] libpthread.so.0 0x7ffff68aace0 
+  [2:1] iotest 0x634228 CcdRaiseCondition
+  [2:2] iotest 0x63801a CsdScheduleForever
+  [2:3] iotest 0x6383e5 CsdScheduler
+  [2:4] iotest 0x66a35a ConverseInit
+  [2:5] iotest 0x5bbea7 charm_main
+  [2:6] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [2:7] iotest 0x4def0e _start
+[3] Stack Traceback:
+  [3:0] libpthread.so.0 0x7ffff68aace0 
+  [3:1] libuct_ib.so.0 0x7fffe9bb37c0 
+  [3:2] libucp.so.0 0x7ffff59dfaaa ucp_worker_progress
+  [3:3] libmpi.so.40 0x7ffff732dccb mca_pml_ucx_iprobe
+  [3:4] libmpi.so.40 0x7ffff719e4bc PMPI_Iprobe
+  [3:5] iotest 0x669055 
+  [3:6] iotest 0x66a5fe 
+  [3:7] iotest 0x6344a4 CcdRaiseCondition
+  [3:8] iotest 0x63801a CsdScheduleForever
+  [3:9] iotest 0x6383e5 CsdScheduler
+  [3:10] iotest 0x66a35a ConverseInit
+  [3:11] iotest 0x5bbea7 charm_main
+  [3:12] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [3:13] iotest 0x4def0e _start
+[4] Stack Traceback:
+  [4:0] libpthread.so.0 0x7ffff68aace0 
+  [4:1] libm.so.6 0x7ffff767139a fmin
+  [4:2] iotest 0x63462f CcdCallBacks
+  [4:3] iotest 0x637fcf CsdScheduleForever
+  [4:4] iotest 0x6383e5 CsdScheduler
+  [4:5] iotest 0x66a35a ConverseInit
+  [4:6] iotest 0x5bbea7 charm_main
+  [4:7] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [4:8] iotest 0x4def0e _start
+[5] Stack Traceback:
+  [5:0] libpthread.so.0 0x7ffff68aace0 
+  [5:1] iotest 0x63254c CcdNumTimerCBs
+  [5:2] iotest 0x637fa6 CsdScheduleForever
+  [5:3] iotest 0x6383e5 CsdScheduler
+  [5:4] iotest 0x66a35a ConverseInit
+  [5:5] iotest 0x5bbea7 charm_main
+  [5:6] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [5:7] iotest 0x4def0e _start
+[6] Stack Traceback:
+  [6:0] libpthread.so.0 0x7ffff68aace0 
+  [6:1] linux-vdso.so.1 0x7ffff7ffab34 clock_gettime
+  [6:2] libc.so.6 0x7ffff65c82ca __clock_gettime
+  [6:3] libmpi.so.40 0x7ffff71b2b11 PMPI_Wtime
+  [6:4] iotest 0x66b299 CmiWallTimer
+  [6:5] iotest 0x6345e9 CcdCallBacks
+  [6:6] iotest 0x637fcf CsdScheduleForever
+  [6:7] iotest 0x6383e5 CsdScheduler
+  [6:8] iotest 0x66a35a ConverseInit
+  [6:9] iotest 0x5bbea7 charm_main
+  [6:10] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [6:11] iotest 0x4def0e _start
+[7] Stack Traceback:
+  [7:0] libpthread.so.0 0x7ffff68aace0 
+  [7:1] libmpi.so.40 0x7ffff732dc2c mca_pml_ucx_iprobe
+  [7:2] libmpi.so.40 0x7ffff719e4bc PMPI_Iprobe
+  [7:3] iotest 0x669055 
+  [7:4] iotest 0x66a51a CmiGetNonLocal
+  [7:5] iotest 0x637e8d CsdNextMessage
+  [7:6] iotest 0x637f5f CsdScheduleForever
+  [7:7] iotest 0x6383e5 CsdScheduler
+  [7:8] iotest 0x66a35a ConverseInit
+  [7:9] iotest 0x5bbea7 charm_main
+  [7:10] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [7:11] iotest 0x4def0e _start
+[8] Stack Traceback:
+  [8:0] libpthread.so.0 0x7ffff68aace0 
+  [8:1] iotest 0x6348d9 CcdCallBacks
+  [8:2] iotest 0x637fcf CsdScheduleForever
+  [8:3] iotest 0x6383e5 CsdScheduler
+  [8:4] iotest 0x66a35a ConverseInit
+  [8:5] iotest 0x5bbea7 charm_main
+  [8:6] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [8:7] iotest 0x4def0e _start
+[9] Stack Traceback:
+  [9:0] libpthread.so.0 0x7ffff68aace0 
+  [9:1] iotest 0x63466d CcdCallBacks
+  [9:2] iotest 0x637fcf CsdScheduleForever
+  [9:3] iotest 0x6383e5 CsdScheduler
+  [9:4] iotest 0x66a35a ConverseInit
+  [9:5] iotest 0x5bbea7 charm_main
+  [9:6] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [9:7] iotest 0x4def0e _start
+[10] Stack Traceback:
+  [10:0] libpthread.so.0 0x7ffff68aace0 
+  [10:1] iotest 0x634202 CcdRaiseCondition
+  [10:2] iotest 0x63801a CsdScheduleForever
+  [10:3] iotest 0x6383e5 CsdScheduler
+  [10:4] iotest 0x66a35a ConverseInit
+  [10:5] iotest 0x5bbea7 charm_main
+  [10:6] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [10:7] iotest 0x4def0e _start
+[11] Stack Traceback:
+  [11:0] libpthread.so.0 0x7ffff68aace0 
+  [11:1] libuct_ib.so.0 0x7fffe9bb39db 
+  [11:2] libucp.so.0 0x7ffff59dfaaa ucp_worker_progress
+  [11:3] libmpi.so.40 0x7ffff732dccb mca_pml_ucx_iprobe
+  [11:4] libmpi.so.40 0x7ffff719e4bc PMPI_Iprobe
+  [11:5] iotest 0x669055 
+  [11:6] iotest 0x66a5fe 
+  [11:7] iotest 0x6344a4 CcdRaiseCondition
+  [11:8] iotest 0x63801a CsdScheduleForever
+  [11:9] iotest 0x6383e5 CsdScheduler
+  [11:10] iotest 0x66a35a ConverseInit
+  [11:11] iotest 0x5bbea7 charm_main
+  [11:12] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [11:13] iotest 0x4def0e _start
+[12] Stack Traceback:
+  [12:0] libpthread.so.0 0x7ffff68aace0 
+  [12:1] libuct_ib.so.0 0x7fffe9bb3630 
+  [12:2] libucp.so.0 0x7ffff59dfaaa ucp_worker_progress
+  [12:3] libmpi.so.40 0x7ffff732dccb mca_pml_ucx_iprobe
+  [12:4] libmpi.so.40 0x7ffff719e4bc PMPI_Iprobe
+  [12:5] iotest 0x669055 
+  [12:6] iotest 0x66a5fe 
+  [12:7] iotest 0x6344a4 CcdRaiseCondition
+  [12:8] iotest 0x63801a CsdScheduleForever
+  [12:9] iotest 0x6383e5 CsdScheduler
+  [12:10] iotest 0x66a35a ConverseInit
+  [12:11] iotest 0x5bbea7 charm_main
+  [12:12] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [12:13] iotest 0x4def0e _start
+[13] Stack Traceback:
+  [13:0] libpthread.so.0 0x7ffff68aace0 
+  [13:1] linux-vdso.so.1 0x7ffff7ffab32 clock_gettime
+  [13:2] libc.so.6 0x7ffff65c82ca __clock_gettime
+  [13:3] libmpi.so.40 0x7ffff71b2b11 PMPI_Wtime
+  [13:4] iotest 0x66b299 CmiWallTimer
+  [13:5] iotest 0x6345e9 CcdCallBacks
+  [13:6] iotest 0x637fcf CsdScheduleForever
+  [13:7] iotest 0x6383e5 CsdScheduler
+  [13:8] iotest 0x66a35a ConverseInit
+  [13:9] iotest 0x5bbea7 charm_main
+  [13:10] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [13:11] iotest 0x4def0e _start
+[14] Stack Traceback:
+  [14:0] libpthread.so.0 0x7ffff68aace0 
+  [14:1] libm.so.6 0x7ffff767139a fmin
+  [14:2] iotest 0x63462f CcdCallBacks
+  [14:3] iotest 0x637fcf CsdScheduleForever
+  [14:4] iotest 0x6383e5 CsdScheduler
+  [14:5] iotest 0x66a35a ConverseInit
+  [14:6] iotest 0x5bbea7 charm_main
+  [14:7] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [14:8] iotest 0x4def0e _start
+[15] Stack Traceback:
+  [15:0] libpthread.so.0 0x7ffff68aace0 
+  [15:1] libmpi.so.40 0x7ffff71b2b32 PMPI_Wtime
+  [15:2] iotest 0x66b299 CmiWallTimer
+  [15:3] iotest 0x6345e9 CcdCallBacks
+  [15:4] iotest 0x637fcf CsdScheduleForever
+  [15:5] iotest 0x6383e5 CsdScheduler
+  [15:6] iotest 0x66a35a ConverseInit
+  [15:7] iotest 0x5bbea7 charm_main
+  [15:8] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [15:9] iotest 0x4def0e _start
+[16] Stack Traceback:
+  [16:0] libpthread.so.0 0x7ffff68aace0 
+  [16:1] linux-vdso.so.1 0x7ffff7ffab34 clock_gettime
+  [16:2] libc.so.6 0x7ffff65c82ca __clock_gettime
+  [16:3] libmpi.so.40 0x7ffff71b2b11 PMPI_Wtime
+  [16:4] iotest 0x66b299 CmiWallTimer
+  [16:5] iotest 0x6345e9 CcdCallBacks
+  [16:6] iotest 0x637fcf CsdScheduleForever
+  [16:7] iotest 0x6383e5 CsdScheduler
+  [16:8] iotest 0x66a35a ConverseInit
+  [16:9] iotest 0x5bbea7 charm_main
+  [16:10] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [16:11] iotest 0x4def0e _start
+[17] Stack Traceback:
+  [17:0] libpthread.so.0 0x7ffff68aace0 
+  [17:1] linux-vdso.so.1 0x7ffff7ffab5b clock_gettime
+  [17:2] libc.so.6 0x7ffff65c82ca __clock_gettime
+  [17:3] libmpi.so.40 0x7ffff71b2b11 PMPI_Wtime
+  [17:4] iotest 0x66b299 CmiWallTimer
+  [17:5] iotest 0x6345e9 CcdCallBacks
+  [17:6] iotest 0x637fcf CsdScheduleForever
+  [17:7] iotest 0x6383e5 CsdScheduler
+  [17:8] iotest 0x66a35a ConverseInit
+  [17:9] iotest 0x5bbea7 charm_main
+  [17:10] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [17:11] iotest 0x4def0e _start
+[18] Stack Traceback:
+  [18:0] libpthread.so.0 0x7ffff68aace0 
+  [18:1] libmpi.so.40 0x7ffff732dcba mca_pml_ucx_iprobe
+  [18:2] libmpi.so.40 0x7ffff719e4bc PMPI_Iprobe
+  [18:3] iotest 0x669055 
+  [18:4] iotest 0x66a5fe 
+  [18:5] iotest 0x6344a4 CcdRaiseCondition
+  [18:6] iotest 0x63801a CsdScheduleForever
+  [18:7] iotest 0x6383e5 CsdScheduler
+  [18:8] iotest 0x66a35a ConverseInit
+  [18:9] iotest 0x5bbea7 charm_main
+  [18:10] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [18:11] iotest 0x4def0e _start
+[19] Stack Traceback:
+  [19:0] libpthread.so.0 0x7ffff68aace0 
+  [19:1] linux-vdso.so.1 0x7ffff7ffab34 clock_gettime
+  [19:2] libc.so.6 0x7ffff65c82ca __clock_gettime
+  [19:3] libmpi.so.40 0x7ffff71b2b11 PMPI_Wtime
+  [19:4] iotest 0x66b299 CmiWallTimer
+  [19:5] iotest 0x6345e9 CcdCallBacks
+  [19:6] iotest 0x637fcf CsdScheduleForever
+  [19:7] iotest 0x6383e5 CsdScheduler
+  [19:8] iotest 0x66a35a ConverseInit
+  [19:9] iotest 0x5bbea7 charm_main
+  [19:10] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [19:11] iotest 0x4def0e _start
+[20] Stack Traceback:
+  [20:0] libpthread.so.0 0x7ffff68aace0 
+  [20:1] iotest 0x666708 
+  [20:2] iotest 0x66a617 
+  [20:3] iotest 0x6344a4 CcdRaiseCondition
+  [20:4] iotest 0x63801a CsdScheduleForever
+  [20:5] iotest 0x6383e5 CsdScheduler
+  [20:6] iotest 0x66a35a ConverseInit
+  [20:7] iotest 0x5bbea7 charm_main
+  [20:8] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [20:9] iotest 0x4def0e _start
+[21] Stack Traceback:
+  [21:0] libpthread.so.0 0x7ffff68aace0 
+  [21:1] linux-vdso.so.1 0x7ffff7ffab34 clock_gettime
+  [21:2] libc.so.6 0x7ffff65c82ca __clock_gettime
+  [21:3] libmpi.so.40 0x7ffff71b2b11 PMPI_Wtime
+  [21:4] iotest 0x66b299 CmiWallTimer
+  [21:5] iotest 0x6345e9 CcdCallBacks
+  [21:6] iotest 0x637fcf CsdScheduleForever
+  [21:7] iotest 0x6383e5 CsdScheduler
+  [21:8] iotest 0x66a35a ConverseInit
+  [21:9] iotest 0x5bbea7 charm_main
+  [21:10] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [21:11] iotest 0x4def0e _start
+[22] Stack Traceback:
+  [22:0] libpthread.so.0 0x7ffff68aace0 
+  [22:1] iotest 0x6345d2 CcdCallBacks
+  [22:2] iotest 0x637fcf CsdScheduleForever
+  [22:3] iotest 0x6383e5 CsdScheduler
+  [22:4] iotest 0x66a35a ConverseInit
+  [22:5] iotest 0x5bbea7 charm_main
+  [22:6] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [22:7] iotest 0x4def0e _start
+[23] Stack Traceback:
+  [23:0] libpthread.so.0 0x7ffff68aace0 
+  [23:1] iotest 0x64eebd CqsDequeue
+  [23:2] iotest 0x637ec1 CsdNextMessage
+  [23:3] iotest 0x637f5f CsdScheduleForever
+  [23:4] iotest 0x6383e5 CsdScheduler
+  [23:5] iotest 0x66a35a ConverseInit
+  [23:6] iotest 0x5bbea7 charm_main
+  [23:7] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [23:8] iotest 0x4def0e _start
+[24] Stack Traceback:
+  [24:0] libpthread.so.0 0x7ffff68aace0 
+  [24:1] libmpi.so.40 0x7ffff719e4b7 PMPI_Iprobe
+  [24:2] iotest 0x669055 
+  [24:3] iotest 0x66a51a CmiGetNonLocal
+  [24:4] iotest 0x637e8d CsdNextMessage
+  [24:5] iotest 0x637f5f CsdScheduleForever
+  [24:6] iotest 0x6383e5 CsdScheduler
+  [24:7] iotest 0x66a35a ConverseInit
+  [24:8] iotest 0x5bbea7 charm_main
+  [24:9] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [24:10] iotest 0x4def0e _start
+[25] Stack Traceback:
+  [25:0] libpthread.so.0 0x7ffff68aace0 
+  [25:1] linux-vdso.so.1 0x7ffff7ffab32 clock_gettime
+  [25:2] libc.so.6 0x7ffff65c82ca __clock_gettime
+  [25:3] libmpi.so.40 0x7ffff71b2b11 PMPI_Wtime
+  [25:4] iotest 0x66b299 CmiWallTimer
+  [25:5] iotest 0x6345e9 CcdCallBacks
+  [25:6] iotest 0x637fcf CsdScheduleForever
+  [25:7] iotest 0x6383e5 CsdScheduler
+  [25:8] iotest 0x66a35a ConverseInit
+  [25:9] iotest 0x5bbea7 charm_main
+  [25:10] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [25:11] iotest 0x4def0e _start
+[26] Stack Traceback:
+  [26:0] libpthread.so.0 0x7ffff68aace0 
+  [26:1] linux-vdso.so.1 0x7ffff7ffab9d clock_gettime
+  [26:2] libc.so.6 0x7ffff65c82ca __clock_gettime
+  [26:3] libmpi.so.40 0x7ffff71b2b11 PMPI_Wtime
+  [26:4] iotest 0x66b299 CmiWallTimer
+  [26:5] iotest 0x6345e9 CcdCallBacks
+  [26:6] iotest 0x637fcf CsdScheduleForever
+  [26:7] iotest 0x6383e5 CsdScheduler
+  [26:8] iotest 0x66a35a ConverseInit
+  [26:9] iotest 0x5bbea7 charm_main
+  [26:10] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [26:11] iotest 0x4def0e _start
+[27] Stack Traceback:
+  [27:0] libpthread.so.0 0x7ffff68aace0 
+  [27:1] libmpi.so.40 0x7ffff719e469 PMPI_Iprobe
+  [27:2] iotest 0x669055 
+  [27:3] iotest 0x66a51a CmiGetNonLocal
+  [27:4] iotest 0x637e8d CsdNextMessage
+  [27:5] iotest 0x637f5f CsdScheduleForever
+  [27:6] iotest 0x6383e5 CsdScheduler
+  [27:7] iotest 0x66a35a ConverseInit
+  [27:8] iotest 0x5bbea7 charm_main
+  [27:9] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [27:10] iotest 0x4def0e _start
+[28] Stack Traceback:
+  [28:0] libpthread.so.0 0x7ffff68aace0 
+  [28:1] linux-vdso.so.1 0x7ffff7ffab5b clock_gettime
+  [28:2] libc.so.6 0x7ffff65c82ca __clock_gettime
+  [28:3] libmpi.so.40 0x7ffff71b2b11 PMPI_Wtime
+  [28:4] iotest 0x66b299 CmiWallTimer
+  [28:5] iotest 0x6345e9 CcdCallBacks
+  [28:6] iotest 0x637fcf CsdScheduleForever
+  [28:7] iotest 0x6383e5 CsdScheduler
+  [28:8] iotest 0x66a35a ConverseInit
+  [28:9] iotest 0x5bbea7 charm_main
+  [28:10] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [28:11] iotest 0x4def0e _start
+[29] Stack Traceback:
+  [29:0] libpthread.so.0 0x7ffff68aace0 
+  [29:1] libmpi.so.40 0x7ffff71b2b3a PMPI_Wtime
+  [29:2] iotest 0x66b299 CmiWallTimer
+  [29:3] iotest 0x6345e9 CcdCallBacks
+  [29:4] iotest 0x637fcf CsdScheduleForever
+  [29:5] iotest 0x6383e5 CsdScheduler
+  [29:6] iotest 0x66a35a ConverseInit
+  [29:7] iotest 0x5bbea7 charm_main
+  [29:8] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [29:9] iotest 0x4def0e _start
+[30] Stack Traceback:
+  [30:0] libpthread.so.0 0x7ffff68aace0 
+  [30:1] libmpi.so.40 0x7ffff732dc05 mca_pml_ucx_iprobe
+  [30:2] libmpi.so.40 0x7ffff719e4bc PMPI_Iprobe
+  [30:3] iotest 0x669055 
+  [30:4] iotest 0x66a51a CmiGetNonLocal
+  [30:5] iotest 0x637e8d CsdNextMessage
+  [30:6] iotest 0x637f5f CsdScheduleForever
+  [30:7] iotest 0x6383e5 CsdScheduler
+  [30:8] iotest 0x66a35a ConverseInit
+  [30:9] iotest 0x5bbea7 charm_main
+  [30:10] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [30:11] iotest 0x4def0e _start
+[31] Stack Traceback:
+  [31:0] libpthread.so.0 0x7ffff68aace0 
+  [31:1] libm.so.6 0x7ffff7671344 fmaxf32x
+  [31:2] iotest 0x634640 CcdCallBacks
+  [31:3] iotest 0x637fcf CsdScheduleForever
+  [31:4] iotest 0x6383e5 CsdScheduler
+  [31:5] iotest 0x66a35a ConverseInit
+  [31:6] iotest 0x5bbea7 charm_main
+  [31:7] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [31:8] iotest 0x4def0e _start
+[32] Stack Traceback:
+  [32:0] libpthread.so.0 0x7ffff68aace0 
+  [32:1] linux-vdso.so.1 0x7ffff7ffab6d clock_gettime
+  [32:2] libc.so.6 0x7ffff65c82ca __clock_gettime
+  [32:3] libmpi.so.40 0x7ffff71b2b11 PMPI_Wtime
+  [32:4] iotest 0x66b299 CmiWallTimer
+  [32:5] iotest 0x6345e9 CcdCallBacks
+  [32:6] iotest 0x637fcf CsdScheduleForever
+  [32:7] iotest 0x6383e5 CsdScheduler
+  [32:8] iotest 0x66a35a ConverseInit
+  [32:9] iotest 0x5bbea7 charm_main
+  [32:10] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [32:11] iotest 0x4def0e _start
+[33] Stack Traceback:
+  [33:0] libpthread.so.0 0x7ffff68aace0 
+  [33:1] libmpi.so.40 0x7ffff71b2b32 PMPI_Wtime
+  [33:2] iotest 0x66b299 CmiWallTimer
+  [33:3] iotest 0x6345e9 CcdCallBacks
+  [33:4] iotest 0x637fcf CsdScheduleForever
+  [33:5] iotest 0x6383e5 CsdScheduler
+  [33:6] iotest 0x66a35a ConverseInit
+  [33:7] iotest 0x5bbea7 charm_main
+  [33:8] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [33:9] iotest 0x4def0e _start
+[34] Stack Traceback:
+  [34:0] libpthread.so.0 0x7ffff68aace0 
+  [34:1] iotest 0x634622 CcdCallBacks
+  [34:2] iotest 0x637fcf CsdScheduleForever
+  [34:3] iotest 0x6383e5 CsdScheduler
+  [34:4] iotest 0x66a35a ConverseInit
+  [34:5] iotest 0x5bbea7 charm_main
+  [34:6] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [34:7] iotest 0x4def0e _start
+[35] Stack Traceback:
+  [35:0] libpthread.so.0 0x7ffff68aace0 
+  [35:1] libmpi.so.40 0x7ffff719e4bc PMPI_Iprobe
+  [35:2] iotest 0x669055 
+  [35:3] iotest 0x66a5fe 
+  [35:4] iotest 0x6344a4 CcdRaiseCondition
+  [35:5] iotest 0x63801a CsdScheduleForever
+  [35:6] iotest 0x6383e5 CsdScheduler
+  [35:7] iotest 0x66a35a ConverseInit
+  [35:8] iotest 0x5bbea7 charm_main
+  [35:9] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [35:10] iotest 0x4def0e _start
+[36] Stack Traceback:
+  [36:0] libpthread.so.0 0x7ffff68aace0 
+  [36:1] libucp.so.0 0x7ffff59dfa97 ucp_worker_progress
+  [36:2] libmpi.so.40 0x7ffff732dccb mca_pml_ucx_iprobe
+  [36:3] libmpi.so.40 0x7ffff719e4bc PMPI_Iprobe
+  [36:4] iotest 0x669055 
+  [36:5] iotest 0x66a5fe 
+  [36:6] iotest 0x6344a4 CcdRaiseCondition
+  [36:7] iotest 0x63801a CsdScheduleForever
+  [36:8] iotest 0x6383e5 CsdScheduler
+  [36:9] iotest 0x66a35a ConverseInit
+  [36:10] iotest 0x5bbea7 charm_main
+  [36:11] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [36:12] iotest 0x4def0e _start
+[37] Stack Traceback:
+  [37:0] libpthread.so.0 0x7ffff68aace0 
+  [37:1] iotest 0x634622 CcdCallBacks
+  [37:2] iotest 0x637fcf CsdScheduleForever
+  [37:3] iotest 0x6383e5 CsdScheduler
+  [37:4] iotest 0x66a35a ConverseInit
+  [37:5] iotest 0x5bbea7 charm_main
+  [37:6] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [37:7] iotest 0x4def0e _start
+[38] Stack Traceback:
+  [38:0] libpthread.so.0 0x7ffff68aace0 
+  [38:1] iotest 0x634601 CcdCallBacks
+  [38:2] iotest 0x637fcf CsdScheduleForever
+  [38:3] iotest 0x6383e5 CsdScheduler
+  [38:4] iotest 0x66a35a ConverseInit
+  [38:5] iotest 0x5bbea7 charm_main
+  [38:6] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [38:7] iotest 0x4def0e _start
+[39] Stack Traceback:
+  [39:0] libpthread.so.0 0x7ffff68aace0 
+  [39:1] iotest 0x634611 CcdCallBacks
+  [39:2] iotest 0x637fcf CsdScheduleForever
+  [39:3] iotest 0x6383e5 CsdScheduler
+  [39:4] iotest 0x66a35a ConverseInit
+  [39:5] iotest 0x5bbea7 charm_main
+  [39:6] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [39:7] iotest 0x4def0e _start
+[40] Stack Traceback:
+  [40:0] libpthread.so.0 0x7ffff68aace0 
+  [40:1] linux-vdso.so.1 0x7ffff7ffab34 clock_gettime
+  [40:2] libc.so.6 0x7ffff65c82ca __clock_gettime
+  [40:3] libmpi.so.40 0x7ffff71b2b11 PMPI_Wtime
+  [40:4] iotest 0x66b299 CmiWallTimer
+  [40:5] iotest 0x6345e9 CcdCallBacks
+  [40:6] iotest 0x637fcf CsdScheduleForever
+  [40:7] iotest 0x6383e5 CsdScheduler
+  [40:8] iotest 0x66a35a ConverseInit
+  [40:9] iotest 0x5bbea7 charm_main
+  [40:10] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [40:11] iotest 0x4def0e _start
+[41] Stack Traceback:
+  [41:0] libpthread.so.0 0x7ffff68aace0 
+  [41:1] libc.so.6 0x7ffff65c82af __clock_gettime
+  [41:2] libmpi.so.40 0x7ffff71b2b11 PMPI_Wtime
+  [41:3] iotest 0x66b299 CmiWallTimer
+  [41:4] iotest 0x6345e9 CcdCallBacks
+  [41:5] iotest 0x637fcf CsdScheduleForever
+  [41:6] iotest 0x6383e5 CsdScheduler
+  [41:7] iotest 0x66a35a ConverseInit
+  [41:8] iotest 0x5bbea7 charm_main
+  [41:9] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [41:10] iotest 0x4def0e _start
+[42] Stack Traceback:
+  [42:0] libpthread.so.0 0x7ffff68aace0 
+  [42:1] linux-vdso.so.1 0x7ffff7ffab34 clock_gettime
+  [42:2] libc.so.6 0x7ffff65c82ca __clock_gettime
+  [42:3] libmpi.so.40 0x7ffff71b2b11 PMPI_Wtime
+  [42:4] iotest 0x66b299 CmiWallTimer
+  [42:5] iotest 0x6345e9 CcdCallBacks
+  [42:6] iotest 0x637fcf CsdScheduleForever
+  [42:7] iotest 0x6383e5 CsdScheduler
+  [42:8] iotest 0x66a35a ConverseInit
+  [42:9] iotest 0x5bbea7 charm_main
+  [42:10] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [42:11] iotest 0x4def0e _start
+[43] Stack Traceback:
+  [43:0] libpthread.so.0 0x7ffff68aace0 
+  [43:1] libmpi.so.40 0x7ffff71b2b3a PMPI_Wtime
+  [43:2] iotest 0x66b299 CmiWallTimer
+  [43:3] iotest 0x6345e9 CcdCallBacks
+  [43:4] iotest 0x637fcf CsdScheduleForever
+  [43:5] iotest 0x6383e5 CsdScheduler
+  [43:6] iotest 0x66a35a ConverseInit
+  [43:7] iotest 0x5bbea7 charm_main
+  [43:8] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [43:9] iotest 0x4def0e _start
+[44] Stack Traceback:
+  [44:0] libpthread.so.0 0x7ffff68aace0 
+  [44:1] linux-vdso.so.1 0x7ffff7ffab32 clock_gettime
+  [44:2] libc.so.6 0x7ffff65c82ca __clock_gettime
+  [44:3] libmpi.so.40 0x7ffff71b2b11 PMPI_Wtime
+  [44:4] iotest 0x66b299 CmiWallTimer
+  [44:5] iotest 0x6345e9 CcdCallBacks
+  [44:6] iotest 0x637fcf CsdScheduleForever
+  [44:7] iotest 0x6383e5 CsdScheduler
+  [44:8] iotest 0x66a35a ConverseInit
+  [44:9] iotest 0x5bbea7 charm_main
+  [44:10] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [44:11] iotest 0x4def0e _start
+[45] Stack Traceback:
+  [45:0] libpthread.so.0 0x7ffff68aace0 
+  [45:1] libucp.so.0 0x7ffff5a0649c ucp_tag_probe_nb
+  [45:2] libmpi.so.40 0x7ffff732dc4b mca_pml_ucx_iprobe
+  [45:3] libmpi.so.40 0x7ffff719e4bc PMPI_Iprobe
+  [45:4] iotest 0x669055 
+  [45:5] iotest 0x66a51a CmiGetNonLocal
+  [45:6] iotest 0x637e8d CsdNextMessage
+  [45:7] iotest 0x637f5f CsdScheduleForever
+  [45:8] iotest 0x6383e5 CsdScheduler
+  [45:9] iotest 0x66a35a ConverseInit
+  [45:10] iotest 0x5bbea7 charm_main
+  [45:11] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [45:12] iotest 0x4def0e _start
+[46] Stack Traceback:
+  [46:0] libpthread.so.0 0x7ffff68aace0 
+  [46:1] linux-vdso.so.1 0x7ffff7ffab34 clock_gettime
+  [46:2] libc.so.6 0x7ffff65c82ca __clock_gettime
+  [46:3] libmpi.so.40 0x7ffff71b2b11 PMPI_Wtime
+  [46:4] iotest 0x66b299 CmiWallTimer
+  [46:5] iotest 0x6345e9 CcdCallBacks
+  [46:6] iotest 0x637fcf CsdScheduleForever
+  [46:7] iotest 0x6383e5 CsdScheduler
+  [46:8] iotest 0x66a35a ConverseInit
+  [46:9] iotest 0x5bbea7 charm_main
+  [46:10] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [46:11] iotest 0x4def0e _start
+[47] Stack Traceback:
+  [47:0] libpthread.so.0 0x7ffff68aace0 
+  [47:1] libuct_ib.so.0 0x7fffe9bb37e9 
+  [47:2] libucp.so.0 0x7ffff59dfaaa ucp_worker_progress
+  [47:3] libmpi.so.40 0x7ffff732dccb mca_pml_ucx_iprobe
+  [47:4] libmpi.so.40 0x7ffff719e4bc PMPI_Iprobe
+  [47:5] iotest 0x669055 
+  [47:6] iotest 0x66a5fe 
+  [47:7] iotest 0x6344a4 CcdRaiseCondition
+  [47:8] iotest 0x63801a CsdScheduleForever
+  [47:9] iotest 0x6383e5 CsdScheduler
+  [47:10] iotest 0x66a35a ConverseInit
+  [47:11] iotest 0x5bbea7 charm_main
+  [47:12] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [47:13] iotest 0x4def0e _start
+[48] Stack Traceback:
+  [48:0] libpthread.so.0 0x7ffff68aace0 
+  [48:1] iotest 0x667dcb 
+  [48:2] iotest 0x66a515 CmiGetNonLocal
+  [48:3] iotest 0x637e8d CsdNextMessage
+  [48:4] iotest 0x637f5f CsdScheduleForever
+  [48:5] iotest 0x6383e5 CsdScheduler
+  [48:6] iotest 0x66a35a ConverseInit
+  [48:7] iotest 0x5bbea7 charm_main
+  [48:8] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [48:9] iotest 0x4def0e _start
+[49] Stack Traceback:
+  [49:0] libpthread.so.0 0x7ffff68aace0 
+  [49:1] iotest 0x63420a CcdRaiseCondition
+  [49:2] iotest 0x637f57 CsdScheduleForever
+  [49:3] iotest 0x6383e5 CsdScheduler
+  [49:4] iotest 0x66a35a ConverseInit
+  [49:5] iotest 0x5bbea7 charm_main
+  [49:6] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [49:7] iotest 0x4def0e _start
+[63] Stack Traceback:
+  [63:0] libpthread.so.0 0x7ffff68aace0 
+  [63:1] iotest 0x63442d CcdRaiseCondition
+  [63:2] iotest 0x63801a CsdScheduleForever
+  [63:3] iotest 0x6383e5 CsdScheduler
+  [63:4] iotest 0x66a35a ConverseInit
+  [63:5] iotest 0x5bbea7 charm_main
+  [63:6] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [63:7] iotest 0x4def0e _start
+[51] Stack Traceback:
+  [51:0] libpthread.so.0 0x7ffff68aace0 
+  [51:1] linux-vdso.so.1 0x7ffff7ffab73 clock_gettime
+  [51:2] libc.so.6 0x7ffff65c82ca __clock_gettime
+  [51:3] libmpi.so.40 0x7ffff71b2b11 PMPI_Wtime
+  [51:4] iotest 0x66b299 CmiWallTimer
+  [51:5] iotest 0x6345e9 CcdCallBacks
+  [51:6] iotest 0x637fcf CsdScheduleForever
+  [51:7] iotest 0x6383e5 CsdScheduler
+  [51:8] iotest 0x66a35a ConverseInit
+  [51:9] iotest 0x5bbea7 charm_main
+  [51:10] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [51:11] iotest 0x4def0e _start
+[52] Stack Traceback:
+  [52:0] libpthread.so.0 0x7ffff68aace0 
+  [52:1] libuct_ib.so.0 0x7fffe9bb3660 
+  [52:2] libucp.so.0 0x7ffff59dfaaa ucp_worker_progress
+  [52:3] libmpi.so.40 0x7ffff732dccb mca_pml_ucx_iprobe
+  [52:4] libmpi.so.40 0x7ffff719e4bc PMPI_Iprobe
+  [52:5] iotest 0x669055 
+  [52:6] iotest 0x66a51a CmiGetNonLocal
+  [52:7] iotest 0x637e8d CsdNextMessage
+  [52:8] iotest 0x637f5f CsdScheduleForever
+  [52:9] iotest 0x6383e5 CsdScheduler
+  [52:10] iotest 0x66a35a ConverseInit
+  [52:11] iotest 0x5bbea7 charm_main
+  [52:12] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [52:13] iotest 0x4def0e _start
+[53] Stack Traceback:
+  [53:0] libpthread.so.0 0x7ffff68aace0 
+  [53:1] iotest 0x6581b3 CdsFifo_Dequeue
+  [53:2] iotest 0x637e9f CsdNextMessage
+  [53:3] iotest 0x637f5f CsdScheduleForever
+  [53:4] iotest 0x6383e5 CsdScheduler
+  [53:5] iotest 0x66a35a ConverseInit
+  [53:6] iotest 0x5bbea7 charm_main
+  [53:7] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [53:8] iotest 0x4def0e _start
+[54] Stack Traceback:
+  [54:0] libpthread.so.0 0x7ffff68aace0 
+  [54:1] linux-vdso.so.1 0x7ffff7ffab32 clock_gettime
+  [54:2] libc.so.6 0x7ffff65c82ca __clock_gettime
+  [54:3] libmpi.so.40 0x7ffff71b2b11 PMPI_Wtime
+  [54:4] iotest 0x66b299 CmiWallTimer
+  [54:5] iotest 0x6345e9 CcdCallBacks
+  [54:6] iotest 0x637fcf CsdScheduleForever
+  [54:7] iotest 0x6383e5 CsdScheduler
+  [54:8] iotest 0x66a35a ConverseInit
+  [54:9] iotest 0x5bbea7 charm_main
+  [54:10] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [54:11] iotest 0x4def0e _start
+[55] Stack Traceback:
+  [55:0] libpthread.so.0 0x7ffff68aace0 
+  [55:1] iotest 0x6581b7 CdsFifo_Dequeue
+  [55:2] iotest 0x637e9f CsdNextMessage
+  [55:3] iotest 0x637f5f CsdScheduleForever
+  [55:4] iotest 0x6383e5 CsdScheduler
+  [55:5] iotest 0x66a35a ConverseInit
+  [55:6] iotest 0x5bbea7 charm_main
+  [55:7] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [55:8] iotest 0x4def0e _start
+[56] Stack Traceback:
+  [56:0] libpthread.so.0 0x7ffff68aace0 
+  [56:1] libmpi.so.40 0x7ffff71b2b3a PMPI_Wtime
+  [56:2] iotest 0x66b299 CmiWallTimer
+  [56:3] iotest 0x6345e9 CcdCallBacks
+  [56:4] iotest 0x637fcf CsdScheduleForever
+  [56:5] iotest 0x6383e5 CsdScheduler
+  [56:6] iotest 0x66a35a ConverseInit
+  [56:7] iotest 0x5bbea7 charm_main
+  [56:8] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [56:9] iotest 0x4def0e _start
+[57] Stack Traceback:
+  [57:0] libpthread.so.0 0x7ffff68aace0 
+  [57:1] linux-vdso.so.1 0x7ffff7ffab9d clock_gettime
+  [57:2] libc.so.6 0x7ffff65c82ca __clock_gettime
+  [57:3] libmpi.so.40 0x7ffff71b2b11 PMPI_Wtime
+  [57:4] iotest 0x66b299 CmiWallTimer
+  [57:5] iotest 0x6345e9 CcdCallBacks
+  [57:6] iotest 0x637fcf CsdScheduleForever
+  [57:7] iotest 0x6383e5 CsdScheduler
+  [57:8] iotest 0x66a35a ConverseInit
+  [57:9] iotest 0x5bbea7 charm_main
+  [57:10] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [57:11] iotest 0x4def0e _start
+[58] Stack Traceback:
+  [58:0] libpthread.so.0 0x7ffff68aace0 
+  [58:1] libuct.so.0 0x7ffff578b822 
+  [58:2] libucp.so.0 0x7ffff59dfaaa ucp_worker_progress
+  [58:3] libmpi.so.40 0x7ffff732dccb mca_pml_ucx_iprobe
+  [58:4] libmpi.so.40 0x7ffff719e4bc PMPI_Iprobe
+  [58:5] iotest 0x669055 
+  [58:6] iotest 0x66a5fe 
+  [58:7] iotest 0x6344a4 CcdRaiseCondition
+  [58:8] iotest 0x63801a CsdScheduleForever
+  [58:9] iotest 0x6383e5 CsdScheduler
+  [58:10] iotest 0x66a35a ConverseInit
+  [58:11] iotest 0x5bbea7 charm_main
+  [58:12] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [58:13] iotest 0x4def0e _start
+[59] Stack Traceback:
+  [59:0] libpthread.so.0 0x7ffff68aace0 
+  [59:1] iotest 0x66a5f4 
+  [59:2] iotest 0x6344a4 CcdRaiseCondition
+  [59:3] iotest 0x63801a CsdScheduleForever
+  [59:4] iotest 0x6383e5 CsdScheduler
+  [59:5] iotest 0x66a35a ConverseInit
+  [59:6] iotest 0x5bbea7 charm_main
+  [59:7] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [59:8] iotest 0x4def0e _start
+[60] Stack Traceback:
+  [60:0] libpthread.so.0 0x7ffff68aace0 
+  [60:1] iotest 0x66a5f0 
+  [60:2] iotest 0x6344a4 CcdRaiseCondition
+  [60:3] iotest 0x63801a CsdScheduleForever
+  [60:4] iotest 0x6383e5 CsdScheduler
+  [60:5] iotest 0x66a35a ConverseInit
+  [60:6] iotest 0x5bbea7 charm_main
+  [60:7] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [60:8] iotest 0x4def0e _start
+[61] Stack Traceback:
+  [61:0] libpthread.so.0 0x7ffff68aace0 
+  [61:1] iotest 0x669062 
+  [61:2] iotest 0x66a5fe 
+  [61:3] iotest 0x6344a4 CcdRaiseCondition
+  [61:4] iotest 0x63801a CsdScheduleForever
+  [61:5] iotest 0x6383e5 CsdScheduler
+  [61:6] iotest 0x66a35a ConverseInit
+  [61:7] iotest 0x5bbea7 charm_main
+  [61:8] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [61:9] iotest 0x4def0e _start
+[62] Stack Traceback:
+  [62:0] libpthread.so.0 0x7ffff68aace0 
+  [62:1] libuct_ib.so.0 0x7fffe9bb367f 
+  [62:2] libucp.so.0 0x7ffff59dfaaa ucp_worker_progress
+  [62:3] libmpi.so.40 0x7ffff732dccb mca_pml_ucx_iprobe
+  [62:4] libmpi.so.40 0x7ffff719e4bc PMPI_Iprobe
+  [62:5] iotest 0x669055 
+  [62:6] iotest 0x66a51a CmiGetNonLocal
+  [62:7] iotest 0x637e8d CsdNextMessage
+  [62:8] iotest 0x637f5f CsdScheduleForever
+  [62:9] iotest 0x6383e5 CsdScheduler
+  [62:10] iotest 0x66a35a ConverseInit
+  [62:11] iotest 0x5bbea7 charm_main
+  [62:12] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [62:13] iotest 0x4def0e _start
+[64] Stack Traceback:
+  [64:0] libpthread.so.0 0x7ffff68aace0 
+  [64:1] iotest 0x668f88 
+  [64:2] iotest 0x66a51a CmiGetNonLocal
+  [64:3] iotest 0x637e8d CsdNextMessage
+  [64:4] iotest 0x637f5f CsdScheduleForever
+  [64:5] iotest 0x6383e5 CsdScheduler
+  [64:6] iotest 0x66a35a ConverseInit
+  [64:7] iotest 0x5bbea7 charm_main
+  [64:8] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [64:9] iotest 0x4def0e _start
+[65] Stack Traceback:
+  [65:0] libpthread.so.0 0x7ffff68aace0 
+  [65:1] libmpi.so.40 0x7ffff71b2b32 PMPI_Wtime
+  [65:2] iotest 0x66b299 CmiWallTimer
+  [65:3] iotest 0x6345e9 CcdCallBacks
+  [65:4] iotest 0x637fcf CsdScheduleForever
+  [65:5] iotest 0x6383e5 CsdScheduler
+  [65:6] iotest 0x66a35a ConverseInit
+  [65:7] iotest 0x5bbea7 charm_main
+  [65:8] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [65:9] iotest 0x4def0e _start
+[66] Stack Traceback:
+  [66:0] libpthread.so.0 0x7ffff68aace0 
+  [66:1] iotest 0x634228 CcdRaiseCondition
+  [66:2] iotest 0x637f57 CsdScheduleForever
+  [66:3] iotest 0x6383e5 CsdScheduler
+  [66:4] iotest 0x66a35a ConverseInit
+  [66:5] iotest 0x5bbea7 charm_main
+  [66:6] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [66:7] iotest 0x4def0e _start
+[67] Stack Traceback:
+  [67:0] libpthread.so.0 0x7ffff68aace0 
+  [67:1] libucp.so.0 0x7ffff59dfa9a ucp_worker_progress
+  [67:2] libmpi.so.40 0x7ffff732dccb mca_pml_ucx_iprobe
+  [67:3] libmpi.so.40 0x7ffff719e4bc PMPI_Iprobe
+  [67:4] iotest 0x669055 
+  [67:5] iotest 0x66a5fe 
+  [67:6] iotest 0x6344a4 CcdRaiseCondition
+  [67:7] iotest 0x63801a CsdScheduleForever
+  [67:8] iotest 0x6383e5 CsdScheduler
+  [67:9] iotest 0x66a35a ConverseInit
+  [67:10] iotest 0x5bbea7 charm_main
+  [67:11] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [67:12] iotest 0x4def0e _start
+[68] Stack Traceback:
+  [68:0] libpthread.so.0 0x7ffff68aace0 
+  [68:1] iotest 0x66680f 
+  [68:2] iotest 0x66a617 
+  [68:3] iotest 0x6344a4 CcdRaiseCondition
+  [68:4] iotest 0x63801a CsdScheduleForever
+  [68:5] iotest 0x6383e5 CsdScheduler
+  [68:6] iotest 0x66a35a ConverseInit
+  [68:7] iotest 0x5bbea7 charm_main
+  [68:8] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [68:9] iotest 0x4def0e _start
+[69] Stack Traceback:
+  [69:0] libpthread.so.0 0x7ffff68aace0 
+  [69:1] iotest 0x6341a6 CcdRaiseCondition
+  [69:2] iotest 0x637f57 CsdScheduleForever
+  [69:3] iotest 0x6383e5 CsdScheduler
+  [69:4] iotest 0x66a35a ConverseInit
+  [69:5] iotest 0x5bbea7 charm_main
+  [69:6] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [69:7] iotest 0x4def0e _start
+[70] Stack Traceback:
+  [70:0] libpthread.so.0 0x7ffff68aace0 
+  [70:1] iotest 0x66a462 CmiGetNonLocal
+  [70:2] iotest 0x637e8d CsdNextMessage
+  [70:3] iotest 0x637f5f CsdScheduleForever
+  [70:4] iotest 0x6383e5 CsdScheduler
+  [70:5] iotest 0x66a35a ConverseInit
+  [70:6] iotest 0x5bbea7 charm_main
+  [70:7] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [70:8] iotest 0x4def0e _start
+[71] Stack Traceback:
+  [71:0] libpthread.so.0 0x7ffff68aace0 
+  [71:1] linux-vdso.so.1 0x7ffff7ffab73 clock_gettime
+  [71:2] libc.so.6 0x7ffff65c82ca __clock_gettime
+  [71:3] libmpi.so.40 0x7ffff71b2b11 PMPI_Wtime
+  [71:4] iotest 0x66b299 CmiWallTimer
+  [71:5] iotest 0x6345e9 CcdCallBacks
+  [71:6] iotest 0x637fcf CsdScheduleForever
+  [71:7] iotest 0x6383e5 CsdScheduler
+  [71:8] iotest 0x66a35a ConverseInit
+  [71:9] iotest 0x5bbea7 charm_main
+  [71:10] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [71:11] iotest 0x4def0e _start
+[72] Stack Traceback:
+  [72:0] libpthread.so.0 0x7ffff68aace0 
+  [72:1] iotest 0x669062 
+  [72:2] iotest 0x66a51a CmiGetNonLocal
+  [72:3] iotest 0x637e8d CsdNextMessage
+  [72:4] iotest 0x637f5f CsdScheduleForever
+  [72:5] iotest 0x6383e5 CsdScheduler
+  [72:6] iotest 0x66a35a ConverseInit
+  [72:7] iotest 0x5bbea7 charm_main
+  [72:8] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [72:9] iotest 0x4def0e _start
+[73] Stack Traceback:
+  [73:0] libpthread.so.0 0x7ffff68aace0 
+  [73:1] iotest 0x634915 CcdCallBacks
+  [73:2] iotest 0x637fcf CsdScheduleForever
+  [73:3] iotest 0x6383e5 CsdScheduler
+  [73:4] iotest 0x66a35a ConverseInit
+  [73:5] iotest 0x5bbea7 charm_main
+  [73:6] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [73:7] iotest 0x4def0e _start
+[74] Stack Traceback:
+  [74:0] libpthread.so.0 0x7ffff68aace0 
+  [74:1] linux-vdso.so.1 0x7ffff7ffab34 clock_gettime
+  [74:2] libc.so.6 0x7ffff65c82ca __clock_gettime
+  [74:3] libmpi.so.40 0x7ffff71b2b11 PMPI_Wtime
+  [74:4] iotest 0x66b299 CmiWallTimer
+  [74:5] iotest 0x6345e9 CcdCallBacks
+  [74:6] iotest 0x637fcf CsdScheduleForever
+  [74:7] iotest 0x6383e5 CsdScheduler
+  [74:8] iotest 0x66a35a ConverseInit
+  [74:9] iotest 0x5bbea7 charm_main
+  [74:10] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [74:11] iotest 0x4def0e _start
+[75] Stack Traceback:
+  [75:0] libpthread.so.0 0x7ffff68aace0 
+  [75:1] linux-vdso.so.1 0x7ffff7ffab34 clock_gettime
+  [75:2] libc.so.6 0x7ffff65c82ca __clock_gettime
+  [75:3] libmpi.so.40 0x7ffff71b2b11 PMPI_Wtime
+  [75:4] iotest 0x66b299 CmiWallTimer
+  [75:5] iotest 0x6345e9 CcdCallBacks
+  [75:6] iotest 0x637fcf CsdScheduleForever
+  [75:7] iotest 0x6383e5 CsdScheduler
+  [75:8] iotest 0x66a35a ConverseInit
+  [75:9] iotest 0x5bbea7 charm_main
+  [75:10] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [75:11] iotest 0x4def0e _start
+[76] Stack Traceback:
+  [76:0] libpthread.so.0 0x7ffff68aace0 
+  [76:1] iotest 0x634511 CcdRaiseCondition
+  [76:2] iotest 0x63801a CsdScheduleForever
+  [76:3] iotest 0x6383e5 CsdScheduler
+  [76:4] iotest 0x66a35a ConverseInit
+  [76:5] iotest 0x5bbea7 charm_main
+  [76:6] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [76:7] iotest 0x4def0e _start
+[77] Stack Traceback:
+  [77:0] libpthread.so.0 0x7ffff68aace0 
+  [77:1] libc.so.6 0x7ffff65c82f3 __clock_gettime
+  [77:2] libmpi.so.40 0x7ffff71b2b11 PMPI_Wtime
+  [77:3] iotest 0x66b299 CmiWallTimer
+  [77:4] iotest 0x6345e9 CcdCallBacks
+  [77:5] iotest 0x637fcf CsdScheduleForever
+  [77:6] iotest 0x6383e5 CsdScheduler
+  [77:7] iotest 0x66a35a ConverseInit
+  [77:8] iotest 0x5bbea7 charm_main
+  [77:9] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [77:10] iotest 0x4def0e _start
+[78] Stack Traceback:
+  [78:0] libpthread.so.0 0x7ffff68aace0 
+  [78:1] iotest 0x634622 CcdCallBacks
+  [78:2] iotest 0x637fcf CsdScheduleForever
+  [78:3] iotest 0x6383e5 CsdScheduler
+  [78:4] iotest 0x66a35a ConverseInit
+  [78:5] iotest 0x5bbea7 charm_main
+  [78:6] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [78:7] iotest 0x4def0e _start
+[79] Stack Traceback:
+  [79:0] libpthread.so.0 0x7ffff68aace0 
+  [79:1] libmpi.so.40 0x7ffff732dbc2 mca_pml_ucx_iprobe
+  [79:2] libmpi.so.40 0x7ffff719e4bc PMPI_Iprobe
+  [79:3] iotest 0x669055 
+  [79:4] iotest 0x66a5fe 
+  [79:5] iotest 0x6344a4 CcdRaiseCondition
+  [79:6] iotest 0x63801a CsdScheduleForever
+  [79:7] iotest 0x6383e5 CsdScheduler
+  [79:8] iotest 0x66a35a ConverseInit
+  [79:9] iotest 0x5bbea7 charm_main
+  [79:10] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [79:11] iotest 0x4def0e _start
+[80] Stack Traceback:
+  [80:0] libpthread.so.0 0x7ffff68aace0 
+  [80:1] linux-vdso.so.1 0x7ffff7ffab34 clock_gettime
+  [80:2] libc.so.6 0x7ffff65c82ca __clock_gettime
+  [80:3] libmpi.so.40 0x7ffff71b2b11 PMPI_Wtime
+  [80:4] iotest 0x66b299 CmiWallTimer
+  [80:5] iotest 0x6345e9 CcdCallBacks
+  [80:6] iotest 0x637fcf CsdScheduleForever
+  [80:7] iotest 0x6383e5 CsdScheduler
+  [80:8] iotest 0x66a35a ConverseInit
+  [80:9] iotest 0x5bbea7 charm_main
+  [80:10] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [80:11] iotest 0x4def0e _start
+[81] Stack Traceback:
+  [81:0] libpthread.so.0 0x7ffff68aace0 
+  [81:1] iotest 0x6341ee CcdRaiseCondition
+  [81:2] iotest 0x63801a CsdScheduleForever
+  [81:3] iotest 0x6383e5 CsdScheduler
+  [81:4] iotest 0x66a35a ConverseInit
+  [81:5] iotest 0x5bbea7 charm_main
+  [81:6] libc.so.6 0x7ffff650dcf3 __libc_start_main
+  [81:7] iotest 0x4def0e _start
+[190] Stack Traceback:
+  [190:0] libpthread.so.0 0x7f2e354adce0 
+  [190:1] iotest 0x63444d CcdRaiseCondition
+  [190:2] iotest 0x637f57 CsdScheduleForever
+  [190:3] iotest 0x6383e5 CsdScheduler
+  [190:4] iotest 0x66a35a ConverseInit
+  [190:5] iotest 0x5bbea7 charm_main
+  [190:6] libc.so.6 0x7f2e35110cf3 __libc_start_main
+  [190:7] iotest 0x4def0e _start
+------------- Processor 190 Exiting: Caught Signal ------------
+Reason: Terminated
+[191] Stack Traceback:
+  [191:0] libpthread.so.0 0x7f2d48ff5ce0 
+  [191:1] libmpi.so.40 0x7f2d49a78cba mca_pml_ucx_iprobe
+  [191:2] libmpi.so.40 0x7f2d498e94bc PMPI_Iprobe
+  [191:3] iotest 0x669055 
+  [191:4] iotest 0x66a5fe 
+  [191:5] iotest 0x6344a4 CcdRaiseCondition
+  [191:6] iotest 0x63801a CsdScheduleForever
+  [191:7] iotest 0x6383e5 CsdScheduler
+  [191:8] iotest 0x66a35a ConverseInit
+  [191:9] iotest 0x5bbea7 charm_main
+  [191:10] libc.so.6 0x7f2d48c58cf3 __libc_start_main
+  [191:11] iotest 0x4def0e _start
+------------- Processor 191 Exiting: Caught Signal ------------
+Reason: Terminated
+[192] Stack Traceback:
+  [192:0] libpthread.so.0 0x7f8ed1bc8ce0 
+  [192:1] libmpi.so.40 0x7f8ed24bc4d2 PMPI_Iprobe
+  [192:2] iotest 0x669055 
+  [192:3] iotest 0x66a51a CmiGetNonLocal
+  [192:4] iotest 0x637e8d CsdNextMessage
+  [192:5] iotest 0x637f5f CsdScheduleForever
+  [192:6] iotest 0x6383e5 CsdScheduler
+  [192:7] iotest 0x66a35a ConverseInit
+  [192:8] iotest 0x5bbea7 charm_main
+  [192:9] libc.so.6 0x7f8ed182bcf3 __libc_start_main
+  [192:10] iotest 0x4def0e _start
+------------- Processor 192 Exiting: Caught Signal ------------
+Reason: Terminated
+[193] Stack Traceback:
+  [193:0] libpthread.so.0 0x7f17bff5ece0 
+  [193:1] iotest 0x64ef0c CqsDequeue
+  [193:2] iotest 0x637ec1 CsdNextMessage
+  [193:3] iotest 0x637f5f CsdScheduleForever
+  [193:4] iotest 0x6383e5 CsdScheduler
+  [193:5] iotest 0x66a35a ConverseInit
+  [193:6] iotest 0x5bbea7 charm_main
+  [193:7] libc.so.6 0x7f17bfbc1cf3 __libc_start_main
+  [193:8] iotest 0x4def0e _start
+------------- Processor 193 Exiting: Caught Signal ------------
+Reason: Terminated
+[194] Stack Traceback:
+  [194:0] libpthread.so.0 0x7fc10a576ce0 
+  [194:1] iotest 0x6348d9 CcdCallBacks
+  [194:2] iotest 0x637fcf CsdScheduleForever
+  [194:3] iotest 0x6383e5 CsdScheduler
+  [194:4] iotest 0x66a35a ConverseInit
+  [194:5] iotest 0x5bbea7 charm_main
+  [194:6] libc.so.6 0x7fc10a1d9cf3 __libc_start_main
+  [194:7] iotest 0x4def0e _start
+------------- Processor 194 Exiting: Caught Signal ------------
+Reason: Terminated
+[195] Stack Traceback:
+  [195:0] libpthread.so.0 0x7fcd7a87ece0 
+  [195:1] iotest 0x6341a6 CcdRaiseCondition
+  [195:2] iotest 0x63801a CsdScheduleForever
+  [195:3] iotest 0x6383e5 CsdScheduler
+  [195:4] iotest 0x66a35a ConverseInit
+  [195:5] iotest 0x5bbea7 charm_main
+  [195:6] libc.so.6 0x7fcd7a4e1cf3 __libc_start_main
+  [195:7] iotest 0x4def0e _start
+------------- Processor 195 Exiting: Caught Signal ------------
+Reason: Terminated
+[196] Stack Traceback:
+  [196:0] libpthread.so.0 0x7f025244ece0 
+  [196:1] linux-vdso.so.1 0x7fff88ae1b34 clock_gettime
+  [196:2] libc.so.6 0x7f025216c2ca __clock_gettime
+  [196:3] libmpi.so.40 0x7f0252d56b11 PMPI_Wtime
+  [196:4] iotest 0x66b299 CmiWallTimer
+  [196:5] iotest 0x6345e9 CcdCallBacks
+  [196:6] iotest 0x637fcf CsdScheduleForever
+  [196:7] iotest 0x6383e5 CsdScheduler
+  [196:8] iotest 0x66a35a ConverseInit
+  [196:9] iotest 0x5bbea7 charm_main
+  [196:10] libc.so.6 0x7f02520b1cf3 __libc_start_main
+  [196:11] iotest 0x4def0e _start
+------------- Processor 196 Exiting: Caught Signal ------------
+Reason: Terminated
+[197] Stack Traceback:
+  [197:0] libpthread.so.0 0x7f6a642e2ce0 
+  [197:1] libuct_ib.so.0 0x7f6a575d1672 
+  [197:2] libucp.so.0 0x7f6a63417aaa ucp_worker_progress
+  [197:3] libmpi.so.40 0x7f6a64d65ccb mca_pml_ucx_iprobe
+  [197:4] libmpi.so.40 0x7f6a64bd64bc PMPI_Iprobe
+  [197:5] iotest 0x669055 
+  [197:6] iotest 0x66a51a CmiGetNonLocal
+  [197:7] iotest 0x637e8d CsdNextMessage
+  [197:8] iotest 0x637f5f CsdScheduleForever
+  [197:9] iotest 0x6383e5 CsdScheduler
+  [197:10] iotest 0x66a35a ConverseInit
+  [197:11] iotest 0x5bbea7 charm_main
+  [197:12] libc.so.6 0x7f6a63f45cf3 __libc_start_main
+  [197:13] iotest 0x4def0e _start
+------------- Processor 197 Exiting: Caught Signal ------------
+Reason: Terminated
+[198] Stack Traceback:
+  [198:0] libpthread.so.0 0x7fef6033ece0 
+  [198:1] libmpi.so.40 0x7fef60dc1c46 mca_pml_ucx_iprobe
+  [198:2] libmpi.so.40 0x7fef60c324bc PMPI_Iprobe
+  [198:3] iotest 0x669055 
+  [198:4] iotest 0x66a5fe 
+  [198:5] iotest 0x6344a4 CcdRaiseCondition
+  [198:6] iotest 0x63801a CsdScheduleForever
+  [198:7] iotest 0x6383e5 CsdScheduler
+  [198:8] iotest 0x66a35a ConverseInit
+  [198:9] iotest 0x5bbea7 charm_main
+  [198:10] libc.so.6 0x7fef5ffa1cf3 __libc_start_main
+  [198:11] iotest 0x4def0e _start
+------------- Processor 198 Exiting: Caught Signal ------------
+Reason: Terminated
+[199] Stack Traceback:
+  [199:0] libpthread.so.0 0x7f8978e5bce0 
+  [199:1] libucp.so.0 0x7f8977f90aaa ucp_worker_progress
+  [199:2] libmpi.so.40 0x7f89798deccb mca_pml_ucx_iprobe
+  [199:3] libmpi.so.40 0x7f897974f4bc PMPI_Iprobe
+  [199:4] iotest 0x669055 
+  [199:5] iotest 0x66a51a CmiGetNonLocal
+  [199:6] iotest 0x637e8d CsdNextMessage
+  [199:7] iotest 0x637f5f CsdScheduleForever
+  [199:8] iotest 0x6383e5 CsdScheduler
+  [199:9] iotest 0x66a35a ConverseInit
+  [199:10] iotest 0x5bbea7 charm_main
+  [199:11] libc.so.6 0x7f8978abecf3 __libc_start_main
+  [199:12] iotest 0x4def0e _start
+------------- Processor 199 Exiting: Caught Signal ------------
+Reason: Terminated
+[200] Stack Traceback:
+  [200:0] libpthread.so.0 0x7f05c84efce0 
+  [200:1] iotest 0x669055 
+  [200:2] iotest 0x66a51a CmiGetNonLocal
+  [200:3] iotest 0x637e8d CsdNextMessage
+  [200:4] iotest 0x637f5f CsdScheduleForever
+  [200:5] iotest 0x6383e5 CsdScheduler
+  [200:6] iotest 0x66a35a ConverseInit
+  [200:7] iotest 0x5bbea7 charm_main
+  [200:8] libc.so.6 0x7f05c8152cf3 __libc_start_main
+  [200:9] iotest 0x4def0e _start
+------------- Processor 200 Exiting: Caught Signal ------------
+Reason: Terminated
+[201] Stack Traceback:
+  [201:0] libpthread.so.0 0x7f0fb6a6bce0 
+  [201:1] iotest 0x669062 
+  [201:2] iotest 0x66a51a CmiGetNonLocal
+  [201:3] iotest 0x637e8d CsdNextMessage
+  [201:4] iotest 0x637f5f CsdScheduleForever
+  [201:5] iotest 0x6383e5 CsdScheduler
+  [201:6] iotest 0x66a35a ConverseInit
+  [201:7] iotest 0x5bbea7 charm_main
+  [201:8] libc.so.6 0x7f0fb66cecf3 __libc_start_main
+  [201:9] iotest 0x4def0e _start
+------------- Processor 201 Exiting: Caught Signal ------------
+Reason: Terminated
+[202] Stack Traceback:
+  [202:0] libpthread.so.0 0x7f130f384ce0 
+  [202:1] linux-vdso.so.1 0x7ffce05d0b6d clock_gettime
+  [202:2] libc.so.6 0x7f130f0a22ca __clock_gettime
+  [202:3] libmpi.so.40 0x7f130fc8cb11 PMPI_Wtime
+  [202:4] iotest 0x66b299 CmiWallTimer
+  [202:5] iotest 0x6345e9 CcdCallBacks
+  [202:6] iotest 0x637fcf CsdScheduleForever
+  [202:7] iotest 0x6383e5 CsdScheduler
+  [202:8] iotest 0x66a35a ConverseInit
+  [202:9] iotest 0x5bbea7 charm_main
+  [202:10] libc.so.6 0x7f130efe7cf3 __libc_start_main
+  [202:11] iotest 0x4def0e _start
+------------- Processor 202 Exiting: Caught Signal ------------
+Reason: Terminated
+[203] Stack Traceback:
+  [203:0] libpthread.so.0 0x7f74d3b72ce0 
+  [203:1] linux-vdso.so.1 0x7ffc1d540b5b clock_gettime
+  [203:2] libc.so.6 0x7f74d38902ca __clock_gettime
+  [203:3] libmpi.so.40 0x7f74d447ab11 PMPI_Wtime
+  [203:4] iotest 0x66b299 CmiWallTimer
+  [203:5] iotest 0x6345e9 CcdCallBacks
+  [203:6] iotest 0x637fcf CsdScheduleForever
+  [203:7] iotest 0x6383e5 CsdScheduler
+  [203:8] iotest 0x66a35a ConverseInit
+  [203:9] iotest 0x5bbea7 charm_main
+  [203:10] libc.so.6 0x7f74d37d5cf3 __libc_start_main
+  [203:11] iotest 0x4def0e _start
+------------- Processor 203 Exiting: Caught Signal ------------
+Reason: Terminated
+[204] Stack Traceback:
+  [204:0] libpthread.so.0 0x7f15aed67ce0 
+  [204:1] libmpi.so.40 0x7f15af65b469 PMPI_Iprobe
+  [204:2] iotest 0x669055 
+  [204:3] iotest 0x66a51a CmiGetNonLocal
+  [204:4] iotest 0x637e8d CsdNextMessage
+  [204:5] iotest 0x637f5f CsdScheduleForever
+  [204:6] iotest 0x6383e5 CsdScheduler
+  [204:7] iotest 0x66a35a ConverseInit
+  [204:8] iotest 0x5bbea7 charm_main
+  [204:9] libc.so.6 0x7f15ae9cacf3 __libc_start_main
+  [204:10] iotest 0x4def0e _start
+------------- Processor 204 Exiting: Caught Signal ------------
+Reason: Terminated
+[205] Stack Traceback:
+  [205:0] libpthread.so.0 0x7f036419cce0 
+  [205:1] libuct_ib.so.0 0x7f035c0da630 
+  [205:2] libucp.so.0 0x7f03632d1aaa ucp_worker_progress
+  [205:3] libmpi.so.40 0x7f0364c1fccb mca_pml_ucx_iprobe
+  [205:4] libmpi.so.40 0x7f0364a904bc PMPI_Iprobe
+  [205:5] iotest 0x669055 
+  [205:6] iotest 0x66a51a CmiGetNonLocal
+  [205:7] iotest 0x637e8d CsdNextMessage
+  [205:8] iotest 0x637f5f CsdScheduleForever
+  [205:9] iotest 0x6383e5 CsdScheduler
+  [205:10] iotest 0x66a35a ConverseInit
+  [205:11] iotest 0x5bbea7 charm_main
+  [205:12] libc.so.6 0x7f0363dffcf3 __libc_start_main
+  [205:13] iotest 0x4def0e _start
+------------- Processor 205 Exiting: Caught Signal ------------
+Reason: Terminated
+[206] Stack Traceback:
+  [206:0] libpthread.so.0 0x7f8059b8fce0 
+  [206:1] libmpi.so.40 0x7f805a612cba mca_pml_ucx_iprobe
+  [206:2] libmpi.so.40 0x7f805a4834bc PMPI_Iprobe
+  [206:3] iotest 0x669055 
+  [206:4] iotest 0x66a51a CmiGetNonLocal
+  [206:5] iotest 0x637e8d CsdNextMessage
+  [206:6] iotest 0x637f5f CsdScheduleForever
+  [206:7] iotest 0x6383e5 CsdScheduler
+  [206:8] iotest 0x66a35a ConverseInit
+  [206:9] iotest 0x5bbea7 charm_main
+  [206:10] libc.so.6 0x7f80597f2cf3 __libc_start_main
+  [206:11] iotest 0x4def0e _start
+------------- Processor 206 Exiting: Caught Signal ------------
+Reason: Terminated
+[207] Stack Traceback:
+  [207:0] libpthread.so.0 0x7f29472a6ce0 
+  [207:1] linux-vdso.so.1 0x7ffd853fdb3b clock_gettime
+  [207:2] libc.so.6 0x7f2946fc42ca __clock_gettime
+  [207:3] libmpi.so.40 0x7f2947baeb11 PMPI_Wtime
+  [207:4] iotest 0x66b299 CmiWallTimer
+  [207:5] iotest 0x6345e9 CcdCallBacks
+  [207:6] iotest 0x637fcf CsdScheduleForever
+  [207:7] iotest 0x6383e5 CsdScheduler
+  [207:8] iotest 0x66a35a ConverseInit
+  [207:9] iotest 0x5bbea7 charm_main
+  [207:10] libc.so.6 0x7f2946f09cf3 __libc_start_main
+  [207:11] iotest 0x4def0e _start
+------------- Processor 207 Exiting: Caught Signal ------------
+Reason: Terminated
+[208] Stack Traceback:
+  [208:0] libpthread.so.0 0x7f6e1d6e1ce0 
+  [208:1] iotest 0x66a610 
+  [208:2] iotest 0x6344a4 CcdRaiseCondition
+  [208:3] iotest 0x63801a CsdScheduleForever
+  [208:4] iotest 0x6383e5 CsdScheduler
+  [208:5] iotest 0x66a35a ConverseInit
+  [208:6] iotest 0x5bbea7 charm_main
+  [208:7] libc.so.6 0x7f6e1d344cf3 __libc_start_main
+  [208:8] iotest 0x4def0e _start
+------------- Processor 208 Exiting: Caught Signal ------------
+Reason: Terminated
+[209] Stack Traceback:
+  [209:0] libpthread.so.0 0x7fa2bbad9ce0 
+  [209:1] linux-vdso.so.1 0x7ffd15ae0b34 clock_gettime
+  [209:2] libc.so.6 0x7fa2bb7f72ca __clock_gettime
+  [209:3] libmpi.so.40 0x7fa2bc3e1b11 PMPI_Wtime
+  [209:4] iotest 0x66b299 CmiWallTimer
+  [209:5] iotest 0x6345e9 CcdCallBacks
+  [209:6] iotest 0x637fcf CsdScheduleForever
+  [209:7] iotest 0x6383e5 CsdScheduler
+  [209:8] iotest 0x66a35a ConverseInit
+  [209:9] iotest 0x5bbea7 charm_main
+  [209:10] libc.so.6 0x7fa2bb73ccf3 __libc_start_main
+  [209:11] iotest 0x4def0e _start
+------------- Processor 209 Exiting: Caught Signal ------------
+Reason: Terminated
+[210] Stack Traceback:
+  [210:0] libpthread.so.0 0x7f3565beace0 
+  [210:1] linux-vdso.so.1 0x7ffc25f2cb34 clock_gettime
+  [210:2] libc.so.6 0x7f35659082ca __clock_gettime
+  [210:3] libmpi.so.40 0x7f35664f2b11 PMPI_Wtime
+  [210:4] iotest 0x66b299 CmiWallTimer
+  [210:5] iotest 0x6345e9 CcdCallBacks
+  [210:6] iotest 0x637fcf CsdScheduleForever
+  [210:7] iotest 0x6383e5 CsdScheduler
+  [210:8] iotest 0x66a35a ConverseInit
+  [210:9] iotest 0x5bbea7 charm_main
+  [210:10] libc.so.6 0x7f356584dcf3 __libc_start_main
+  [210:11] iotest 0x4def0e _start
+------------- Processor 210 Exiting: Caught Signal ------------
+Reason: Terminated
+[211] Stack Traceback:
+  [211:0] libpthread.so.0 0x7f278b839ce0 
+  [211:1] libuct_ib.so.0 0x7f277e9d07e9 
+  [211:2] libucp.so.0 0x7f278a96eaaa ucp_worker_progress
+  [211:3] libmpi.so.40 0x7f278c2bcccb mca_pml_ucx_iprobe
+  [211:4] libmpi.so.40 0x7f278c12d4bc PMPI_Iprobe
+  [211:5] iotest 0x669055 
+  [211:6] iotest 0x66a5fe 
+  [211:7] iotest 0x6344a4 CcdRaiseCondition
+  [211:8] iotest 0x63801a CsdScheduleForever
+  [211:9] iotest 0x6383e5 CsdScheduler
+  [211:10] iotest 0x66a35a ConverseInit
+  [211:11] iotest 0x5bbea7 charm_main
+  [211:12] libc.so.6 0x7f278b49ccf3 __libc_start_main
+  [211:13] iotest 0x4def0e _start
+------------- Processor 211 Exiting: Caught Signal ------------
+Reason: Terminated
+[212] Stack Traceback:
+  [212:0] libpthread.so.0 0x7f880ecb5ce0 
+  [212:1] iotest 0x632537 CcdNumTimerCBs
+  [212:2] iotest 0x637fa6 CsdScheduleForever
+  [212:3] iotest 0x6383e5 CsdScheduler
+  [212:4] iotest 0x66a35a ConverseInit
+  [212:5] iotest 0x5bbea7 charm_main
+  [212:6] libc.so.6 0x7f880e918cf3 __libc_start_main
+  [212:7] iotest 0x4def0e _start
+------------- Processor 212 Exiting: Caught Signal ------------
+Reason: Terminated
+[213] Stack Traceback:
+  [213:0] libpthread.so.0 0x7f7111c7bce0 
+  [213:1] iotest 0x66678b 
+  [213:2] iotest 0x66a533 CmiGetNonLocal
+  [213:3] iotest 0x637e8d CsdNextMessage
+  [213:4] iotest 0x637f5f CsdScheduleForever
+  [213:5] iotest 0x6383e5 CsdScheduler
+  [213:6] iotest 0x66a35a ConverseInit
+  [213:7] iotest 0x5bbea7 charm_main
+  [213:8] libc.so.6 0x7f71118decf3 __libc_start_main
+  [213:9] iotest 0x4def0e _start
+------------- Processor 213 Exiting: Caught Signal ------------
+Reason: Terminated
+[214] Stack Traceback:
+  [214:0] libpthread.so.0 0x7f553e4a3ce0 
+  [214:1] libmpi.so.40 0x7f553ef26cba mca_pml_ucx_iprobe
+  [214:2] libmpi.so.40 0x7f553ed974bc PMPI_Iprobe
+  [214:3] iotest 0x669055 
+  [214:4] iotest 0x66a51a CmiGetNonLocal
+  [214:5] iotest 0x637e8d CsdNextMessage
+  [214:6] iotest 0x637f5f CsdScheduleForever
+  [214:7] iotest 0x6383e5 CsdScheduler
+  [214:8] iotest 0x66a35a ConverseInit
+  [214:9] iotest 0x5bbea7 charm_main
+  [214:10] libc.so.6 0x7f553e106cf3 __libc_start_main
+  [214:11] iotest 0x4def0e _start
+------------- Processor 214 Exiting: Caught Signal ------------
+Reason: Terminated
+[215] Stack Traceback:
+  [215:0] libpthread.so.0 0x7f224523bce0 
+  [215:1] linux-vdso.so.1 0x7fff1c58fb34 clock_gettime
+  [215:2] libc.so.6 0x7f2244f592ca __clock_gettime
+  [215:3] libmpi.so.40 0x7f2245b43b11 PMPI_Wtime
+  [215:4] iotest 0x66b299 CmiWallTimer
+  [215:5] iotest 0x6345e9 CcdCallBacks
+  [215:6] iotest 0x637fcf CsdScheduleForever
+  [215:7] iotest 0x6383e5 CsdScheduler
+  [215:8] iotest 0x66a35a ConverseInit
+  [215:9] iotest 0x5bbea7 charm_main
+  [215:10] libc.so.6 0x7f2244e9ecf3 __libc_start_main
+  [215:11] iotest 0x4def0e _start
+------------- Processor 215 Exiting: Caught Signal ------------
+Reason: Terminated
+[216] Stack Traceback:
+  [216:0] libpthread.so.0 0x7f8fad07dce0 
+  [216:1] libmpi.so.40 0x7f8fad985b3a PMPI_Wtime
+  [216:2] iotest 0x66b299 CmiWallTimer
+  [216:3] iotest 0x6345e9 CcdCallBacks
+  [216:4] iotest 0x637fcf CsdScheduleForever
+  [216:5] iotest 0x6383e5 CsdScheduler
+  [216:6] iotest 0x66a35a ConverseInit
+  [216:7] iotest 0x5bbea7 charm_main
+  [216:8] libc.so.6 0x7f8facce0cf3 __libc_start_main
+  [216:9] iotest 0x4def0e _start
+------------- Processor 216 Exiting: Caught Signal ------------
+Reason: Terminated
+[217] Stack Traceback:
+  [217:0] libpthread.so.0 0x7f12d2798ce0 
+  [217:1] libuct.so.0 0x7f12d1679983 
+  [217:2] libucp.so.0 0x7f12d18cdaaa ucp_worker_progress
+  [217:3] libmpi.so.40 0x7f12d321bccb mca_pml_ucx_iprobe
+  [217:4] libmpi.so.40 0x7f12d308c4bc PMPI_Iprobe
+  [217:5] iotest 0x669055 
+  [217:6] iotest 0x66a5fe 
+  [217:7] iotest 0x6344a4 CcdRaiseCondition
+  [217:8] iotest 0x63801a CsdScheduleForever
+  [217:9] iotest 0x6383e5 CsdScheduler
+  [217:10] iotest 0x66a35a ConverseInit
+  [217:11] iotest 0x5bbea7 charm_main
+  [217:12] libc.so.6 0x7f12d23fbcf3 __libc_start_main
+  [217:13] iotest 0x4def0e _start
+------------- Processor 217 Exiting: Caught Signal ------------
+Reason: Terminated
+[218] Stack Traceback:
+  [218:0] libpthread.so.0 0x7f6e50f4cce0 
+  [218:1] iotest 0x66a629 
+  [218:2] iotest 0x6344a4 CcdRaiseCondition
+  [218:3] iotest 0x63801a CsdScheduleForever
+  [218:4] iotest 0x6383e5 CsdScheduler
+  [218:5] iotest 0x66a35a ConverseInit
+  [218:6] iotest 0x5bbea7 charm_main
+  [218:7] libc.so.6 0x7f6e50bafcf3 __libc_start_main
+  [218:8] iotest 0x4def0e _start
+------------- Processor 218 Exiting: Caught Signal ------------
+Reason: Terminated
+[219] Stack Traceback:
+  [219:0] libpthread.so.0 0x7f72660b5ce0 
+  [219:1] libuct_ib.so.0 0x7f7259383672 
+  [219:2] libucp.so.0 0x7f72651eaaaa ucp_worker_progress
+  [219:3] libmpi.so.40 0x7f7266b38ccb mca_pml_ucx_iprobe
+  [219:4] libmpi.so.40 0x7f72669a94bc PMPI_Iprobe
+  [219:5] iotest 0x669055 
+  [219:6] iotest 0x66a5fe 
+  [219:7] iotest 0x6344a4 CcdRaiseCondition
+  [219:8] iotest 0x63801a CsdScheduleForever
+  [219:9] iotest 0x6383e5 CsdScheduler
+  [219:10] iotest 0x66a35a ConverseInit
+  [219:11] iotest 0x5bbea7 charm_main
+  [219:12] libc.so.6 0x7f7265d18cf3 __libc_start_main
+  [219:13] iotest 0x4def0e _start
+------------- Processor 219 Exiting: Caught Signal ------------
+Reason: Terminated
+[220] Stack Traceback:
+  [220:0] libpthread.so.0 0x7f5382942ce0 
+  [220:1] libuct.so.0 0x7f5381823983 
+  [220:2] libucp.so.0 0x7f5381a77aaa ucp_worker_progress
+  [220:3] libmpi.so.40 0x7f53833c5ccb mca_pml_ucx_iprobe
+  [220:4] libmpi.so.40 0x7f53832364bc PMPI_Iprobe
+  [220:5] iotest 0x669055 
+  [220:6] iotest 0x66a5fe 
+  [220:7] iotest 0x6344a4 CcdRaiseCondition
+  [220:8] iotest 0x63801a CsdScheduleForever
+  [220:9] iotest 0x6383e5 CsdScheduler
+  [220:10] iotest 0x66a35a ConverseInit
+  [220:11] iotest 0x5bbea7 charm_main
+  [220:12] libc.so.6 0x7f53825a5cf3 __libc_start_main
+  [220:13] iotest 0x4def0e _start
+------------- Processor 220 Exiting: Caught Signal ------------
+Reason: Terminated
+[221] Stack Traceback:
+  [221:0] libpthread.so.0 0x7f9b4b9c3ce0 
+  [221:1] libucp.so.0 0x7f9b4aaf8ab8 ucp_worker_progress
+  [221:2] libmpi.so.40 0x7f9b4c446ccb mca_pml_ucx_iprobe
+  [221:3] libmpi.so.40 0x7f9b4c2b74bc PMPI_Iprobe
+  [221:4] iotest 0x669055 
+  [221:5] iotest 0x66a5fe 
+  [221:6] iotest 0x6344a4 CcdRaiseCondition
+  [221:7] iotest 0x63801a CsdScheduleForever
+  [221:8] iotest 0x6383e5 CsdScheduler
+  [221:9] iotest 0x66a35a ConverseInit
+  [221:10] iotest 0x5bbea7 charm_main
+  [221:11] libc.so.6 0x7f9b4b626cf3 __libc_start_main
+  [221:12] iotest 0x4def0e _start
+------------- Processor 221 Exiting: Caught Signal ------------
+Reason: Terminated
+[222] Stack Traceback:
+  [222:0] libpthread.so.0 0x7f3fb566cce0 
+  [222:1] iotest 0x634228 CcdRaiseCondition
+  [222:2] iotest 0x63801a CsdScheduleForever
+  [222:3] iotest 0x6383e5 CsdScheduler
+  [222:4] iotest 0x66a35a ConverseInit
+  [222:5] iotest 0x5bbea7 charm_main
+  [222:6] libc.so.6 0x7f3fb52cfcf3 __libc_start_main
+  [222:7] iotest 0x4def0e _start
+------------- Processor 222 Exiting: Caught Signal ------------
+Reason: Terminated
+[223] Stack Traceback:
+  [223:0] libpthread.so.0 0x7ff58a805ce0 
+  [223:1] libmpi.so.40 0x7ff58b288c2c mca_pml_ucx_iprobe
+  [223:2] libmpi.so.40 0x7ff58b0f94bc PMPI_Iprobe
+  [223:3] iotest 0x669055 
+  [223:4] iotest 0x66a51a CmiGetNonLocal
+  [223:5] iotest 0x637e8d CsdNextMessage
+  [223:6] iotest 0x637f5f CsdScheduleForever
+  [223:7] iotest 0x6383e5 CsdScheduler
+  [223:8] iotest 0x66a35a ConverseInit
+  [223:9] iotest 0x5bbea7 charm_main
+  [223:10] libc.so.6 0x7ff58a468cf3 __libc_start_main
+  [223:11] iotest 0x4def0e _start
+------------- Processor 223 Exiting: Caught Signal ------------
+Reason: Terminated
+[224] Stack Traceback:
+  [224:0] libpthread.so.0 0x7f56b7082ce0 
+  [224:1] linux-vdso.so.1 0x7ffd8a1e2b34 clock_gettime
+  [224:2] libc.so.6 0x7f56b6da02ca __clock_gettime
+  [224:3] libmpi.so.40 0x7f56b798ab11 PMPI_Wtime
+  [224:4] iotest 0x66b299 CmiWallTimer
+  [224:5] iotest 0x6345e9 CcdCallBacks
+  [224:6] iotest 0x637fcf CsdScheduleForever
+  [224:7] iotest 0x6383e5 CsdScheduler
+  [224:8] iotest 0x66a35a ConverseInit
+  [224:9] iotest 0x5bbea7 charm_main
+  [224:10] libc.so.6 0x7f56b6ce5cf3 __libc_start_main
+  [224:11] iotest 0x4def0e _start
+------------- Processor 224 Exiting: Caught Signal ------------
+Reason: Terminated
+[225] Stack Traceback:
+  [225:0] libpthread.so.0 0x7f5f1a028ce0 
+  [225:1] iotest 0x634450 CcdRaiseCondition
+  [225:2] iotest 0x63801a CsdScheduleForever
+  [225:3] iotest 0x6383e5 CsdScheduler
+  [225:4] iotest 0x66a35a ConverseInit
+  [225:5] iotest 0x5bbea7 charm_main
+  [225:6] libc.so.6 0x7f5f19c8bcf3 __libc_start_main
+  [225:7] iotest 0x4def0e _start
+------------- Processor 225 Exiting: Caught Signal ------------
+Reason: Terminated
+[226] Stack Traceback:
+  [226:0] libpthread.so.0 0x7f9d3b6c1ce0 
+  [226:1] linux-vdso.so.1 0x7ffcf5fa5b1e clock_gettime
+  [226:2] libc.so.6 0x7f9d3b3df2ca __clock_gettime
+  [226:3] libmpi.so.40 0x7f9d3bfc9b11 PMPI_Wtime
+  [226:4] iotest 0x66b299 CmiWallTimer
+  [226:5] iotest 0x6345e9 CcdCallBacks
+  [226:6] iotest 0x637fcf CsdScheduleForever
+  [226:7] iotest 0x6383e5 CsdScheduler
+  [226:8] iotest 0x66a35a ConverseInit
+  [226:9] iotest 0x5bbea7 charm_main
+  [226:10] libc.so.6 0x7f9d3b324cf3 __libc_start_main
+  [226:11] iotest 0x4def0e _start
+------------- Processor 226 Exiting: Caught Signal ------------
+Reason: Terminated
+[227] Stack Traceback:
+  [227:0] libpthread.so.0 0x7fb22d239ce0 
+  [227:1] linux-vdso.so.1 0x7ffc6d5bab34 clock_gettime
+  [227:2] libc.so.6 0x7fb22cf572ca __clock_gettime
+  [227:3] libmpi.so.40 0x7fb22db41b11 PMPI_Wtime
+  [227:4] iotest 0x66b299 CmiWallTimer
+  [227:5] iotest 0x6345e9 CcdCallBacks
+  [227:6] iotest 0x637fcf CsdScheduleForever
+  [227:7] iotest 0x6383e5 CsdScheduler
+  [227:8] iotest 0x66a35a ConverseInit
+  [227:9] iotest 0x5bbea7 charm_main
+  [227:10] libc.so.6 0x7fb22ce9ccf3 __libc_start_main
+  [227:11] iotest 0x4def0e _start
+------------- Processor 227 Exiting: Caught Signal ------------
+Reason: Terminated
+[228] Stack Traceback:
+  [228:0] libpthread.so.0 0x7f738baf3ce0 
+  [228:1] iotest 0x64ef0b CqsDequeue
+  [228:2] iotest 0x637ec1 CsdNextMessage
+  [228:3] iotest 0x637f5f CsdScheduleForever
+  [228:4] iotest 0x6383e5 CsdScheduler
+  [228:5] iotest 0x66a35a ConverseInit
+  [228:6] iotest 0x5bbea7 charm_main
+  [228:7] libc.so.6 0x7f738b756cf3 __libc_start_main
+  [228:8] iotest 0x4def0e _start
+------------- Processor 228 Exiting: Caught Signal ------------
+Reason: Terminated
+[229] Stack Traceback:
+  [229:0] libpthread.so.0 0x7f18896cece0 
+  [229:1] linux-vdso.so.1 0x7ffce43a1b32 clock_gettime
+  [229:2] libc.so.6 0x7f18893ec2ca __clock_gettime
+  [229:3] libmpi.so.40 0x7f1889fd6b11 PMPI_Wtime
+  [229:4] iotest 0x66b299 CmiWallTimer
+  [229:5] iotest 0x6345e9 CcdCallBacks
+  [229:6] iotest 0x637fcf CsdScheduleForever
+  [229:7] iotest 0x6383e5 CsdScheduler
+  [229:8] iotest 0x66a35a ConverseInit
+  [229:9] iotest 0x5bbea7 charm_main
+  [229:10] libc.so.6 0x7f1889331cf3 __libc_start_main
+  [229:11] iotest 0x4def0e _start
+------------- Processor 229 Exiting: Caught Signal ------------
+Reason: Terminated
+[230] Stack Traceback:
+  [230:0] libpthread.so.0 0x7f67977b2ce0 
+  [230:1] linux-vdso.so.1 0x7ffe339c9b34 clock_gettime
+  [230:2] libc.so.6 0x7f67974d02ca __clock_gettime
+  [230:3] libmpi.so.40 0x7f67980bab11 PMPI_Wtime
+  [230:4] iotest 0x66b299 CmiWallTimer
+  [230:5] iotest 0x6345e9 CcdCallBacks
+  [230:6] iotest 0x637fcf CsdScheduleForever
+  [230:7] iotest 0x6383e5 CsdScheduler
+  [230:8] iotest 0x66a35a ConverseInit
+  [230:9] iotest 0x5bbea7 charm_main
+  [230:10] libc.so.6 0x7f6797415cf3 __libc_start_main
+  [230:11] iotest 0x4def0e _start
+------------- Processor 230 Exiting: Caught Signal ------------
+Reason: Terminated
+[231] Stack Traceback:
+  [231:0] libpthread.so.0 0x7fdc1edb2ce0 
+  [231:1] linux-vdso.so.1 0x7ffc149a2b32 clock_gettime
+  [231:2] libc.so.6 0x7fdc1ead02ca __clock_gettime
+  [231:3] libmpi.so.40 0x7fdc1f6bab11 PMPI_Wtime
+  [231:4] iotest 0x66b299 CmiWallTimer
+  [231:5] iotest 0x6345e9 CcdCallBacks
+  [231:6] iotest 0x637fcf CsdScheduleForever
+  [231:7] iotest 0x6383e5 CsdScheduler
+  [231:8] iotest 0x66a35a ConverseInit
+  [231:9] iotest 0x5bbea7 charm_main
+  [231:10] libc.so.6 0x7fdc1ea15cf3 __libc_start_main
+  [231:11] iotest 0x4def0e _start
+------------- Processor 231 Exiting: Caught Signal ------------
+Reason: Terminated
+[232] Stack Traceback:
+  [232:0] libpthread.so.0 0x7efd40530ce0 
+  [232:1] iotest 0x63420a CcdRaiseCondition
+  [232:2] iotest 0x637f57 CsdScheduleForever
+  [232:3] iotest 0x6383e5 CsdScheduler
+  [232:4] iotest 0x66a35a ConverseInit
+  [232:5] iotest 0x5bbea7 charm_main
+  [232:6] libc.so.6 0x7efd40193cf3 __libc_start_main
+  [232:7] iotest 0x4def0e _start
+------------- Processor 232 Exiting: Caught Signal ------------
+Reason: Terminated
+[233] Stack Traceback:
+  [233:0] libpthread.so.0 0x7fdcb16c6ce0 
+  [233:1] iotest 0x6341ee CcdRaiseCondition
+  [233:2] iotest 0x63801a CsdScheduleForever
+  [233:3] iotest 0x6383e5 CsdScheduler
+  [233:4] iotest 0x66a35a ConverseInit
+  [233:5] iotest 0x5bbea7 charm_main
+  [233:6] libc.so.6 0x7fdcb1329cf3 __libc_start_main
+  [233:7] iotest 0x4def0e _start
+------------- Processor 233 Exiting: Caught Signal ------------
+Reason: Terminated
+[234] Stack Traceback:
+  [234:0] libpthread.so.0 0x7f4f1f69bce0 
+  [234:1] iotest 0x666708 
+  [234:2] iotest 0x66a533 CmiGetNonLocal
+  [234:3] iotest 0x637e8d CsdNextMessage
+  [234:4] iotest 0x637f5f CsdScheduleForever
+  [234:5] iotest 0x6383e5 CsdScheduler
+  [234:6] iotest 0x66a35a ConverseInit
+  [234:7] iotest 0x5bbea7 charm_main
+  [234:8] libc.so.6 0x7f4f1f2fecf3 __libc_start_main
+  [234:9] iotest 0x4def0e _start
+------------- Processor 234 Exiting: Caught Signal ------------
+Reason: Terminated
+[235] Stack Traceback:
+  [235:0] libpthread.so.0 0x7f50cd742ce0 
+  [235:1] linux-vdso.so.1 0x7fff50fcab34 clock_gettime
+  [235:2] libc.so.6 0x7f50cd4602ca __clock_gettime
+  [235:3] libmpi.so.40 0x7f50ce04ab11 PMPI_Wtime
+  [235:4] iotest 0x66b299 CmiWallTimer
+  [235:5] iotest 0x6345e9 CcdCallBacks
+  [235:6] iotest 0x637fcf CsdScheduleForever
+  [235:7] iotest 0x6383e5 CsdScheduler
+  [235:8] iotest 0x66a35a ConverseInit
+  [235:9] iotest 0x5bbea7 charm_main
+  [235:10] libc.so.6 0x7f50cd3a5cf3 __libc_start_main
+  [235:11] iotest 0x4def0e _start
+------------- Processor 235 Exiting: Caught Signal ------------
+Reason: Terminated
+[236] Stack Traceback:
+  [236:0] libpthread.so.0 0x7fbea1817ce0 
+  [236:1] linux-vdso.so.1 0x7ffcc113db34 clock_gettime
+  [236:2] libc.so.6 0x7fbea15352ca __clock_gettime
+  [236:3] libmpi.so.40 0x7fbea211fb11 PMPI_Wtime
+  [236:4] iotest 0x66b299 CmiWallTimer
+  [236:5] iotest 0x6345e9 CcdCallBacks
+  [236:6] iotest 0x637fcf CsdScheduleForever
+  [236:7] iotest 0x6383e5 CsdScheduler
+  [236:8] iotest 0x66a35a ConverseInit
+  [236:9] iotest 0x5bbea7 charm_main
+  [236:10] libc.so.6 0x7fbea147acf3 __libc_start_main
+  [236:11] iotest 0x4def0e _start
+------------- Processor 236 Exiting: Caught Signal ------------
+Reason: Terminated
+[237] Stack Traceback:
+  [237:0] libpthread.so.0 0x7f1ae2586ce0 
+  [237:1] libc.so.6 0x7f1ae22a42f3 __clock_gettime
+  [237:2] libmpi.so.40 0x7f1ae2e8eb11 PMPI_Wtime
+  [237:3] iotest 0x66b299 CmiWallTimer
+  [237:4] iotest 0x6345e9 CcdCallBacks
+  [237:5] iotest 0x637fcf CsdScheduleForever
+  [237:6] iotest 0x6383e5 CsdScheduler
+  [237:7] iotest 0x66a35a ConverseInit
+  [237:8] iotest 0x5bbea7 charm_main
+  [237:9] libc.so.6 0x7f1ae21e9cf3 __libc_start_main
+  [237:10] iotest 0x4def0e _start
+------------- Processor 237 Exiting: Caught Signal ------------
+Reason: Terminated
+[238] Stack Traceback:
+  [238:0] libpthread.so.0 0x7f04348a6ce0 
+  [238:1] linux-vdso.so.1 0x7fff7ad65b34 clock_gettime
+  [238:2] libc.so.6 0x7f04345c42ca __clock_gettime
+  [238:3] libmpi.so.40 0x7f04351aeb11 PMPI_Wtime
+  [238:4] iotest 0x66b299 CmiWallTimer
+  [238:5] iotest 0x6345e9 CcdCallBacks
+  [238:6] iotest 0x637fcf CsdScheduleForever
+  [238:7] iotest 0x6383e5 CsdScheduler
+  [238:8] iotest 0x66a35a ConverseInit
+  [238:9] iotest 0x5bbea7 charm_main
+  [238:10] libc.so.6 0x7f0434509cf3 __libc_start_main
+  [238:11] iotest 0x4def0e _start
+------------- Processor 238 Exiting: Caught Signal ------------
+Reason: Terminated
+[239] Stack Traceback:
+  [239:0] libpthread.so.0 0x7f99b9a77ce0 
+  [239:1] linux-vdso.so.1 0x7ffc897fbb32 clock_gettime
+  [239:2] libc.so.6 0x7f99b97952ca __clock_gettime
+  [239:3] libmpi.so.40 0x7f99ba37fb11 PMPI_Wtime
+  [239:4] iotest 0x66b299 CmiWallTimer
+  [239:5] iotest 0x6345e9 CcdCallBacks
+  [239:6] iotest 0x637fcf CsdScheduleForever
+  [239:7] iotest 0x6383e5 CsdScheduler
+  [239:8] iotest 0x66a35a ConverseInit
+  [239:9] iotest 0x5bbea7 charm_main
+  [239:10] libc.so.6 0x7f99b96dacf3 __libc_start_main
+  [239:11] iotest 0x4def0e _start
+------------- Processor 239 Exiting: Caught Signal ------------
+Reason: Terminated
+[240] Stack Traceback:
+  [240:0] libpthread.so.0 0x7fbce052fce0 
+  [240:1] libmpi.so.40 0x7fbce0fb2cd1 mca_pml_ucx_iprobe
+  [240:2] libmpi.so.40 0x7fbce0e234bc PMPI_Iprobe
+  [240:3] iotest 0x669055 
+  [240:4] iotest 0x66a51a CmiGetNonLocal
+  [240:5] iotest 0x637e8d CsdNextMessage
+  [240:6] iotest 0x637f5f CsdScheduleForever
+  [240:7] iotest 0x6383e5 CsdScheduler
+  [240:8] iotest 0x66a35a ConverseInit
+  [240:9] iotest 0x5bbea7 charm_main
+  [240:10] libc.so.6 0x7fbce0192cf3 __libc_start_main
+  [240:11] iotest 0x4def0e _start
+------------- Processor 240 Exiting: Caught Signal ------------
+Reason: Terminated
+[241] Stack Traceback:
+  [241:0] libpthread.so.0 0x7fee832f1ce0 
+  [241:1] libmpi.so.40 0x7fee83bf9b32 PMPI_Wtime
+  [241:2] iotest 0x66b299 CmiWallTimer
+  [241:3] iotest 0x6345e9 CcdCallBacks
+  [241:4] iotest 0x637fcf CsdScheduleForever
+  [241:5] iotest 0x6383e5 CsdScheduler
+  [241:6] iotest 0x66a35a ConverseInit
+  [241:7] iotest 0x5bbea7 charm_main
+  [241:8] libc.so.6 0x7fee82f54cf3 __libc_start_main
+  [241:9] iotest 0x4def0e _start
+------------- Processor 241 Exiting: Caught Signal ------------
+Reason: Terminated
+[242] Stack Traceback:
+  [242:0] libpthread.so.0 0x7efec2a36ce0 
+  [242:1] libuct_ib.so.0 0x7efeb5bb3672 
+  [242:2] libucp.so.0 0x7efec1b6baaa ucp_worker_progress
+  [242:3] libmpi.so.40 0x7efec34b9ccb mca_pml_ucx_iprobe
+  [242:4] libmpi.so.40 0x7efec332a4bc PMPI_Iprobe
+  [242:5] iotest 0x669055 
+  [242:6] iotest 0x66a5fe 
+  [242:7] iotest 0x6344a4 CcdRaiseCondition
+  [242:8] iotest 0x63801a CsdScheduleForever
+  [242:9] iotest 0x6383e5 CsdScheduler
+  [242:10] iotest 0x66a35a ConverseInit
+  [242:11] iotest 0x5bbea7 charm_main
+  [242:12] libc.so.6 0x7efec2699cf3 __libc_start_main
+  [242:13] iotest 0x4def0e _start
+------------- Processor 242 Exiting: Caught Signal ------------
+Reason: Terminated
+[243] Stack Traceback:
+  [243:0] libpthread.so.0 0x7f9fcdb41ce0 
+  [243:1] iotest 0x634622 CcdCallBacks
+  [243:2] iotest 0x637fcf CsdScheduleForever
+  [243:3] iotest 0x6383e5 CsdScheduler
+  [243:4] iotest 0x66a35a ConverseInit
+  [243:5] iotest 0x5bbea7 charm_main
+  [243:6] libc.so.6 0x7f9fcd7a4cf3 __libc_start_main
+  [243:7] iotest 0x4def0e _start
+------------- Processor 243 Exiting: Caught Signal ------------
+Reason: Terminated
+[244] Stack Traceback:
+  [244:0] libpthread.so.0 0x7fdc4a898ce0 
+  [244:1] libmpi.so.40 0x7fdc4b31bc4b mca_pml_ucx_iprobe
+  [244:2] libmpi.so.40 0x7fdc4b18c4bc PMPI_Iprobe
+  [244:3] iotest 0x669055 
+  [244:4] iotest 0x66a5fe 
+  [244:5] iotest 0x6344a4 CcdRaiseCondition
+  [244:6] iotest 0x63801a CsdScheduleForever
+  [244:7] iotest 0x6383e5 CsdScheduler
+  [244:8] iotest 0x66a35a ConverseInit
+  [244:9] iotest 0x5bbea7 charm_main
+  [244:10] libc.so.6 0x7fdc4a4fbcf3 __libc_start_main
+  [244:11] iotest 0x4def0e _start
+------------- Processor 244 Exiting: Caught Signal ------------
+Reason: Terminated
+[245] Stack Traceback:
+  [245:0] libpthread.so.0 0x7f8768a32ce0 
+  [245:1] libuct_ib.so.0 0x7f87601707dc 
+  [245:2] libucp.so.0 0x7f8767b67aaa ucp_worker_progress
+  [245:3] libmpi.so.40 0x7f87694b5ccb mca_pml_ucx_iprobe
+  [245:4] libmpi.so.40 0x7f87693264bc PMPI_Iprobe
+  [245:5] iotest 0x669055 
+  [245:6] iotest 0x66a5fe 
+  [245:7] iotest 0x6344a4 CcdRaiseCondition
+  [245:8] iotest 0x63801a CsdScheduleForever
+  [245:9] iotest 0x6383e5 CsdScheduler
+  [245:10] iotest 0x66a35a ConverseInit
+  [245:11] iotest 0x5bbea7 charm_main
+  [245:12] libc.so.6 0x7f8768695cf3 __libc_start_main
+  [245:13] iotest 0x4def0e _start
+------------- Processor 245 Exiting: Caught Signal ------------
+Reason: Terminated
+[246] Stack Traceback:
+  [246:0] libpthread.so.0 0x7f626423fce0 
+  [246:1] iotest 0x634915 CcdCallBacks
+  [246:2] iotest 0x637fcf CsdScheduleForever
+  [246:3] iotest 0x6383e5 CsdScheduler
+  [246:4] iotest 0x66a35a ConverseInit
+  [246:5] iotest 0x5bbea7 charm_main
+  [246:6] libc.so.6 0x7f6263ea2cf3 __libc_start_main
+  [246:7] iotest 0x4def0e _start
+------------- Processor 246 Exiting: Caught Signal ------------
+Reason: Terminated
+[247] Stack Traceback:
+  [247:0] libpthread.so.0 0x7fbbd49b1ce0 
+  [247:1] iotest 0x634642 CcdCallBacks
+  [247:2] iotest 0x637fcf CsdScheduleForever
+  [247:3] iotest 0x6383e5 CsdScheduler
+  [247:4] iotest 0x66a35a ConverseInit
+  [247:5] iotest 0x5bbea7 charm_main
+  [247:6] libc.so.6 0x7fbbd4614cf3 __libc_start_main
+  [247:7] iotest 0x4def0e _start
+------------- Processor 247 Exiting: Caught Signal ------------
+Reason: Terminated
+[248] Stack Traceback:
+  [248:0] libpthread.so.0 0x7f29567cdce0 
+  [248:1] iotest 0x63254c CcdNumTimerCBs
+  [248:2] iotest 0x637fa6 CsdScheduleForever
+  [248:3] iotest 0x6383e5 CsdScheduler
+  [248:4] iotest 0x66a35a ConverseInit
+  [248:5] iotest 0x5bbea7 charm_main
+  [248:6] libc.so.6 0x7f2956430cf3 __libc_start_main
+  [248:7] iotest 0x4def0e _start
+------------- Processor 248 Exiting: Caught Signal ------------
+Reason: Terminated
+[249] Stack Traceback:
+  [249:0] libpthread.so.0 0x7fe329364ce0 
+  [249:1] libucp.so.0 0x7fe328499a97 ucp_worker_progress
+  [249:2] libmpi.so.40 0x7fe329de7ccb mca_pml_ucx_iprobe
+  [249:3] libmpi.so.40 0x7fe329c584bc PMPI_Iprobe
+  [249:4] iotest 0x669055 
+  [249:5] iotest 0x66a51a CmiGetNonLocal
+  [249:6] iotest 0x637e8d CsdNextMessage
+  [249:7] iotest 0x637f5f CsdScheduleForever
+  [249:8] iotest 0x6383e5 CsdScheduler
+  [249:9] iotest 0x66a35a ConverseInit
+  [249:10] iotest 0x5bbea7 charm_main
+  [249:11] libc.so.6 0x7fe328fc7cf3 __libc_start_main
+  [249:12] iotest 0x4def0e _start
+------------- Processor 249 Exiting: Caught Signal ------------
+Reason: Terminated
+[250] Stack Traceback:
+  [250:0] libpthread.so.0 0x7f69d225fce0 
+  [250:1] libmpi.so.40 0x7f69d2ce2bc0 mca_pml_ucx_iprobe
+  [250:2] libmpi.so.40 0x7f69d2b534bc PMPI_Iprobe
+  [250:3] iotest 0x669055 
+  [250:4] iotest 0x66a51a CmiGetNonLocal
+  [250:5] iotest 0x637e8d CsdNextMessage
+  [250:6] iotest 0x637f5f CsdScheduleForever
+  [250:7] iotest 0x6383e5 CsdScheduler
+  [250:8] iotest 0x66a35a ConverseInit
+  [250:9] iotest 0x5bbea7 charm_main
+  [250:10] libc.so.6 0x7f69d1ec2cf3 __libc_start_main
+  [250:11] iotest 0x4def0e _start
+------------- Processor 250 Exiting: Caught Signal ------------
+Reason: Terminated
+[251] Stack Traceback:
+  [251:0] libpthread.so.0 0x7fee4d9eece0 
+  [251:1] linux-vdso.so.1 0x7ffe21171b34 clock_gettime
+  [251:2] libc.so.6 0x7fee4d70c2ca __clock_gettime
+  [251:3] libmpi.so.40 0x7fee4e2f6b11 PMPI_Wtime
+  [251:4] iotest 0x66b299 CmiWallTimer
+  [251:5] iotest 0x6345e9 CcdCallBacks
+  [251:6] iotest 0x637fcf CsdScheduleForever
+  [251:7] iotest 0x6383e5 CsdScheduler
+  [251:8] iotest 0x66a35a ConverseInit
+  [251:9] iotest 0x5bbea7 charm_main
+  [251:10] libc.so.6 0x7fee4d651cf3 __libc_start_main
+  [251:11] iotest 0x4def0e _start
+------------- Processor 251 Exiting: Caught Signal ------------
+Reason: Terminated
+[252] Stack Traceback:
+  [252:0] libpthread.so.0 0x7f7663700ce0 
+  [252:1] iotest 0x634622 CcdCallBacks
+  [252:2] iotest 0x637fcf CsdScheduleForever
+  [252:3] iotest 0x6383e5 CsdScheduler
+  [252:4] iotest 0x66a35a ConverseInit
+  [252:5] iotest 0x5bbea7 charm_main
+  [252:6] libc.so.6 0x7f7663363cf3 __libc_start_main
+  [252:7] iotest 0x4def0e _start
+------------- Processor 252 Exiting: Caught Signal ------------
+Reason: Terminated
+[253] Stack Traceback:
+  [253:0] libpthread.so.0 0x7fa482a69ce0 
+  [253:1] iotest 0x64ef0b CqsDequeue
+  [253:2] iotest 0x637ec1 CsdNextMessage
+  [253:3] iotest 0x637f5f CsdScheduleForever
+  [253:4] iotest 0x6383e5 CsdScheduler
+  [253:5] iotest 0x66a35a ConverseInit
+  [253:6] iotest 0x5bbea7 charm_main
+  [253:7] libc.so.6 0x7fa4826cccf3 __libc_start_main
+  [253:8] iotest 0x4def0e _start
+------------- Processor 253 Exiting: Caught Signal ------------
+Reason: Terminated
+[254] Stack Traceback:
+  [254:0] libpthread.so.0 0x7fae9e1a5ce0 
+  [254:1] libmpi.so.40 0x7fae9ea99414 PMPI_Iprobe
+  [254:2] iotest 0x669055 
+  [254:3] iotest 0x66a51a CmiGetNonLocal
+  [254:4] iotest 0x637e8d CsdNextMessage
+  [254:5] iotest 0x637f5f CsdScheduleForever
+  [254:6] iotest 0x6383e5 CsdScheduler
+  [254:7] iotest 0x66a35a ConverseInit
+  [254:8] iotest 0x5bbea7 charm_main
+  [254:9] libc.so.6 0x7fae9de08cf3 __libc_start_main
+  [254:10] iotest 0x4def0e _start
+------------- Processor 254 Exiting: Caught Signal ------------
+Reason: Terminated
+[255] Stack Traceback:
+  [255:0] libpthread.so.0 0x7f9e02ea8ce0 
+  [255:1] libucp.so.0 0x7f9e020045a4 ucp_tag_probe_nb
+  [255:2] libmpi.so.40 0x7f9e0392bc4b mca_pml_ucx_iprobe
+  [255:3] libmpi.so.40 0x7f9e0379c4bc PMPI_Iprobe
+  [255:4] iotest 0x669055 
+  [255:5] iotest 0x66a51a CmiGetNonLocal
+  [255:6] iotest 0x637e8d CsdNextMessage
+  [255:7] iotest 0x637f5f CsdScheduleForever
+  [255:8] iotest 0x6383e5 CsdScheduler
+  [255:9] iotest 0x66a35a ConverseInit
+  [255:10] iotest 0x5bbea7 charm_main
+  [255:11] libc.so.6 0x7f9e02b0bcf3 __libc_start_main
+  [255:12] iotest 0x4def0e _start
+------------- Processor 255 Exiting: Caught Signal ------------
+Reason: Terminated
+[128] Stack Traceback:
+  [128:0] libpthread.so.0 0x7f9dd4714ce0 
+  [128:1] iotest 0x63450c CcdRaiseCondition
+  [128:2] iotest 0x637f57 CsdScheduleForever
+  [128:3] iotest 0x6383e5 CsdScheduler
+  [128:4] iotest 0x66a35a ConverseInit
+  [128:5] iotest 0x5bbea7 charm_main
+  [128:6] libc.so.6 0x7f9dd4377cf3 __libc_start_main
+  [128:7] iotest 0x4def0e _start
+------------- Processor 128 Exiting: Caught Signal ------------
+Reason: Terminated
+[129] Stack Traceback:
+  [129:0] libpthread.so.0 0x7f49045a0ce0 
+  [129:1] libmpi.so.40 0x7f4905023cba mca_pml_ucx_iprobe
+  [129:2] libmpi.so.40 0x7f4904e944bc PMPI_Iprobe
+  [129:3] iotest 0x669055 
+  [129:4] iotest 0x66a5fe 
+  [129:5] iotest 0x6344a4 CcdRaiseCondition
+  [129:6] iotest 0x63801a CsdScheduleForever
+  [129:7] iotest 0x6383e5 CsdScheduler
+  [129:8] iotest 0x66a35a ConverseInit
+  [129:9] iotest 0x5bbea7 charm_main
+  [129:10] libc.so.6 0x7f4904203cf3 __libc_start_main
+  [129:11] iotest 0x4def0e _start
+------------- Processor 129 Exiting: Caught Signal ------------
+Reason: Terminated
+[130] Stack Traceback:
+  [130:0] libpthread.so.0 0x7f9a7a91ece0 
+  [130:1] iotest 0x63442d CcdRaiseCondition
+  [130:2] iotest 0x63801a CsdScheduleForever
+  [130:3] iotest 0x6383e5 CsdScheduler
+  [130:4] iotest 0x66a35a ConverseInit
+  [130:5] iotest 0x5bbea7 charm_main
+  [130:6] libc.so.6 0x7f9a7a581cf3 __libc_start_main
+  [130:7] iotest 0x4def0e _start
+------------- Processor 130 Exiting: Caught Signal ------------
+Reason: Terminated
+[131] Stack Traceback:
+  [131:0] libpthread.so.0 0x7fc0b6e60ce0 
+  [131:1] iotest 0x669055 
+  [131:2] iotest 0x66a51a CmiGetNonLocal
+  [131:3] iotest 0x637e8d CsdNextMessage
+  [131:4] iotest 0x637f5f CsdScheduleForever
+  [131:5] iotest 0x6383e5 CsdScheduler
+  [131:6] iotest 0x66a35a ConverseInit
+  [131:7] iotest 0x5bbea7 charm_main
+  [131:8] libc.so.6 0x7fc0b6ac3cf3 __libc_start_main
+  [131:9] iotest 0x4def0e _start
+------------- Processor 131 Exiting: Caught Signal ------------
+Reason: Terminated
+[132] Stack Traceback:
+  [132:0] libpthread.so.0 0x7f88ccc0dce0 
+  [132:1] libuct_ib.so.0 0x7f88bfdd2672 
+  [132:2] libucp.so.0 0x7f88cbd42aaa ucp_worker_progress
+  [132:3] libmpi.so.40 0x7f88cd690ccb mca_pml_ucx_iprobe
+  [132:4] libmpi.so.40 0x7f88cd5014bc PMPI_Iprobe
+  [132:5] iotest 0x669055 
+  [132:6] iotest 0x66a5fe 
+  [132:7] iotest 0x6344a4 CcdRaiseCondition
+  [132:8] iotest 0x63801a CsdScheduleForever
+  [132:9] iotest 0x6383e5 CsdScheduler
+  [132:10] iotest 0x66a35a ConverseInit
+  [132:11] iotest 0x5bbea7 charm_main
+  [132:12] libc.so.6 0x7f88cc870cf3 __libc_start_main
+  [132:13] iotest 0x4def0e _start
+------------- Processor 132 Exiting: Caught Signal ------------
+Reason: Terminated
+[133] Stack Traceback:
+  [133:0] libpthread.so.0 0x7f133dc8fce0 
+  [133:1] libmpi.so.40 0x7f133e712bc0 mca_pml_ucx_iprobe
+  [133:2] libmpi.so.40 0x7f133e5834bc PMPI_Iprobe
+  [133:3] iotest 0x669055 
+  [133:4] iotest 0x66a51a CmiGetNonLocal
+  [133:5] iotest 0x637e8d CsdNextMessage
+  [133:6] iotest 0x637f5f CsdScheduleForever
+  [133:7] iotest 0x6383e5 CsdScheduler
+  [133:8] iotest 0x66a35a ConverseInit
+  [133:9] iotest 0x5bbea7 charm_main
+  [133:10] libc.so.6 0x7f133d8f2cf3 __libc_start_main
+  [133:11] iotest 0x4def0e _start
+------------- Processor 133 Exiting: Caught Signal ------------
+Reason: Terminated
+[134] Stack Traceback:
+  [134:0] libpthread.so.0 0x7f8fc3c68ce0 
+  [134:1] libucp.so.0 0x7f8fc2dc45a4 ucp_tag_probe_nb
+  [134:2] libmpi.so.40 0x7f8fc46ebc4b mca_pml_ucx_iprobe
+  [134:3] libmpi.so.40 0x7f8fc455c4bc PMPI_Iprobe
+  [134:4] iotest 0x669055 
+  [134:5] iotest 0x66a51a CmiGetNonLocal
+  [134:6] iotest 0x637e8d CsdNextMessage
+  [134:7] iotest 0x637f5f CsdScheduleForever
+  [134:8] iotest 0x6383e5 CsdScheduler
+  [134:9] iotest 0x66a35a ConverseInit
+  [134:10] iotest 0x5bbea7 charm_main
+  [134:11] libc.so.6 0x7f8fc38cbcf3 __libc_start_main
+  [134:12] iotest 0x4def0e _start
+------------- Processor 134 Exiting: Caught Signal ------------
+Reason: Terminated
+[135] Stack Traceback:
+  [135:0] libpthread.so.0 0x7fce056e3ce0 
+  [135:1] iotest 0x637fc2 CsdScheduleForever
+  [135:2] iotest 0x6383e5 CsdScheduler
+  [135:3] iotest 0x66a35a ConverseInit
+  [135:4] iotest 0x5bbea7 charm_main
+  [135:5] libc.so.6 0x7fce05346cf3 __libc_start_main
+  [135:6] iotest 0x4def0e _start
+------------- Processor 135 Exiting: Caught Signal ------------
+Reason: Terminated
+[136] Stack Traceback:
+  [136:0] libpthread.so.0 0x7fe072b6bce0 
+  [136:1] libmpi.so.40 0x7fe0734c1520 ompi_coll_libnbc_progress
+  [136:2] libopen-pal.so.40 0x7fe071f41563 opal_progress
+  [136:3] libmpi.so.40 0x7fe0735eece5 mca_pml_ucx_iprobe
+  [136:4] libmpi.so.40 0x7fe07345f4bc PMPI_Iprobe
+  [136:5] iotest 0x669055 
+  [136:6] iotest 0x66a51a CmiGetNonLocal
+  [136:7] iotest 0x637e8d CsdNextMessage
+  [136:8] iotest 0x637f5f CsdScheduleForever
+  [136:9] iotest 0x6383e5 CsdScheduler
+  [136:10] iotest 0x66a35a ConverseInit
+  [136:11] iotest 0x5bbea7 charm_main
+  [136:12] libc.so.6 0x7fe0727cecf3 __libc_start_main
+  [136:13] iotest 0x4def0e _start
+------------- Processor 136 Exiting: Caught Signal ------------
+Reason: Terminated
+[137] Stack Traceback:
+  [137:0] libpthread.so.0 0x7f75f969ace0 
+  [137:1] linux-vdso.so.1 0x7fff36f80b34 clock_gettime
+  [137:2] libc.so.6 0x7f75f93b82ca __clock_gettime
+  [137:3] libmpi.so.40 0x7f75f9fa2b11 PMPI_Wtime
+  [137:4] iotest 0x66b299 CmiWallTimer
+  [137:5] iotest 0x6345e9 CcdCallBacks
+  [137:6] iotest 0x637fcf CsdScheduleForever
+  [137:7] iotest 0x6383e5 CsdScheduler
+  [137:8] iotest 0x66a35a ConverseInit
+  [137:9] iotest 0x5bbea7 charm_main
+  [137:10] libc.so.6 0x7f75f92fdcf3 __libc_start_main
+  [137:11] iotest 0x4def0e _start
+------------- Processor 137 Exiting: Caught Signal ------------
+Reason: Terminated
+[138] Stack Traceback:
+  [138:0] libpthread.so.0 0x7f6993483ce0 
+  [138:1] linux-vdso.so.1 0x7ffe3f9a5b34 clock_gettime
+  [138:2] libc.so.6 0x7f69931a12ca __clock_gettime
+  [138:3] libmpi.so.40 0x7f6993d8bb11 PMPI_Wtime
+  [138:4] iotest 0x66b299 CmiWallTimer
+  [138:5] iotest 0x6345e9 CcdCallBacks
+  [138:6] iotest 0x637fcf CsdScheduleForever
+  [138:7] iotest 0x6383e5 CsdScheduler
+  [138:8] iotest 0x66a35a ConverseInit
+  [138:9] iotest 0x5bbea7 charm_main
+  [138:10] libc.so.6 0x7f69930e6cf3 __libc_start_main
+  [138:11] iotest 0x4def0e _start
+------------- Processor 138 Exiting: Caught Signal ------------
+Reason: Terminated
+[139] Stack Traceback:
+  [139:0] libpthread.so.0 0x7feaba2a0ce0 
+  [139:1] iotest 0x634611 CcdCallBacks
+  [139:2] iotest 0x637fcf CsdScheduleForever
+  [139:3] iotest 0x6383e5 CsdScheduler
+  [139:4] iotest 0x66a35a ConverseInit
+  [139:5] iotest 0x5bbea7 charm_main
+  [139:6] libc.so.6 0x7feab9f03cf3 __libc_start_main
+  [139:7] iotest 0x4def0e _start
+------------- Processor 139 Exiting: Caught Signal ------------
+Reason: Terminated
+[140] Stack Traceback:
+  [140:0] libpthread.so.0 0x7f080d51fce0 
+  [140:1] libucp.so.0 0x7f080c654a59 ucp_worker_progress
+  [140:2] libmpi.so.40 0x7f080dfa2ccb mca_pml_ucx_iprobe
+  [140:3] libmpi.so.40 0x7f080de134bc PMPI_Iprobe
+  [140:4] iotest 0x669055 
+  [140:5] iotest 0x66a51a CmiGetNonLocal
+  [140:6] iotest 0x637e8d CsdNextMessage
+  [140:7] iotest 0x637f5f CsdScheduleForever
+  [140:8] iotest 0x6383e5 CsdScheduler
+  [140:9] iotest 0x66a35a ConverseInit
+  [140:10] iotest 0x5bbea7 charm_main
+  [140:11] libc.so.6 0x7f080d182cf3 __libc_start_main
+  [140:12] iotest 0x4def0e _start
+------------- Processor 140 Exiting: Caught Signal ------------
+Reason: Terminated
+[141] Stack Traceback:
+  [141:0] libpthread.so.0 0x7f4d5951ece0 
+  [141:1] libmpi.so.40 0x7f4d59fa1cba mca_pml_ucx_iprobe
+  [141:2] libmpi.so.40 0x7f4d59e124bc PMPI_Iprobe
+  [141:3] iotest 0x669055 
+  [141:4] iotest 0x66a5fe 
+  [141:5] iotest 0x6344a4 CcdRaiseCondition
+  [141:6] iotest 0x63801a CsdScheduleForever
+  [141:7] iotest 0x6383e5 CsdScheduler
+  [141:8] iotest 0x66a35a ConverseInit
+  [141:9] iotest 0x5bbea7 charm_main
+  [141:10] libc.so.6 0x7f4d59181cf3 __libc_start_main
+  [141:11] iotest 0x4def0e _start
+------------- Processor 141 Exiting: Caught Signal ------------
+Reason: Terminated
+[142] Stack Traceback:
+  [142:0] libpthread.so.0 0x7fd08005ace0 
+  [142:1] libuct_ib.so.0 0x7fd0731d19e0 
+  [142:2] libucp.so.0 0x7fd07f18faaa ucp_worker_progress
+  [142:3] libmpi.so.40 0x7fd080addccb mca_pml_ucx_iprobe
+  [142:4] libmpi.so.40 0x7fd08094e4bc PMPI_Iprobe
+  [142:5] iotest 0x669055 
+  [142:6] iotest 0x66a5fe 
+  [142:7] iotest 0x6344a4 CcdRaiseCondition
+  [142:8] iotest 0x63801a CsdScheduleForever
+  [142:9] iotest 0x6383e5 CsdScheduler
+  [142:10] iotest 0x66a35a ConverseInit
+  [142:11] iotest 0x5bbea7 charm_main
+  [142:12] libc.so.6 0x7fd07fcbdcf3 __libc_start_main
+  [142:13] iotest 0x4def0e _start
+------------- Processor 142 Exiting: Caught Signal ------------
+Reason: Terminated
+[143] Stack Traceback:
+  [143:0] libpthread.so.0 0x7f6151b43ce0 
+  [143:1] iotest 0x634192 CcdRaiseCondition
+  [143:2] iotest 0x63801a CsdScheduleForever
+  [143:3] iotest 0x6383e5 CsdScheduler
+  [143:4] iotest 0x66a35a ConverseInit
+  [143:5] iotest 0x5bbea7 charm_main
+  [143:6] libc.so.6 0x7f61517a6cf3 __libc_start_main
+  [143:7] iotest 0x4def0e _start
+------------- Processor 143 Exiting: Caught Signal ------------
+Reason: Terminated
+[144] Stack Traceback:
+  [144:0] libpthread.so.0 0x7fd43030fce0 
+  [144:1] libmpi.so.40 0x7fd430c17b3a PMPI_Wtime
+  [144:2] iotest 0x66b299 CmiWallTimer
+  [144:3] iotest 0x6345e9 CcdCallBacks
+  [144:4] iotest 0x637fcf CsdScheduleForever
+  [144:5] iotest 0x6383e5 CsdScheduler
+  [144:6] iotest 0x66a35a ConverseInit
+  [144:7] iotest 0x5bbea7 charm_main
+  [144:8] libc.so.6 0x7fd42ff72cf3 __libc_start_main
+  [144:9] iotest 0x4def0e _start
+------------- Processor 144 Exiting: Caught Signal ------------
+Reason: Terminated
+[145] Stack Traceback:
+  [145:0] libpthread.so.0 0x7f9f69ce3ce0 
+  [145:1] linux-vdso.so.1 0x7fff5a982b34 clock_gettime
+  [145:2] libc.so.6 0x7f9f69a012ca __clock_gettime
+  [145:3] libmpi.so.40 0x7f9f6a5ebb11 PMPI_Wtime
+  [145:4] iotest 0x66b299 CmiWallTimer
+  [145:5] iotest 0x6345e9 CcdCallBacks
+  [145:6] iotest 0x637fcf CsdScheduleForever
+  [145:7] iotest 0x6383e5 CsdScheduler
+  [145:8] iotest 0x66a35a ConverseInit
+  [145:9] iotest 0x5bbea7 charm_main
+  [145:10] libc.so.6 0x7f9f69946cf3 __libc_start_main
+  [145:11] iotest 0x4def0e _start
+------------- Processor 145 Exiting: Caught Signal ------------
+Reason: Terminated
+[146] Stack Traceback:
+  [146:0] libpthread.so.0 0x7efddba00ce0 
+  [146:1] iotest 0x6345d0 CcdCallBacks
+  [146:2] iotest 0x637fcf CsdScheduleForever
+  [146:3] iotest 0x6383e5 CsdScheduler
+  [146:4] iotest 0x66a35a ConverseInit
+  [146:5] iotest 0x5bbea7 charm_main
+  [146:6] libc.so.6 0x7efddb663cf3 __libc_start_main
+  [146:7] iotest 0x4def0e _start
+------------- Processor 146 Exiting: Caught Signal ------------
+Reason: Terminated
+[147] Stack Traceback:
+  [147:0] libpthread.so.0 0x7f2663f3ace0 
+  [147:1] libuct_ib.so.0 0x7f26571d17c0 
+  [147:2] libucp.so.0 0x7f266306faaa ucp_worker_progress
+  [147:3] libmpi.so.40 0x7f26649bdccb mca_pml_ucx_iprobe
+  [147:4] libmpi.so.40 0x7f266482e4bc PMPI_Iprobe
+  [147:5] iotest 0x669055 
+  [147:6] iotest 0x66a5fe 
+  [147:7] iotest 0x6344a4 CcdRaiseCondition
+  [147:8] iotest 0x63801a CsdScheduleForever
+  [147:9] iotest 0x6383e5 CsdScheduler
+  [147:10] iotest 0x66a35a ConverseInit
+  [147:11] iotest 0x5bbea7 charm_main
+  [147:12] libc.so.6 0x7f2663b9dcf3 __libc_start_main
+  [147:13] iotest 0x4def0e _start
+------------- Processor 147 Exiting: Caught Signal ------------
+Reason: Terminated
+[148] Stack Traceback:
+  [148:0] libpthread.so.0 0x7f6da12a5ce0 
+  [148:1] linux-vdso.so.1 0x7ffd4f49bb6d clock_gettime
+  [148:2] libc.so.6 0x7f6da0fc32ca __clock_gettime
+  [148:3] libmpi.so.40 0x7f6da1badb11 PMPI_Wtime
+  [148:4] iotest 0x66b299 CmiWallTimer
+  [148:5] iotest 0x6345e9 CcdCallBacks
+  [148:6] iotest 0x637fcf CsdScheduleForever
+  [148:7] iotest 0x6383e5 CsdScheduler
+  [148:8] iotest 0x66a35a ConverseInit
+  [148:9] iotest 0x5bbea7 charm_main
+  [148:10] libc.so.6 0x7f6da0f08cf3 __libc_start_main
+  [148:11] iotest 0x4def0e _start
+------------- Processor 148 Exiting: Caught Signal ------------
+Reason: Terminated
+[149] Stack Traceback:
+  [149:0] libpthread.so.0 0x7f9df6fe9ce0 
+  [149:1] iotest 0x634609 CcdCallBacks
+  [149:2] iotest 0x637fcf CsdScheduleForever
+  [149:3] iotest 0x6383e5 CsdScheduler
+  [149:4] iotest 0x66a35a ConverseInit
+  [149:5] iotest 0x5bbea7 charm_main
+  [149:6] libc.so.6 0x7f9df6c4ccf3 __libc_start_main
+  [149:7] iotest 0x4def0e _start
+------------- Processor 149 Exiting: Caught Signal ------------
+Reason: Terminated
+[150] Stack Traceback:
+  [150:0] libpthread.so.0 0x7f8ea1563ce0 
+  [150:1] libmpi.so.40 0x7f8ea1e6bb32 PMPI_Wtime
+  [150:2] iotest 0x66b299 CmiWallTimer
+  [150:3] iotest 0x6345e9 CcdCallBacks
+  [150:4] iotest 0x637fcf CsdScheduleForever
+  [150:5] iotest 0x6383e5 CsdScheduler
+  [150:6] iotest 0x66a35a ConverseInit
+  [150:7] iotest 0x5bbea7 charm_main
+  [150:8] libc.so.6 0x7f8ea11c6cf3 __libc_start_main
+  [150:9] iotest 0x4def0e _start
+------------- Processor 150 Exiting: Caught Signal ------------
+Reason: Terminated
+[151] Stack Traceback:
+  [151:0] libpthread.so.0 0x7f73d4378ce0 
+  [151:1] libmpi.so.40 0x7f73d4dfbbc2 mca_pml_ucx_iprobe
+  [151:2] libmpi.so.40 0x7f73d4c6c4bc PMPI_Iprobe
+  [151:3] iotest 0x669055 
+  [151:4] iotest 0x66a51a CmiGetNonLocal
+  [151:5] iotest 0x637e8d CsdNextMessage
+  [151:6] iotest 0x637f5f CsdScheduleForever
+  [151:7] iotest 0x6383e5 CsdScheduler
+  [151:8] iotest 0x66a35a ConverseInit
+  [151:9] iotest 0x5bbea7 charm_main
+  [151:10] libc.so.6 0x7f73d3fdbcf3 __libc_start_main
+  [151:11] iotest 0x4def0e _start
+------------- Processor 151 Exiting: Caught Signal ------------
+Reason: Terminated
+[152] Stack Traceback:
+  [152:0] libpthread.so.0 0x7f879cf27ce0 
+  [152:1] iotest 0x637f38 CsdScheduleForever
+  [152:2] iotest 0x6383e5 CsdScheduler
+  [152:3] iotest 0x66a35a ConverseInit
+  [152:4] iotest 0x5bbea7 charm_main
+  [152:5] libc.so.6 0x7f879cb8acf3 __libc_start_main
+  [152:6] iotest 0x4def0e _start
+------------- Processor 152 Exiting: Caught Signal ------------
+Reason: Terminated
+[153] Stack Traceback:
+  [153:0] libpthread.so.0 0x7f6f7249cce0 
+  [153:1] linux-vdso.so.1 0x7ffe783e9b34 clock_gettime
+  [153:2] libc.so.6 0x7f6f721ba2ca __clock_gettime
+  [153:3] libmpi.so.40 0x7f6f72da4b11 PMPI_Wtime
+  [153:4] iotest 0x66b299 CmiWallTimer
+  [153:5] iotest 0x6345e9 CcdCallBacks
+  [153:6] iotest 0x637fcf CsdScheduleForever
+  [153:7] iotest 0x6383e5 CsdScheduler
+  [153:8] iotest 0x66a35a ConverseInit
+  [153:9] iotest 0x5bbea7 charm_main
+  [153:10] libc.so.6 0x7f6f720ffcf3 __libc_start_main
+  [153:11] iotest 0x4def0e _start
+------------- Processor 153 Exiting: Caught Signal ------------
+Reason: Terminated
+[154] Stack Traceback:
+  [154:0] libpthread.so.0 0x7fd7f6af2ce0 
+  [154:1] iotest 0x6341e7 CcdRaiseCondition
+  [154:2] iotest 0x63801a CsdScheduleForever
+  [154:3] iotest 0x6383e5 CsdScheduler
+  [154:4] iotest 0x66a35a ConverseInit
+  [154:5] iotest 0x5bbea7 charm_main
+  [154:6] libc.so.6 0x7fd7f6755cf3 __libc_start_main
+  [154:7] iotest 0x4def0e _start
+------------- Processor 154 Exiting: Caught Signal ------------
+Reason: Terminated
+[155] Stack Traceback:
+  [155:0] libpthread.so.0 0x7fb1ae095ce0 
+  [155:1] iotest 0x64ef0b CqsDequeue
+  [155:2] iotest 0x637ec1 CsdNextMessage
+  [155:3] iotest 0x637f5f CsdScheduleForever
+  [155:4] iotest 0x6383e5 CsdScheduler
+  [155:5] iotest 0x66a35a ConverseInit
+  [155:6] iotest 0x5bbea7 charm_main
+  [155:7] libc.so.6 0x7fb1adcf8cf3 __libc_start_main
+  [155:8] iotest 0x4def0e _start
+------------- Processor 155 Exiting: Caught Signal ------------
+Reason: Terminated
+[156] Stack Traceback:
+  [156:0] libpthread.so.0 0x7fa467bb4ce0 
+  [156:1] linux-vdso.so.1 0x7fff979a6b34 clock_gettime
+  [156:2] libc.so.6 0x7fa4678d22ca __clock_gettime
+  [156:3] libmpi.so.40 0x7fa4684bcb11 PMPI_Wtime
+  [156:4] iotest 0x66b299 CmiWallTimer
+  [156:5] iotest 0x6345e9 CcdCallBacks
+  [156:6] iotest 0x637fcf CsdScheduleForever
+  [156:7] iotest 0x6383e5 CsdScheduler
+  [156:8] iotest 0x66a35a ConverseInit
+  [156:9] iotest 0x5bbea7 charm_main
+  [156:10] libc.so.6 0x7fa467817cf3 __libc_start_main
+  [156:11] iotest 0x4def0e _start
+------------- Processor 156 Exiting: Caught Signal ------------
+Reason: Terminated
+[157] Stack Traceback:
+  [157:0] libpthread.so.0 0x7f238b27cce0 
+  [157:1] libmpi.so.40 0x7f238bcffbc0 mca_pml_ucx_iprobe
+  [157:2] libmpi.so.40 0x7f238bb704bc PMPI_Iprobe
+  [157:3] iotest 0x669055 
+  [157:4] iotest 0x66a51a CmiGetNonLocal
+  [157:5] iotest 0x637e8d CsdNextMessage
+  [157:6] iotest 0x637f5f CsdScheduleForever
+  [157:7] iotest 0x6383e5 CsdScheduler
+  [157:8] iotest 0x66a35a ConverseInit
+  [157:9] iotest 0x5bbea7 charm_main
+  [157:10] libc.so.6 0x7f238aedfcf3 __libc_start_main
+  [157:11] iotest 0x4def0e _start
+------------- Processor 157 Exiting: Caught Signal ------------
+Reason: Terminated
+[158] Stack Traceback:
+  [158:0] libpthread.so.0 0x7f330e71fce0 
+  [158:1] iotest 0x6341f2 CcdRaiseCondition
+  [158:2] iotest 0x63801a CsdScheduleForever
+  [158:3] iotest 0x6383e5 CsdScheduler
+  [158:4] iotest 0x66a35a ConverseInit
+  [158:5] iotest 0x5bbea7 charm_main
+  [158:6] libc.so.6 0x7f330e382cf3 __libc_start_main
+  [158:7] iotest 0x4def0e _start
+------------- Processor 158 Exiting: Caught Signal ------------
+Reason: Terminated
+[159] Stack Traceback:
+  [159:0] libpthread.so.0 0x7fabf9aecce0 
+  [159:1] libuct_ib.so.0 0x7fabecd607b9 
+  [159:2] libucp.so.0 0x7fabf8c21aaa ucp_worker_progress
+  [159:3] libmpi.so.40 0x7fabfa56fccb mca_pml_ucx_iprobe
+  [159:4] libmpi.so.40 0x7fabfa3e04bc PMPI_Iprobe
+  [159:5] iotest 0x669055 
+  [159:6] iotest 0x66a5fe 
+  [159:7] iotest 0x6344a4 CcdRaiseCondition
+  [159:8] iotest 0x63801a CsdScheduleForever
+  [159:9] iotest 0x6383e5 CsdScheduler
+  [159:10] iotest 0x66a35a ConverseInit
+  [159:11] iotest 0x5bbea7 charm_main
+  [159:12] libc.so.6 0x7fabf974fcf3 __libc_start_main
+  [159:13] iotest 0x4def0e _start
+------------- Processor 159 Exiting: Caught Signal ------------
+Reason: Terminated
+[160] Stack Traceback:
+  [160:0] libpthread.so.0 0x7f31a94bace0 
+  [160:1] iotest 0x66680d 
+  [160:2] iotest 0x66a533 CmiGetNonLocal
+  [160:3] iotest 0x637e8d CsdNextMessage
+  [160:4] iotest 0x637f5f CsdScheduleForever
+  [160:5] iotest 0x6383e5 CsdScheduler
+  [160:6] iotest 0x66a35a ConverseInit
+  [160:7] iotest 0x5bbea7 charm_main
+  [160:8] libc.so.6 0x7f31a911dcf3 __libc_start_main
+  [160:9] iotest 0x4def0e _start
+------------- Processor 160 Exiting: Caught Signal ------------
+Reason: Terminated
+[161] Stack Traceback:
+  [161:0] libpthread.so.0 0x7f13b2667ce0 
+  [161:1] libmpi.so.40 0x7f13b2f5b4d2 PMPI_Iprobe
+  [161:2] iotest 0x669055 
+  [161:3] iotest 0x66a51a CmiGetNonLocal
+  [161:4] iotest 0x637e8d CsdNextMessage
+  [161:5] iotest 0x637f5f CsdScheduleForever
+  [161:6] iotest 0x6383e5 CsdScheduler
+  [161:7] iotest 0x66a35a ConverseInit
+  [161:8] iotest 0x5bbea7 charm_main
+  [161:9] libc.so.6 0x7f13b22cacf3 __libc_start_main
+  [161:10] iotest 0x4def0e _start
+------------- Processor 161 Exiting: Caught Signal ------------
+Reason: Terminated
+[162] Stack Traceback:
+  [162:0] libpthread.so.0 0x7f8ebd09fce0 
+  [162:1] libuct_ib.so.0 0x7f8eb031e657 
+  [162:2] libucp.so.0 0x7f8ebc1d4aaa ucp_worker_progress
+  [162:3] libmpi.so.40 0x7f8ebdb22ccb mca_pml_ucx_iprobe
+  [162:4] libmpi.so.40 0x7f8ebd9934bc PMPI_Iprobe
+  [162:5] iotest 0x669055 
+  [162:6] iotest 0x66a51a CmiGetNonLocal
+  [162:7] iotest 0x637e8d CsdNextMessage
+  [162:8] iotest 0x637f5f CsdScheduleForever
+  [162:9] iotest 0x6383e5 CsdScheduler
+  [162:10] iotest 0x66a35a ConverseInit
+  [162:11] iotest 0x5bbea7 charm_main
+  [162:12] libc.so.6 0x7f8ebcd02cf3 __libc_start_main
+  [162:13] iotest 0x4def0e _start
+------------- Processor 162 Exiting: Caught Signal ------------
+Reason: Terminated
+[163] Stack Traceback:
+  [163:0] libpthread.so.0 0x7f571d8acce0 
+  [163:1] libucp.so.0 0x7f571c9e1ab8 ucp_worker_progress
+  [163:2] libmpi.so.40 0x7f571e32fccb mca_pml_ucx_iprobe
+  [163:3] libmpi.so.40 0x7f571e1a04bc PMPI_Iprobe
+  [163:4] iotest 0x669055 
+  [163:5] iotest 0x66a51a CmiGetNonLocal
+  [163:6] iotest 0x637e8d CsdNextMessage
+  [163:7] iotest 0x637f5f CsdScheduleForever
+  [163:8] iotest 0x6383e5 CsdScheduler
+  [163:9] iotest 0x66a35a ConverseInit
+  [163:10] iotest 0x5bbea7 charm_main
+  [163:11] libc.so.6 0x7f571d50fcf3 __libc_start_main
+  [163:12] iotest 0x4def0e _start
+------------- Processor 163 Exiting: Caught Signal ------------
+Reason: Terminated
+[164] Stack Traceback:
+  [164:0] libpthread.so.0 0x7f46a6d1fce0 
+  [164:1] libucp.so.0 0x7f46a5e54aaa ucp_worker_progress
+  [164:2] libmpi.so.40 0x7f46a77a2ccb mca_pml_ucx_iprobe
+  [164:3] libmpi.so.40 0x7f46a76134bc PMPI_Iprobe
+  [164:4] iotest 0x669055 
+  [164:5] iotest 0x66a51a CmiGetNonLocal
+  [164:6] iotest 0x637e8d CsdNextMessage
+  [164:7] iotest 0x637f5f CsdScheduleForever
+  [164:8] iotest 0x6383e5 CsdScheduler
+  [164:9] iotest 0x66a35a ConverseInit
+  [164:10] iotest 0x5bbea7 charm_main
+  [164:11] libc.so.6 0x7f46a6982cf3 __libc_start_main
+  [164:12] iotest 0x4def0e _start
+------------- Processor 164 Exiting: Caught Signal ------------
+Reason: Terminated
+[165] Stack Traceback:
+  [165:0] libpthread.so.0 0x7f5bf3427ce0 
+  [165:1] libuct.so.0 0x7f5bf2308822 
+  [165:2] libucp.so.0 0x7f5bf255caaa ucp_worker_progress
+  [165:3] libmpi.so.40 0x7f5bf3eaaccb mca_pml_ucx_iprobe
+  [165:4] libmpi.so.40 0x7f5bf3d1b4bc PMPI_Iprobe
+  [165:5] iotest 0x669055 
+  [165:6] iotest 0x66a5fe 
+  [165:7] iotest 0x6344a4 CcdRaiseCondition
+  [165:8] iotest 0x63801a CsdScheduleForever
+  [165:9] iotest 0x6383e5 CsdScheduler
+  [165:10] iotest 0x66a35a ConverseInit
+  [165:11] iotest 0x5bbea7 charm_main
+  [165:12] libc.so.6 0x7f5bf308acf3 __libc_start_main
+  [165:13] iotest 0x4def0e _start
+------------- Processor 165 Exiting: Caught Signal ------------
+Reason: Terminated
+[166] Stack Traceback:
+  [166:0] libpthread.so.0 0x7fe5fb2cdce0 
+  [166:1] iotest 0x666802 
+  [166:2] iotest 0x66a617 
+  [166:3] iotest 0x6344a4 CcdRaiseCondition
+  [166:4] iotest 0x63801a CsdScheduleForever
+  [166:5] iotest 0x6383e5 CsdScheduler
+  [166:6] iotest 0x66a35a ConverseInit
+  [166:7] iotest 0x5bbea7 charm_main
+  [166:8] libc.so.6 0x7fe5faf30cf3 __libc_start_main
+  [166:9] iotest 0x4def0e _start
+------------- Processor 166 Exiting: Caught Signal ------------
+Reason: Terminated
+[167] Stack Traceback:
+  [167:0] libpthread.so.0 0x7efce0a68ce0 
+  [167:1] iotest 0x634215 CcdRaiseCondition
+  [167:2] iotest 0x63801a CsdScheduleForever
+  [167:3] iotest 0x6383e5 CsdScheduler
+  [167:4] iotest 0x66a35a ConverseInit
+  [167:5] iotest 0x5bbea7 charm_main
+  [167:6] libc.so.6 0x7efce06cbcf3 __libc_start_main
+  [167:7] iotest 0x4def0e _start
+------------- Processor 167 Exiting: Caught Signal ------------
+Reason: Terminated
+[168] Stack Traceback:
+  [168:0] libpthread.so.0 0x7f28c39b0ce0 
+  [168:1] iotest 0x669062 
+  [168:2] iotest 0x66a5fe 
+  [168:3] iotest 0x6344a4 CcdRaiseCondition
+  [168:4] iotest 0x63801a CsdScheduleForever
+  [168:5] iotest 0x6383e5 CsdScheduler
+  [168:6] iotest 0x66a35a ConverseInit
+  [168:7] iotest 0x5bbea7 charm_main
+  [168:8] libc.so.6 0x7f28c3613cf3 __libc_start_main
+  [168:9] iotest 0x4def0e _start
+------------- Processor 168 Exiting: Caught Signal ------------
+Reason: Terminated
+[169] Stack Traceback:
+  [169:0] libpthread.so.0 0x7fa10cab0ce0 
+  [169:1] iotest 0x6341a6 CcdRaiseCondition
+  [169:2] iotest 0x637f57 CsdScheduleForever
+  [169:3] iotest 0x6383e5 CsdScheduler
+  [169:4] iotest 0x66a35a ConverseInit
+  [169:5] iotest 0x5bbea7 charm_main
+  [169:6] libc.so.6 0x7fa10c713cf3 __libc_start_main
+  [169:7] iotest 0x4def0e _start
+------------- Processor 169 Exiting: Caught Signal ------------
+Reason: Terminated
+[170] Stack Traceback:
+  [170:0] libpthread.so.0 0x7efdfe8d6ce0 
+  [170:1] libmpi.so.40 0x7efdff359cba mca_pml_ucx_iprobe
+  [170:2] libmpi.so.40 0x7efdff1ca4bc PMPI_Iprobe
+  [170:3] iotest 0x669055 
+  [170:4] iotest 0x66a5fe 
+  [170:5] iotest 0x6344a4 CcdRaiseCondition
+  [170:6] iotest 0x63801a CsdScheduleForever
+  [170:7] iotest 0x6383e5 CsdScheduler
+  [170:8] iotest 0x66a35a ConverseInit
+  [170:9] iotest 0x5bbea7 charm_main
+  [170:10] libc.so.6 0x7efdfe539cf3 __libc_start_main
+  [170:11] iotest 0x4def0e _start
+------------- Processor 170 Exiting: Caught Signal ------------
+Reason: Terminated
+[171] Stack Traceback:
+  [171:0] libpthread.so.0 0x7f306e80fce0 
+  [171:1] libucp.so.0 0x7f306d944a9a ucp_worker_progress
+  [171:2] libopen-pal.so.40 0x7f306dbe5563 opal_progress
+  [171:3] libmpi.so.40 0x7f306f292ce5 mca_pml_ucx_iprobe
+  [171:4] libmpi.so.40 0x7f306f1034bc PMPI_Iprobe
+  [171:5] iotest 0x669055 
+  [171:6] iotest 0x66a51a CmiGetNonLocal
+  [171:7] iotest 0x637e8d CsdNextMessage
+  [171:8] iotest 0x637f5f CsdScheduleForever
+  [171:9] iotest 0x6383e5 CsdScheduler
+  [171:10] iotest 0x66a35a ConverseInit
+  [171:11] iotest 0x5bbea7 charm_main
+  [171:12] libc.so.6 0x7f306e472cf3 __libc_start_main
+  [171:13] iotest 0x4def0e _start
+------------- Processor 171 Exiting: Caught Signal ------------
+Reason: Terminated
+[172] Stack Traceback:
+  [172:0] libpthread.so.0 0x7f2e88fcfce0 
+  [172:1] iotest 0x66b294 CmiWallTimer
+  [172:2] iotest 0x6345e9 CcdCallBacks
+  [172:3] iotest 0x637fcf CsdScheduleForever
+  [172:4] iotest 0x6383e5 CsdScheduler
+  [172:5] iotest 0x66a35a ConverseInit
+  [172:6] iotest 0x5bbea7 charm_main
+  [172:7] libc.so.6 0x7f2e88c32cf3 __libc_start_main
+  [172:8] iotest 0x4def0e _start
+------------- Processor 172 Exiting: Caught Signal ------------
+Reason: Terminated
+[173] Stack Traceback:
+  [173:0] libpthread.so.0 0x7f1de57f5ce0 
+  [173:1] iotest 0x637e3e CsdNextMessage
+  [173:2] iotest 0x637f5f CsdScheduleForever
+  [173:3] iotest 0x6383e5 CsdScheduler
+  [173:4] iotest 0x66a35a ConverseInit
+  [173:5] iotest 0x5bbea7 charm_main
+  [173:6] libc.so.6 0x7f1de5458cf3 __libc_start_main
+  [173:7] iotest 0x4def0e _start
+------------- Processor 173 Exiting: Caught Signal ------------
+Reason: Terminated
+[174] Stack Traceback:
+  [174:0] libpthread.so.0 0x7f1e03033ce0 
+  [174:1] linux-vdso.so.1 0x7ffd17967b34 clock_gettime
+  [174:2] libc.so.6 0x7f1e02d512ca __clock_gettime
+  [174:3] libmpi.so.40 0x7f1e0393bb11 PMPI_Wtime
+  [174:4] iotest 0x66b299 CmiWallTimer
+  [174:5] iotest 0x6345e9 CcdCallBacks
+  [174:6] iotest 0x637fcf CsdScheduleForever
+  [174:7] iotest 0x6383e5 CsdScheduler
+  [174:8] iotest 0x66a35a ConverseInit
+  [174:9] iotest 0x5bbea7 charm_main
+  [174:10] libc.so.6 0x7f1e02c96cf3 __libc_start_main
+  [174:11] iotest 0x4def0e _start
+------------- Processor 174 Exiting: Caught Signal ------------
+Reason: Terminated
+[175] Stack Traceback:
+  [175:0] libpthread.so.0 0x7f9cc3141ce0 
+  [175:1] libmpi.so.40 0x7f9cc3bc4bd7 mca_pml_ucx_iprobe
+  [175:2] libmpi.so.40 0x7f9cc3a354bc PMPI_Iprobe
+  [175:3] iotest 0x669055 
+  [175:4] iotest 0x66a5fe 
+  [175:5] iotest 0x6344a4 CcdRaiseCondition
+  [175:6] iotest 0x63801a CsdScheduleForever
+  [175:7] iotest 0x6383e5 CsdScheduler
+  [175:8] iotest 0x66a35a ConverseInit
+  [175:9] iotest 0x5bbea7 charm_main
+  [175:10] libc.so.6 0x7f9cc2da4cf3 __libc_start_main
+  [175:11] iotest 0x4def0e _start
+------------- Processor 175 Exiting: Caught Signal ------------
+Reason: Terminated
+[176] Stack Traceback:
+  [176:0] libpthread.so.0 0x7ff6d480bce0 
+  [176:1] iotest 0x634215 CcdRaiseCondition
+  [176:2] iotest 0x63801a CsdScheduleForever
+  [176:3] iotest 0x6383e5 CsdScheduler
+  [176:4] iotest 0x66a35a ConverseInit
+  [176:5] iotest 0x5bbea7 charm_main
+  [176:6] libc.so.6 0x7ff6d446ecf3 __libc_start_main
+  [176:7] iotest 0x4def0e _start
+------------- Processor 176 Exiting: Caught Signal ------------
+Reason: Terminated
+[177] Stack Traceback:
+  [177:0] libpthread.so.0 0x7f73ed6a6ce0 
+  [177:1] linux-vdso.so.1 0x7ffff59cab34 clock_gettime
+  [177:2] libc.so.6 0x7f73ed3c42ca __clock_gettime
+  [177:3] libmpi.so.40 0x7f73edfaeb11 PMPI_Wtime
+  [177:4] iotest 0x66b299 CmiWallTimer
+  [177:5] iotest 0x6345e9 CcdCallBacks
+  [177:6] iotest 0x637fcf CsdScheduleForever
+  [177:7] iotest 0x6383e5 CsdScheduler
+  [177:8] iotest 0x66a35a ConverseInit
+  [177:9] iotest 0x5bbea7 charm_main
+  [177:10] libc.so.6 0x7f73ed309cf3 __libc_start_main
+  [177:11] iotest 0x4def0e _start
+------------- Processor 177 Exiting: Caught Signal ------------
+Reason: Terminated
+[178] Stack Traceback:
+  [178:0] libpthread.so.0 0x7f289fa61ce0 
+  [178:1] iotest 0x669243 
+  [178:2] iotest 0x66a51a CmiGetNonLocal
+  [178:3] iotest 0x637e8d CsdNextMessage
+  [178:4] iotest 0x637f5f CsdScheduleForever
+  [178:5] iotest 0x6383e5 CsdScheduler
+  [178:6] iotest 0x66a35a ConverseInit
+  [178:7] iotest 0x5bbea7 charm_main
+  [178:8] libc.so.6 0x7f289f6c4cf3 __libc_start_main
+  [178:9] iotest 0x4def0e _start
+------------- Processor 178 Exiting: Caught Signal ------------
+Reason: Terminated
+[179] Stack Traceback:
+  [179:0] libpthread.so.0 0x7f6f1c8f0ce0 
+  [179:1] iotest 0x667dcb 
+  [179:2] iotest 0x66a515 CmiGetNonLocal
+  [179:3] iotest 0x637e8d CsdNextMessage
+  [179:4] iotest 0x637f5f CsdScheduleForever
+  [179:5] iotest 0x6383e5 CsdScheduler
+  [179:6] iotest 0x66a35a ConverseInit
+  [179:7] iotest 0x5bbea7 charm_main
+  [179:8] libc.so.6 0x7f6f1c553cf3 __libc_start_main
+  [179:9] iotest 0x4def0e _start
+------------- Processor 179 Exiting: Caught Signal ------------
+Reason: Terminated
+[180] Stack Traceback:
+  [180:0] libpthread.so.0 0x7ff727806ce0 
+  [180:1] linux-vdso.so.1 0x7ffd31784b32 clock_gettime
+  [180:2] libc.so.6 0x7ff7275242ca __clock_gettime
+  [180:3] libmpi.so.40 0x7ff72810eb11 PMPI_Wtime
+  [180:4] iotest 0x66b299 CmiWallTimer
+  [180:5] iotest 0x6345e9 CcdCallBacks
+  [180:6] iotest 0x637fcf CsdScheduleForever
+  [180:7] iotest 0x6383e5 CsdScheduler
+  [180:8] iotest 0x66a35a ConverseInit
+  [180:9] iotest 0x5bbea7 charm_main
+  [180:10] libc.so.6 0x7ff727469cf3 __libc_start_main
+  [180:11] iotest 0x4def0e _start
+------------- Processor 180 Exiting: Caught Signal ------------
+Reason: Terminated
+[181] Stack Traceback:
+  [181:0] libpthread.so.0 0x7facd34f4ce0 
+  [181:1] iotest 0x634609 CcdCallBacks
+  [181:2] iotest 0x637fcf CsdScheduleForever
+  [181:3] iotest 0x6383e5 CsdScheduler
+  [181:4] iotest 0x66a35a ConverseInit
+  [181:5] iotest 0x5bbea7 charm_main
+  [181:6] libc.so.6 0x7facd3157cf3 __libc_start_main
+  [181:7] iotest 0x4def0e _start
+------------- Processor 181 Exiting: Caught Signal ------------
+Reason: Terminated
+[182] Stack Traceback:
+  [182:0] libpthread.so.0 0x7f165bbb4ce0 
+  [182:1] linux-vdso.so.1 0x7fff2cbe1b34 clock_gettime
+  [182:2] libc.so.6 0x7f165b8d22ca __clock_gettime
+  [182:3] libmpi.so.40 0x7f165c4bcb11 PMPI_Wtime
+  [182:4] iotest 0x66b299 CmiWallTimer
+  [182:5] iotest 0x6345e9 CcdCallBacks
+  [182:6] iotest 0x637fcf CsdScheduleForever
+  [182:7] iotest 0x6383e5 CsdScheduler
+  [182:8] iotest 0x66a35a ConverseInit
+  [182:9] iotest 0x5bbea7 charm_main
+  [182:10] libc.so.6 0x7f165b817cf3 __libc_start_main
+  [182:11] iotest 0x4def0e _start
+------------- Processor 182 Exiting: Caught Signal ------------
+Reason: Terminated
+[183] Stack Traceback:
+  [183:0] libpthread.so.0 0x7fcf3eb84ce0 
+  [183:1] libuct.so.0 0x7fcf3da6596f 
+  [183:2] libucp.so.0 0x7fcf3dcb9aaa ucp_worker_progress
+  [183:3] libopen-pal.so.40 0x7fcf3df5a563 opal_progress
+  [183:4] libmpi.so.40 0x7fcf3f607ce5 mca_pml_ucx_iprobe
+  [183:5] libmpi.so.40 0x7fcf3f4784bc PMPI_Iprobe
+  [183:6] iotest 0x669055 
+  [183:7] iotest 0x66a5fe 
+  [183:8] iotest 0x6344a4 CcdRaiseCondition
+  [183:9] iotest 0x63801a CsdScheduleForever
+  [183:10] iotest 0x6383e5 CsdScheduler
+  [183:11] iotest 0x66a35a ConverseInit
+  [183:12] iotest 0x5bbea7 charm_main
+  [183:13] libc.so.6 0x7fcf3e7e7cf3 __libc_start_main
+  [183:14] iotest 0x4def0e _start
+------------- Processor 183 Exiting: Caught Signal ------------
+Reason: Terminated
+[184] Stack Traceback:
+  [184:0] libpthread.so.0 0x7f5733a85ce0 
+  [184:1] libuct_ib.so.0 0x7f572c1c47dc 
+  [184:2] libucp.so.0 0x7f5732bbaaaa ucp_worker_progress
+  [184:3] libmpi.so.40 0x7f5734508ccb mca_pml_ucx_iprobe
+  [184:4] libmpi.so.40 0x7f57343794bc PMPI_Iprobe
+  [184:5] iotest 0x669055 
+  [184:6] iotest 0x66a5fe 
+  [184:7] iotest 0x6344a4 CcdRaiseCondition
+  [184:8] iotest 0x63801a CsdScheduleForever
+  [184:9] iotest 0x6383e5 CsdScheduler
+  [184:10] iotest 0x66a35a ConverseInit
+  [184:11] iotest 0x5bbea7 charm_main
+  [184:12] libc.so.6 0x7f57336e8cf3 __libc_start_main
+  [184:13] iotest 0x4def0e _start
+------------- Processor 184 Exiting: Caught Signal ------------
+Reason: Terminated
+[185] Stack Traceback:
+  [185:0] libpthread.so.0 0x7fa22765dce0 
+  [185:1] iotest 0x668f86 
+  [185:2] iotest 0x66a51a CmiGetNonLocal
+  [185:3] iotest 0x637e8d CsdNextMessage
+  [185:4] iotest 0x637f5f CsdScheduleForever
+  [185:5] iotest 0x6383e5 CsdScheduler
+  [185:6] iotest 0x66a35a ConverseInit
+  [185:7] iotest 0x5bbea7 charm_main
+  [185:8] libc.so.6 0x7fa2272c0cf3 __libc_start_main
+  [185:9] iotest 0x4def0e _start
+------------- Processor 185 Exiting: Caught Signal ------------
+Reason: Terminated
+[186] Stack Traceback:
+  [186:0] libpthread.so.0 0x7fb901614ce0 
+  [186:1] libmpi.so.40 0x7fb901f08471 PMPI_Iprobe
+  [186:2] iotest 0x669055 
+  [186:3] iotest 0x66a5fe 
+  [186:4] iotest 0x6344a4 CcdRaiseCondition
+  [186:5] iotest 0x63801a CsdScheduleForever
+  [186:6] iotest 0x6383e5 CsdScheduler
+  [186:7] iotest 0x66a35a ConverseInit
+  [186:8] iotest 0x5bbea7 charm_main
+  [186:9] libc.so.6 0x7fb901277cf3 __libc_start_main
+  [186:10] iotest 0x4def0e _start
+------------- Processor 186 Exiting: Caught Signal ------------
+Reason: Terminated
+[187] Stack Traceback:
+  [187:0] libpthread.so.0 0x7ff36b62cce0 
+  [187:1] iotest 0x63444d CcdRaiseCondition
+  [187:2] iotest 0x637f57 CsdScheduleForever
+  [187:3] iotest 0x6383e5 CsdScheduler
+  [187:4] iotest 0x66a35a ConverseInit
+  [187:5] iotest 0x5bbea7 charm_main
+  [187:6] libc.so.6 0x7ff36b28fcf3 __libc_start_main
+  [187:7] iotest 0x4def0e _start
+------------- Processor 187 Exiting: Caught Signal ------------
+Reason: Terminated
+[188] Stack Traceback:
+  [188:0] libpthread.so.0 0x7f5ed1276ce0 
+  [188:1] linux-vdso.so.1 0x7fff635ceb34 clock_gettime
+  [188:2] libc.so.6 0x7f5ed0f942ca __clock_gettime
+  [188:3] libmpi.so.40 0x7f5ed1b7eb11 PMPI_Wtime
+  [188:4] iotest 0x66b299 CmiWallTimer
+  [188:5] iotest 0x6345e9 CcdCallBacks
+  [188:6] iotest 0x637fcf CsdScheduleForever
+  [188:7] iotest 0x6383e5 CsdScheduler
+  [188:8] iotest 0x66a35a ConverseInit
+  [188:9] iotest 0x5bbea7 charm_main
+  [188:10] libc.so.6 0x7f5ed0ed9cf3 __libc_start_main
+  [188:11] iotest 0x4def0e _start
+------------- Processor 188 Exiting: Caught Signal ------------
+Reason: Terminated
+[189] Stack Traceback:
+  [189:0] libpthread.so.0 0x7f3706b2fce0 
+  [189:1] linux-vdso.so.1 0x7ffc8f3c8b34 clock_gettime
+  [189:2] libc.so.6 0x7f370684d2ca __clock_gettime
+  [189:3] libmpi.so.40 0x7f3707437b11 PMPI_Wtime
+  [189:4] iotest 0x66b299 CmiWallTimer
+  [189:5] iotest 0x6345e9 CcdCallBacks
+  [189:6] iotest 0x637fcf CsdScheduleForever
+  [189:7] iotest 0x6383e5 CsdScheduler
+  [189:8] iotest 0x66a35a ConverseInit
+  [189:9] iotest 0x5bbea7 charm_main
+  [189:10] libc.so.6 0x7f3706792cf3 __libc_start_main
+  [189:11] iotest 0x4def0e _start
+------------- Processor 189 Exiting: Caught Signal ------------
+Reason: Terminated
+[cn039.delta.ncsa.illinois.edu:1461939] 255 more processes have sent help message help-mpi-api.txt / mpi-abort
+[cn039.delta.ncsa.illinois.edu:1461939] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages

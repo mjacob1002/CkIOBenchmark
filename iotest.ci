@@ -35,7 +35,7 @@ mainmodule iotest {
 			serial {
 				// ckout << "Starting the reading\n";
 				Ck::IO::Options opts;
-				opts.num_readers = num_io_buffers;
+				opts.numReaders = num_io_buffers;
 				CkCallback open_cb(CkIndex_Main::ready(NULL), thisProxy);
 				open_cb.setRefNum(0);
 				start_time = CkWallTimer(); // start before opening the file
