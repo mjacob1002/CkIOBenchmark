@@ -1,0 +1,13 @@
+#!/bin/bash
+#SBATCH --nodes=8
+#SBATCH --ntasks-per-node=128
+#SBATCH --cpus-per-task=1
+#SBATCH --partition=cpu
+#SBATCH --account=mzu-delta-cpu
+#SBATCH --job-name=myjobtest
+#SBATCH --time=00:20:00      # hh:mm:ss for the job
+#SBATCH --constraint="scratch"
+
+echo "job is starting p, process cnt per node=4, node=2 on `hostname`"
+./charmrun +p1024 ./naive /scratch/mzu/yanniz3/CkIOBenchmark/TEST_FILES/file128gb_0 1024 512 1024 dump.file 
+
