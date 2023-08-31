@@ -25,7 +25,7 @@ iotest: iotest.ci iotest.C
 	$(CHARMC) iotest.C -o $@ -module CkIO -g -O3
 naive: naive.C naive.ci
 	$(CHARMC) naive.ci -g
-	$(CHARMC) naive.C -o $@ -g -O3 -tracemode projections -g
+	$(CHARMC) naive.C -o $@ -g -O3 -g
 
 iotest.proj: iotest.ci iotest.C
 	$(CHARMC) iotest.ci -g 

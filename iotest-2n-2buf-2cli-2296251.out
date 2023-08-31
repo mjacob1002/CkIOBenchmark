@@ -1,0 +1,33 @@
+job is starting p, process cnt per node=4, node=2 on cn089.delta.ncsa.illinois.edu
+
+Running as 2 OS processes: ./iotest /scratch/mzu/yanniz3/CkIOBenchmark/TEST_FILES/16gb 2 2 2
+charmrun> /usr/bin/setarch x86_64 -R mpirun -np 2 ./iotest /scratch/mzu/yanniz3/CkIOBenchmark/TEST_FILES/16gb 2 2 2
+Charm++> Running on MPI library: Open MPI v4.1.2, package: Open MPI svcdeltaswmgt@dt-login01.delta.internal.ncsa.edu Distribution, ident: 4.1.2, repo rev: v4.1.2, Nov 24, 2021 (MPI standard: 3.1)
+Charm++> Level of thread support used: MPI_THREAD_SINGLE (desired: MPI_THREAD_SINGLE)
+Charm++> Running in non-SMP mode: 2 processes (PEs)
+Converse/Charm++ Commit ID: v7.1.0-devel-394-ga074df49d
+Isomalloc> Synchronized global address space.
+CharmLB> Load balancer assumes all CPUs are same.
+Charm++> Running on 2 hosts (2 sockets x 64 cores x 1 PUs = 128-way SMP)
+Charm++> cpu topology info is gathered in 0.003 seconds.
+CharmLB> Load balancing instrumentation for communication is off.
+Args: TEST_FILE=/scratch/mzu/yanniz3/CkIOBenchmark/TEST_FILES/16gb, num_pes=2, num_io_buffers = 2, num_readers=2, dump_file=
+BufferChares[0] starts at offset 0 and contains 8589934592 bytes
+BufferChares[1] starts at offset 8589934592 and contains 8589934592 bytes
+The read session has been set up. Moving on to the reads
+------------- Processor 0 Exiting: Caught Signal ------------
+Reason: Segmentation fault
+Reader[1] is the last reader; has to read 8589934592 bytes
+------------- Processor 1 Exiting: Caught Signal ------------
+Reason: Segmentation fault
+[0] Stack Traceback:
+  [0:0] libpthread.so.0 0x7ffff68a9cf0 
+  [0:1] libc.so.6 0x7ffff65a1291 
+malloc(): corrupted top size
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 0 on node cn089 exited on signal 6 (Aborted).
+--------------------------------------------------------------------------

@@ -41,7 +41,7 @@ public:
 		if(msg -> argc > 5){
 			dump_file = std::string(msg -> argv[5]);
 		}
-		CkPrintf("Args: TEST_FILE=%s, num_pes=%zu, num_io_bufers = %zu, num_readers=%zu, dump_file=%s\n", TEST_FILE.c_str(), num_pes, num_io_buffers, num_readers, dump_file.c_str());
+		CkPrintf("Args: TEST_FILE=%s, num_pes=%zu, num_io_buffers = %zu, num_readers=%zu, dump_file=%s\n", TEST_FILE.c_str(), num_pes, num_io_buffers, num_readers, dump_file.c_str());
 		std::ifstream ifs;
 		ifs.open(TEST_FILE);
 		ifs.seekg(0, std::ios::end);
@@ -77,8 +77,8 @@ public:
 		std::cerr << "Just finished reading\n";
 		// CkCallback cb(CkIndex_Main::logging(0), mainProxy);
 		traceEnd(); // end the trace
-		CkPrintf("About to try verifying the full read\n");
-		readers.verifyFullFileRead(TEST_FILE, file_size, num_readers); // make sure all the reads were correct
+		CkPrintf("About to try verifying the full read using verify()\n");
+		readers.verify(TEST_FILE);
 		// mainProxy.logging(0);
 		
 		// CkCallback cb(CkIndex_Main::postClose(0),mainProxy);
@@ -110,8 +110,8 @@ public:
 		my_offset = offset + thisIndex * _bytes;
 		if(thisIndex == num_chares - 1) {
 			_bytes = file_size - my_offset;
-			CkPrintf("Reader[%d] is the last reader; has to read %zu bytes\n", thisIndex,_bytes);
 		}
+			CkPrintf("Reader[%d] is the last reader; has to read %zu bytes\n", thisIndex,_bytes);
 		#ifdef TEMP_DEBUG
 			_bytes=1024 * 1024 * 4;
 		#endif
@@ -148,23 +148,22 @@ public:
 
 	void verify(std::string test_file){
 		testing_file = test_file; // set the test file
-		// CkPrintf("On Reader %d: Reader is (%zu, %zu) while ReadCompleteMsg is (%zu, %zu)\n", my_offset, _bytes, og_msg -> offset, og_msg -> bytes);
-		// char* sequence = sequentialRead(og_msg -> offset, og_msg -> bytes);
-		// std::string fname = "LOGGING" + std::to_string(og_msg -> offset) + "+" + std::to_string(og_msg -> bytes);
-		// std::ofstream ofs(fname);	
-		// ofs << "SEQUENTIAL READ RESULTS FROM READER " << thisIndex << ": ";
-		// ofs.write(sequence, og_msg -> bytes);
-		// ofs << "\n";
-		// ofs << "PARALLEL READ RESULTS FROM READER" << thisIndex << ": ";	
-		// ofs.write(og_msg -> data, og_msg -> bytes);
-		// ofs << "\n";
-	//	for(size_t i = 0; i< og_msg -> bytes; ++i){
-	//		if(sequence[i] != og_msg -> data[i]){
-	//			CkPrintf("Reader %d: At index %d, sequentialRead returned %d while parallel returned %d\n", thisIndex, i, (int)(sequence[i]), (int)(og_msg -> data[i]));
-	//		}
-	//		CkEnforce(sequence[i] == og_msg -> data[i]);
-	//	}
-		// CkEnforce(!strncmp(sequence, og_msg -> data, og_msg -> bytes));
+    std::ifstream ifs(testing_file);
+    if(!ifs.good()){
+      CkPrintf("Something is wrong with this bitch.");
+    }
+    char* read_ifstream = new char[og_msg -> bytes];
+    ifs.seekg(og_msg -> offset);
+    ifs.read(read_ifstream, og_msg -> bytes);
+		CkPrintf("On Reader %d: Reader is (%zu, %zu) while ReadCompleteMsg is (%zu, %zu)\n", my_offset, _bytes, og_msg -> offset, og_msg -> bytes);
+    //verify the reads are the same
+    char* data = og_msg -> data;
+    for(int i = 0; i < og_msg -> bytes; ++i){
+      if(read_ifstream[i] != og_msg -> data[i]){
+        CkPrintf("read_ifstream[%d]=%zu, while data[%d]=%zu\n", i, int(read_ifstream[i]), i, data[i]);
+      }
+      CkEnforce(read_ifstream[i] == data[i]);
+    }
 		CkCallback cb(CkIndex_Main::logging(0), mainProxy);
 		// delete[] sequence;
 		delete og_msg;
@@ -196,7 +195,7 @@ public:
 	//	CkPrintf("What the sequential received: %s\n", t.c_str());
 		for(size_t i = 0; i < num_bytes_to_read; ++i){
 			if(og_msg -> data[i] != sequence[i]){
-				CkPrintf("Reader[%d]: og_msg -> data[%d]=%c; sequence[%d]=%c\n", thisIndex, i, (og_msg -> data[i]), i, sequence[i]);
+				CkPrintf("Reader[%d]; %zu; : og_msg -> data[%d]=%c; sequence[%d]=%c\n", thisIndex, my_offset, i, (og_msg -> data[i]), i, sequence[i]);
 				CkPrintf("size_t values: og->msg[%d] is %d; sequence[%d] is %d\n", i, (int)(og_msg -> data[i]), i, (int)(sequence[i]));
 			}
 			CkEnforce(og_msg -> data[i] == sequence[i]);

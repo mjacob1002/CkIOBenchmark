@@ -55,6 +55,7 @@ mainmodule iotest {
 				CkPrintf("The read session has been set up. Moving on to the reads\n");
 				current_session = msg -> session;
 				CkCallback test_read_cb(CkIndex_Reader::testRead(0), thisProxy); // this is a bug; you shouldn't use thisProxy. However, I don't invoke this callback so it's ok to leave in for now because I'm too lazy to rework code.	
+        CkPrintf("file size is %zu\n",file_size);
 				readers = CProxy_Reader::ckNew(msg -> session, file_size, file_size / num_readers, 0, num_readers, num_readers); // create 5 readers which will each read 23 bytes and start from offset 5 i.e 0 will read bytes [5,28), 1 is [10, 33).
 
 			}

@@ -1,0 +1,55 @@
+job is starting p, process cnt per node=4, node=2 on cn003.delta.ncsa.illinois.edu
+
+Running as 2 OS processes: ./iotest /scratch/mzu/yanniz3/CkIOBenchmark/TEST_FILES/file128gb 2 2 2
+charmrun> /usr/bin/setarch x86_64 -R mpirun -np 2 ./iotest /scratch/mzu/yanniz3/CkIOBenchmark/TEST_FILES/file128gb 2 2 2
+Charm++> Running on MPI library: Open MPI v4.1.2, package: Open MPI svcdeltaswmgt@dt-login01.delta.internal.ncsa.edu Distribution, ident: 4.1.2, repo rev: v4.1.2, Nov 24, 2021 (MPI standard: 3.1)
+Charm++> Level of thread support used: MPI_THREAD_SINGLE (desired: MPI_THREAD_SINGLE)
+Charm++> Running in non-SMP mode: 2 processes (PEs)
+Converse/Charm++ Commit ID: v7.1.0-devel-394-ga074df49d
+Isomalloc> Synchronized global address space.
+CharmLB> Load balancer assumes all CPUs are same.
+Charm++> Running on 2 hosts (2 sockets x 64 cores x 1 PUs = 128-way SMP)
+Charm++> cpu topology info is gathered in 0.004 seconds.
+CharmLB> Load balancing instrumentation for communication is off.
+Args: TEST_FILE=/scratch/mzu/yanniz3/CkIOBenchmark/TEST_FILES/file128gb, num_pes=2, num_io_buffers = 2, num_readers=2, dump_file=
+The read session has been set up. Moving on to the reads
+Reader[1] is the last reader; has to read 68719476736 bytes
+DISK_TIME: 102.517366
+Just finished reading
+About to try verifying the full read
+Reader 0: starting the verification of full file read
+Reader 0 verification: starting sequential read
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+MPI_ABORT was invoked on rank 1 in communicator MPI COMMUNICATOR 3 DUP FROM 0
+with errorcode 1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+[1] Stack Traceback:
+  [1:0] libpthread.so.0 0x7f5c6f5f8cf0 
+  [1:1] libstdc++.so.6 0x7f5c6fb3e542 std::istream::get()
+  [1:2] iotest 0x4ebe54 Reader::verifyFullFileRead(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long, unsigned long)
+  [1:3] iotest 0x4e764a CkIndex_Reader::_call_verifyFullFileRead_marshall4(void*, void*)
+  [1:4] iotest 0x52004d CkDeliverMessageReadonly
+  [1:5] iotest 0x56418d CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [1:6] iotest 0x539350 CkArray::recvBroadcast(CkMessage*)
+  [1:7] iotest 0x5200b8 CkDeliverMessageFree
+  [1:8] iotest 0x524697 _processHandler(void*, CkCoreState*)
+  [1:9] iotest 0x637f70 CsdScheduleForever
+  [1:10] iotest 0x6383c5 CsdScheduler
+  [1:11] iotest 0x66a33a ConverseInit
+  [1:12] iotest 0x5bbe87 charm_main
+  [1:13] libc.so.6 0x7f5c6f25bd85 __libc_start_main
+  [1:14] iotest 0x4deefe _start
+------------- Processor 1 Exiting: Caught Signal ------------
+Reason: Terminated
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 0 on node cn003 exited on signal 9 (Killed).
+--------------------------------------------------------------------------
+slurmstepd: error: Detected 1 oom-kill event(s) in StepId=2223523.batch. Some of your processes may have been killed by the cgroup out-of-memory handler.

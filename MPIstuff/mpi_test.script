@@ -9,4 +9,4 @@
 #SBATCH --constraint="scratch"
 
 echo "job is starting p, process cnt per node=4, node=2 on `hostname`"
-mpirun -np 1024 mpi_io /scratch/mzu/yanniz3/CkIOBenchmark/TEST_FILES/file128gb.txt
+mpirun -np 1024 mpi_io /scratch/mzu/yanniz3/CkIOBenchmark/TEST_FILES/file128gb_2

@@ -732,9 +732,10 @@ void Main::_serial_4(Ck::IO::SessionReadyMsg* gen0) {
     CkPrintf("The read session has been set up. Moving on to the reads\n");
     current_session = msg -> session;
     CkCallback test_read_cb(CkIndex_Reader::testRead(0), thisProxy);
+        CkPrintf("file size is %zu\n",file_size);
     readers = CProxy_Reader::ckNew(msg -> session, file_size, file_size / num_readers, 0, num_readers, num_readers);
    
-#line 738 "iotest.def.h"
+#line 739 "iotest.def.h"
     } // end serial block
   }
   _TRACE_END_EXECUTE(); 
@@ -1673,14 +1674,14 @@ void Reader::_serial_0(Ck::IO::ReadCompleteMsg* gen0) {
   {
     Ck::IO::ReadCompleteMsg*& msg = gen0;
     { // begin serial block
-#line 54 "iotest.ci"
+#line 55 "iotest.ci"
 
     CkCallback cb(CkReductionTarget(Main, doneReading), mainProxy);
     size_t bytes = msg -> bytes;
     og_msg = msg;
     contribute(sizeof(bytes), &bytes, CkReduction::nop, cb);
    
-#line 1684 "iotest.def.h"
+#line 1685 "iotest.def.h"
     } // end serial block
   }
   _TRACE_END_EXECUTE(); 

@@ -1,0 +1,58 @@
+job is starting p, process cnt per node=4, node=2 on cn010.delta.ncsa.illinois.edu
+
+Running as 2 OS processes: ./iotest /scratch/mzu/yanniz3/CkIOBenchmark/TEST_FILES/file128gb 2 2 2
+charmrun> /usr/bin/setarch x86_64 -R mpirun -np 2 ./iotest /scratch/mzu/yanniz3/CkIOBenchmark/TEST_FILES/file128gb 2 2 2
+Charm++> Running on MPI library: Open MPI v4.1.2, package: Open MPI svcdeltaswmgt@dt-login01.delta.internal.ncsa.edu Distribution, ident: 4.1.2, repo rev: v4.1.2, Nov 24, 2021 (MPI standard: 3.1)
+Charm++> Level of thread support used: MPI_THREAD_SINGLE (desired: MPI_THREAD_SINGLE)
+Charm++> Running in non-SMP mode: 2 processes (PEs)
+Converse/Charm++ Commit ID: v7.1.0-devel-394-ga074df49d
+Isomalloc> Synchronized global address space.
+CharmLB> Load balancer assumes all CPUs are same.
+Charm++> Running on 2 hosts (2 sockets x 64 cores x 1 PUs = 128-way SMP)
+Charm++> cpu topology info is gathered in 0.004 seconds.
+CharmLB> Load balancing instrumentation for communication is off.
+Args: TEST_FILE=/scratch/mzu/yanniz3/CkIOBenchmark/TEST_FILES/file128gb, num_pes=2, num_io_buffers = 2, num_readers=2, dump_file=
+The read session has been set up. Moving on to the reads
+Reader[1] is the last reader; has to read 68719476736 bytes
+DISK_TIME: 117.373380
+Just finished reading
+About to try verifying the full read
+Reader 0: starting the verification of full file read
+Reader 0 verification: starting sequential read
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+MPI_ABORT was invoked on rank 0 in communicator MPI COMMUNICATOR 3 DUP FROM 0
+with errorcode 1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+------------- Processor 0 Exiting: Caught Signal ------------
+Reason: Terminated
+[0] Stack Traceback:
+  [0:0] libpthread.so.0 0x7ffff68a9cf0 
+  [0:1] libpthread.so.0 0x7ffff68a8ab4 __read
+  [0:2] libstdc++.so.6 0x7ffff6da59df std::__basic_file<char>::xsgetn(char*, long)
+  [0:3] libstdc++.so.6 0x7ffff6de20a0 std::basic_filebuf<char, std::char_traits<char> >::underflow()
+  [0:4] libstdc++.so.6 0x7ffff6e17206 std::basic_streambuf<char, std::char_traits<char> >::uflow()
+  [0:5] libstdc++.so.6 0x7ffff6def57e std::istream::get()
+  [0:6] iotest 0x4ebe54 Reader::verifyFullFileRead(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long, unsigned long)
+  [0:7] iotest 0x4e764a CkIndex_Reader::_call_verifyFullFileRead_marshall4(void*, void*)
+  [0:8] iotest 0x52004d CkDeliverMessageReadonly
+  [0:9] iotest 0x56418d CkLocRec::invokeEntry(CkMigratable*, void*, int, bool)
+  [0:10] iotest 0x539350 CkArray::recvBroadcast(CkMessage*)
+  [0:11] iotest 0x5200b8 CkDeliverMessageFree
+  [0:12] iotest 0x524697 _processHandler(void*, CkCoreState*)
+  [0:13] iotest 0x637f70 CsdScheduleForever
+  [0:14] iotest 0x6383c5 CsdScheduler
+  [0:15] iotest 0x66a33a ConverseInit
+  [0:16] iotest 0x5bbe87 charm_main
+  [0:17] libc.so.6 0x7ffff650cd85 __libc_start_main
+  [0:18] iotest 0x4deefe _start
+--------------------------------------------------------------------------
+mpirun noticed that process rank 1 with PID 87841 on node cn020 exited on signal 9 (Killed).
+--------------------------------------------------------------------------
