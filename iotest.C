@@ -100,9 +100,10 @@ public:
 // object that is used to enact the parallel reads
 struct Reader : public CBase_Reader {
 	Reader_SDAG_CODE;
-	Ck::IO::ReadCompleteMsg* og_msg = 0;
+	Ck::IO::ReadCompleteMsg* og_msg;
 	size_t _bytes;
 	size_t my_offset;
+	char* data = 0;
 	std::string testing_file;
 public:
 	Reader(Ck::IO::Session session, size_t file_size, size_t bytes, size_t offset, size_t num_chares){
@@ -117,9 +118,11 @@ public:
 		#endif
 		// ckout << "My offset for reader " << thisIndex << " is " << my_offset << endl;
 		CkCallback test_read_cb(CkIndex_Reader::testRead(0), thisProxy[thisIndex]);	
+		data = new char[_bytes];
+		CkPrintf("Just allocatd buffer of size %zu\n", _bytes);
 		// CkPrintf("From Reader[%d] before issuing read: _bytes=%zu, my_offset=%zu\n", thisIndex, _bytes, my_offset); 
 		//CmiPrintf("NUMBYTES: %zu", _bytes);
-		Ck::IO::read(session, _bytes, my_offset, test_read_cb);
+		Ck::IO::read(session, _bytes, my_offset, data, test_read_cb);
 	}
 
 	char* sequentialRead(size_t offset, size_t bytes){
@@ -195,11 +198,11 @@ public:
 	//	std::string t(sequence, num_bytes_to_read);
 	//	CkPrintf("What the sequential received: %s\n", t.c_str());
 		for(size_t i = 0; i < num_bytes_to_read; ++i){
-			if(og_msg -> data[i] != sequence[i]){
-				CkPrintf("Reader[%d]: og_msg -> data[%d]=%c; sequence[%d]=%c\n", thisIndex, i, (og_msg -> data[i]), i, sequence[i]);
-				CkPrintf("size_t values: og->msg[%d] is %d; sequence[%d] is %d\n", i, (int)(og_msg -> data[i]), i, (int)(sequence[i]));
+			if(data[i] != sequence[i]){
+				CkPrintf("Reader[%d]: data[%d]=%c; sequence[%d]=%c\n", thisIndex, i, (data[i]), i, sequence[i]);
+				CkPrintf("size_t values: data[%d] is %d; sequence[%d] is %d\n", i, (int)(data[i]), i, (int)(sequence[i]));
 			}
-			CkEnforce(og_msg -> data[i] == sequence[i]);
+			CkEnforce(data[i] == sequence[i]);
 		}
 
 		if(!thisIndex) CkPrintf("Reader 0 verification: finished verification of the data\n");
